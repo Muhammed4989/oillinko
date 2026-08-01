@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/ui";
 import { categories } from "@/lib/equipment";
@@ -46,12 +47,21 @@ export default async function CategoryPage({
 
   return (
     <>
-      <section className="border-b border-line bg-oil-800">
-        <div className="mx-auto max-w-6xl px-4 py-16">
+      <section className="relative overflow-hidden border-b border-line bg-oil-800">
+        <Image
+          src={cat.image}
+          alt={cat.name}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-oil-900/60 via-oil-900/70 to-oil-900" />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
           <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
             Equipment
           </p>
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
             {cat.name}
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-muted">{cat.description}</p>

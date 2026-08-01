@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -52,6 +53,16 @@ export default function QualityPage() {
         subtitle="In the oil and gas industry, the certificate is part of the product. We make sure every item we source meets the standard your project requires."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
+        <div className="relative mb-12 h-56 overflow-hidden rounded-lg border border-line sm:h-72">
+          <Image
+            src="/images/night-refinery.jpg"
+            alt="Industrial refinery at night"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-oil-900/60 to-transparent" />
+        </div>
         <div className="grid gap-6 md:grid-cols-2">
           {checks.map((c) => (
             <div key={c.title} className="rounded-lg border border-line bg-oil-800 p-6">

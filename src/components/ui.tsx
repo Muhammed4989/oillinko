@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function PageHeader({
@@ -43,8 +44,15 @@ export function SectionTitle({
 
 export function CtaBand() {
   return (
-    <section className="border-t border-line bg-accent">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center">
+    <section className="relative overflow-hidden border-t border-line bg-accent">
+      <Image
+        src="/images/refinery-night-unsplash.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover opacity-20"
+      />
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center">
         <h2 className="text-2xl font-bold text-black sm:text-3xl">
           Have a Bill of Quantities ready?
         </h2>

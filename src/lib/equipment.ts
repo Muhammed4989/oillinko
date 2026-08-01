@@ -10,6 +10,7 @@ export type Category = {
   short: string;
   tagline: string;
   description: string;
+  image: string;
   specs: string[];
   standards: string[];
   sampleItems: SampleItem[];
@@ -22,6 +23,7 @@ export const categories: Category[] = [
     name: "Hot Tap & Line Stop Equipment",
     short: "Saddles & pneumatic stoppers for live pipeline work",
     tagline: "Hot tapping and line stop equipment that keeps pipelines running",
+  image: "/images/refinery-hazy-unsplash.jpg",
     description:
       "One-piece and split (two-piece) weld-on saddles for permanent installation on live oil and gas pipelines, suitable for Hot Tapping and Line Stop / Stopple operations without pipeline shutdown, plus inflatable pneumatic stoppers (balloons) with rubber strips for temporary plugging of pipelines from 4\" to 42\".",
     specs: [
@@ -58,6 +60,7 @@ export const categories: Category[] = [
     name: "Pipeline Fittings",
     short: "Seamless butt weld elbows, tees and reducers",
     tagline: "Seamless butt weld elbows, tees and reducers to ANSI B16.9",
+  image: "/images/pipes-plant.jpg",
     description:
       "Seamless butt weld fittings — 45° and 90° elbows, equal and reducing tees, and concentric reducers — manufactured to ANSI B16.9 with beveled ends, in carbon steel to ASTM A234-WPB, Sch. STD.",
     specs: [
@@ -81,6 +84,7 @@ export const categories: Category[] = [
     name: "Flanges",
     short: "Weld neck, blind and slip-on flanges, Class 150–600",
     tagline: "Weld neck, blind and slip-on flanges per ANSI B16.5",
+  image: "/images/night-refinery.jpg",
     description:
       "Raised face flanges — weld neck, blind and slip-on types — manufactured to ANSI B16.5 in carbon steel to ASTM A105, available in Class 150, 300 and 600.",
     specs: [
@@ -105,6 +109,7 @@ export const categories: Category[] = [
     name: "Gaskets",
     short: "Spiral wound gaskets per API 601 / ASME B16.20",
     tagline: "Spiral wound gaskets for high-integrity flange sealing",
+  image: "/images/about-refinery.jpg",
     description:
       "Spiral wound gaskets manufactured to API 601 / ASME B16.20 with stainless steel (AISI 304) windings and graphite filler — the standard choice for oil and gas flange connections.",
     specs: [
@@ -127,6 +132,7 @@ export const categories: Category[] = [
     name: "Stud Bolts & Nuts",
     short: "ASTM A193 B7 stud bolts with A194 2H nuts",
     tagline: "ASTM A193 B7 stud bolts with ASTM A194 2H heavy hex nuts",
+  image: "/images/train-refinery.jpg",
     description:
       "Screwed stud bolts in ASTM A193 Gr. B7 with nuts in ASTM A194 Gr. 2H, threaded to ANSI B1.1 (2A bolts / 2B nuts) with dimensions per ANSI B18.2 — supplied with one or two nuts as specified.",
     specs: [
@@ -151,6 +157,7 @@ export const categories: Category[] = [
     name: "Pipe Cutters",
     short: "Manual and steel pipe cutters for every size range",
     tagline: "Manual and steel pipe cutters for on-site cutting",
+  image: "/images/hero-refinery.jpg",
     description:
       "Manual and steel pipe cutters covering every line size from 4\" to 26\" — practical, field-proven tools for cutting line pipe during installation and maintenance work.",
     specs: [

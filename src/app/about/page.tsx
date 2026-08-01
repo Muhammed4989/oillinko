@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CtaBand, PageHeader } from "@/components/ui";
 import { site } from "@/lib/site";
 
@@ -17,6 +18,16 @@ export default function AboutPage() {
         subtitle="A sourcing and procurement consultancy for the oil and gas industry, based in Istanbul — the trading hub between Europe, the Middle East and Asia."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
+        <div className="relative mb-12 h-64 overflow-hidden rounded-lg border border-line sm:h-80">
+          <Image
+            src="/images/about-refinery.jpg"
+            alt="Oil refinery complex near water"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-oil-900/60 to-transparent" />
+        </div>
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold">What we do</h2>

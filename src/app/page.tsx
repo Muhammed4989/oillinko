@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CtaBand, SectionTitle } from "@/components/ui";
 import { categories } from "@/lib/equipment";
 
@@ -47,15 +48,17 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line bg-oil-800">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#f97316 1px, transparent 1px), linear-gradient(90deg, #f97316 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
+      <section className="relative overflow-hidden border-b border-line">
+        <Image
+          src="/images/hero-refinery.jpg"
+          alt="Oil refinery at sunset — oil and gas equipment sourcing"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-oil-900/80 via-oil-900/70 to-oil-900/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-oil-900/90 to-oil-900/40" />
         <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-oil-900 px-3 py-1 text-xs font-medium text-muted">
             <span className="h-2 w-2 rounded-full bg-accent" />
@@ -128,15 +131,27 @@ export default function HomePage() {
               <Link
                 key={c.slug}
                 href={`/equipment/${c.slug}`}
-                className="group rounded-lg border border-line bg-oil-900 p-6 transition-colors hover:border-accent"
+                className="group overflow-hidden rounded-lg border border-line bg-oil-900 transition-colors hover:border-accent"
               >
-                <h3 className="text-lg font-semibold transition-colors group-hover:text-accent">
-                  {c.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{c.short}</p>
-                <p className="mt-4 text-xs font-medium text-accent">
-                  {c.totalItems} reference items →
-                </p>
+                <div className="relative h-40 overflow-hidden">
+                  <Image
+                    src={c.image}
+                    alt={c.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-oil-900/70 to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold transition-colors group-hover:text-accent">
+                    {c.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{c.short}</p>
+                  <p className="mt-4 text-xs font-medium text-accent">
+                    {c.totalItems} reference items →
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
