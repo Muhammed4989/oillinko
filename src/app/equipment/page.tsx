@@ -7,7 +7,7 @@ import { categories } from "@/lib/equipment";
 export const metadata: Metadata = {
   title: "Equipment",
   description:
-    "Oil and gas equipment we source: hot tap & line stop equipment, pipeline fittings, flanges, gaskets, stud bolts and pipe cutters — to API, ANSI, ASME and ASTM standards.",
+    "Oil and gas equipment we source: pumps and rotating equipment, valves and actuation, flanges, fittings and bolting, gaskets and sealing products, pressure vessels and tanks, wellhead equipment and pipeline intervention equipment — to API, ANSI, ASME and ASTM standards.",
   alternates: { canonical: "/equipment" },
 };
 
@@ -54,7 +54,7 @@ export default function EquipmentIndexPage() {
                   ))}
                 </div>
                 <p className="mt-4 text-xs font-medium text-accent">
-                  {c.totalItems} reference items in our catalogue →
+                  {c.totalItems}+ typical line items we quote →
                 </p>
               </div>
             </Link>

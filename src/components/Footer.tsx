@@ -11,17 +11,19 @@ const columns = [
       { href: "/quality", label: "Quality & Compliance" },
       { href: "/suppliers", label: "Supplier Network" },
       { href: "/how-it-works", label: "How It Works" },
+      { href: "/blog", label: "Blog" },
     ],
   },
   {
     title: "Equipment",
     links: [
-      { href: "/equipment/hot-tap-line-stop", label: "Hot Tap & Line Stop" },
-      { href: "/equipment/pipeline-fittings", label: "Pipeline Fittings" },
-      { href: "/equipment/flanges", label: "Flanges" },
-      { href: "/equipment/gaskets", label: "Gaskets" },
-      { href: "/equipment/stud-bolts", label: "Stud Bolts & Nuts" },
-      { href: "/equipment/pipe-cutters", label: "Pipe Cutters" },
+      { href: "/equipment/pumps-rotating-equipment", label: "Pumps & Rotating Equipment" },
+      { href: "/equipment/valves-actuation", label: "Valves & Actuation" },
+      { href: "/equipment/flanges-fittings-bolting", label: "Flanges, Fittings & Bolting" },
+      { href: "/equipment/gaskets-sealing", label: "Gaskets & Sealing Products" },
+      { href: "/equipment/pressure-vessels-tanks", label: "Pressure Vessels & Tanks" },
+      { href: "/equipment/wellhead-production-equipment", label: "Wellhead & Production Equipment" },
+      { href: "/equipment/pipeline-intervention-equipment", label: "Pipeline Intervention Equipment" },
     ],
   },
 ];
@@ -34,8 +36,10 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Oil & gas equipment sourcing and procurement consultancy based in
-              Istanbul, connecting buyers worldwide with verified manufacturers.
+              Oil & gas equipment sourcing and procurement consultancy — head
+              office in Istanbul, Turkey, with regional offices in
+              London, Erbil and Amman, connecting buyers worldwide with
+              verified manufacturers.
             </p>
           </div>
           {columns.map((col) => (
@@ -59,22 +63,25 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="mt-4 space-y-2 text-sm text-muted">
-              <li>{site.address}</li>
               <li>
                 <a href={`mailto:${site.email}`} className="hover:text-foreground">
                   {site.email}
                 </a>
               </li>
               <li>
-                <a href={site.whatsappLink} className="hover:text-foreground">
-                  WhatsApp: {site.whatsapp}
+                {site.headOffice.city} ({site.headOffice.country}):{" "}
+                <a href={`tel:${site.headOffice.phone.replace(/\s/g, "")}`} className="hover:text-foreground">
+                  {site.headOffice.phone}
                 </a>
               </li>
-              <li>
-                <a href={site.phoneLink} className="hover:text-foreground">
-                  {site.phone}
-                </a>
-              </li>
+              {site.offices.map((o) => (
+                <li key={o.city}>
+                  {o.city}:{" "}
+                  <a href={`tel:${o.phone.replace(/\s/g, "")}`} className="hover:text-foreground">
+                    {o.phone}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const nav = [
@@ -9,20 +10,21 @@ const nav = [
   { href: "/services", label: "Services" },
   { href: "/equipment", label: "Equipment" },
   { href: "/quality", label: "Quality" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <rect x="1" y="1" width="30" height="30" rx="6" stroke="#f97316" strokeWidth="2" fill="#0b0f14" />
-        <path d="M9 22V10h5a4 4 0 0 1 0 8h-5" stroke="#f97316" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M23 10v12" stroke="#f97316" strokeWidth="2.4" strokeLinecap="round" />
-      </svg>
-      <span className="text-lg font-bold tracking-tight">
-        OILLINKO
-      </span>
+    <Link href="/" className="flex items-center gap-2" aria-label="Oillinko — Oil & Gas Equipment Sourcing & Procurement">
+      <Image
+        src="/images/Oillinko_Logo_Horizontal_WhiteBG.png"
+        alt="Oillinko"
+        width={1800}
+        height={520}
+        priority
+        className="h-8 w-auto rounded"
+      />
     </Link>
   );
 }

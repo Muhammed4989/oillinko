@@ -4,14 +4,14 @@ import { CtaBand, PageHeader } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Supplier Network",
   description:
-    "Oillinko's supplier network: verified oil and gas equipment manufacturers in Turkey, Europe, the Gulf and Asia — qualified on factory capability, certificates and export track record.",
+    "Oillinko's supplier network: verified oil and gas equipment manufacturers across Europe, the Gulf, the Middle East and Asia — qualified on factory capability, certificates and export track record.",
   alternates: { canonical: "/suppliers" },
 };
 
 const regions = [
   {
-    title: "Turkey",
-    text: "Our home base and first port of call. Turkish manufacturers are competitive across flanges, fittings, fasteners, gaskets and specialized pipeline equipment — with short logistics lines to the Middle East, Caucasus and Europe.",
+    title: "Türkiye",
+    text: "A key sourcing market, close to our regional office in Istanbul. Manufacturers there are competitive across flanges, fittings, fasteners, gaskets and specialized pipeline equipment — with short logistics lines to the Middle East, Caucasus and Europe.",
   },
   {
     title: "Europe",

@@ -67,7 +67,7 @@ export default function RfqForm() {
           <input required name="email" type="email" className={input} placeholder="you@company.com" />
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium">Phone / WhatsApp</label>
+          <label className="mb-1.5 block text-sm font-medium">Phone</label>
           <input name="phone" type="tel" className={input} placeholder="+90 ..." />
         </div>
       </div>

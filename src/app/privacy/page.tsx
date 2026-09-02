@@ -22,7 +22,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               When you submit a request through our RFQ form or contact us by
-              email, WhatsApp or phone, we receive the information you provide:
+              email or phone, we receive the information you provide:
               your name, company, email address, phone number and any equipment
               lists or documents you attach. We do not automatically collect
               personal data from browsing beyond standard, anonymous analytics

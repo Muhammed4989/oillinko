@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Oillinko is an oil and gas equipment sourcing and procurement consultancy based in Istanbul, Turkey, connecting buyers worldwide with verified manufacturers.",
+    "Oillinko is an international oil and gas equipment sourcing and procurement consultancy, headquartered in Istanbul, Turkey, with regional offices in London, Erbil and Amman.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="About Oillinko"
-        subtitle="A sourcing and procurement consultancy for the oil and gas industry, based in Istanbul — the trading hub between Europe, the Middle East and Asia."
+        subtitle="An international sourcing and procurement consultancy for the oil and gas industry — head office in Istanbul, with regional offices in London, Erbil and Amman, serving buyers across the Middle East, Europe, Asia and beyond."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="relative mb-12 h-64 overflow-hidden rounded-lg border border-line sm:h-80">
@@ -47,13 +47,15 @@ export default function AboutPage() {
                 get one accountable partner instead of chasing suppliers
                 across borders.
               </p>
-              <p>
-                Based in {site.address}, we work with buyers and suppliers
-                worldwide. Our home advantage is the Turkish manufacturing
-                base — competitive, quality-certified production of flanges,
+<p>
+                Operating from our head office in {site.headOffice.city},{" "}
+                {site.headOffice.country}, and regional offices in Istanbul,
+                Erbil and Amman, we work with buyers and suppliers worldwide.
+                Our sourcing network spans certified production of flanges,
                 fittings, fasteners, gaskets and specialized pipeline
-                equipment — combined with easy access to suppliers across
-                Europe, the Gulf and Asia.
+                equipment across Europe, the Gulf and Asia — combined with
+                fast access to suppliers and a single point of contact from
+                quote to delivery.
               </p>
             </div>
             <h2 className="mt-12 text-2xl font-bold">Our approach</h2>
@@ -84,8 +86,8 @@ export default function AboutPage() {
               <h3 className="font-semibold">At a glance</h3>
               <dl className="mt-4 space-y-3 text-sm">
                 <div>
-                  <dt className="text-muted">Headquarters</dt>
-                  <dd className="mt-0.5">{site.address}</dd>
+                  <dt className="text-muted">Head Office</dt>
+                  <dd className="mt-0.5">{site.headOffice.address}</dd>
                 </div>
                 <div>
                   <dt className="text-muted">Serving</dt>
@@ -93,7 +95,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <dt className="text-muted">Sourcing from</dt>
-                  <dd className="mt-0.5">Turkey, Europe, Gulf, Asia</dd>
+                  <dd className="mt-0.5">Europe, Gulf, Asia &amp; beyond</dd>
                 </div>
                 <div>
                   <dt className="text-muted">Focus</dt>
@@ -110,13 +112,12 @@ export default function AboutPage() {
                   </a>
                 </li>
                 <li>
-                  <a className="hover:text-accent" href={site.whatsappLink}>
-                    {site.whatsapp}
-                  </a>
-                </li>
-                <li>
-                  <a className="hover:text-accent" href={site.phoneLink}>
-                    {site.phone}
+                  {site.headOffice.city}:{" "}
+                  <a
+                    className="hover:text-accent"
+                    href={`tel:${site.headOffice.phone.replace(/\s/g, "")}`}
+                  >
+                    {site.headOffice.phone}
                   </a>
                 </li>
               </ul>
