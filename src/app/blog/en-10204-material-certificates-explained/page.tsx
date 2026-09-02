@@ -57,7 +57,16 @@ export default function Page() {
 
         <h2 id="what-en-10204-actually-is" className="mt-12 text-xl font-bold">What EN 10204 actually is</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          EN 10204 is a European standard, <em>Metallic products — Types of
+          EN 10204 is a{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.cencenelec.eu/european-standardization/european-standards/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            European standard
+          </a>
+          , <em>Metallic products — Types of
           inspection documents</em>, that defines four types of document a
           manufacturer can issue to certify that a delivered product complies
           with the order. It does not set the technical requirements
@@ -148,7 +157,22 @@ export default function Page() {
           >
             third-party inspection
           </Link>
-          .
+          . Listing the right certificate type on every line item also belongs
+          in the wider{" "}
+          <Link
+            className="text-accent hover:underline"
+            href="/blog/how-to-write-a-bill-of-quantities"
+          >
+            bill of quantities
+          </Link>{" "}
+          you send to suppliers.
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Not sure which certificate type your project needs?{" "}
+          <Link className="text-accent hover:underline" href="/rfq">
+            Send us your specification
+          </Link>{" "}
+          and we will confirm the correct EN 10204 type before we quote.
         </p>
 
         <Faq faqs={faqs} />

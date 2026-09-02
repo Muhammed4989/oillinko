@@ -117,7 +117,15 @@ export default function FittingsGuide() {
         <h2 id="materials-astm-a234-wpb-and-beyond" className="mt-12 text-xl font-bold">Materials: ASTM A234 WPB and beyond</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           For carbon steel butt-weld fittings the standard grade is{" "}
-          <strong className="text-foreground">ASTM A234 WPB</strong> — the fitting
+          <a
+            className="text-accent hover:underline"
+            href="https://www.astm.org/products-services/standards-and-publications.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">ASTM A234 WPB</strong>
+          </a>{" "}
+          — the fitting
           companion to carbon steel pipe (ASTM A106 / API 5L), suitable for
           temperatures from roughly −20°F to 400°F and widely used in field
           equipment. Fittings can also be supplied in higher-strength or
@@ -147,6 +155,13 @@ export default function FittingsGuide() {
           Related:{" "}
           <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">pipeline fittings</Link> ·{" "}
           <Link className="text-accent hover:underline" href="/blog/how-to-write-a-bill-of-quantities">how to write a bill of quantities</Link>
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Sourcing pipeline fittings for a project?{" "}
+          <Link className="text-accent hover:underline" href="/rfq">
+            Send us your fittings list
+          </Link>{" "}
+          with sizes and schedules and we will quote against the matching pipe spec.
         </p>
 
         <Faq faqs={faqs} />

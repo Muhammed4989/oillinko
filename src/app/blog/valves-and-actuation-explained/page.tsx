@@ -112,9 +112,17 @@ export default function Page() {
         <h2 id="specifying-actuation" className="mt-12 text-xl font-bold">Specifying actuation</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Actuators mount to the valve stem per the{" "}
-          <strong className="text-foreground">ISO 5211</strong> interface
-          standard, which keeps the actuator and valve interchangeable between
-          manufacturers. When specifying actuation, define:
+          <a
+            className="text-accent hover:underline"
+            href="https://www.iso.org/standard/89904.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">ISO 5211</strong>
+          </a>{" "}
+          interface standard, which keeps the actuator and valve
+          interchangeable between manufacturers. When specifying actuation,
+          define:
         </p>
         <CheckList
           items={[
@@ -127,15 +135,23 @@ export default function Page() {
           ]}
         />
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
-          As with flanges and gaskets, treat the valve and its actuator as one
+          As with{" "}
+          <Link className="text-accent hover:underline" href="/blog/flanges-gaskets-and-bolting">
+            flanges and gaskets
+          </Link>
+          , treat the valve and its actuator as one
           matched package rather than two separate purchases — the actuator&apos;s
           torque output must be sized to the valve&apos;s actual breakaway and
           running torque at the specified pressure differential.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Sourcing valves for a project?{" "}
+          Sourcing valves for a project? Browse our{" "}
+          <Link className="text-accent hover:underline" href="/equipment/valves-actuation">
+            valves &amp; actuation
+          </Link>{" "}
+          category, or{" "}
           <Link className="text-accent hover:underline" href="/rfq">
-            Send us your valve list and duty conditions
+            send us your valve list and duty conditions
           </Link>{" "}
           and we will structure the RFQ so every offer is quoted on the same
           standard, testing and actuation basis.

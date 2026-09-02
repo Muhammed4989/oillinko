@@ -55,9 +55,16 @@ export default function Page() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Separators, scrubbers, filter vessels, knockout drums and reactors
           are designed and fabricated to{" "}
-          <strong className="text-foreground">ASME Section VIII</strong>, the
-          Boiler and Pressure Vessel Code&apos;s rules for unfired pressure
-          vessels. Division 1 covers general design-by-rule methods suitable
+          <a
+            className="text-accent hover:underline"
+            href="https://www.asme.org/codes-standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">ASME Section VIII</strong>
+          </a>
+          , the Boiler and Pressure Vessel Code&apos;s rules for unfired
+          pressure vessels. Division 1 covers general design-by-rule methods suitable
           for most conventional vessels; Division 2 uses more detailed
           design-by-analysis methods, generally chosen for higher-pressure or
           weight-critical vessels where the extra engineering pays for
@@ -66,6 +73,18 @@ export default function Page() {
         </p>
 
         <h2 id="storage-tanks-api-650-and-api-620" className="mt-12 text-xl font-bold">Storage tanks — API 650 and API 620</h2>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Both tank types are governed by{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.api.org/products-and-services/standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            API
+          </a>{" "}
+          standards rather than ASME:
+        </p>
         <div className="mt-6 space-y-4">
           {[
             {
@@ -89,8 +108,15 @@ export default function Page() {
           Shell-and-tube heat exchangers combine a pressure vessel (the
           shell, governed by ASME Section VIII) with a bundle of tubes
           designed and constructed to{" "}
-          <strong className="text-foreground">TEMA</strong> (Tubular
-          Exchanger Manufacturers Association) standards. TEMA defines three
+          <a
+            className="text-accent hover:underline"
+            href="https://tema.org/standards/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">TEMA</strong>
+          </a>{" "}
+          (Tubular Exchanger Manufacturers Association) standards. TEMA defines three
           classes of mechanical design severity — R for the most demanding
           petroleum and related processing service, C for generally moderate
           service, and B for chemical process service — governing design
@@ -122,9 +148,13 @@ export default function Page() {
           .
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Sourcing a vessel, tank or exchanger package?{" "}
+          Sourcing a vessel, tank or exchanger package? Browse our{" "}
+          <Link className="text-accent hover:underline" href="/equipment/pressure-vessels-tanks">
+            pressure vessels, tanks &amp; heat exchangers
+          </Link>{" "}
+          category, or{" "}
           <Link className="text-accent hover:underline" href="/rfq">
-            Send us your process datasheet
+            send us your process datasheet
           </Link>{" "}
           and we will source it against the correct code and inspection basis.
         </p>
