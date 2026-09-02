@@ -116,9 +116,17 @@ export default function HotTappingGuide() {
 
         <h2 id="the-standards-that-govern-the-work" className="mt-12 text-xl font-bold">The standards that govern the work</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Hot tapping is a pressure-boundary activity: it is executed against
-          written procedures, not habits. The references buyers and contractors
-          should know:
+          Hot tapping is a pressure-boundary activity: it is executed against{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.api.org/products-and-services/standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            API RP 2201
+          </a>{" "}
+          and related written procedures, not habits. The references buyers and
+          contractors should know:
         </p>
         <ul className="mt-5 space-y-3">
           {[
@@ -153,6 +161,13 @@ export default function HotTappingGuide() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Related: <Link className="text-accent hover:underline" href="/equipment/pipeline-intervention-equipment">hot tap &amp; line stop equipment</Link> ·{" "}
           <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">pipeline fittings</Link>
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Sourcing hot tap or line stop equipment?{" "}
+          <Link className="text-accent hover:underline" href="/rfq">
+            Send us your line size, pressure class and material
+          </Link>{" "}
+          and we will quote the matching saddles and stoppers.
         </p>
 
         <Faq faqs={faqs} />

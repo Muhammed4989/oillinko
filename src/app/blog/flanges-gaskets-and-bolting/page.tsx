@@ -60,7 +60,15 @@ export default function FlangesGuide() {
         <h2 id="flanges-asme-b16-5-types-and-pressure-classes" className="mt-12 text-xl font-bold">Flanges: ASME B16.5 types and pressure classes</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           The defining standard for flanges from NPS 1/2 to NPS 24 is{" "}
-          <strong className="text-foreground">ASME B16.5</strong>. It fixes the
+          <a
+            className="text-accent hover:underline"
+            href="https://www.asme.org/codes-standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">ASME B16.5</strong>
+          </a>
+          . It fixes the
           dimensions, pressure classes, facings and materials so that flanges from
           different factories can still be bolted together. Common flange types
           in oil and gas are:
@@ -117,7 +125,16 @@ export default function FlangesGuide() {
         <h2 id="stud-bolts-astm-a193-b7-and-a194-2h" className="mt-12 text-xl font-bold">Stud bolts: ASTM A193 B7 and A194 2H</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           The bolts that hold a flanged joint in tension are threaded rods with a
-          heavy hex nut at each end. The established pairing for high-pressure,
+          heavy hex nut at each end, made to{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.astm.org/products-services/standards-and-publications.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ASTM
+          </a>{" "}
+          material grades. The established pairing for high-pressure,
           high-temperature hydrocarbon service is:
         </p>
         <ul className="mt-5 space-y-3">
@@ -156,7 +173,15 @@ export default function FlangesGuide() {
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
           Related:{" "}
           <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">flanges, fittings &amp; bolting</Link> ·{" "}
-          <Link className="text-accent hover:underline" href="/equipment/gaskets-sealing">gaskets &amp; sealing products</Link>
+          <Link className="text-accent hover:underline" href="/equipment/gaskets-sealing">gaskets &amp; sealing products</Link> ·{" "}
+          <Link className="text-accent hover:underline" href="/blog/en-10204-material-certificates-explained">EN 10204 certificates</Link>
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Sourcing a flanged connection package?{" "}
+          <Link className="text-accent hover:underline" href="/rfq">
+            Send us your flange, gasket and bolt list
+          </Link>{" "}
+          and we will quote it as one matched set.
         </p>
 
         <Faq faqs={faqs} />

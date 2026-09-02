@@ -58,7 +58,16 @@ export default function BoqGuide() {
         <h2 id="start-with-the-project-frame" className="mt-12 text-xl font-bold">Start with the project frame</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Before the line items, give the reader the frame: project or plant name,
-          the duty line, the relevant code or class (e.g. ANSI/ASME B16.5 Class
+          the duty line, the relevant code or class (e.g.{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.asme.org/codes-standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ANSI/ASME B16.5
+          </a>{" "}
+          Class
           600), the quantities of connections involved, and the delivery target and
           location. This lets suppliers align their material to the same design
           pressure — and lets you compare like for like.
@@ -97,7 +106,11 @@ export default function BoqGuide() {
           material, the class, the quantities and the bolt set. In practice, the
           three fields that cause most re-manufacturing are the facing (RF vs FF),
           the schedule on the bore, and the matching bolt set — which is why we
-          always quote flanges, gaskets and bolts as one set.
+          always quote{" "}
+          <Link className="text-accent hover:underline" href="/blog/flanges-gaskets-and-bolting">
+            flanges, gaskets and bolts as one set
+          </Link>
+          .
         </p>
 
         <h2 id="common-mistakes-that-delay-quotes" className="mt-12 text-xl font-bold">Common mistakes that delay quotes</h2>

@@ -44,8 +44,17 @@ export default function Page() {
       <BlogPostHeader post={post} />
       <Prose>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
-          A flange only seals as well as the gasket between the two faces.
-          Get the gasket type, filler or facing wrong and the flange class,
+          A flange only seals as well as the gasket between the two faces,
+          sized and tested to{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.asme.org/codes-standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ASME B16.20
+          </a>
+          . Get the gasket type, filler or facing wrong and the flange class,
           bolting and material grade around it stop mattering. Here is how
           the main gasket types used in oil and gas piping differ, and when
           each one applies.
@@ -99,9 +108,13 @@ export default function Page() {
           for how the three elements work as one connection.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Need gaskets matched to an existing flange schedule?{" "}
+          Need gaskets matched to an existing flange schedule? Browse our{" "}
+          <Link className="text-accent hover:underline" href="/equipment/gaskets-sealing">
+            gaskets &amp; sealing products
+          </Link>{" "}
+          category, or{" "}
           <Link className="text-accent hover:underline" href="/rfq">
-            Send us your flange list
+            send us your flange list
           </Link>{" "}
           and we will quote the matching gasket set.
         </p>

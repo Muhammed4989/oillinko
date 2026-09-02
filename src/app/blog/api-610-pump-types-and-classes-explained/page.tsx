@@ -48,7 +48,15 @@ export default function Page() {
       <BlogPostHeader post={post} />
       <Prose>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
-          API 610 (<em>Centrifugal Pumps for Petroleum, Petrochemical and
+          <a
+            className="text-accent hover:underline"
+            href="https://www.api.org/products-and-services/standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            API 610
+          </a>{" "}
+          (<em>Centrifugal Pumps for Petroleum, Petrochemical and
           Natural Gas Industries</em>) is the reference standard for
           centrifugal pumps in hydrocarbon service. Before a datasheet gets to
           dimensions, materials or performance curves, it identifies the pump
@@ -178,7 +186,11 @@ export default function Page() {
           seal chamber dimensions or testing scope.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Sourcing an API 610 pump package? We prepare the RFQ, circulate it to
+          Sourcing an API 610 pump package? Browse our{" "}
+          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+            pumps &amp; rotating equipment
+          </Link>{" "}
+          category, or we prepare the RFQ, circulate it to
           verified manufacturers, and check every returned offer against the
           type, class and testing requirements before it reaches you.{" "}
           <Link className="text-accent hover:underline" href="/rfq">

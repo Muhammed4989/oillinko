@@ -48,11 +48,18 @@ export default function Page() {
       <BlogPostHeader post={post} />
       <Prose>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
-          A commercial invoice and a material certificate tell you what the
-          manufacturer says it built. Third-party inspection (TPI) is how a
-          buyer confirms it independently — an accredited, uninvolved
-          inspection body checks the equipment against the purchase order and
-          the applicable standards, before it ever leaves the factory.
+          A commercial invoice and a{" "}
+          <Link
+            className="text-accent hover:underline"
+            href="/blog/en-10204-material-certificates-explained"
+          >
+            material certificate
+          </Link>{" "}
+          tell you what the manufacturer says it built. Third-party inspection
+          (TPI) is how a buyer confirms it independently — an accredited,
+          uninvolved inspection body checks the equipment against the purchase
+          order and the applicable standards, before it ever leaves the
+          factory.
         </p>
 
         <h2 id="what-a-tpi-agency-actually-does" className="mt-12 text-xl font-bold">What a TPI agency actually does</h2>
@@ -106,7 +113,17 @@ export default function Page() {
           most oil and gas equipment inspection worldwide, including Bureau
           Veritas, TÜV Rheinland, SGS, Intertek, DNV, Lloyd&apos;s Register
           and RINA, alongside regional and national agencies accepted by
-          specific end users. Large tenders often name an approved list of
+          specific end users. Reputable agencies are generally accredited to{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.iso.org/standard/17020"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ISO/IEC 17020
+          </a>
+          , the international standard for the competence and impartiality of
+          inspection bodies. Large tenders often name an approved list of
           agencies in the technical specification — always check whether your
           project restricts the choice before booking one.
         </p>

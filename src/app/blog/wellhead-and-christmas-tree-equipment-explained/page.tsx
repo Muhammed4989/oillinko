@@ -80,10 +80,18 @@ export default function Page() {
 
         <h2 id="api-6a-pressure-and-material-classes" className="mt-12 text-xl font-bold">API 6A: pressure and material classes</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          <strong className="text-foreground">API 6A</strong> (Wellhead and
-          Christmas Tree Equipment) is the governing standard for this
-          category, setting requirements for design, materials, testing and
-          marking. Two selections drive most of the specification:
+          <a
+            className="text-accent hover:underline"
+            href="https://www.api.org/products-and-services/standards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong className="text-foreground">API 6A</strong>
+          </a>{" "}
+          (Wellhead and Christmas Tree Equipment) is the governing standard
+          for this category, setting requirements for design, materials,
+          testing and marking. Two selections drive most of the
+          specification:
         </p>
         <CheckList
           items={[
@@ -110,12 +118,26 @@ export default function Page() {
           components in some cases, confirming that connection types and
           pressure ratings are consistent from the casing head up through the
           tree is essential — a mismatch discovered at the wellsite is far
-          more costly than one caught on the datasheet.
+          more costly than one caught on the datasheet. Sour service adds a
+          separate material qualification requirement under{" "}
+          <a
+            className="text-accent hover:underline"
+            href="https://www.iso.org/standard/79658.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NACE MR0175 / ISO 15156
+          </a>
+          , distinct from the pressure rating itself.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Sourcing wellhead or Christmas tree equipment?{" "}
+          Sourcing wellhead or Christmas tree equipment? Browse our{" "}
+          <Link className="text-accent hover:underline" href="/equipment/wellhead-production-equipment">
+            wellhead &amp; production equipment
+          </Link>{" "}
+          category, or{" "}
           <Link className="text-accent hover:underline" href="/rfq">
-            Send us your well design and produced fluid data
+            send us your well design and produced fluid data
           </Link>{" "}
           and we will structure the RFQ against the correct API 6A class.
         </p>

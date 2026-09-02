@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CtaBand } from "@/components/ui";
 import { categories } from "@/lib/equipment";
+import { getPost } from "@/lib/blog";
 import { site } from "@/lib/site";
+
+// Cornerstone blog article for each equipment category — used to link the
+// category page to the article that explains it in depth (and vice versa).
+const categoryGuide: Record<string, string> = {
+  "pumps-rotating-equipment": "api-610-pump-types-and-classes-explained",
+  "valves-actuation": "valves-and-actuation-explained",
+  "flanges-fittings-bolting": "flanges-gaskets-and-bolting",
+  "gaskets-sealing": "gaskets-and-sealing-products-explained",
+  "pressure-vessels-tanks": "pressure-vessels-tanks-and-heat-exchangers-explained",
+  "wellhead-production-equipment": "wellhead-and-christmas-tree-equipment-explained",
+  "pipeline-intervention-equipment": "hot-tapping-and-line-stopping",
+};
 
 export const dynamicParams = false;
 
@@ -34,6 +48,9 @@ export default async function CategoryPage({
   const { slug } = await params;
   const cat = categories.find((c) => c.slug === slug);
   if (!cat) notFound();
+
+  const guideSlug = categoryGuide[slug];
+  const guidePost = guideSlug ? getPost(guideSlug) : undefined;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -135,6 +152,22 @@ export default async function CategoryPage({
                 ))}
               </div>
             </div>
+            {guidePost && (
+              <div className="rounded-lg border border-line bg-oil-800 p-6">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-accent">
+                  From the blog
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">
+                  {guidePost.short}
+                </p>
+                <Link
+                  href={`/blog/${guidePost.slug}`}
+                  className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
+                >
+                  {guidePost.title} →
+                </Link>
+              </div>
+            )}
             <div className="rounded-lg border border-line bg-oil-800 p-6">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-accent">
                 Need this equipment?
