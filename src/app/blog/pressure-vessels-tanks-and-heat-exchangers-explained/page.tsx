@@ -51,7 +51,7 @@ export default function Page() {
           which piece of equipment, and what each one actually covers.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Pressure vessels — ASME Section VIII</h2>
+        <h2 id="pressure-vessels-asme-section-viii" className="mt-12 text-xl font-bold">Pressure vessels — ASME Section VIII</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Separators, scrubbers, filter vessels, knockout drums and reactors
           are designed and fabricated to{" "}
@@ -65,7 +65,7 @@ export default function Page() {
           traceability back to the vessel through its material certificates.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Storage tanks — API 650 and API 620</h2>
+        <h2 id="storage-tanks-api-650-and-api-620" className="mt-12 text-xl font-bold">Storage tanks — API 650 and API 620</h2>
         <div className="mt-6 space-y-4">
           {[
             {
@@ -84,7 +84,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Heat exchangers — TEMA class</h2>
+        <h2 id="heat-exchangers-tema-class" className="mt-12 text-xl font-bold">Heat exchangers — TEMA class</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Shell-and-tube heat exchangers combine a pressure vessel (the
           shell, governed by ASME Section VIII) with a bundle of tubes
@@ -98,7 +98,7 @@ export default function Page() {
           removable bundles.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">What to include on the specification</h2>
+        <h2 id="what-to-include-on-the-specification" className="mt-12 text-xl font-bold">What to include on the specification</h2>
         <CheckList
           items={[
             "Governing code — ASME Section VIII (vessel), API 650/620 (tank), or TEMA class (heat exchanger)",

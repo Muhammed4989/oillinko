@@ -55,7 +55,7 @@ export default function Page() {
           inspection.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">What EN 10204 actually is</h2>
+        <h2 id="what-en-10204-actually-is" className="mt-12 text-xl font-bold">What EN 10204 actually is</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           EN 10204 is a European standard, <em>Metallic products — Types of
           inspection documents</em>, that defines four types of document a
@@ -66,7 +66,7 @@ export default function Page() {
           documented and who is allowed to validate it.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">The four certificate types</h2>
+        <h2 id="the-four-certificate-types" className="mt-12 text-xl font-bold">The four certificate types</h2>
         <div className="mt-6 overflow-x-auto rounded-lg border border-line">
           <table className="w-full min-w-[640px] text-left text-sm">
             <thead>
@@ -115,7 +115,7 @@ export default function Page() {
           second signature.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">3.1 vs 3.2 — the distinction that matters most</h2>
+        <h2 id="3-1-vs-3-2-the-distinction-that-matters-most" className="mt-12 text-xl font-bold">3.1 vs 3.2 — the distinction that matters most</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           For pressure-containing parts in oil and gas — flanges, fittings,
           pipe, pumps casings, bolting — <strong className="text-foreground">EN
@@ -132,7 +132,7 @@ export default function Page() {
           test results.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">How to specify it correctly</h2>
+        <h2 id="how-to-specify-it-correctly" className="mt-12 text-xl font-bold">How to specify it correctly</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           When writing a line item, state the certificate type explicitly next
           to the material standard — for example &quot;ASTM A105, EN 10204

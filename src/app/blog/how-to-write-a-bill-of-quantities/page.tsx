@@ -44,7 +44,7 @@ export default function BoqGuide() {
       <BlogPostHeader post={post} />
 
       <Prose>
-        <h2 className="text-xl font-bold">Why the BOQ matters more than the supplier</h2>
+        <h2 id="why-the-boq-matters-more-than-the-supplier" className="text-xl font-bold">Why the BOQ matters more than the supplier</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           A supplier can only quote what you tell them. The difference between two
           offers for the same project sometimes reaches thirty to forty percent —
@@ -55,7 +55,7 @@ export default function BoqGuide() {
           the contract between your project and everyone who bids on it.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Start with the project frame</h2>
+        <h2 id="start-with-the-project-frame" className="mt-12 text-xl font-bold">Start with the project frame</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Before the line items, give the reader the frame: project or plant name,
           the duty line, the relevant code or class (e.g. ANSI/ASME B16.5 Class
@@ -64,7 +64,7 @@ export default function BoqGuide() {
           pressure — and lets you compare like for like.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">The anatomy of a line item — remove the guesswork</h2>
+        <h2 id="the-anatomy-of-a-line-item-remove-the-guesswork" className="mt-12 text-xl font-bold">The anatomy of a line item — remove the guesswork</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Each row of the BOQ should say:
         </p>
@@ -81,7 +81,7 @@ export default function BoqGuide() {
           ]}
         />
 
-        <h2 className="mt-12 text-xl font-bold">Write the line like a sentence: example</h2>
+        <h2 id="write-the-line-like-a-sentence-example" className="mt-12 text-xl font-bold">Write the line like a sentence: example</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Take a vague note and the same line rewritten so a quoting team reads it
           without a single guess:
@@ -100,7 +100,7 @@ export default function BoqGuide() {
           always quote flanges, gaskets and bolts as one set.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Common mistakes that delay quotes</h2>
+        <h2 id="common-mistakes-that-delay-quotes" className="mt-12 text-xl font-bold">Common mistakes that delay quotes</h2>
         <CheckList
           items={[
             'Generic lines like "pipe fittings" — a real price is impossible',

@@ -43,7 +43,7 @@ export default function FittingsGuide() {
       <BlogPostHeader post={post} />
 
       <Prose>
-        <h2 className="text-xl font-bold">What counts as a pipeline fitting</h2>
+        <h2 id="what-counts-as-a-pipeline-fitting" className="text-xl font-bold">What counts as a pipeline fitting</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Pipeline fittings are the manufactured pieces that change the
           direction, size or branching of a piping run. In oil and gas the
@@ -75,7 +75,7 @@ export default function FittingsGuide() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Schedules: what the wall thickness means</h2>
+        <h2 id="schedules-what-the-wall-thickness-means" className="mt-12 text-xl font-bold">Schedules: what the wall thickness means</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           The nominal size (e.g. NPS 8) is the outside diameter family, but the
           wall thickness is set by the <strong className="text-foreground">schedule</strong>
@@ -114,7 +114,7 @@ export default function FittingsGuide() {
           are written differently from one supplier to another, so spell it out.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Materials: ASTM A234 WPB and beyond</h2>
+        <h2 id="materials-astm-a234-wpb-and-beyond" className="mt-12 text-xl font-bold">Materials: ASTM A234 WPB and beyond</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           For carbon steel butt-weld fittings the standard grade is{" "}
           <strong className="text-foreground">ASTM A234 WPB</strong> — the fitting
@@ -125,7 +125,7 @@ export default function FittingsGuide() {
           material certificate (EN 10204 Type 3.1) is how you prove the grade.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Six fields that complete a fittings line item</h2>
+        <h2 id="six-fields-that-complete-a-fittings-line-item" className="mt-12 text-xl font-bold">Six fields that complete a fittings line item</h2>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           {[
             'Type — elbow, tee, reducer (not just "fitting")',

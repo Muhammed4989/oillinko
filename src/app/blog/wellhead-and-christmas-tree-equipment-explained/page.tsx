@@ -51,7 +51,7 @@ export default function Page() {
           assembly consists of and how it is specified.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">What the assembly consists of</h2>
+        <h2 id="what-the-assembly-consists-of" className="mt-12 text-xl font-bold">What the assembly consists of</h2>
         <div className="mt-6 space-y-4">
           {[
             {
@@ -78,7 +78,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">API 6A: pressure and material classes</h2>
+        <h2 id="api-6a-pressure-and-material-classes" className="mt-12 text-xl font-bold">API 6A: pressure and material classes</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           <strong className="text-foreground">API 6A</strong> (Wellhead and
           Christmas Tree Equipment) is the governing standard for this
@@ -94,7 +94,7 @@ export default function Page() {
           ]}
         />
 
-        <h2 className="mt-12 text-xl font-bold">What to confirm before you specify</h2>
+        <h2 id="what-to-confirm-before-you-specify" className="mt-12 text-xl font-bold">What to confirm before you specify</h2>
         <CheckList
           items={[
             "Casing and tubing sizes and weights, to match head spool bore and hangers",

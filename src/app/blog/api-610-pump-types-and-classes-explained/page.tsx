@@ -57,7 +57,7 @@ export default function Page() {
           opened.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">The three pump families</h2>
+        <h2 id="the-three-pump-families" className="mt-12 text-xl font-bold">The three pump families</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           API 610 groups every centrifugal pump configuration into three
           families, based on where the bearings sit relative to the impeller:
@@ -84,7 +84,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Overhung (OH) sub-types</h2>
+        <h2 id="overhung-oh-sub-types" className="mt-12 text-xl font-bold">Overhung (OH) sub-types</h2>
         <div className="mt-6 overflow-x-auto rounded-lg border border-line">
           <table className="w-full min-w-[560px] text-left text-sm">
             <thead>
@@ -113,7 +113,7 @@ export default function Page() {
           </table>
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Between-bearings (BB) sub-types</h2>
+        <h2 id="between-bearings-bb-sub-types" className="mt-12 text-xl font-bold">Between-bearings (BB) sub-types</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           This is the family most buyers of boiler feedwater, pipeline and
           high-head process pumps deal with directly:
@@ -145,7 +145,7 @@ export default function Page() {
           </table>
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Vertically suspended (VS) sub-types</h2>
+        <h2 id="vertically-suspended-vs-sub-types" className="mt-12 text-xl font-bold">Vertically suspended (VS) sub-types</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           VS pumps range from single-casing diffuser and volute designs (VS1,
           VS2) through axial flow (VS3) and cantilever designs (VS4, VS5) to
@@ -154,7 +154,7 @@ export default function Page() {
           NPSH available at grade would otherwise be insufficient.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">What API 610 requires regardless of type</h2>
+        <h2 id="what-api-610-requires-regardless-of-type" className="mt-12 text-xl font-bold">What API 610 requires regardless of type</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Whichever type code applies, API 610 imposes a common set of
           mechanical and testing requirements that go well beyond a general

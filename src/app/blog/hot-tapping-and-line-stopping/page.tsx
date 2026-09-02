@@ -43,7 +43,7 @@ export default function HotTappingGuide() {
       <BlogPostHeader post={post} />
 
       <Prose>
-        <h2 className="text-xl font-bold">What is hot tapping?</h2>
+        <h2 id="what-is-hot-tapping" className="text-xl font-bold">What is hot tapping?</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Hot tapping is the process of cutting a hole into a pipeline while it
           remains under pressure and in service. A branch connection — a welded
@@ -60,7 +60,7 @@ export default function HotTappingGuide() {
           or modified safely — while the rest of the system keeps operating.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Why shut down a pipeline when you can hot tap?</h2>
+        <h2 id="why-shut-down-a-pipeline-when-you-can-hot-tap" className="mt-12 text-xl font-bold">Why shut down a pipeline when you can hot tap?</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Operators hot tap to avoid the cost, risk and lost production of a
           full shutdown. Typical applications:
@@ -83,7 +83,7 @@ export default function HotTappingGuide() {
           ))}
         </ul>
 
-        <h2 className="mt-12 text-xl font-bold">The equipment that makes it possible</h2>
+        <h2 id="the-equipment-that-makes-it-possible" className="mt-12 text-xl font-bold">The equipment that makes it possible</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           A hot tap and line stop setup is a matched system of fittings,
           machines and tools. At the connection point, the critical components are:
@@ -114,7 +114,7 @@ export default function HotTappingGuide() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">The standards that govern the work</h2>
+        <h2 id="the-standards-that-govern-the-work" className="mt-12 text-xl font-bold">The standards that govern the work</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Hot tapping is a pressure-boundary activity: it is executed against
           written procedures, not habits. The references buyers and contractors
@@ -140,7 +140,7 @@ export default function HotTappingGuide() {
           ))}
         </ul>
 
-        <h2 className="mt-12 text-xl font-bold">Buying hot tap and line stop equipment</h2>
+        <h2 id="buying-hot-tap-and-line-stop-equipment" className="mt-12 text-xl font-bold">Buying hot tap and line stop equipment</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           When you source saddles, fittings and stoppers, the specification
           should capture five things: the line size and wall thickness to be
