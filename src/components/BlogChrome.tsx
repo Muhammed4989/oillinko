@@ -174,8 +174,9 @@ export function RelatedPosts({ post }: { post: BlogPost }) {
 export function Prose({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start lg:gap-12">
-      <TableOfContents />
+      <TableOfContents variant="sidebar" />
       <article id="post-content" className="max-w-3xl">
+        <TableOfContents variant="inline" />
         {children}
       </article>
     </div>
