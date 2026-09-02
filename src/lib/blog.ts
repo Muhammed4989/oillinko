@@ -13,6 +13,11 @@ export const blogCategories: BlogCategory[] = [
   { slug: "wellhead-production-equipment", name: "Wellhead & Production Equipment" },
   { slug: "pipeline-intervention-equipment", name: "Pipeline Intervention Equipment" },
   { slug: "standards-certification", name: "Standards & Certification" },
+  { slug: "oil-gas-markets", name: "Oil & Gas Markets" },
+  { slug: "upstream-production", name: "Upstream & Production" },
+  { slug: "midstream-transportation", name: "Midstream & Transportation" },
+  { slug: "testing-laboratories", name: "Testing & Laboratories" },
+  { slug: "industry-technology", name: "Industry Technology" },
 ];
 
 export function categoryName(slug: string): string {
