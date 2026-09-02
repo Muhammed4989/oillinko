@@ -91,11 +91,11 @@ export default async function CategoryPage({
               ))}
             </ul>
 
-            <h2 className="mt-12 text-xl font-bold">Reference items</h2>
+            <h2 className="mt-12 text-xl font-bold">Representative items</h2>
             <p className="mt-2 text-sm text-muted">
-              Sample line items from client bills of quantities we have sourced
-              in this category. Your requirement can be entirely different —
-              we source to your list.
+              Typical line items we quote in this category, shown here to
+              illustrate the range. Your requirement can be entirely different
+              — we source to your exact list and specification.
             </p>
             <div className="mt-5 overflow-x-auto rounded-lg border border-line">
               <table className="w-full min-w-[480px] text-left text-sm">

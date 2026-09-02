@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Oillinko — oil and gas equipment sourcing and procurement consultancy in Istanbul, Turkey.",
+    "Contact Oillinko — international oil and gas equipment sourcing and procurement consultancy, head office in Istanbul, Turkey, with regional offices in London, Erbil and Amman.",
   alternates: { canonical: "/contact" },
 };
 
@@ -17,17 +17,17 @@ const cards = [
     hint: "Best for detailed inquiries and documents",
   },
   {
-    title: "WhatsApp",
-    value: site.whatsapp,
-    href: site.whatsappLink,
-    hint: "Fastest for quick questions",
+    title: `${site.headOffice.city} — Head Office`,
+    value: site.headOffice.phone,
+    href: `tel:${site.headOffice.phone.replace(/\s/g, "")}`,
+    hint: site.headOffice.country,
   },
-  {
-    title: "Phone",
-    value: site.phone,
-    href: site.phoneLink,
-    hint: "Mon–Fri, 09:00–18:00 (UTC+3)",
-  },
+  ...site.offices.map((o) => ({
+    title: `${o.city} — ${o.label}`,
+    value: o.phone,
+    href: `tel:${o.phone.replace(/\s/g, "")}`,
+    hint: o.country,
+  })),
 ];
 
 export default function ContactPage() {
@@ -38,7 +38,7 @@ export default function ContactPage() {
         subtitle="Have an equipment list, a project requirement, or a question about sourcing? We respond within 24 hours."
       />
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((c) => (
             <a
               key={c.title}
@@ -57,12 +57,12 @@ export default function ContactPage() {
         </div>
         <div className="mt-6 rounded-lg border border-line bg-oil-800 p-6">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-accent">
-            Office
+            Head Office
           </h2>
-          <p className="mt-3 text-lg font-semibold">{site.address}</p>
+          <p className="mt-3 text-lg font-semibold">{site.headOffice.address}</p>
           <p className="mt-1 text-sm text-muted">
-            Istanbul&apos;s industrial and commercial district — close to major
-            manufacturers and freight corridors.
+            Serving the global oil and gas market from Turkey, with regional
+            presence across the UK, the Middle East and beyond.
           </p>
         </div>
       </section>
