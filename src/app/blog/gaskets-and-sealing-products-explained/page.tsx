@@ -51,7 +51,7 @@ export default function Page() {
           each one applies.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">The main gasket types</h2>
+        <h2 id="the-main-gasket-types" className="mt-12 text-xl font-bold">The main gasket types</h2>
         <div className="mt-6 space-y-4">
           {[
             {
@@ -78,7 +78,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">What to specify on a gasket line item</h2>
+        <h2 id="what-to-specify-on-a-gasket-line-item" className="mt-12 text-xl font-bold">What to specify on a gasket line item</h2>
         <CheckList
           items={[
             "Gasket type — spiral wound, RTJ, kammprofile or sheet",

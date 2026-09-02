@@ -44,7 +44,7 @@ export default function FlangesGuide() {
       <BlogPostHeader post={post} />
 
       <Prose>
-        <h2 className="text-xl font-bold">Why flanged connections dominate oil and gas piping</h2>
+        <h2 id="why-flanged-connections-dominate-oil-and-gas-piping" className="text-xl font-bold">Why flanged connections dominate oil and gas piping</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Flanged connections give plant operators a maintenance point that welded
           connections cannot. Pumps, valves, vessels and instruments must be
@@ -57,7 +57,7 @@ export default function FlangesGuide() {
           waiting to happen. Treat the connection as one system.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Flanges: ASME B16.5 types and pressure classes</h2>
+        <h2 id="flanges-asme-b16-5-types-and-pressure-classes" className="mt-12 text-xl font-bold">Flanges: ASME B16.5 types and pressure classes</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           The defining standard for flanges from NPS 1/2 to NPS 24 is{" "}
           <strong className="text-foreground">ASME B16.5</strong>. It fixes the
@@ -102,7 +102,7 @@ export default function FlangesGuide() {
           gasket retention is critical.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Gaskets: sealing the face</h2>
+        <h2 id="gaskets-sealing-the-face" className="mt-12 text-xl font-bold">Gaskets: sealing the face</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           For the joint to seal, the gasket must match the flange size, class and
           service. The industrial workhorse is the{" "}
@@ -114,7 +114,7 @@ export default function FlangesGuide() {
           and temperature, not just the flange size.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Stud bolts: ASTM A193 B7 and A194 2H</h2>
+        <h2 id="stud-bolts-astm-a193-b7-and-a194-2h" className="mt-12 text-xl font-bold">Stud bolts: ASTM A193 B7 and A194 2H</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           The bolts that hold a flanged joint in tension are threaded rods with a
           heavy hex nut at each end. The established pairing for high-pressure,
@@ -138,7 +138,7 @@ export default function FlangesGuide() {
           ))}
         </ul>
 
-        <h2 className="mt-12 text-xl font-bold">Specify the whole set</h2>
+        <h2 id="specify-the-whole-set" className="mt-12 text-xl font-bold">Specify the whole set</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           When adding flanged connections to your equipment list, include every
           element — not just the flange:

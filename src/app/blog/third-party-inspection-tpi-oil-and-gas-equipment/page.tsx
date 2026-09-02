@@ -55,7 +55,7 @@ export default function Page() {
           the applicable standards, before it ever leaves the factory.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">What a TPI agency actually does</h2>
+        <h2 id="what-a-tpi-agency-actually-does" className="mt-12 text-xl font-bold">What a TPI agency actually does</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Scope varies by equipment and contract, but a typical TPI assignment
           for oil and gas equipment covers:
@@ -72,7 +72,7 @@ export default function Page() {
           ]}
         />
 
-        <h2 className="mt-12 text-xl font-bold">Witness, monitor, or review only?</h2>
+        <h2 id="witness-monitor-or-review-only" className="mt-12 text-xl font-bold">Witness, monitor, or review only?</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Not every inspection needs a fully witnessed test, and the level you
           choose changes both cost and lead time. The common levels, from most
@@ -100,7 +100,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Who are the TPI agencies?</h2>
+        <h2 id="who-are-the-tpi-agencies" className="mt-12 text-xl font-bold">Who are the TPI agencies?</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           A handful of internationally accredited inspection houses cover
           most oil and gas equipment inspection worldwide, including Bureau
@@ -111,7 +111,7 @@ export default function Page() {
           project restricts the choice before booking one.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">Writing the inspection clause in an RFQ</h2>
+        <h2 id="writing-the-inspection-clause-in-an-rfq" className="mt-12 text-xl font-bold">Writing the inspection clause in an RFQ</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           To get comparable quotes, spell out in the RFQ or purchase order:
         </p>

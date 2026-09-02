@@ -44,17 +44,37 @@ export const metadata: Metadata = {
     title: `${site.name} — Oil & Gas Equipment Sourcing & Procurement`,
     description: site.description,
     url: site.domain,
+    images: [
+      {
+        url: "/images/refinery-hazy-unsplash.jpg",
+        width: 1600,
+        height: 1067,
+        alt: "Oillinko — Oil & Gas Equipment Sourcing & Procurement",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — Oil & Gas Equipment Sourcing & Procurement`,
+    description: site.description,
+    images: ["/images/refinery-hazy-unsplash.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: site.domain,
   },
 };
 
-const jsonLd = {
+const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: site.legalName,
@@ -68,6 +88,15 @@ const jsonLd = {
     addressCountry: "TR",
   },
   sameAs: [],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: site.domain,
+  description: site.description,
+  publisher: { "@type": "Organization", name: site.legalName, url: site.domain },
 };
 
 export default function RootLayout({
@@ -86,7 +115,11 @@ export default function RootLayout({
         <Footer />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </body>
     </html>

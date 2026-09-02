@@ -51,7 +51,7 @@ export default function Page() {
           specified.
         </p>
 
-        <h2 className="mt-12 text-xl font-bold">The main valve types in oil and gas piping</h2>
+        <h2 id="the-main-valve-types-in-oil-and-gas-piping" className="mt-12 text-xl font-bold">The main valve types in oil and gas piping</h2>
         <div className="mt-6 space-y-4">
           {[
             {
@@ -82,7 +82,7 @@ export default function Page() {
           ))}
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">The standards behind the valve body</h2>
+        <h2 id="the-standards-behind-the-valve-body" className="mt-12 text-xl font-bold">The standards behind the valve body</h2>
         <div className="mt-6 overflow-x-auto rounded-lg border border-line">
           <table className="w-full min-w-[560px] text-left text-sm">
             <thead>
@@ -109,7 +109,7 @@ export default function Page() {
           </table>
         </div>
 
-        <h2 className="mt-12 text-xl font-bold">Specifying actuation</h2>
+        <h2 id="specifying-actuation" className="mt-12 text-xl font-bold">Specifying actuation</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Actuators mount to the valve stem per the{" "}
           <strong className="text-foreground">ISO 5211</strong> interface

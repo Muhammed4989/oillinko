@@ -1,0 +1,44 @@
+# Oillinko
+
+> Oillinko is an oil & gas equipment sourcing and procurement consultancy headquartered in Istanbul, Turkey, with regional offices in London, Erbil and Amman. Oillinko connects buyers worldwide with verified manufacturers of pumps, valves, flanges, gaskets, pressure vessels, wellhead equipment and pipeline intervention equipment — sourced and checked against international standards (API, ASME, ASTM, ANSI, NACE, TEMA).
+
+Buyers send a bill of quantities (BOQ) or equipment list; Oillinko sources it from qualified manufacturers, checks the offers against the buyer's technical specification, and manages ordering, inspection and delivery.
+
+## Company
+
+- [About](https://oillinko.com/about): Who Oillinko is and how the company works.
+- [Services](https://oillinko.com/services): Sourcing, procurement and inspection services offered.
+- [How It Works](https://oillinko.com/how-it-works): The process from BOQ to delivered equipment.
+- [Quality](https://oillinko.com/quality): Quality assurance, standards compliance and inspection approach.
+- [Industries](https://oillinko.com/industries): Industries and project types served.
+- [Suppliers](https://oillinko.com/suppliers): Information for manufacturers who want to supply through Oillinko.
+- [Contact](https://oillinko.com/contact): Office locations (Istanbul head office; London, Erbil, Amman) and contact details.
+- [Request a Quote](https://oillinko.com/rfq): Submit a BOQ or equipment list to receive competitive offers.
+
+## Equipment categories
+
+- [Pumps & Rotating Equipment](https://oillinko.com/equipment/pumps-rotating-equipment): Centrifugal, positive displacement and metering pumps (API 610, 674, 675, 676).
+- [Valves & Actuation](https://oillinko.com/equipment/valves-actuation): Gate, globe, check, ball and control valves with pneumatic, electric or hydraulic actuation (API 600, 602, 6D; ASME B16.34).
+- [Flanges, Fittings & Bolting](https://oillinko.com/equipment/flanges-fittings-bolting): Weld neck, blind and slip-on flanges, butt-weld fittings and stud bolts (ASME B16.5, ANSI B16.9).
+- [Gaskets & Sealing Products](https://oillinko.com/equipment/gaskets-sealing): Spiral wound, ring-type joint (RTJ) and non-metallic gaskets (API 601, ASME B16.20/B16.21).
+- [Pressure Vessels, Tanks & Heat Exchangers](https://oillinko.com/equipment/pressure-vessels-tanks): ASME Section VIII vessels, API 650/620 storage tanks, TEMA shell-and-tube heat exchangers.
+- [Wellhead & Production Equipment](https://oillinko.com/equipment/wellhead-production-equipment): Wellheads, Christmas trees and production chokes (API 6A).
+- [Pipeline Intervention Equipment](https://oillinko.com/equipment/pipeline-intervention-equipment): Hot tap saddles, line stop fittings and pneumatic stoppers.
+
+## Blog / knowledge base
+
+- [API 610 Pump Types & Classes Explained (OH, BB, VS)](https://oillinko.com/blog/api-610-pump-types-and-classes-explained): How to read an API 610 pump type designation before you specify one.
+- [Third-Party Inspection (TPI) for Oil & Gas Equipment](https://oillinko.com/blog/third-party-inspection-tpi-oil-and-gas-equipment): What TPI covers, who the agencies are, and how to specify witnessing level.
+- [EN 10204 Material Certificates Explained (2.1, 2.2, 3.1, 3.2)](https://oillinko.com/blog/en-10204-material-certificates-explained): The difference between a 3.1 and a 3.2 certificate, and when you need one.
+- [How to Write a Bill of Quantities (BOQ)](https://oillinko.com/blog/how-to-write-a-bill-of-quantities): Get your equipment list right so suppliers can quote accurately.
+- [Flanges, Gaskets & Bolting](https://oillinko.com/blog/flanges-gaskets-and-bolting): How flanged connections hold, and how to specify them.
+- [Pipeline Fittings & Schedules](https://oillinko.com/blog/pipeline-fittings-and-schedules): Elbows, tees, reducers and how pipe schedules work.
+- [Hot Tapping & Line Stopping](https://oillinko.com/blog/hot-tapping-and-line-stopping): Modifying live pipelines without shutting them down.
+- [Valves & Actuation for Oil and Gas](https://oillinko.com/blog/valves-and-actuation-explained): Gate, ball, check and control valves, and how to choose the actuator.
+- [Gaskets & Sealing Products Explained](https://oillinko.com/blog/gaskets-and-sealing-products-explained): Choosing the right gasket type for the flange class and service.
+- [Pressure Vessels, Tanks & Heat Exchangers](https://oillinko.com/blog/pressure-vessels-tanks-and-heat-exchangers-explained): ASME Section VIII, API 650/620 and TEMA, explained for buyers.
+- [Wellhead & Christmas Tree Equipment Explained (API 6A)](https://oillinko.com/blog/wellhead-and-christmas-tree-equipment-explained): How wellhead pressure and material classes are set, in plain terms.
+
+## Optional
+
+- [Sitemap](https://oillinko.com/sitemap.xml): Full list of indexable pages.

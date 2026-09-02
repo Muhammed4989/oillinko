@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { categoryName, getRelatedPosts, type BlogPost } from "@/lib/blog";
+import TableOfContents from "@/components/TableOfContents";
 
 export function Breadcrumb({ title }: { title: string }) {
   return (
@@ -171,7 +172,15 @@ export function RelatedPosts({ post }: { post: BlogPost }) {
 }
 
 export function Prose({ children }: { children: React.ReactNode }) {
-  return <article className="mx-auto max-w-4xl px-4 py-14">{children}</article>;
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-14 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start lg:gap-12">
+      <TableOfContents variant="sidebar" />
+      <article id="post-content" className="max-w-3xl">
+        <TableOfContents variant="inline" />
+        {children}
+      </article>
+    </div>
+  );
 }
 
 export function CheckList({ items }: { items: string[] }) {
