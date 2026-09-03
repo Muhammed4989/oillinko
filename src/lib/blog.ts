@@ -13,6 +13,11 @@ export const blogCategories: BlogCategory[] = [
   { slug: "wellhead-production-equipment", name: "Wellhead & Production Equipment" },
   { slug: "pipeline-intervention-equipment", name: "Pipeline Intervention Equipment" },
   { slug: "standards-certification", name: "Standards & Certification" },
+  { slug: "oil-gas-markets", name: "Oil & Gas Markets" },
+  { slug: "upstream-production", name: "Upstream & Production" },
+  { slug: "midstream-transportation", name: "Midstream & Transportation" },
+  { slug: "testing-laboratories", name: "Testing & Laboratories" },
+  { slug: "industry-technology", name: "Industry Technology" },
 ];
 
 export function categoryName(slug: string): string {
@@ -36,6 +41,48 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-682-mechanical-seal-piping-plans-explained",
+    title: "API 682 Mechanical Seal Piping Plans Explained (Plans 11, 23, 32, 52, 53)",
+    short: "What Plan 11, 23, 32, 52 and 53 actually do, and how to pick the right one",
+    tagline:
+      "How API 682 piping plans support a mechanical seal, the difference between Plan 52 and Plan 53, and what to check on a seal datasheet before you accept a quote",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-03",
+    dateLabel: "3 September 2026",
+    description:
+      "API 682 mechanical seal piping plans explained for buyers: Plan 11, 23 and 32 single-seal flush plans, Plan 52 and Plan 53 dual-seal buffer/barrier systems, seal Category and Arrangement basics, and what to check on a seal datasheet.",
+    keywords:
+      "API 682 piping plans, mechanical seal Plan 11, Plan 23 seal flush, Plan 32 seal flush, API 682 Plan 52, API 682 Plan 53, seal buffer fluid, seal barrier fluid",
+    image: "/images/pipes-plant.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "api-674-api-676-positive-displacement-pumps-explained",
+      "gaskets-and-sealing-products-explained",
+    ],
+  },
+  {
+    slug: "api-674-api-676-positive-displacement-pumps-explained",
+    title: "API 674 & API 676: Reciprocating and Rotary Positive Displacement Pumps",
+    short: "When to specify a positive displacement pump instead of centrifugal, and which standard applies",
+    tagline:
+      "API 674 reciprocating pumps and API 676 rotary pumps compared — drive types, typical services, and what a positive displacement pump datasheet needs that a centrifugal one doesn't",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-03",
+    dateLabel: "3 September 2026",
+    description:
+      "API 674 reciprocating and API 676 rotary positive displacement pumps explained for buyers: direct-acting vs power-frame drives, gear/screw/lobe/vane rotary types, relief valve and pulsation control requirements, and how they differ from API 610 centrifugal pumps.",
+    keywords:
+      "API 674 reciprocating pump, API 676 rotary pump, positive displacement pump oil and gas, twin screw pump, triplex plunger pump, API 675 metering pump",
+    image: "/images/night-refinery.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "api-682-mechanical-seal-piping-plans-explained",
+      "en-10204-material-certificates-explained",
+    ],
+  },
+  {
     slug: "api-610-pump-types-and-classes-explained",
     title: "API 610 Pump Types & Classes Explained (OH, BB, VS)",
     short: "How to read an API 610 pump type designation before you specify one",
@@ -51,9 +98,9 @@ export const blogPosts: BlogPost[] = [
       "API 610 pump types, API 610 BB3, API 610 OH2, between bearings pump, overhung pump, vertically suspended pump, API 610 classes",
     image: "/images/night-refinery.jpg",
     related: [
-      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "api-682-mechanical-seal-piping-plans-explained",
       "en-10204-material-certificates-explained",
-      "how-to-write-a-bill-of-quantities",
+      "api-674-api-676-positive-displacement-pumps-explained",
     ],
   },
   {

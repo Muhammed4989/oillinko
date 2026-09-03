@@ -4,9 +4,9 @@ import BlogListing from "@/components/BlogListing";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Oil and gas equipment knowledge base: API 610 pump types, third-party inspection, EN 10204 material certificates, flanges and bolting, pipeline fittings, and how to prepare a bill of quantities for procurement.",
+    "Oil and gas industry knowledge base: equipment standards and procurement, upstream production and extraction, midstream transportation, testing and laboratories, and industry technology — practical articles for professionals.",
   keywords:
-    "oil and gas equipment blog, API 610 guide, TPI inspection guide, EN 10204 guide, flange bolting guide, pipeline fittings guide, bill of quantities",
+    "oil and gas blog, oil and gas equipment guide, oil and gas production, oil and gas transportation, petroleum testing, oil and gas industry technology, API 610 guide, bill of quantities",
   alternates: { canonical: "/blog" },
 };
 

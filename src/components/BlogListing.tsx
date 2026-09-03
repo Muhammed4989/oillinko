@@ -25,7 +25,7 @@ export default function BlogListing() {
     <>
       <PageHeader
         title="Blog"
-        subtitle="Practical, technical writing for buyers of oil and gas equipment — the standards, the parts, and how to procure them right the first time."
+        subtitle="Practical, technical writing on the oil and gas industry — equipment and standards, procurement, production, transportation, testing and technology — for buyers and industry professionals."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-10 lg:grid-cols-[220px_1fr]">
