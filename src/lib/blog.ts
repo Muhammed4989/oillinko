@@ -101,6 +101,7 @@ export const blogPosts: BlogPost[] = [
       "api-682-mechanical-seal-piping-plans-explained",
       "en-10204-material-certificates-explained",
       "api-674-api-676-positive-displacement-pumps-explained",
+      "reading-a-pump-curve-explained",
     ],
   },
   {
@@ -122,6 +123,7 @@ export const blogPosts: BlogPost[] = [
       "en-10204-material-certificates-explained",
       "api-610-pump-types-and-classes-explained",
       "how-to-write-a-bill-of-quantities",
+      "pump-factory-acceptance-testing-and-commissioning-checklist",
     ],
   },
   {
@@ -308,6 +310,48 @@ export const blogPosts: BlogPost[] = [
       "api-610-pump-types-and-classes-explained",
       "third-party-inspection-tpi-oil-and-gas-equipment",
       "en-10204-material-certificates-explained",
+    ],
+  },
+  {
+    slug: "reading-a-pump-curve-explained",
+    title: "Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained",
+    short: "How to read a vendor's pump curve before you sign off on a quote",
+    tagline:
+      "What the head-capacity, efficiency and NPSH-required curves on a pump datasheet actually tell you, and how to check a vendor's curve against your system before you accept an offer",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-04",
+    dateLabel: "4 September 2026",
+    description:
+      "How to read a centrifugal pump curve: head vs flow, best efficiency point (BEP), preferred and allowable operating regions, NPSH required vs available, the affinity laws, and what changed under API 610 Thirteenth Edition (2026).",
+    keywords:
+      "how to read a pump curve, best efficiency point, NPSH required vs available, API 610 preferred operating region, pump affinity laws, centrifugal pump curve explained",
+    image: "/images/hero-refinery.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "api-674-api-676-positive-displacement-pumps-explained",
+      "pump-factory-acceptance-testing-and-commissioning-checklist",
+    ],
+  },
+  {
+    slug: "pump-factory-acceptance-testing-and-commissioning-checklist",
+    title: "Pump Commissioning and Factory Acceptance Testing (FAT) Checklist",
+    short: "What to check at the factory, and what changes once the pump is on site",
+    tagline:
+      "The difference between FAT and commissioning, witness levels, the core factory tests, and a practical checklist for both stages of bringing a pump into service",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-04",
+    dateLabel: "4 September 2026",
+    description:
+      "Pump factory acceptance testing (FAT) and commissioning explained: witness levels, hydrostatic, performance, NPSH, mechanical run and string tests, a FAT checklist, and what site commissioning re-checks after the pump arrives.",
+    keywords:
+      "pump factory acceptance test, pump FAT checklist, pump commissioning checklist, mechanical run test pump, pump string test, witnessed test vs unwitnessed",
+    image: "/images/refinery-night-unsplash.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "reading-a-pump-curve-explained",
     ],
   },
 ];

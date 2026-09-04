@@ -29,8 +29,8 @@ pressure-vessels-tanks-and-heat-exchangers-explained, wellhead-and-christmas-tre
 
 - [x] Mechanical Seal Plans Explained (API 682 Plan 11, 23, 32, 52, 53)
 - [x] API 674 & API 676: Reciprocating and Rotary Positive Displacement Pumps
-- [ ] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
-- [ ] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
+- [x] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
+- [x] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
 - [ ] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
 - [ ] Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment
 - [ ] API 675 Metering Pumps: Controlled-Volume Dosing Explained
