@@ -41,6 +41,49 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "equipment-trading-companies-vs-buying-direct",
+    title:
+      "Equipment Trading Companies vs Buying Direct from the Manufacturer: Pros, Cons and When Each Makes Sense",
+    short: "The trade-offs between routing an order through a trading company and buying direct from the factory",
+    tagline:
+      "Lead time, minimum order quantities, vendor vetting and multi-vendor shipments — what actually changes when an equipment RFQ goes through a sourcing partner instead of straight to the manufacturer",
+    category: "buyers-guides",
+    readTime: "8 min read",
+    date: "2026-09-05",
+    dateLabel: "5 September 2026",
+    description:
+      "Equipment trading companies vs buying direct from the manufacturer: how lead time, MOQs, vendor vetting, inspection coordination and multi-vendor shipments differ, plus a short framework for deciding which fits a given order.",
+    keywords:
+      "equipment trading company vs manufacturer, buying direct from manufacturer, oil and gas sourcing partner, equipment sourcing company, procurement trading company",
+    image: "/images/train-refinery.jpg",
+    related: [
+      "what-an-oil-gas-equipment-sourcing-partner-actually-does",
+      "how-to-write-a-bill-of-quantities",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+    ],
+  },
+  {
+    slug: "what-an-oil-gas-equipment-sourcing-partner-actually-does",
+    title: "What an Oil & Gas Equipment Sourcing Partner Actually Does (Beyond Placing the Order)",
+    short: "Vendor vetting, comparable quotes, technical review, inspection coordination and freight — the work behind the RFQ",
+    tagline:
+      "What actually happens between sending a request for quotation and receiving the equipment: vendor vetting, comparable quotes, technical review, inspection coordination and Incoterms handling",
+    category: "buyers-guides",
+    readTime: "8 min read",
+    date: "2026-09-05",
+    dateLabel: "5 September 2026",
+    description:
+      "What an oil & gas equipment sourcing partner actually does beyond placing the order: vendor vetting, circulating comparable RFQs, technical review of quotes, inspection and witnessing coordination, and Incoterms and freight handling.",
+    keywords:
+      "what does a sourcing partner do, oil and gas equipment sourcing, vendor vetting oil and gas, RFQ circulation, equipment procurement partner",
+    image: "/images/hero-refinery.jpg",
+    related: [
+      "equipment-trading-companies-vs-buying-direct",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "how-to-write-a-bill-of-quantities",
+    ],
+  },
+  {
     slug: "api-682-mechanical-seal-piping-plans-explained",
     title: "API 682 Mechanical Seal Piping Plans Explained (Plans 11, 23, 32, 52, 53)",
     short: "What Plan 11, 23, 32, 52 and 53 actually do, and how to pick the right one",
@@ -122,6 +165,7 @@ export const blogPosts: BlogPost[] = [
       "en-10204-material-certificates-explained",
       "api-610-pump-types-and-classes-explained",
       "how-to-write-a-bill-of-quantities",
+      "equipment-trading-companies-vs-buying-direct",
     ],
   },
   {
@@ -164,6 +208,7 @@ export const blogPosts: BlogPost[] = [
       "flanges-gaskets-and-bolting",
       "pipeline-fittings-and-schedules",
       "en-10204-material-certificates-explained",
+      "what-an-oil-gas-equipment-sourcing-partner-actually-does",
     ],
   },
   {
