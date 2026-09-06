@@ -25,13 +25,30 @@ flanges-gaskets-and-bolting, pipeline-fittings-and-schedules, hot-tapping-and-li
 valves-and-actuation-explained, gaskets-and-sealing-products-explained,
 pressure-vessels-tanks-and-heat-exchangers-explained, wellhead-and-christmas-tree-equipment-explained
 
+**Content mix (agreed with the user 2026-09-03):** not every article should
+be a pure technical explainer — see CONTENT_PIPELINE.md Section 1a. Keep a
+steady share (roughly 1 in every 3-4) of articles angled toward the buyer's
+sourcing decision — trading-company-vs-direct trade-offs, what a sourcing
+partner actually does, how to vet a supplier — without ever inventing a
+specific client or project story. The topics below (category slug:
+buyers-guides) are a starting set for that angle; mix future additions in
+among the technical topics rather than batching them.
+
+## Sourcing & Trading Partnerships (category slug: buyers-guides)
+
+- [x] Equipment Trading Companies vs Buying Direct from the Manufacturer: Pros, Cons and When Each Makes Sense
+- [x] What an Oil & Gas Equipment Sourcing Partner Actually Does (Beyond Placing the Order)
+- [x] How to Evaluate and Vet an Equipment Trading Company Before You Send Your First RFQ
+- [ ] Consolidated Shipments and Multi-Vendor Orders: Why Buyers Use a Single Sourcing Partner
+- [ ] Common Reasons an RFQ Goes to the Wrong Supplier — and How a Sourcing Partner Filters for Fit
+
 ## Pumps & Rotating Equipment (category slug: pumps-rotating-equipment)
 
 - [x] Mechanical Seal Plans Explained (API 682 Plan 11, 23, 32, 52, 53)
 - [x] API 674 & API 676: Reciprocating and Rotary Positive Displacement Pumps
-- [ ] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
-- [ ] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
-- [ ] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
+- [x] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
+- [x] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
+- [x] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
 - [ ] Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment
 - [ ] API 675 Metering Pumps: Controlled-Volume Dosing Explained
 
