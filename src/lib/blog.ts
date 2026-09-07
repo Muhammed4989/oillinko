@@ -145,6 +145,7 @@ export const blogPosts: BlogPost[] = [
       "en-10204-material-certificates-explained",
       "api-674-api-676-positive-displacement-pumps-explained",
       "reading-a-pump-curve-explained",
+      "vertical-turbine-pumps-tank-farms-cooling-water-intakes",
     ],
   },
   {
@@ -168,6 +169,7 @@ export const blogPosts: BlogPost[] = [
       "how-to-write-a-bill-of-quantities",
       "pump-factory-acceptance-testing-and-commissioning-checklist",
       "equipment-trading-companies-vs-buying-direct",
+      "how-to-evaluate-and-vet-an-equipment-trading-company",
     ],
   },
   {
@@ -211,6 +213,7 @@ export const blogPosts: BlogPost[] = [
       "pipeline-fittings-and-schedules",
       "en-10204-material-certificates-explained",
       "what-an-oil-gas-equipment-sourcing-partner-actually-does",
+      "how-to-evaluate-and-vet-an-equipment-trading-company",
     ],
   },
   {
@@ -358,7 +361,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "reading-a-pump-curve-explained",
+slug: "reading-a-pump-curve-explained",
     title: "Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained",
     short: "How to read a vendor's pump curve before you sign off on a quote",
     tagline:
@@ -397,6 +400,48 @@ export const blogPosts: BlogPost[] = [
       "api-610-pump-types-and-classes-explained",
       "third-party-inspection-tpi-oil-and-gas-equipment",
       "reading-a-pump-curve-explained",
+    ],
+  },
+  {
+    slug: "how-to-evaluate-and-vet-an-equipment-trading-company",
+    title: "How to Evaluate and Vet an Equipment Trading Company Before You Send Your First RFQ",
+    short: "The checks that separate a real sourcing partner from a reseller with a PDF catalogue",
+    tagline:
+      "Company registration, manufacturer relationships, quality credentials, financial red flags and the documents to ask for before any deposit — how to vet an equipment trading company before you commit an order to it",
+    category: "buyers-guides",
+    readTime: "8 min read",
+    date: "2026-09-06",
+    dateLabel: "6 September 2026",
+    description:
+      "How to evaluate and vet an oil and gas equipment trading company before your first RFQ: company registration checks, manufacturer relationships, ISO 9001 and API Spec Q1 credentials, financial red flags, and the documents to request before any deposit.",
+    keywords:
+      "vet equipment trading company, oil and gas sourcing partner, how to choose a trading company, equipment supplier due diligence, RFQ red flags, ISO 9001 trading company, API Spec Q1",
+    image: "/images/train-refinery.jpg",
+    related: [
+      "how-to-write-a-bill-of-quantities",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "en-10204-material-certificates-explained",
+    ],
+  },
+  {
+    slug: "vertical-turbine-pumps-tank-farms-cooling-water-intakes",
+    title: "Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)",
+    short: "How the API 610 VS sub-types differ, and which ones actually get specified for tank farms and intakes",
+    tagline:
+      "VS1 through VS7 explained, why vertical turbine pumps solve NPSH problems a horizontal pump can't, and the intake design and testing details that decide whether the installed pump performs",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-06",
+    dateLabel: "6 September 2026",
+    description:
+      "Vertical turbine pumps explained for buyers: the API 610 VS1-VS7 sub-types, why vertical configurations solve NPSH problems in tank farm transfer and cooling water intake service, ANSI/HI 9.8 intake design, lineshaft lubrication options, and factory testing.",
+    keywords:
+      "vertical turbine pump, API 610 VS6, API 610 VS1, can pump, cooling water intake pump, tank farm transfer pump, ANSI HI 9.8, NPSH vertical pump",
+    image: "/images/hero-refinery.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "api-682-mechanical-seal-piping-plans-explained",
+      "api-674-api-676-positive-displacement-pumps-explained",
     ],
   },
 ];

@@ -38,7 +38,7 @@ among the technical topics rather than batching them.
 
 - [x] Equipment Trading Companies vs Buying Direct from the Manufacturer: Pros, Cons and When Each Makes Sense
 - [x] What an Oil & Gas Equipment Sourcing Partner Actually Does (Beyond Placing the Order)
-- [ ] How to Evaluate and Vet an Equipment Trading Company Before You Send Your First RFQ
+- [x] How to Evaluate and Vet an Equipment Trading Company Before You Send Your First RFQ
 - [ ] Consolidated Shipments and Multi-Vendor Orders: Why Buyers Use a Single Sourcing Partner
 - [ ] Common Reasons an RFQ Goes to the Wrong Supplier — and How a Sourcing Partner Filters for Fit
 
@@ -48,7 +48,7 @@ among the technical topics rather than batching them.
 - [x] API 674 & API 676: Reciprocating and Rotary Positive Displacement Pumps
 - [x] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
 - [x] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
-- [ ] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
+- [x] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
 - [ ] Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment
 - [ ] API 675 Metering Pumps: Controlled-Volume Dosing Explained
 

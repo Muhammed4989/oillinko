@@ -196,6 +196,12 @@ Notes:
   force it) — check `src/lib/blog.ts` for slugs/topics.
 - Add an RFQ closing paragraph if the topic supports one naturally (most
   do): `Sourcing X? <Link href="/rfq">Send us your…</Link> and we will…`
+- Say "Oillinko" by name at least once in the body text (agreed with the
+  user 2026-09-03) — don't rely on "we"/"our" alone. The closing paragraph
+  is the natural place, e.g. "...and Oillinko will circulate it to verified
+  manufacturers..." This applies to every article, and especially to the
+  commercial/procurement-angle pieces from Section 1a, where the company
+  name should appear naturally in the discussion itself, not just the CTA.
 
 ## 5. Register the post in `src/lib/blog.ts`
 
