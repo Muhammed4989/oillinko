@@ -51,6 +51,37 @@ topics (same categories, same spirit — genuinely distinct, useful,
 non-redundant angles a real oil & gas equipment buyer would search for) and
 append them before picking.
 
+## 1a. Balance technical explainers with commercial/procurement-angle content
+
+Not every article should be a pure technical explainer (agreed with the user
+2026-09-03). Alongside the standards deep-dives, deliberately keep a steady
+share of articles that speak to the buyer's *sourcing decision* — content
+that indirectly supports why a buyer would use a sourcing/trading partner
+like Oillinko rather than going direct, without ever fabricating a project
+story. Good angles for this bucket:
+- Pros, cons and trade-offs of buying through an equipment trading/sourcing
+  company vs. direct from a manufacturer (lead time, MOQs, inspection,
+  consolidated multi-vendor shipments, single point of contact, language and
+  geography advantages).
+- What a sourcing partner actually does beyond placing an order (vendor
+  vetting, circulating one RFQ to several verified manufacturers, technical
+  review of quotes against spec, inspection/witnessing coordination, freight
+  and incoterms handling).
+- How a buyer finds and evaluates equipment suppliers or trading companies
+  in general — red flags, questions to ask, how to sanity-check a quote.
+- General regional/industry procurement context (e.g. the equipment mix
+  typical of a certain type of field development), framed generically —
+  never as an invented specific project or client story.
+
+This does **not** relax the no-fabrication rule in Section 0: never invent a
+specific "we supplied X to field Y in country Z" story, an unnamed client,
+or a tender that didn't happen. Keep these commercial-angle pieces grounded
+in general, verifiable industry practice. Aim for roughly 1 in every 3–4
+articles to lean this direction; the rest continue as technical/standards
+explainers in the existing pattern. When topping up the backlog (Section 1),
+add a proportional number of topics in this vein, mixed in among the
+technical ones — not front-loaded and not batched separately.
+
 ## 2. Research
 
 For each topic, before writing:
