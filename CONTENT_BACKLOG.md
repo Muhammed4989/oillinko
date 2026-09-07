@@ -25,6 +25,23 @@ flanges-gaskets-and-bolting, pipeline-fittings-and-schedules, hot-tapping-and-li
 valves-and-actuation-explained, gaskets-and-sealing-products-explained,
 pressure-vessels-tanks-and-heat-exchangers-explained, wellhead-and-christmas-tree-equipment-explained
 
+**Content mix (agreed with the user 2026-09-03):** not every article should
+be a pure technical explainer — see CONTENT_PIPELINE.md Section 1a. Keep a
+steady share (roughly 1 in every 3-4) of articles angled toward the buyer's
+sourcing decision — trading-company-vs-direct trade-offs, what a sourcing
+partner actually does, how to vet a supplier — without ever inventing a
+specific client or project story. The topics below (category slug:
+buyers-guides) are a starting set for that angle; mix future additions in
+among the technical topics rather than batching them.
+
+## Sourcing & Trading Partnerships (category slug: buyers-guides)
+
+- [ ] Equipment Trading Companies vs Buying Direct from the Manufacturer: Pros, Cons and When Each Makes Sense
+- [ ] What an Oil & Gas Equipment Sourcing Partner Actually Does (Beyond Placing the Order)
+- [ ] How to Evaluate and Vet an Equipment Trading Company Before You Send Your First RFQ
+- [x] Consolidated Shipments and Multi-Vendor Orders: Why Buyers Use a Single Sourcing Partner
+- [x] Common Reasons an RFQ Goes to the Wrong Supplier — and How a Sourcing Partner Filters for Fit
+
 ## Pumps & Rotating Equipment (category slug: pumps-rotating-equipment)
 
 - [x] Mechanical Seal Plans Explained (API 682 Plan 11, 23, 32, 52, 53)
