@@ -58,6 +58,48 @@ export const blogPosts: BlogPost[] = [
     image: "/images/train-refinery.jpg",
     related: [
       "what-an-oil-gas-equipment-sourcing-partner-actually-does",
+      "consolidated-shipments-and-multi-vendor-orders",
+      "common-reasons-an-rfq-goes-to-the-wrong-supplier",
+    ],
+  },
+  {
+    slug: "consolidated-shipments-and-multi-vendor-orders",
+    title: "Consolidated Shipments and Multi-Vendor Orders: Why Buyers Use a Single Sourcing Partner",
+    short: "How combining multiple vendors into one shipment actually works, and when it's worth it",
+    tagline:
+      "What shipment consolidation solves for multi-vendor equipment orders, when it isn't worth the extra handling, and what a sourcing partner should confirm before goods leave any factory",
+    category: "buyers-guides",
+    readTime: "8 min read",
+    date: "2026-09-07",
+    dateLabel: "7 September 2026",
+    description:
+      "Consolidated shipments and multi-vendor equipment orders explained: how consolidation works, minimum order quantities, Incoterms and paperwork across multiple vendors, inspection scheduling, and when direct shipment is still the better choice.",
+    keywords:
+      "consolidated shipment procurement, multi-vendor order oil and gas, freight consolidation equipment, LCL vs FCL shipment, Incoterms 2020, equipment sourcing partner logistics",
+    image: "/images/about-refinery.jpg",
+    related: [
+      "common-reasons-an-rfq-goes-to-the-wrong-supplier",
+      "how-to-write-a-bill-of-quantities",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+    ],
+  },
+  {
+    slug: "common-reasons-an-rfq-goes-to-the-wrong-supplier",
+    title: "Common Reasons an RFQ Goes to the Wrong Supplier — and How a Sourcing Partner Filters for Fit",
+    short: "Why RFQs land on mismatched suppliers, and how to filter for real fit before sending one",
+    tagline:
+      "Trading-company confusion, specialization mismatches, capacity mismatches and communication gaps that send an RFQ to the wrong supplier, and what a sourcing partner should check before it goes out",
+    category: "buyers-guides",
+    readTime: "8 min read",
+    date: "2026-09-07",
+    dateLabel: "7 September 2026",
+    description:
+      "Why RFQs land on the wrong supplier: trading company vs manufacturer confusion, specialization and capacity mismatches, and communication gaps — and how a sourcing partner filters vendors for genuine fit before quoting.",
+    keywords:
+      "RFQ wrong supplier, vendor vetting oil and gas, how to evaluate a supplier, equipment sourcing partner, supplier capability mismatch, RFQ best practices procurement",
+    image: "/images/train-refinery.jpg",
+    related: [
+      "consolidated-shipments-and-multi-vendor-orders",
       "how-to-write-a-bill-of-quantities",
       "third-party-inspection-tpi-oil-and-gas-equipment",
     ],
@@ -165,7 +207,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/about-refinery.jpg",
     related: [
       "en-10204-material-certificates-explained",
-      "api-610-pump-types-and-classes-explained",
+      "consolidated-shipments-and-multi-vendor-orders",
       "how-to-write-a-bill-of-quantities",
       "pump-factory-acceptance-testing-and-commissioning-checklist",
       "equipment-trading-companies-vs-buying-direct",
@@ -210,7 +252,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/about-refinery.jpg",
     related: [
       "flanges-gaskets-and-bolting",
-      "pipeline-fittings-and-schedules",
+      "common-reasons-an-rfq-goes-to-the-wrong-supplier",
       "en-10204-material-certificates-explained",
       "what-an-oil-gas-equipment-sourcing-partner-actually-does",
       "how-to-evaluate-and-vet-an-equipment-trading-company",
