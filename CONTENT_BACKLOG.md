@@ -49,8 +49,8 @@ among the technical topics rather than batching them.
 - [x] Reading a Pump Curve: Head, Flow, NPSH and Best Efficiency Point Explained
 - [x] Pump Commissioning and Factory Acceptance Testing (FAT) Checklist
 - [x] Vertical Turbine Pumps for Tank Farms and Cooling Water Intakes (API 610 VS)
-- [ ] Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment
-- [ ] API 675 Metering Pumps: Controlled-Volume Dosing Explained
+- [x] Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment
+- [x] API 675 Metering Pumps: Controlled-Volume Dosing Explained
 
 ## Valves & Actuation (category slug: valves-actuation)
 
