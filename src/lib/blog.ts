@@ -165,6 +165,7 @@ export const blogPosts: BlogPost[] = [
       "api-610-pump-types-and-classes-explained",
       "api-682-mechanical-seal-piping-plans-explained",
       "en-10204-material-certificates-explained",
+      "api-675-metering-pumps-controlled-volume-dosing-explained",
     ],
   },
   {
@@ -188,6 +189,8 @@ export const blogPosts: BlogPost[] = [
       "api-674-api-676-positive-displacement-pumps-explained",
       "reading-a-pump-curve-explained",
       "vertical-turbine-pumps-tank-farms-cooling-water-intakes",
+      "api-671-couplings-and-baseplate-design",
+      "api-675-metering-pumps-controlled-volume-dosing-explained",
     ],
   },
   {
@@ -442,6 +445,7 @@ slug: "reading-a-pump-curve-explained",
       "api-610-pump-types-and-classes-explained",
       "third-party-inspection-tpi-oil-and-gas-equipment",
       "reading-a-pump-curve-explained",
+      "api-671-couplings-and-baseplate-design",
     ],
   },
   {
@@ -484,6 +488,48 @@ slug: "reading-a-pump-curve-explained",
       "api-610-pump-types-and-classes-explained",
       "api-682-mechanical-seal-piping-plans-explained",
       "api-674-api-676-positive-displacement-pumps-explained",
+    ],
+  },
+  {
+    slug: "api-671-couplings-and-baseplate-design",
+    title: "Special-Purpose Couplings (API 671) and Baseplate Design for Rotating Equipment",
+    short: "How to specify the right coupling type and baseplate for critical rotating equipment",
+    tagline:
+      "Metallic flexible element, gear, quill shaft and torsional damping couplings compared, service factors and design life per API 671, and what API 686 requires for baseplate flatness, grouting and anchor bolt design",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-08",
+    dateLabel: "8 September 2026",
+    description:
+      "Special-purpose couplings and baseplate design explained for buyers: API 671 coupling types (disc, diaphragm, gear, quill shaft, torsional damping), service factors, DBSE, and API 686 baseplate flatness, grouting and anchor bolt requirements.",
+    keywords:
+      "API 671 coupling, API 686 baseplate, special purpose coupling oil and gas, disc coupling API 671, gear coupling API, baseplate grouting rotating equipment, DBSE coupling, IOGP S-700",
+    image: "/images/pipes-plant.jpg",
+    related: [
+      "api-610-pump-types-and-classes-explained",
+      "api-674-api-676-positive-displacement-pumps-explained",
+      "pump-factory-acceptance-testing-and-commissioning-checklist",
+    ],
+  },
+  {
+    slug: "api-675-metering-pumps-controlled-volume-dosing-explained",
+    title: "API 675 Metering Pumps: Controlled-Volume Dosing Explained",
+    short: "What API 675 accuracy, linearity and repeatability actually require of a metering pump",
+    tagline:
+      "Hydraulic diaphragm vs packed plunger metering pumps, the ±1% accuracy and 10:1 turndown requirements, relief valve and diaphragm rupture detection rules, and what to specify on an API 675 datasheet",
+    category: "pumps-rotating-equipment",
+    readTime: "9 min read",
+    date: "2026-09-08",
+    dateLabel: "8 September 2026",
+    description:
+      "API 675 metering pumps explained for buyers: hydraulic diaphragm vs packed plunger, steady-state accuracy ±1%, linearity and repeatability ±3%, 10:1 turndown ratio, relief valve requirements, diaphragm rupture detection, and testing.",
+    keywords:
+      "API 675 metering pump, API 675 controlled volume, hydraulic diaphragm metering pump, packed plunger metering pump, chemical injection pump API 675, dosing pump accuracy, turndown ratio 10:1",
+    image: "/images/night-refinery.jpg",
+    related: [
+      "api-674-api-676-positive-displacement-pumps-explained",
+      "api-682-mechanical-seal-piping-plans-explained",
+      "api-610-pump-types-and-classes-explained",
     ],
   },
 ];
