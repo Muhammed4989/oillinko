@@ -282,7 +282,7 @@ export default function Page() {
             "Confirm the baseplate flatness tolerance: 150 μm/m (0.002 in./ft) across mounting pads, demonstrated in the manufacturer&rsquo;s shop with the baseplate supported at foundation bolt holes only",
             "Specify the coupling guard arrangement and confirm it meets the safety requirements of the site and applicable local regulations",
             "Include the API 671 edition (5th Edition, August 2020) and any supplementary specification (e.g. IOGP S-700) on the datasheet so the manufacturer quotes to the correct requirements",
-            "For baseplates, confirm that grout shoulder width is at least 75 mm from the baseplate edge to the foundation edge, and that expansion joints are placed at 1.2–1.8 m (4–6 ft) intervals",
+            "For baseplates, confirm the foundation extends beyond the baseplate to leave a grout shoulder, and settle shoulder width and expansion joint spacing against the grout manufacturer&rsquo;s own installation guidance — common epoxy grout practice limits shoulder width to roughly 50–75 mm (2–3 in.) to reduce edge-lifting risk and places expansion joints at roughly 1.2–1.8 m intervals",
           ]}
         />
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
@@ -295,10 +295,10 @@ export default function Page() {
           <Link className="text-accent hover:underline" href="/rfq">
             send us your coupling datasheet
           </Link>{" "}
-          and we will circulate it to verified manufacturers, checking every
-          returned offer against the API 671 edition, torsional requirements,
-          and baseplate specifications you need confirmed before the order is
-          placed.
+          and Oillinko will circulate it to verified manufacturers, checking
+          every returned offer against the API 671 edition, torsional
+          requirements, and baseplate specifications you need confirmed before
+          the order is placed.
         </p>
 
         <Faq faqs={faqs} />

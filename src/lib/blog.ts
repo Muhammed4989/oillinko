@@ -303,7 +303,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "hot-tapping-and-line-stopping",
-    title: "Hot Tapping & Line Stopping",
+    title: "Hot Tapping & Line Stopping Explained (API RP 2201)",
     short: "Modify live pipelines without shutting them down",
     tagline: "What hot tapping and line stopping are, when they are used, and the equipment that makes them possible",
     category: "pipeline-intervention-equipment",
@@ -311,9 +311,9 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-02",
     dateLabel: "2 February 2026",
     description:
-      "A practical guide to hot tapping and line stopping — modifying live oil and gas pipelines without shutdown. Covers procedures, the equipment involved (tapping saddles, line stop fittings, pneumatic stoppers), and the standards that govern the work.",
+      "Hot tapping and line stopping explained: how a live oil and gas pipeline is tapped and plugged without shutdown, the difference between line stopping and line plugging, the equipment involved (tapping saddles, stopple fittings, cylinder line stops, pneumatic stoppers), and what API RP 2201 requires.",
     keywords:
-      "hot tapping, line stopping, hot tap saddle, line stop equipment, pneumatic stopper, API RP 2201, live pipeline maintenance, stopple fitting",
+      "hot tapping, line stopping, line plugging, cylinder line stopping, line tapping, hot tap and line stop, hot tap saddle, line stop equipment, stopple fitting, pneumatic stopper, API RP 2201, live pipeline maintenance",
     image: "/images/refinery-hazy-unsplash.jpg",
     related: [
       "pipeline-fittings-and-schedules",
