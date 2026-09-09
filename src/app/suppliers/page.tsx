@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Supplier Network",
+  title: "Oil & Gas Equipment & Material Suppliers — Our Verified Network",
   description:
-    "Oillinko's supplier network: verified oil and gas equipment manufacturers across Europe, the Gulf, the Middle East and Asia — qualified on factory capability, certificates and export track record.",
+    "How Oillinko qualifies oil and gas equipment and material suppliers: verified manufacturers across Türkiye, Europe, the Gulf and Asia, checked on real production capability, EN 10204 3.1 certificates, testing and welding qualifications, and export track record.",
   alternates: { canonical: "/suppliers" },
 };
 
