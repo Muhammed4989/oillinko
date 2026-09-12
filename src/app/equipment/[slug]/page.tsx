@@ -1,197 +1,38 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CtaBand } from "@/components/ui";
 import { categories } from "@/lib/equipment";
-import { getPost } from "@/lib/blog";
+import { catalogue, getGroup, requestUrl, sectors } from "@/lib/catalogue";
 import { site } from "@/lib/site";
 
-// Cornerstone blog article for each equipment category — used to link the
-// category page to the article that explains it in depth (and vice versa).
-const categoryGuide: Record<string, string> = {
-  "pumps-rotating-equipment": "api-610-pump-types-and-classes-explained",
-  "valves-actuation": "valves-and-actuation-explained",
-  "flanges-fittings-bolting": "flanges-gaskets-and-bolting",
-  "gaskets-sealing": "gaskets-and-sealing-products-explained",
-  "pressure-vessels-tanks": "pressure-vessels-tanks-and-heat-exchangers-explained",
-  "wellhead-production-equipment": "wellhead-and-christmas-tree-equipment-explained",
-  "pipeline-intervention-equipment": "hot-tapping-and-line-stopping",
-};
-
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return categories.map((c) => ({ slug: c.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const cat = categories.find((c) => c.slug === slug);
-  if (!cat) return {};
-  return {
-    title: cat.name,
-    description: cat.description,
-    alternates: { canonical: `/equipment/${slug}` },
-  };
-}
-
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  const cat = categories.find((c) => c.slug === slug);
-  if (!cat) notFound();
-
-  const guideSlug = categoryGuide[slug];
-  const guidePost = guideSlug ? getPost(guideSlug) : undefined;
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: `${cat.name} — ${site.name}`,
-    serviceType: cat.name,
-    description: cat.description,
-    provider: { "@type": "Organization", name: site.legalName, url: site.domain },
-    areaServed: "Worldwide",
-  };
-
-  return (
-    <>
-      <section className="relative overflow-hidden border-b border-line bg-oil-800">
-        <Image
-          src={cat.image}
-          alt={cat.name}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-oil-900/60 via-oil-900/70 to-oil-900" />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
-            Equipment
-          </p>
-          <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
-            {cat.name}
-          </h1>
-          <p className="mt-4 max-w-3xl text-lg text-muted">{cat.description}</p>
-          {cat.imageCredit && <p className="mt-4 text-xs text-muted">Photo: {cat.imageCredit} · <Link href="/image-credits" className="underline">Image credits</Link></p>}
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-10 lg:grid-cols-3">
-          <div className="lg:col-span-2">
-            <h2 className="text-xl font-bold">Key specifications</h2>
-            <ul className="mt-5 space-y-3">
-              {cat.specs.map((s) => (
-                <li key={s} className="flex gap-3 text-sm leading-relaxed text-muted">
-                  <svg
-                    className="mt-0.5 shrink-0"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#f97316"
-                    strokeWidth="3"
-                  >
-                    <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {s}
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="mt-12 text-xl font-bold">Representative items</h2>
-            <p className="mt-2 text-sm text-muted">
-              Typical line items we quote in this category, shown here to
-              illustrate the range. Your requirement can be entirely different
-              — we source to your exact list and specification.
-            </p>
-            <div className="mt-5 overflow-x-auto rounded-lg border border-line">
-              <table className="w-full min-w-[480px] text-left text-sm">
-                <thead>
-                  <tr className="border-b border-line bg-oil-800 text-xs uppercase tracking-wider text-muted">
-                    <th className="px-4 py-3">Item</th>
-                    <th className="px-4 py-3">Description</th>
-                    <th className="px-4 py-3 text-right">Qty</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cat.sampleItems.map((i) => (
-                    <tr key={i.ref} className="border-b border-line/60 last:border-0">
-                      <td className="px-4 py-3 font-mono text-xs text-accent">{i.ref}</td>
-                      <td className="px-4 py-3 text-muted">{i.description}</td>
-                      <td className="px-4 py-3 text-right text-muted">{i.qty}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <aside className="space-y-6">
-            <div className="rounded-lg border border-line bg-oil-800 p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-accent">
-                Standards
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {cat.standards.map((s) => (
-                  <span
-                    key={s}
-                    className="rounded-full border border-line bg-oil-900 px-3 py-1 text-xs text-muted"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-            {guidePost && (
-              <div className="rounded-lg border border-line bg-oil-800 p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-accent">
-                  From the blog
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {guidePost.short}
-                </p>
-                <Link
-                  href={`/blog/${guidePost.slug}`}
-                  className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
-                >
-                  {guidePost.title} →
-                </Link>
-              </div>
-            )}
-            <div className="rounded-lg border border-line bg-oil-800 p-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-accent">
-                Need this equipment?
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                Send us your quantities and required specifications. We&apos;ll
-                return competitive offers from verified manufacturers.
-              </p>
-              <a
-                href="/rfq"
-                className="mt-4 inline-block rounded bg-accent px-5 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-accent-hi"
-              >
-                Request a Quote
-              </a>
-            </div>
-          </aside>
-        </div>
-      </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <CtaBand />
-    </>
-  );
+export const dynamicParams=false;
+export function generateStaticParams(){return catalogue.map(g=>({slug:g.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const group=getGroup(slug);if(!group)return {};return {title:`${group.name} — Sourcing & RFQ`,description:group.summary,alternates:{canonical:`/equipment/${slug}`}};}
+const guides:Record<string,string>={"pumps-rotating-equipment":"api-610-pump-types-and-classes-explained","valves-actuation":"valves-and-actuation-explained","flanges-fittings-bolting":"flanges-gaskets-and-bolting","gaskets-sealing":"gaskets-and-sealing-products-explained","pressure-vessels-tanks":"pressure-vessels-tanks-and-heat-exchangers-explained","wellhead-production-equipment":"wellhead-and-christmas-tree-equipment-explained","pipeline-intervention-equipment":"hot-tapping-and-line-stopping"};
+export default async function CategoryPage({params}:{params:Promise<{slug:string}>}){
+ const {slug}=await params;const group=getGroup(slug);if(!group)notFound();const legacy=categories.find(c=>c.slug===slug);
+ const related=catalogue.filter(g=>g.slug!==slug&&g.sectors.some(s=>group.sectors.includes(s))).slice(0,4);
+ const structured=[{"@context":"https://schema.org","@type":"Service",name:`${group.name} sourcing`,description:group.summary,provider:{"@type":"Organization",name:site.name,url:site.domain},url:`${site.domain}/equipment/${slug}`},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:site.domain},{"@type":"ListItem",position:2,name:"Catalogue",item:`${site.domain}/equipment`},{"@type":"ListItem",position:3,name:group.name,item:`${site.domain}/equipment/${slug}`}]}];
+ return <>
+  <section className="border-b border-line bg-oil-800"><div className="mx-auto max-w-6xl px-4 py-12">
+   <nav aria-label="Breadcrumb" className="mb-6 flex flex-wrap gap-2 text-sm text-muted"><Link href="/">Home</Link><span>/</span><Link href="/equipment">Catalogue</Link><span>/</span><span>{group.name}</span></nav>
+   <p className="text-sm font-semibold uppercase tracking-wide text-accent">{group.kind} enquiries</p><h1 className="mt-3 max-w-4xl text-3xl font-bold sm:text-4xl">{group.name}</h1><p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">{group.summary}</p>
+   <div className="mt-6 flex flex-wrap gap-2">{group.sectors.map(id=><Link key={id} className="rounded-full border border-line bg-white px-3 py-2 text-sm" href={`/industries/${id}`}>{sectors.find(s=>s.id===id)?.name}</Link>)}</div>
+   <Link href={requestUrl(slug)} className="mt-7 inline-block rounded bg-accent px-6 py-3 font-semibold text-black">Send your requirement to Oillinko</Link>
+  </div></section>
+  <section className="mx-auto grid max-w-6xl gap-8 px-4 py-12 lg:grid-cols-[minmax(0,1fr)_280px]">
+   <div className="min-w-0"><h2 className="text-2xl font-bold">Equipment types & enquiry checklists</h2><p className="mt-3 text-muted">Select the closest requirement below. The checklist helps us request a comparable quotation; attach your datasheet or drawing when available.</p>
+    <nav aria-label="On this page" className="my-6 flex flex-wrap gap-2">{group.types.map(t=><a key={t.id} href={`#${t.id}`} className="rounded border border-line px-3 py-2 text-sm text-accent">{t.name}</a>)}</nav>
+    <div className="space-y-6">{group.types.map(t=><article id={t.id} key={t.id} className="scroll-mt-24 rounded-xl border border-line bg-white p-6"><h3 className="text-xl font-semibold">{t.name}</h3><p className="mt-3 leading-relaxed text-muted">{t.description}</p><h4 className="mt-5 font-semibold">Include in your request</h4><ul className="mt-3 grid list-inside list-disc gap-2 text-muted sm:grid-cols-2">{t.requirements.map(r=><li key={r}>{r}</li>)}</ul><Link className="mt-6 inline-block rounded border border-line px-4 py-3 font-semibold text-accent hover:border-accent" href={requestUrl(slug,t.id)}>Request {t.name.toLowerCase()} →</Link></article>)}</div>
+    {legacy&&legacy.standards.length>1&&<div className="mt-8 rounded-xl border border-line p-6"><h2 className="text-xl font-bold">Specification references</h2><p className="mt-3 text-muted">These references may apply to equipment within this family. State the exact standard and edition required for your item; applicability and supplier documentation are reviewed for each inquiry.</p><div className="mt-4 flex flex-wrap gap-2">{legacy.standards.map(s=><span key={s} className="rounded border border-line px-3 py-2 text-sm">{s}</span>)}</div></div>}
+   </div>
+   <aside className="space-y-5"><div className="rounded-xl border border-line bg-oil-800 p-6"><h2 className="text-lg font-bold">Your request stays with Oillinko</h2><p className="mt-3 text-sm leading-relaxed text-muted">Our team receives and reviews your inquiry. We clarify missing details and coordinate sourcing manually.</p><p className="mt-3 text-sm leading-relaxed text-muted">Catalogue coverage is a guide to enquiries we can review. Stock, availability, lead time and any required approvals are confirmed in the quotation.</p></div>
+    <div className="rounded-xl border border-line bg-white p-6"><h2 className="text-lg font-bold">Country of origin</h2><p className="mt-3 text-sm leading-relaxed text-muted">Specify the manufacturing country you require, any excluded origins and whether alternatives are acceptable. Brand location and shipping country are not proof of manufacturing origin. Request origin documentation if your project requires it.</p></div>
+    <div className="rounded-xl border border-line bg-white p-6"><h2 className="text-lg font-bold">Complete BOQ or mixed enquiry?</h2><p className="mt-3 text-sm text-muted">Send all items in one request with quantities, units, delivery location and required date.</p><Link href="/rfq" className="mt-4 inline-block font-semibold text-accent">Upload your BOQ →</Link></div>
+    {guides[slug]&&<Link href={`/blog/${guides[slug]}`} className="block rounded-xl border border-line p-6 font-semibold text-accent">Read the related equipment guide →</Link>}
+   </aside>
+  </section>
+  <section className="mx-auto max-w-6xl px-4 pb-14"><h2 className="text-2xl font-bold">Related categories</h2><div className="mt-5 grid gap-4 sm:grid-cols-2">{related.map(g=><Link key={g.slug} href={`/equipment/${g.slug}`} className="rounded-lg border border-line bg-white p-5 font-semibold hover:text-accent">{g.name} →</Link>)}</div></section>
+  <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(structured).replace(/</g,"\\u003c")}} />
+ </>;
 }

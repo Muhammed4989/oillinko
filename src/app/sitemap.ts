@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { categories } from "@/lib/equipment";
 import { blogPosts } from "@/lib/blog";
+import { sectors } from "@/lib/catalogue";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -37,5 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...blogPages];
+  const sectorPages = sectors.map(s => ({ url: `${site.domain}/industries/${s.id}`, changeFrequency: "monthly" as const, priority: 0.8 }));
+  return [...staticPages, ...categoryPages, ...sectorPages, ...blogPages];
 }

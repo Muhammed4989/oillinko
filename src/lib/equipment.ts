@@ -1,3 +1,4 @@
+import { catalogue } from "./catalogue";
 export type SampleItem = {
   ref: string;
   description: string;
@@ -19,7 +20,7 @@ export type Category = {
   totalItems: number;
 };
 
-export const categories: Category[] = [
+const existingCategories: Category[] = [
   {
     slug: "instrumentation-control", name: "Instrumentation & Control",
     short: "Pressure, temperature, level and flow measurement",
@@ -218,3 +219,9 @@ export const categories: Category[] = [
     totalItems: 20,
   },
 ];
+
+export const categories: Category[] = catalogue.map(group => {
+ const existing=existingCategories.find(c=>c.slug===group.slug);
+ if(existing) return {...existing, name:group.name};
+ return {slug:group.slug,name:group.name,short:group.summary,tagline:group.summary,description:group.summary,image:"",specs:group.types.map(t=>t.name),standards:["Requirements confirmed against your project specification"],sampleItems:[],totalItems:group.types.length};
+});

@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { site } from "@/lib/site";
 import { categories } from "@/lib/equipment";
+import { originCountries, sectors } from "@/lib/catalogue";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-export default function RfqForm() {
+export default function RfqForm({ initialCategory = "Multiple / full BOQ", initialItem = "", initialOrigin = "", sourcePage = "/rfq" }: { initialCategory?: string; initialItem?: string; initialOrigin?: string; sourcePage?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [file, setFile] = useState<File | null>(null);
 
@@ -43,6 +44,8 @@ export default function RfqForm() {
       <input type="hidden" name="_subject" value="New RFQ from oillinko.com" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="source_page" value={sourcePage} />
+      <p className="rounded-lg border border-line bg-white p-4 text-sm text-muted">Your enquiry goes to the Oillinko team. We review your requirements and coordinate sourcing with you.</p>
       <input
         type="text"
         name="_honey"
@@ -91,13 +94,13 @@ export default function RfqForm() {
       </div>
 
       <div>
-        <label htmlFor="rfq-country" className="mb-1.5 block text-sm font-medium">Country</label>
-        <input id="rfq-country" name="country" type="text" className={input} placeholder="Your country" />
+        <label htmlFor="rfq-country" className="mb-1.5 block text-sm font-medium">Delivery country / service location</label>
+        <input id="rfq-country" name="delivery_country" type="text" className={input} placeholder="Where is the equipment or service needed?" />
       </div>
 
       <div>
-        <label htmlFor="rfq-category" className="mb-1.5 block text-sm font-medium">Equipment category</label>
-        <select id="rfq-category" name="category" className={input} defaultValue="Multiple / full BOQ">
+        <label htmlFor="rfq-category" className="mb-1.5 block text-sm font-medium">Equipment / service category</label>
+        <select id="rfq-category" name="category" className={input} defaultValue={initialCategory}>
           <option value="" disabled>
             Select a category
           </option>
@@ -111,6 +114,18 @@ export default function RfqForm() {
         </select>
       </div>
 
+      <div>
+        <label htmlFor="rfq-item" className="mb-1.5 block text-sm font-medium">Equipment / service / model reference</label>
+        <input id="rfq-item" name="equipment_or_service" defaultValue={initialItem} className={input} placeholder="Selected equipment, model or part number" />
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div><label htmlFor="rfq-origin" className="mb-1.5 block text-sm font-medium">Required country of origin</label><input id="rfq-origin" name="required_manufacturing_origin" list="origin-countries" defaultValue={initialOrigin} className={input} placeholder="No preference, or specify a country" /><datalist id="origin-countries">{originCountries.map(c=><option key={c} value={c}/>)}</datalist><p className="mt-2 text-xs text-muted">Product manufacturing origin, separate from delivery country. Subject to confirmation.</p></div>
+        <div><label htmlFor="rfq-origins-excluded" className="mb-1.5 block text-sm font-medium">Excluded origins / alternatives</label><input id="rfq-origins-excluded" name="origin_restrictions" className={input} placeholder="Specify restrictions or acceptable alternatives" /></div>
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div><label htmlFor="rfq-sector" className="mb-1.5 block text-sm font-medium">Industry sector</label><select id="rfq-sector" name="industry_sector" className={input} defaultValue=""><option value="">Select if applicable</option>{sectors.map(s=><option key={s.id}>{s.name}</option>)}</select></div>
+        <div><label htmlFor="rfq-date" className="mb-1.5 block text-sm font-medium">Required delivery / service date</label><input id="rfq-date" name="required_date" type="date" className={input}/></div>
+      </div>
       <div>
         <label htmlFor="rfq-message" className="mb-1.5 block text-sm font-medium">{file ? "Additional details (optional)" : "Equipment requirements *"}</label>
         <textarea

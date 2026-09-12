@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function ServicesPage() {
         subtitle="Everything between a bill of quantities and delivered, compliant equipment — handled by one accountable partner."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
+        <p className="mb-8 rounded-lg border border-line bg-white p-5 text-muted">Looking for inspection, calibration, repair, rental or field services? <Link className="font-semibold text-accent underline" href="/equipment/inspection-engineering-services">Browse specialist service requirements</Link> and send the scope to Oillinko.</p>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <div key={s.title} className="rounded-lg border border-line bg-oil-800 p-6">

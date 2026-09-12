@@ -1,58 +1,6 @@
 import type { Metadata } from "next";
-import { CtaBand, PageHeader } from "@/components/ui";
-
-export const metadata: Metadata = {
-  title: "Industries",
-  description:
-    "Oillinko serves upstream, midstream and downstream oil and gas: drilling, pipelines, terminals, refineries, petrochemical and power plants.",
-  alternates: { canonical: "/industries" },
-};
-
-const industries = [
-  {
-    title: "Upstream — Exploration & Production",
-    text: "Field equipment for drilling and production facilities: fittings, flanges, fasteners and maintenance tooling that hold up in harsh field conditions.",
-  },
-  {
-    title: "Midstream — Pipelines & Terminals",
-    text: "The heart of our experience: line pipe fittings, hot tap and line stop equipment, saddles, pneumatic stoppers, gaskets and bolting for pipeline construction, tie-ins and live-line maintenance.",
-  },
-  {
-    title: "Downstream — Refineries & Petrochemicals",
-    text: "Process piping components for refineries and petrochemical plants, sourced to the class ratings and material grades those units require.",
-  },
-  {
-    title: "Gas & LPG Facilities",
-    text: "Equipment for natural gas transmission, LPG plants and distribution systems, including stoppers and sealing products compatible with gas service.",
-  },
-  {
-    title: "Power & Utilities",
-    text: "Piping components and consumables for thermal and combined-cycle power plants, and utility piping networks.",
-  },
-  {
-    title: "Water & Industrial Piping",
-    text: "Flanged connections, fittings and gaskets for water transmission and general industrial piping systems.",
-  },
-];
-
-export default function IndustriesPage() {
-  return (
-    <>
-      <PageHeader
-        title="Industries We Serve"
-        subtitle="From live pipeline maintenance to new process construction — we source equipment across the full oil and gas value chain."
-      />
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {industries.map((x) => (
-            <div key={x.title} className="rounded-lg border border-line bg-oil-800 p-6">
-              <h2 className="text-lg font-semibold text-accent">{x.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{x.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <CtaBand />
-    </>
-  );
-}
+import Link from "next/link";
+import { PageHeader } from "@/components/ui";
+import { catalogue, sectors } from "@/lib/catalogue";
+export const metadata: Metadata={title:"Oil & Gas Industries — Equipment & Services",description:"Explore sourcing requirements across exploration, drilling, production, pipelines, refining, gas, offshore, power and water sectors.",alternates:{canonical:"/industries"}};
+export default function IndustriesPage(){return <><PageHeader title="Explore by Industry" subtitle="Find equipment and services by the part of the oil and gas value chain you work in. A category can serve more than one sector."/><section className="mx-auto max-w-6xl px-4 py-12"><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{sectors.map(s=><Link href={`/industries/${s.id}`} key={s.id} className="rounded-xl border border-line bg-white p-6 hover:border-accent"><h2 className="text-xl font-semibold">{s.name}</h2><p className="mt-3 leading-relaxed text-muted">{s.description}</p><p className="mt-5 text-sm font-semibold text-accent">{catalogue.filter(g=>g.sectors.includes(s.id)).length} relevant categories →</p></Link>)}</div></section></>;}

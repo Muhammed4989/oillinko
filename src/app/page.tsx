@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CatalogueEntry from "@/components/CatalogueEntry";
 import Image from "next/image";
 import { CtaBand, SectionTitle } from "@/components/ui";
 import { categories } from "@/lib/equipment";
@@ -110,9 +111,10 @@ export default function HomePage() {
             <span className="text-accent">sourced right</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Send us your equipment list. From Istanbul, we help you find suppliers, compare quotations and coordinate procurement against your project specifications.
+            Send us your equipment or service requirements. From Istanbul, we review your specifications, find suitable suppliers and coordinate quotations across the oil and gas value chain.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <CatalogueEntry />
+          <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href="/rfq"
               className="rounded bg-accent px-6 py-3 font-semibold text-black transition-colors hover:bg-accent-hi"
@@ -123,7 +125,7 @@ export default function HomePage() {
               href="/equipment"
               className="rounded border border-line bg-oil-900 px-6 py-3 font-semibold transition-colors hover:border-accent hover:text-accent"
             >
-              Browse Equipment
+              Browse the Catalogue
             </Link>
           </div>
           <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium text-muted">
@@ -161,11 +163,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-20">
           <SectionTitle
             eyebrow="Equipment categories"
-            title="What we source"
-            subtitle="From line pipe fittings to live-line maintenance equipment — we source across the full range of oil and gas field equipment."
+            title="Explore equipment categories"
+            subtitle="Browse equipment and services from exploration and drilling through production, processing, utilities and maintenance."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {categories.map((c) => (
+            {categories.filter(c => c.image).slice(0, 6).map((c) => (
               <Link
                 key={c.slug}
                 href={`/equipment/${c.slug}`}
@@ -294,6 +296,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-4 py-10 text-center"><Link href="/equipment" className="inline-block rounded bg-accent px-6 py-3 font-semibold text-black">Browse all equipment &amp; services</Link><Link href="/industries" className="ml-5 inline-block py-3 font-semibold text-accent">Explore by industry sector →</Link></section>
       <CtaBand />
       <script
         type="application/ld+json"

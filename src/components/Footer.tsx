@@ -15,8 +15,10 @@ const columns = [
     ],
   },
   {
-    title: "Equipment",
+    title: "Equipment & Services",
     links: [
+      { href: "/equipment", label: "Browse the full catalogue" },
+      { href: "/industries", label: "Browse by industry" },
       { href: "/equipment/instrumentation-control", label: "Instrumentation & Control" },
       { href: "/equipment/fire-safety-equipment", label: "Fire & Safety Equipment" },
       { href: "/equipment/pumps-rotating-equipment", label: "Pumps & Rotating Equipment" },
