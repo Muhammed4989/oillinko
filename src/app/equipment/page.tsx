@@ -16,7 +16,7 @@ export default function EquipmentIndexPage() {
     <>
       <PageHeader
         title="Equipment"
-        subtitle="The oil and gas equipment we source — every category backed by verified manufacturers and international specification compliance."
+        subtitle="Explore equipment we can help source. Availability, lead times and compliance documentation are confirmed for each request."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-6 md:grid-cols-2">
@@ -32,11 +32,12 @@ export default function EquipmentIndexPage() {
                   alt={c.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`${c.imageFit === "contain" ? "object-contain bg-white p-3" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-oil-800/80 to-transparent" />
               </div>
               <div className="flex flex-1 flex-col p-6">
+                {c.imageCredit && <p className="mb-2 text-xs text-muted">Photo: {c.imageCredit}</p>}
                 <h2 className="text-xl font-semibold transition-colors group-hover:text-accent">
                   {c.name}
                 </h2>
@@ -54,7 +55,7 @@ export default function EquipmentIndexPage() {
                   ))}
                 </div>
                 <p className="mt-4 text-xs font-medium text-accent">
-                  {c.totalItems}+ typical line items we quote →
+                  Explore equipment →
                 </p>
               </div>
             </Link>

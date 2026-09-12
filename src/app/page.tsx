@@ -15,12 +15,12 @@ const steps = [
   {
     n: "02",
     title: "We source and quote",
-    text: "We match every line item to verified manufacturers, check quotes against your specifications, and return a consolidated offer.",
+    text: "We approach suitable suppliers, compare their offers with your specifications, and flag any details that need clarification.",
   },
   {
     n: "03",
-    title: "You receive, inspected",
-    text: "We manage the order, quality inspection, documentation and delivery — you receive conforming equipment on time.",
+    title: "We coordinate your order",
+    text: "Once the offer is agreed, we coordinate the order, documentation, inspection and delivery according to the confirmed scope.",
   },
 ];
 
@@ -30,20 +30,21 @@ const reasons = [
     text: "Every quote is checked against your technical requirements — API, ANSI, ASME, ASTM — before it reaches you.",
   },
   {
-    title: "Verified manufacturers only",
-    text: "Real factories with real certificates. We qualify suppliers before we ever send them your inquiry.",
+    title: "Supplier checks for your requirement",
+    text: "We request supplier credentials and relevant certificates, and clarify availability and technical details before you commit.",
   },
   {
     title: "One accountable partner",
-    text: "One contract, one point of contact, one delivery. We take responsibility for the whole chain.",
+    text: "One point of contact for your sourcing inquiry, supplier follow-up and offer comparison. The quotation sets out the supply and delivery responsibilities.",
   },
   {
     title: "Global network, regional reach",
-    text: "Head office in Istanbul, with regional offices in London, Erbil and Amman — fast, local access to markets and manufacturers worldwide.",
+    text: "Head office in Istanbul, with regional offices in Erbil and Amman — fast, local access to markets and manufacturers worldwide.",
   },
 ];
 
 const faqs = [
+  { q: "Is this equipment held in stock?", a: "Equipment shown here illustrates the requirements we can help source. Availability, lead time, origin and documentation are confirmed with the supplier for each inquiry before an order is agreed." },
   {
     q: "What equipment does Oillinko source?",
     a: "We source oil and gas equipment across pipeline construction, maintenance and live-line work: hot tap and line stop equipment (saddles, line stop fittings, pneumatic stoppers), pipeline fittings, flanges, spiral wound gaskets, stud bolts and nuts, pipe cutters — plus valves and related items on a project basis, to your specification and standards.",
@@ -88,7 +89,7 @@ const faqJsonLd = {
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-line">
+      <section className="hero-dark relative overflow-hidden border-b border-line">
         <Image
           src="/images/hero-refinery.jpg"
           alt="Oil refinery at sunset — oil and gas equipment sourcing"
@@ -99,7 +100,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-oil-900/80 via-oil-900/70 to-oil-900/95" />
         <div className="absolute inset-0 bg-gradient-to-r from-oil-900/90 to-oil-900/40" />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-oil-900 px-3 py-1 text-xs font-medium text-muted">
             <span className="h-2 w-2 rounded-full bg-accent" />
             Istanbul, Turkey — serving buyers worldwide
@@ -109,10 +110,7 @@ export default function HomePage() {
             <span className="text-accent">sourced right</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Oillinko is a sourcing and procurement consultancy for the oil and
-            gas industry. We turn your equipment lists into competitive offers
-            from verified manufacturers — compliant with the exact
-            specifications your project demands.
+            Send us your equipment list. From Istanbul, we help you find suppliers, compare quotations and coordinate procurement against your project specifications.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -146,7 +144,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-4 py-20">
         <SectionTitle
           eyebrow="How it works"
-          title="Three steps from BOQ to delivered equipment"
+          title="From your equipment list to an agreed supply plan"
         />
         <div className="grid gap-6 md:grid-cols-3">
           {steps.map((s) => (
@@ -179,17 +177,18 @@ export default function HomePage() {
                     alt={c.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`${c.imageFit === "contain" ? "object-contain bg-white p-2" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-oil-900/70 to-transparent" />
                 </div>
                 <div className="p-6">
+                  {c.imageCredit && <p className="mb-2 text-xs text-muted">Photo: {c.imageCredit}</p>}
                   <h3 className="text-lg font-semibold transition-colors group-hover:text-accent">
                     {c.name}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{c.short}</p>
                   <p className="mt-4 text-xs font-medium text-accent">
-                    {c.totalItems} reference items →
+                    Explore equipment →
                   </p>
                 </div>
               </Link>

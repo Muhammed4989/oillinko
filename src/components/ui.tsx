@@ -10,7 +10,7 @@ export function PageHeader({
 }) {
   return (
     <section className="border-b border-line bg-oil-800">
-      <div className="mx-auto max-w-6xl px-4 py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12">
         <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
           {title}
         </h1>
@@ -58,7 +58,7 @@ export function CtaBand() {
         </h2>
         <p className="max-w-2xl text-black/80">
           Send us your BOQ or equipment list and get competitive offers from
-          verified manufacturers — checked against the technical specifications
+          suitable suppliers — reviewed against the technical specifications
           your project requires.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

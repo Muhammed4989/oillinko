@@ -11,6 +11,8 @@ export type Category = {
   tagline: string;
   description: string;
   image: string;
+  imageCredit?: string;
+  imageFit?: "contain";
   specs: string[];
   standards: string[];
   sampleItems: SampleItem[];
@@ -19,11 +21,32 @@ export type Category = {
 
 export const categories: Category[] = [
   {
+    slug: "instrumentation-control", name: "Instrumentation & Control",
+    short: "Pressure, temperature, level and flow measurement",
+    tagline: "Measurement equipment sourced to your datasheet",
+    description: "Send your instrument datasheets or model references for pressure gauges, transmitters, thermowells and level instruments. We coordinate supplier quotations and clarify process connections, materials, measuring ranges and required documentation. Availability and approvals are confirmed for each inquiry.",
+    image: "/images/pressure-gauge.jpg", imageCredit: "Omnibus-Trip · CC BY-SA 3.0",
+    specs: ["Pressure, temperature, level and flow instruments", "Thermowell material, insertion length and connection confirmed from your drawing", "Measuring range, output signal and process conditions", "Calibration and hazardous-area documentation where specified"],
+    standards: ["As specified in your instrument datasheet"],
+    sampleItems: [{ref: "IN-01", description: "Radar level transmitter to project datasheet", qty: 1}, {ref: "IN-02", description: "Thermowell with material and dimensions to approved drawing", qty: 1}], totalItems: 2,
+  },
+  {
+    slug: "fire-safety-equipment", name: "Fire & Safety Equipment",
+    short: "Fire hoses, hose racks and associated fittings",
+    tagline: "Fire protection components sourced to your project requirements",
+    description: "We help source fire hoses, hose racks and associated fittings against your specified model, dimensions and approvals. Send the required quantities, hose length, working pressure and coupling details so the supplier can confirm a suitable offer.",
+    image: "/images/fire-hose.jpg", imageCredit: "Antoine Letarte · CC BY-SA 3.0",
+    specs: ["Hose type, diameter and length", "Rack or cabinet compatibility", "Working pressure and coupling or thread details", "Required approvals and documentation confirmed before ordering"],
+    standards: ["Project-specified fire protection approvals"],
+    sampleItems: [{ref: "FS-01", description: "Hose rack hose, diameter and length to your specification", qty: 1}, {ref: "FS-02", description: "Fire hose coupling to specified thread and size", qty: 1}], totalItems: 2,
+  },
+  {
     slug: "pumps-rotating-equipment",
     name: "Pumps & Rotating Equipment",
     short: "Centrifugal, positive displacement and metering pumps",
     tagline: "Centrifugal and positive displacement pumps built to API standards",
-    image: "/images/night-refinery.jpg",
+    image: "/images/centrifugal-pump.jpg",
+    imageCredit: "KSB Aktiengesellschaft · CC BY-SA 3.0", imageFit: "contain",
     description:
       "Centrifugal pumps (API 610 — overhung, between-bearings and vertically suspended types), reciprocating and rotary positive displacement pumps (API 674 / API 676) and metering pumps (API 675), sourced complete with mechanical seals, couplings and baseplates to match your process conditions.",
     specs: [
@@ -50,7 +73,8 @@ export const categories: Category[] = [
     name: "Valves & Actuation",
     short: "Gate, globe, check, ball and control valves with actuation",
     tagline: "Gate, ball, check and control valves to API and ASME valve standards",
-    image: "/images/train-refinery.jpg",
+    image: "/images/globe-valve.jpg",
+    imageCredit: "Heather Smith / The Alloy Valve Stockist · CC BY 3.0", imageFit: "contain",
     description:
       "Gate, globe, check, ball, butterfly and plug valves for process and pipeline service, manufactured to API 600, API 602, API 6D and ASME B16.34, supplied manual or fitted with pneumatic, electric or hydraulic actuation to ISO 5211 mounting.",
     specs: [

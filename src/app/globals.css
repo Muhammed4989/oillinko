@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0f14;
-  --foreground: #e5e7eb;
-  --oil-900: #0b0f14;
-  --oil-800: #10161d;
-  --oil-700: #16202b;
-  --oil-600: #1e2c3a;
-  --line: #22303f;
+  color-scheme: light;
+  --background: #f5f8fb;
+  --foreground: #142b40;
+  --oil-900: #ffffff;
+  --oil-800: #edf3f8;
+  --oil-700: #e0eaf2;
+  --oil-600: #cfdfeb;
+  --line: #c9d7e2;
   --accent: #f97316;
   --accent-hi: #fb923c;
-  --muted: #94a3b8;
+  --muted: #4d6275;
 }
 
 @theme inline {
@@ -33,3 +34,16 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Keep orange buttons bright; use a deeper orange for readable text links. */
+.text-accent { color: #b34408; }
+.hover\:text-accent:hover, .group:hover .group-hover\:text-accent { color: #a13b05; }
+.hero-dark {
+  --oil-900: #132b40;
+  --line: #527087;
+  --muted: #d7e3ed;
+  color: #ffffff;
+}
+.hero-dark .text-accent { color: #fb923c; }
+:focus-visible { outline: 3px solid #b34408; outline-offset: 3px; }
+input, textarea, select { font-size: 1rem; }

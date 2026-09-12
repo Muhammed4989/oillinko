@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Oillinko — international oil and gas equipment sourcing and procurement consultancy, head office in Istanbul, Turkey, with regional offices in London, Erbil and Amman.",
+    "Contact Oillinko — international oil and gas equipment sourcing and procurement consultancy, head office in Istanbul, Turkey, with regional offices in Erbil and Amman.",
   alternates: { canonical: "/contact" },
 };
 

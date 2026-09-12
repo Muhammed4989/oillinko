@@ -1,6 +1,6 @@
 # Oillinko
 
-> Oillinko is an oil & gas equipment sourcing and procurement consultancy headquartered in Istanbul, Turkey, with regional offices in London, Erbil and Amman. Oillinko connects buyers worldwide with verified manufacturers of pumps, valves, flanges, gaskets, pressure vessels, wellhead equipment and pipeline intervention equipment — sourced and checked against international standards (API, ASME, ASTM, ANSI, NACE, TEMA).
+> Oillinko is an oil & gas equipment sourcing and procurement consultancy headquartered in Istanbul, Turkey, with regional offices in Erbil and Amman. Oillinko connects buyers worldwide with verified manufacturers of pumps, valves, flanges, gaskets, pressure vessels, wellhead equipment and pipeline intervention equipment — sourced and checked against international standards (API, ASME, ASTM, ANSI, NACE, TEMA).
 
 Buyers send a bill of quantities (BOQ) or equipment list; Oillinko sources it from qualified manufacturers, checks the offers against the buyer's technical specification, and manages ordering, inspection and delivery.
 
@@ -12,7 +12,7 @@ Buyers send a bill of quantities (BOQ) or equipment list; Oillinko sources it fr
 - [Quality](https://oillinko.com/quality): Quality assurance, standards compliance and inspection approach.
 - [Industries](https://oillinko.com/industries): Industries and project types served.
 - [Suppliers](https://oillinko.com/suppliers): Information for manufacturers who want to supply through Oillinko.
-- [Contact](https://oillinko.com/contact): Office locations (Istanbul head office; London, Erbil, Amman) and contact details.
+- [Contact](https://oillinko.com/contact): Office locations (Istanbul head office; Erbil, Amman) and contact details.
 - [Request a Quote](https://oillinko.com/rfq): Submit a BOQ or equipment list to receive competitive offers.
 
 ## Equipment categories

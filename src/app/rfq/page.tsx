@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CtaBand, PageHeader } from "@/components/ui";
+import { PageHeader } from "@/components/ui";
+import { site } from "@/lib/site";
 import RfqForm from "@/components/RfqForm";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function RfqPage() {
     <>
       <PageHeader
         title="Request a Quote"
-        subtitle="Send us your bill of quantities or equipment list. We'll return competitive offers from verified manufacturers, verified against your specifications."
+        subtitle="Send us your bill of quantities or equipment list. We'll review your requirements and contact suitable suppliers for quotations."
       />
       <section className="mx-auto max-w-3xl px-4 py-14">
         <div className="rounded-xl border border-line bg-oil-800 p-6 sm:p-8">
@@ -28,14 +29,13 @@ export default function RfqPage() {
               info@oillinko.com
             </a>{" "}
             or call our office at{" "}
-            <a className="text-accent hover:underline" href="tel:+442079460958">
-              +44 20 7946 0958
+            <a className="text-accent hover:underline" href={`tel:${site.headOffice.phone.replace(/\s/g, "")}`}>
+              {site.headOffice.phone}
             </a>
-            . We respond within 24 hours.
+            . We aim to acknowledge your request within one business day.
           </p>
         </div>
       </section>
-      <CtaBand />
     </>
   );
 }

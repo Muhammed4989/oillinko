@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Oillinko is an international oil and gas equipment sourcing and procurement consultancy, headquartered in Istanbul, Turkey, with regional offices in London, Erbil and Amman.",
+    "Oillinko is an international oil and gas equipment sourcing and procurement consultancy, headquartered in Istanbul, Turkey, with regional offices in Erbil and Amman.",
   alternates: { canonical: "/about" },
 };
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="About Oillinko"
-        subtitle="An international sourcing and procurement consultancy for the oil and gas industry — head office in Istanbul, with regional offices in London, Erbil and Amman, serving buyers across the Middle East, Europe, Asia and beyond."
+        subtitle="An international sourcing and procurement consultancy for the oil and gas industry — head office in Istanbul, with regional offices in Erbil and Amman, serving buyers across the Middle East, Europe, Asia and beyond."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="relative mb-12 h-64 overflow-hidden rounded-lg border border-line sm:h-80">

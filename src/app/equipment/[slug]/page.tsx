@@ -82,6 +82,7 @@ export default async function CategoryPage({
             {cat.name}
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-muted">{cat.description}</p>
+          {cat.imageCredit && <p className="mt-4 text-xs text-muted">Photo: {cat.imageCredit} · <Link href="/image-credits" className="underline">Image credits</Link></p>}
         </div>
       </section>
 

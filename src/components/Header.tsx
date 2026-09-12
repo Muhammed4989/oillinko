@@ -23,7 +23,7 @@ export function Logo() {
         width={1800}
         height={520}
         priority
-        className="h-8 w-auto rounded"
+        className="h-10 w-auto rounded"
       />
     </Link>
   );
@@ -36,7 +36,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-oil-900/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Logo />
-        <nav className="hidden items-center gap-6 text-sm text-muted md:flex">
+        <nav className="hidden items-center gap-5 text-sm text-muted lg:flex">
           {nav.map((n) => (
             <Link key={n.href} href={n.href} className="transition-colors hover:text-foreground">
               {n.label}
@@ -50,9 +50,11 @@ export default function Header() {
           </Link>
         </nav>
         <button
-          className="flex h-10 w-10 items-center justify-center rounded border border-line md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded border border-line lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -64,7 +66,7 @@ export default function Header() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-line bg-oil-900 px-4 py-4 md:hidden">
+        <nav id="mobile-navigation" className="border-t border-line bg-oil-900 px-4 py-4 lg:hidden">
           <div className="flex flex-col gap-3 text-muted">
             {nav.map((n) => (
               <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="hover:text-foreground">

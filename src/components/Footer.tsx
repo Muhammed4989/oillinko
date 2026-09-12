@@ -17,6 +17,8 @@ const columns = [
   {
     title: "Equipment",
     links: [
+      { href: "/equipment/instrumentation-control", label: "Instrumentation & Control" },
+      { href: "/equipment/fire-safety-equipment", label: "Fire & Safety Equipment" },
       { href: "/equipment/pumps-rotating-equipment", label: "Pumps & Rotating Equipment" },
       { href: "/equipment/valves-actuation", label: "Valves & Actuation" },
       { href: "/equipment/flanges-fittings-bolting", label: "Flanges, Fittings & Bolting" },
@@ -38,7 +40,7 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-relaxed text-muted">
               Oil & gas equipment sourcing and procurement consultancy — head
               office in Istanbul, Turkey, with regional offices in
-              London, Erbil and Amman, connecting buyers worldwide with
+              Erbil and Amman, connecting buyers worldwide with
               verified manufacturers.
             </p>
           </div>
@@ -90,6 +92,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>
           <div className="flex gap-5">
+            <Link href="/image-credits" className="hover:text-foreground">Image credits</Link>
             <Link href="/privacy" className="hover:text-foreground">
               Privacy Policy
             </Link>
