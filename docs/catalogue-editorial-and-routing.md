@@ -12,6 +12,8 @@ The catalogue contains 37 categories and 219 equipment, service and software top
 
 ## URLs and indexing
 
+The URL migration supersedes the original `/equipment` layout described below. See [the public URL contract](catalogue-url-contract.md) for the current `/oil-and-gas` structure, immutable topic IDs, historical redirects and expansion rules. The original paths remain supported through permanent redirects.
+
 - `/equipment`: indexable catalogue with a GET search form.
 - `/equipment?search=...&category=...&sector=...&kind=...&application=...&origin=...`: shareable, server-rendered selections; noindex/follow with a canonical pointing to the main catalogue.
 - `/equipment/[category]`: indexable category; existing product anchors remain available.

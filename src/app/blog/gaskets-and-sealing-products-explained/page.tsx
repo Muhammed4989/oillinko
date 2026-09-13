@@ -109,7 +109,7 @@ export default function Page() {
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Need gaskets matched to an existing flange schedule? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/gaskets-sealing">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/gaskets-seals">
             gaskets &amp; sealing products
           </Link>{" "}
           category, or{" "}

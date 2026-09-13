@@ -257,7 +257,7 @@ export default function Page() {
           and Oillinko will circulate it to verified manufacturers and
           review every returned curve against your duty point, NPSH margin
           and operating region before it comes back to you. Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps">
             pumps &amp; rotating equipment
           </Link>{" "}
           category, or see our guide to{" "}

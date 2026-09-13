@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui";
 import { site } from "@/lib/site";
 import RfqForm from "@/components/RfqForm";
-import { getGroup, typeUrl } from "@/lib/catalogue";
+import { getGroup, groupUrl, typeUrl } from "@/lib/catalogue";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
@@ -24,7 +24,7 @@ export default async function RfqPage({ searchParams }: { searchParams: Promise<
       />
       <section className="mx-auto max-w-3xl px-4 py-14">
         <div className="rounded-xl border border-line bg-oil-800 p-6 sm:p-8">
-          <RfqForm key={`${group?.slug}/${item?.id}/${origin}`} initialCategory={group?.name ?? "Multiple / full BOQ"} initialItem={item?.name} initialKind={item?.kind ?? group?.kind ?? ""} initialOrigin={origin} sourcePage={group ? (item ? typeUrl(group,item) : `/equipment/${group.slug}`) : "/rfq"} />
+          <RfqForm key={`${group?.slug}/${item?.id}/${origin}`} initialCategory={group?.name ?? "Multiple / full BOQ"} initialItem={item?.name} initialKind={item?.kind ?? group?.kind ?? ""} initialOrigin={origin} sourcePage={group ? (item ? typeUrl(group,item) : groupUrl(group)) : "/rfq"} />
         </div>
         <div className="mt-6 rounded-lg border border-line bg-oil-800 p-6 text-sm leading-relaxed text-muted">
           <p className="font-semibold text-foreground">Prefer email or phone?</p>

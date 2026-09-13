@@ -304,7 +304,7 @@ export default function Page() {
         />
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing a reciprocating or rotary PD pump package? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps">
             pumps &amp; rotating equipment
           </Link>{" "}
           category, or{" "}

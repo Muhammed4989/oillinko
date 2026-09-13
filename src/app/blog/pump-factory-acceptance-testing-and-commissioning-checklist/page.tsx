@@ -236,7 +236,7 @@ export default function Page() {
           documentation requirements with the manufacturer before the order
           is placed, and coordinate the FAT itself so nothing is scheduled
           without your knowledge. Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps">
             pumps &amp; rotating equipment
           </Link>{" "}
           category, or see our guide to{" "}

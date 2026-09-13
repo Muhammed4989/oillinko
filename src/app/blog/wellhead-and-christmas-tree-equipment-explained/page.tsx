@@ -132,7 +132,7 @@ export default function Page() {
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing wellhead or Christmas tree equipment? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/wellhead-production-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/wellhead-production-equipment">
             wellhead &amp; production equipment
           </Link>{" "}
           category, or{" "}

@@ -3,6 +3,7 @@ import CatalogueEntry from "@/components/CatalogueEntry";
 import Image from "next/image";
 import { CtaBand, SectionTitle } from "@/components/ui";
 import { categories } from "@/lib/equipment";
+import { getGroup, groupUrl } from "@/lib/catalogue";
 import { blogPosts } from "@/lib/blog";
 
 const latestPosts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 4);
@@ -122,7 +123,7 @@ export default function HomePage() {
               Request a Quote
             </Link>
             <Link
-              href="/equipment"
+              href="/oil-and-gas"
               className="rounded border border-line bg-oil-900 px-6 py-3 font-semibold transition-colors hover:border-accent hover:text-accent"
             >
               Browse the Catalogue
@@ -170,7 +171,7 @@ export default function HomePage() {
             {categories.filter(c => c.image).slice(0, 6).map((c) => (
               <Link
                 key={c.slug}
-                href={`/equipment/${c.slug}`}
+                href={groupUrl(getGroup(c.slug)!)}
                 className="group overflow-hidden rounded-lg border border-line bg-oil-900 transition-colors hover:border-accent"
               >
                 <div className="relative h-40 overflow-hidden">
@@ -296,7 +297,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-10 text-center"><Link href="/equipment" className="inline-block rounded bg-accent px-6 py-3 font-semibold text-black">Browse all equipment &amp; services</Link><Link href="/industries" className="ml-5 inline-block py-3 font-semibold text-accent">Explore by industry sector →</Link></section>
+      <section className="mx-auto max-w-6xl px-4 py-10 text-center"><Link href="/oil-and-gas" className="inline-block rounded bg-accent px-6 py-3 font-semibold text-black">Browse all equipment &amp; services</Link><Link href="/industries" className="ml-5 inline-block py-3 font-semibold text-accent">Explore by industry sector →</Link></section>
       <CtaBand />
       <script
         type="application/ld+json"

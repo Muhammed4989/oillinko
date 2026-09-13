@@ -37,111 +37,98 @@ for (const kind of ["Equipment", "Service", "Software"]) {
 for (const sector of sectors) assert(found("", sector.id).every(t => t.sectors.includes(sector.id)));
 for (const application of applications) assert(found("", "", "", application).every(t => t.applications.includes(application)));
 
-const paths = new Set();
-const names = new Set();
-const detailed = [];
-const wordCounts = [];
-for (const group of catalogue) {
-  assert(!paths.has(group.slug), `Duplicate group URL: ${group.slug}`);
-  paths.add(group.slug);
-  const ids = new Set();
-  for (const item of group.types) {
-    assert(!ids.has(item.id), `Duplicate anchor: ${group.slug}/${item.id}`); ids.add(item.id);
-    assert(!names.has(item.name), `Duplicate item title: ${item.name}`); names.add(item.name);
-    assert(item.requirements.length >= 4 && item.requirements.every(Boolean), item.id);
-    assert(item.sectors.every(id => sectors.some(s => s.id === id)), item.id);
-    assert(item.applications.every(a => applications.includes(a)), item.id);
-    const rfq = new URL(requestUrl(group.slug, item.id, "New Zealand"), "https://oillinko.com");
-    assert.equal(rfq.searchParams.get("category"), group.slug);
-    assert.equal(rfq.searchParams.get("item"), item.id);
-    assert.equal(rfq.searchParams.get("origin"), "New Zealand");
-    if (item.detail) {
-      detailed.push(`${group.slug}/${item.id}`);
-      const sections = productSections(group,item);
-      const words = contentWordCount(sections);
-      wordCounts.push(words);
-      assert(words>=700, `Fewer than 700 body words: ${item.id} (${words})`);
-      const paragraphs=sections.flatMap(s=>s.paragraphs);
-      assert.equal(new Set(paragraphs).size,paragraphs.length,`Repeated paragraph within ${item.id}`);
-      assert.equal(typeUrl(group, item), `/equipment/${group.slug}/${item.id}`);
-    } else assert.equal(typeUrl(group, item), `/equipment/${group.slug}#${item.id}`);
-  }
-}
-assert.equal(detailed.length,names.size,"Every type must have a product page");
-assert.equal(Object.keys(topicOverviews).length,detailed.length,"Missing or orphaned product overview");
-const filters=readCatalogueFilters({search:" MWD ",category:"drilling-well-construction",sector:"drilling",kind:"Equipment",application:"Maintenance & spares",origin:"New Zealand"});
-const searchUrl=new URL(catalogueSearchUrl(filters),"https://oillinko.com");
-assert.equal(searchUrl.hash,"");
-assert.equal(searchUrl.searchParams.get("search"),"MWD");
-assert.deepEqual(readCatalogueFilters(Object.fromEntries(searchUrl.searchParams)),filters);
-assert.equal(catalogueSearchUrl(readCatalogueFilters({})),"/equipment");
-assert.equal(readCatalogueFilters({sector:"unknown",search:["a","b"],kind:"invalid"}).search,"");
-assert(filterCatalogue("","","","","lng-cryogenic-equipment").every(g=>g.slug==="lng-cryogenic-equipment"));
 
-if (process.argv.includes("--build")) {
-  const base = path.join(__dirname, "../.next/server/app");
-  const sitemap = fs.readFileSync(path.join(base, "sitemap.xml.body"), "utf8");
-  for (const relative of [...catalogue.map(g => `equipment/${g.slug}`), ...detailed.map(p => `equipment/${p}`), ...sectors.map(s => `industries/${s.id}`)]) {
-    const html = fs.readFileSync(path.join(base, `${relative}.html`), "utf8");
-    assert(html.includes(`rel="canonical" href="https://oillinko.com/${relative}"`), `Canonical: ${relative}`);
-    assert.equal((html.match(/<h1(?:\s|>)/g) ?? []).length, 1, `H1: ${relative}`);
-    assert(sitemap.includes(`<loc>https://oillinko.com/${relative}</loc>`), `Sitemap: ${relative}`);
-  }
-  for (const group of catalogue) {
-    const html = fs.readFileSync(path.join(base, `equipment/${group.slug}.html`), "utf8");
-    for (const item of group.types) {
-      assert(html.includes(`id="${item.id}"`), `Legacy anchor: ${item.id}`);
-      if (item.detail) assert(html.includes(`href="${typeUrl(group,item)}"`), `Unlinked brief: ${item.id}`);
-    }
-  }
-  for (const relative of detailed) {
-    const html=fs.readFileSync(path.join(base,`equipment/${relative}.html`),"utf8");
-    const body=html.match(/<article[^>]*data-product-content[^>]*>([\s\S]*?)<\/article>/)?.[1];
-    assert(body,`Missing product content region: ${relative}`);
-    const words=body.replace(/<[^>]+>/g," ").replace(/&[a-z#0-9]+;/gi," ").split(/\s+/).filter(Boolean).length;
-    assert(words>=700,`Rendered body too short: ${relative}: ${words}`);
-    assert(html.indexOf('<form')>html.indexOf('</article>'),`Form precedes product content: ${relative}`);
-    assert(html.includes('name="equipment_or_service"'),`Missing product enquiry form: ${relative}`);
-    assert(html.includes('name="required_manufacturing_origin"')&&html.includes('name="delivery_country"'),`Missing separate origin/location fields: ${relative}`);
-  }
+const {catalogueRoot,catalogueRoutes,sectionUrl,routedCatalogueFilters,legacyCatalogueRedirects}=require('../src/lib/catalogue.ts');
+const {publicProductPaths}=require('../src/lib/catalogue-public-paths.ts');
+const routes=catalogueRoutes();
+const pathSet=new Set(routes.map(r=>r.url));
+assert.equal(pathSet.size,routes.length,'Public routes must not collide');
+const products=routes.filter(r=>r.item);
+const categoryRoutes=routes.filter(r=>r.group&&!r.item);
+assert(products.length>=219,'A migration must preserve every published topic');
+assert.equal(Object.keys(publicProductPaths).length,products.length);
+const ids=new Set();const wordCounts=[];
+for(const group of catalogue)for(const item of group.types){
+ assert(!ids.has(item.id),item.id);ids.add(item.id);
+ assert(item.requirements.length>=4&&item.requirements.every(Boolean),item.id);
+ assert(item.sectors.every(id=>sectors.some(s=>s.id===id)),item.id);
+ assert(item.applications.every(a=>applications.includes(a)),item.id);
+ const sections=productSections(group,item);const words=contentWordCount(sections);wordCounts.push(words);
+ assert(words>=700,'Content floor: '+item.id);
+ assert.equal(new Set(sections.flatMap(s=>s.paragraphs)).size,sections.flatMap(s=>s.paragraphs).length,'Repeated paragraph: '+item.id);
+ const url=typeUrl(group,item);
+ assert(url.startsWith(sectionUrl(item.kind)+'/'),'Incorrect type namespace: '+item.id);
+ assert.equal(typeUrl({...group,slug:'future-classification',name:'New display name'},{...item,name:'New product name'}),url,'Titles or reclassification must not change public product URLs');
+ const rfq=new URL(requestUrl(group.slug,item.id,'New Zealand'),'https://oillinko.com');
+ assert.equal(rfq.searchParams.get('category'),group.slug);assert.equal(rfq.searchParams.get('item'),item.id);assert.equal(rfq.searchParams.get('origin'),'New Zealand');
 }
-console.log(JSON.stringify({ categories: catalogue.length, types: names.size, sectors: sectors.length, productPages: detailed.length, minimumBodyWords: Math.min(...wordCounts), searchCases: searches.length, checks: "passed" }, null, 2));
+assert.equal(Object.keys(topicOverviews).length,products.length);
+const allPaths=new Set([catalogueRoot,...pathSet,...sectors.map(s=>'/industries/'+s.id)]);
+const legacy=legacyCatalogueRedirects();
+assert(legacy.length>=256,'All previously published category and topic URLs must remain mapped');
+for(const r of legacy){assert(allPaths.has(r.destination),'Redirect destination: '+r.source);assert(!legacy.some(l=>l.source===r.destination),'Redirect chain: '+r.source);}
+for(const route of categoryRoutes){assert(route.group.types.every(t=>t.kind===route.kind));assert(route.group.types.every(t=>pathSet.has(typeUrl(route.group,t))));}
+assert.equal(catalogueSearchUrl({category:'pumps-rotating-equipment'}),'/oil-and-gas/equipment/pumps');
+assert.equal(catalogueSearchUrl({kind:'Service'}),'/oil-and-gas/services');
+assert.equal(catalogueSearchUrl({kind:'Software'}),'/oil-and-gas/software');
+assert.equal(catalogueSearchUrl({sector:'pipelines'}),'/industries/pipelines');
+assert.equal(catalogueSearchUrl({category:'pumps-rotating-equipment',sector:'pipelines',origin:'Germany'}),'/oil-and-gas/equipment/pumps?sector=pipelines&origin=Germany');
+assert.equal(catalogueSearchUrl({category:'pumps-rotating-equipment',kind:'Service'}),'/oil-and-gas/services?category=pumps-rotating-equipment');
+const filters=readCatalogueFilters({search:' MWD ',category:'drilling-well-construction',sector:'drilling',kind:'Equipment',application:'Maintenance & spares',origin:'New Zealand'});
+const search=new URL(catalogueSearchUrl(filters),'https://oillinko.com');
+const route=routes.find(r=>r.url===search.pathname);
+assert(route&&route.group,'Category search should use its landing page');
+assert.deepEqual(routedCatalogueFilters(Object.fromEntries(search.searchParams),{category:route.group.slug,kind:route.kind}),filters);
+assert.equal(catalogueSearchUrl({}),catalogueRoot);
+assert.equal(readCatalogueFilters({sector:'unknown',search:['a','b'],kind:'invalid'}).search,'');
 
-// Optional deployment check: GET only; never submits an enquiry.
-async function checkHttp(base) {
-  const sitemapResponse = await fetch(new URL('/sitemap.xml', base), { signal: AbortSignal.timeout(30000) });
-  assert.equal(sitemapResponse.status, 200, 'Sitemap HTTP status');
-  const sitemap = await sitemapResponse.text();
-  const routes = [...catalogue.map(g=>`/equipment/${g.slug}`), ...detailed.map(p=>`/equipment/${p}`), ...sectors.map(s=>`/industries/${s.id}`)];
-  let cursor = 0;
-  await Promise.all(Array.from({length:4}, async () => {
-    while (cursor < routes.length) {
-      const route = routes[cursor++];
-      const response = await fetch(new URL(route,base), { redirect:'manual', signal:AbortSignal.timeout(30000) });
-      assert.equal(response.status,200,`HTTP status: ${route}`);
-      const html=await response.text();
-      assert(html.includes(`rel="canonical" href="https://oillinko.com${route}"`),`HTTP canonical: ${route}`);
-      assert(sitemap.includes(`<loc>https://oillinko.com${route}</loc>`),`HTTP sitemap: ${route}`);
-      assert.equal((html.match(/<h1(?:\s|>)/g)??[]).length,1,`HTTP H1: ${route}`);
-      if (route.split('/').length===4) {
-        const body=html.match(/<article[^>]*data-product-content[^>]*>([\s\S]*?)<\/article>/)?.[1];
-        assert(body,`HTTP product content: ${route}`);
-        assert(body.replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').split(/\s+/).filter(Boolean).length>=700,`HTTP word count: ${route}`);
-        assert(html.indexOf('<form')>html.indexOf('</article>'),`HTTP content before form: ${route}`);
-        assert(html.includes('name="equipment_or_service"'),`HTTP RFQ form: ${route}`);
-      }
-    }
-  }));
-  const response=await fetch(new URL('/equipment?search=tank+cleaning&kind=Service',base), {signal:AbortSignal.timeout(30000)});
-  assert.equal(response.status,200,'Filtered catalogue status');
-  const html=await response.text();
-  assert(html.includes('content="noindex, follow"'),'Filtered catalogue must not be indexed');
-  assert(html.includes('rel="canonical" href="https://oillinko.com/equipment"'),'Filtered catalogue canonical');
-  assert(html.includes('/equipment/shutdown-tank-maintenance-services/tank-cleaning-and-sludge-removal'),'Server rendered filtered result');
-  assert(!html.includes('href="/equipment/shutdown-tank-maintenance-services/heat-exchanger-cleaning'),'Unrelated filtered result');
-  const missing=await fetch(new URL('/equipment/lng-cryogenic-equipment/not-a-real-product',base),{signal:AbortSignal.timeout(30000)});
-  assert.equal(missing.status,404,'Unknown product must return 404');
-  console.log(JSON.stringify({base,checkedCatalogueRoutes:routes.length,filteredServerRendering:'passed',unknownProduct404:'passed',httpChecks:'passed'},null,2));
+function checkHtml(html,url,item){
+ assert(html.includes('rel="canonical" href="https://oillinko.com'+url+'"'),'Canonical: '+url);
+ assert.equal((html.match(/<h1(?:\s|>)/g)??[]).length,1,'H1: '+url);
+ assert(!/<a[^>]+href="\/equipment(?:[/?#"])/.test(html),'Internal legacy link: '+url);
+ if(item){
+  const body=html.match(/<article[^>]*data-product-content[^>]*>([\s\S]*?)<\/article>/)?.[1];assert(body,'Product content: '+url);
+  const words=body.replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').split(/\s+/).filter(Boolean).length;
+  assert(words>=700,'Rendered word count: '+url);
+  assert(html.indexOf('<form')>html.indexOf('</article>'),'Content before form: '+url);
+  for(const name of ['equipment_or_service','required_manufacturing_origin','delivery_country'])assert(html.includes('name="'+name+'"'),'RFQ field '+name+': '+url);
+  assert(html.includes('name="equipment_or_service"')&&html.includes(item.name.replace(/&/g,'&amp;')),'Product context: '+url);
+ }
 }
-const urlIndex=process.argv.indexOf('--url');
-if(urlIndex!==-1) checkHttp(process.argv[urlIndex+1]).catch(error=>{console.error(error);process.exitCode=1;});
+if(process.argv.includes('--build')){
+ const app=path.join(__dirname,'../.next/server/app');const sitemap=fs.readFileSync(path.join(app,'sitemap.xml.body'),'utf8');
+ for(const url of allPaths)assert(sitemap.includes('<loc>https://oillinko.com'+url+'</loc>'),'Sitemap: '+url);
+ assert(!sitemap.includes('<loc>https://oillinko.com/equipment'),'Legacy URLs in sitemap');
+ for(const route of products)checkHtml(fs.readFileSync(path.join(app,route.url+'.html'),'utf8'),route.url,route.item);
+ const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../.next/routes-manifest.json'),'utf8'));
+ for(const r of legacy)assert(manifest.redirects.some(m=>m.source===r.source&&m.destination==='https://oillinko.com'+r.destination&&m.statusCode===308),'Missing permanent redirect: '+r.source);
+}
+console.log(JSON.stringify({groups:catalogue.length,categoryPages:categoryRoutes.length,products:products.length,sectors:sectors.length,minimumBodyWords:Math.min(...wordCounts),publicCatalogueAndSectorRoutes:allPaths.size,legacyRedirects:legacy.length,checks:'passed'},null,2));
+
+async function checkHttp(base){
+ const get=route=>fetch(new URL(route,base),{redirect:'manual',signal:AbortSignal.timeout(30000)});
+ const site=await get('/sitemap.xml');assert.equal(site.status,200);const sitemap=await site.text();
+ const queue=[...allPaths];let cursor=0;
+ await Promise.all(Array.from({length:4},async()=>{while(cursor<queue.length){const url=queue[cursor++];const response=await get(url);assert.equal(response.status,200,'HTTP '+url);const html=await response.text();checkHtml(html,url,products.find(r=>r.url===url)?.item);assert(sitemap.includes('<loc>https://oillinko.com'+url+'</loc>'),'Live sitemap: '+url);}}));
+ const oldQueue=[...legacy];cursor=0;
+ await Promise.all(Array.from({length:4},async()=>{while(cursor<oldQueue.length){const r=oldQueue[cursor++];const response=await get(r.source+'?origin=Germany');assert.equal(response.status,308,'Permanent legacy redirect: '+r.source);assert.equal(response.headers.get('location'),'https://oillinko.com'+r.destination+'?origin=Germany','Direct migration with origin: '+r.source);}}));
+ for(const [query,target] of [['/equipment','/oil-and-gas/equipment'],['/equipment?sector=pipelines','/industries/pipelines'],['/equipment?category=pumps-rotating-equipment&origin=Germany','/oil-and-gas/equipment/pumps?origin=Germany']]){
+  const r=await get(query);assert.equal(r.status,308,query);assert.equal(r.headers.get('location'),'https://oillinko.com'+target,query);
+ }
+ for(const [url,expectedCategory,expectedKind,expectedSector] of [
+  ['/oil-and-gas/equipment/pumps','pumps-rotating-equipment','Equipment',''],
+  ['/oil-and-gas/services','','Service',''],
+  ['/industries/pipelines','','','pipelines'],
+ ]){
+  const r=await get(url);const html=await r.text();assert(!html.includes('content="noindex, follow"'),'Clean landing must be indexable: '+url);
+  for(const [field,value]of [['category',expectedCategory],['kind',expectedKind],['sector',expectedSector]]){
+   const select=html.match(new RegExp('<select[^>]+name="'+field+'"[^>]*>([\\s\\S]*?)</select>'))?.[1];
+   assert(select&&new RegExp('<option[^>]*(?:value="'+value+'"[^>]*selected=""|selected=""[^>]*value="'+value+'")').test(select)||select?.includes('<option selected="">'+value+'</option>'),'Selected '+field+' on '+url);
+  }
+ }
+ const filtered=await get('/oil-and-gas/services?search=tank+cleaning');assert.equal(filtered.status,200);const html=await filtered.text();
+ assert(html.includes('content="noindex, follow"'));assert(html.includes('href="/oil-and-gas/services/tank-cleaning"'));assert(!html.includes('href="/oil-and-gas/services/heat-exchanger-cleaning'));
+ assert.equal((await get('/oil-and-gas/equipment/pumps/not-a-real-product')).status,404);
+ console.log(JSON.stringify({base,checkedPublicRoutes:allPaths.size,checkedPermanentRedirects:legacy.length+3,filterSelections:'passed',contentAndCanonicals:'passed',httpChecks:'passed'},null,2));
+}
+const urlIndex=process.argv.indexOf('--url');if(urlIndex!==-1)checkHttp(process.argv[urlIndex+1]).catch(e=>{console.error(e);process.exitCode=1;});

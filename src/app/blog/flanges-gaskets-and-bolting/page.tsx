@@ -172,8 +172,8 @@ export default function FlangesGuide() {
         />
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
           Related:{" "}
-          <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">flanges, fittings &amp; bolting</Link> ·{" "}
-          <Link className="text-accent hover:underline" href="/equipment/gaskets-sealing">gaskets &amp; sealing products</Link> ·{" "}
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/flanges-fittings-bolting">flanges, fittings &amp; bolting</Link> ·{" "}
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/gaskets-seals">gaskets &amp; sealing products</Link> ·{" "}
           <Link className="text-accent hover:underline" href="/blog/en-10204-material-certificates-explained">EN 10204 certificates</Link>
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">

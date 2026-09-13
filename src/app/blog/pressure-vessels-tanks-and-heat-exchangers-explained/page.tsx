@@ -149,7 +149,7 @@ export default function Page() {
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing a vessel, tank or exchanger package? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pressure-vessels-tanks">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pressure-vessels-tanks">
             pressure vessels, tanks &amp; heat exchangers
           </Link>{" "}
           category, or{" "}

@@ -159,8 +159,8 @@ export default function HotTappingGuide() {
           42&quot;.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Related: <Link className="text-accent hover:underline" href="/equipment/pipeline-intervention-equipment">hot tap &amp; line stop equipment</Link> ·{" "}
-          <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">pipeline fittings</Link>
+          Related: <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pipeline-intervention">hot tap &amp; line stop equipment</Link> ·{" "}
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/flanges-fittings-bolting">pipeline fittings</Link>
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing hot tap or line stop equipment?{" "}

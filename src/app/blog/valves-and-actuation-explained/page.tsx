@@ -146,7 +146,7 @@ export default function Page() {
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing valves for a project? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/valves-actuation">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/valves">
             valves &amp; actuation
           </Link>{" "}
           category, or{" "}

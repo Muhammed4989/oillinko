@@ -187,7 +187,7 @@ export default function Page() {
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing an API 610 pump package? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps">
             pumps &amp; rotating equipment
           </Link>{" "}
           category, or we prepare the RFQ, circulate it to

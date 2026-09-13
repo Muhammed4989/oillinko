@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { sectors, filterCatalogue, typeUrl } from "@/lib/catalogue";
+import { notFound, redirect } from "next/navigation";
+import { sectors, catalogueSearchUrl, routedCatalogueFilters } from "@/lib/catalogue";
 import { PageHeader } from "@/components/ui";
+import CatalogueExplorer from "@/components/CatalogueExplorer";
+import type { CatalogueQuery } from "@/components/CatalogueLanding";
+type Props={params:Promise<{sector:string}>;searchParams:Promise<CatalogueQuery>};
 export const dynamicParams=false;
 export function generateStaticParams(){return sectors.map(s=>({sector:s.id}));}
-export async function generateMetadata({params}:{params:Promise<{sector:string}>}):Promise<Metadata>{const {sector}=await params;const s=sectors.find(s=>s.id===sector);return s?{title:`${s.name} Equipment & Services`,description:s.description,alternates:{canonical:`/industries/${s.id}`}}:{};}
-export default async function SectorPage({params}:{params:Promise<{sector:string}>}){const {sector}=await params;const s=sectors.find(s=>s.id===sector);if(!s)notFound();const groups=filterCatalogue("",s.id,"","");return <><PageHeader title={s.name} subtitle={s.description}/><section className="mx-auto max-w-6xl px-4 py-12"><nav aria-label="Breadcrumb" className="mb-6 flex gap-3 text-sm text-muted"><Link href="/industries">Industries</Link><span>/</span><span>{s.name}</span></nav><p className="max-w-3xl text-lg text-muted">Explore the equipment and service categories relevant to this sector. Open a category for product types and the technical information to include in your request.</p><div className="mt-8 grid gap-5 md:grid-cols-2">{groups.map(g=><article key={g.slug} className="rounded-xl border border-line bg-white p-6"><h2 className="text-xl font-semibold"><Link href={`/equipment/${g.slug}`}>{g.name}</Link></h2><p className="mt-3 text-muted">{g.summary}</p><ul className="mt-4 space-y-2 text-sm">{g.types.map(t=><li key={t.id}><Link className="text-accent hover:underline" href={typeUrl(g,t)}>{t.name}</Link></li>)}</ul></article>)}</div><div className="mt-10 rounded-xl border border-line bg-oil-800 p-6"><h2 className="text-xl font-bold">Send the complete project requirement</h2><p className="mt-3 text-muted">Include quantities, technical documents and any required manufacturing origin. Our Oillinko team reviews the inquiry and coordinates the next steps with you.</p><Link href="/rfq" className="mt-5 inline-block rounded bg-accent px-5 py-3 font-semibold text-black">Send your BOQ</Link></div></section></>;}
+export async function generateMetadata({params,searchParams}:Props):Promise<Metadata>{
+ const {sector}=await params;const s=sectors.find(s=>s.id===sector);if(!s)return {};
+ const query=await searchParams;const title=`${s.name} Equipment & Services`;const url=`/industries/${s.id}`;
+ return {title,description:s.description,alternates:{canonical:url},openGraph:{title,description:s.description,url},...(Object.values(query).some(Boolean)?{robots:{index:false,follow:true,googleBot:{index:false,follow:true}}}:{})};
+}
+export default async function SectorPage({params,searchParams}:Props){
+ const {sector}=await params;const s=sectors.find(s=>s.id===sector);if(!s)notFound();
+ const filters=routedCatalogueFilters(await searchParams,{sector:s.id});const target=catalogueSearchUrl(filters);
+ if(target.split('?')[0]!==`/industries/${s.id}`)redirect(target);
+ return <><PageHeader title={s.name} subtitle={s.description}/><section className="mx-auto max-w-6xl px-4 pt-10"><nav aria-label="Breadcrumb" className="mb-6 flex gap-3 text-sm text-muted"><Link href="/oil-and-gas">Oil &amp; Gas</Link><span>/</span><Link href="/industries">Industries</Link><span>/</span><span>{s.name}</span></nav><p className="max-w-3xl text-lg leading-relaxed text-muted">Explore equipment, services and software used in this sector. Choose a requirement type or category to refine the catalogue. Each product or service has its own information page with selection guidance and a request form.</p></section><CatalogueExplorer filters={filters}/></>;
+}

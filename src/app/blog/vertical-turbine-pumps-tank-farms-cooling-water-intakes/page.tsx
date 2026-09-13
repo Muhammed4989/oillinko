@@ -298,7 +298,7 @@ export default function Page() {
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing a vertical turbine pump package for a tank farm or cooling
           water intake? Browse our{" "}
-          <Link className="text-accent hover:underline" href="/equipment/pumps-rotating-equipment">
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps">
             pumps &amp; rotating equipment
           </Link>{" "}
           category, or{" "}

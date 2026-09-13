@@ -1,14 +1,8 @@
-import type { Metadata } from "next";
-import { PageHeader } from "@/components/ui";
-import CatalogueExplorer from "@/components/CatalogueExplorer";
-import { readCatalogueFilters } from "@/lib/catalogue";
-type Props = { searchParams: Promise<Record<string, string | string[] | undefined>> };
-export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
- const query = await searchParams;
- const filtered = Object.values(query).some(value => Array.isArray(value) ? value.some(Boolean) : !!value);
- return { title: "Oil & Gas Equipment & Services Catalogue", description: "Browse oil and gas equipment and services by category, sector and project need. Read product information and send your requirement to Oillinko.", alternates: { canonical: "/equipment" }, ...(filtered ? { robots: { index: false, follow: true } } : {}) };
-}
-export default async function EquipmentPage({ searchParams }: Props) {
- const filters = readCatalogueFilters(await searchParams);
- return <><PageHeader title="Equipment & Services Catalogue" subtitle="Choose a category, sector or requirement, then search. Explore product information and services across the oil and gas value chain."/><CatalogueExplorer filters={filters}/></>;
+import { permanentRedirect } from "next/navigation";
+import { catalogueSearchUrl, readCatalogueFilters } from "@/lib/catalogue";
+import type { CatalogueQuery } from "@/components/CatalogueLanding";
+export default async function LegacyCatalogue({searchParams}:{searchParams:Promise<CatalogueQuery>}) {
+ const filters=readCatalogueFilters(await searchParams);
+ const selected=filters.category||filters.sector||filters.kind||filters.search||filters.application;
+ permanentRedirect(`https://oillinko.com${catalogueSearchUrl(selected?filters:{...filters,kind:"Equipment"})}`);
 }

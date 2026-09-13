@@ -153,7 +153,7 @@ export default function FittingsGuide() {
         </ul>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Related:{" "}
-          <Link className="text-accent hover:underline" href="/equipment/flanges-fittings-bolting">pipeline fittings</Link> ·{" "}
+          <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/flanges-fittings-bolting">pipeline fittings</Link> ·{" "}
           <Link className="text-accent hover:underline" href="/blog/how-to-write-a-bill-of-quantities">how to write a bill of quantities</Link>
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
