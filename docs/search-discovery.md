@@ -18,6 +18,14 @@ Do not add invented inventory, manufacturer authorization, partnerships, standar
 
 If real crawler traffic is blocked, inspect the actual response and relevant hosting logs. A successful request with a crawler User-Agent from a developer's machine does not establish access from the crawler's verified IP ranges. Do not weaken the firewall globally or trust a User-Agent string as authentication.
 
+## IndexNow notifications
+
+`INDEXNOW_KEY` is a production-only Vercel secret. The root verification route serves it as plain text only at the exact `/{key}.txt` path and returns 404 for other unmatched filenames. Do not commit the value, add the verification file to the sitemap or print the key in logs. It proves the right to submit this host's public URLs and does not grant access to the Vercel account. Its verification response is intentionally public to search engines and marked noindex.
+
+After deploying published content, validate the live sitemap and proof file with `node scripts/submit-indexnow.cjs --key-file PATH_TO_PRIVATE_KEY_FILE`. This is a dry run by default. Add `--submit --receipt PATH_TO_LOCAL_RECEIPT` to notify the IndexNow endpoint. The utility submits the current canonical sitemap URLs, or an explicit `--urls-file` subset of that sitemap. It is not a deletion-notification tool.
+
+HTTP 200 means received; HTTP 202 means received with ownership validation pending. Neither confirms indexing. IndexNow shares notifications with participating engines, including Bing. It does not submit to Google Search Console or guarantee AI citations. Do not run it repeatedly when content is unchanged.
+
 ## Primary references
 
 - [Google: requesting recrawls and submitting sitemaps](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)
