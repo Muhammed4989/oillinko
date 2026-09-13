@@ -29,16 +29,17 @@ async function main() {
   if(!args.includes('--submit')) {console.log('Dry run only. Add --submit to notify IndexNow.'); return;}
 
   const response = await fetch(endpoint, {
-    method:'POST', headers:{'Content-Type':'application/json; charset=utf-8'},
-    body:JSON.stringify({host:'oillinko.com',key,keyLocation,urlList:urls}), signal:AbortSignal.timeout(60000),
+    method:'POST', headers:{'Content-Type':'application/json; charset=utf-8','User-Agent':'Oillinko-IndexNow/1.0'},
+    body:JSON.stringify({host:'oillinko.com',key,urlList:urls}), signal:AbortSignal.timeout(60000),
   });
-  await response.arrayBuffer();
+  const responseText = await response.text();
   const result = {
     submittedAt:new Date().toISOString(), endpoint, host:'oillinko.com', urlCount:urls.length,
     urlListSha256:crypto.createHash('sha256').update(urls.join('\n')).digest('hex'),
     httpStatus:response.status,
     result:response.status === 200 ? 'received' : response.status === 202 ? 'received; ownership validation pending' : 'not accepted',
     indexingStatus:'not confirmed by this response',
+    ...(![200,202].includes(response.status) ? {responseDetails:responseText.split(key).join('[redacted]').slice(0,1500)} : {}),
   };
   const receipt = option('--receipt'); if(receipt) fs.writeFileSync(receipt,JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify(result,null,2));
