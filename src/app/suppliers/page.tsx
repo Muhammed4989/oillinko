@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function SuppliersPage() {
         subtitle="The quality of an offer depends on the quality of the factory behind it. We build and maintain a network of verified manufacturers."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mb-10 rounded-xl border border-line bg-white p-6 sm:p-8"><h2 className="text-xl font-bold">Explore companies across the global industry</h2><p className="mt-3 leading-relaxed text-muted">Browse our independent directory of equipment manufacturers, oilfield technology providers, engineering companies and energy operators by specialty.</p><Link href="/oil-and-gas/companies" className="mt-4 inline-block font-semibold text-accent underline">Explore the global company directory</Link></div>
         <div className="grid gap-6 md:grid-cols-2">
           {regions.map((r) => (
             <div key={r.title} className="rounded-lg border border-line bg-oil-800 p-6">

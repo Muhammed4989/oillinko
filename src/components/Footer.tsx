@@ -10,6 +10,7 @@ const columns = [
       { href: "/services", label: "Sourcing & Procurement" },
       { href: "/quality", label: "Quality & Compliance" },
       { href: "/suppliers", label: "Supplier Network" },
+      { href: "/oil-and-gas/companies", label: "Global Company Directory" },
       { href: "/how-it-works", label: "How It Works" },
       { href: "/blog", label: "Blog" },
     ],

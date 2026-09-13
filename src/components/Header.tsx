@@ -10,6 +10,7 @@ const nav = [
   { href: "/oil-and-gas/services", label: "Services" },
   { href: "/oil-and-gas", label: "Catalogue" },
   { href: "/industries", label: "Industries" },
+  { href: "/oil-and-gas/companies", label: "Companies" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -36,7 +37,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-oil-900/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Logo />
-        <nav className="hidden items-center gap-5 text-sm text-muted lg:flex">
+        <nav className="hidden items-center gap-4 text-sm text-muted lg:flex">
           {nav.map((n) => (
             <Link key={n.href} href={n.href} className="transition-colors hover:text-foreground">
               {n.label}

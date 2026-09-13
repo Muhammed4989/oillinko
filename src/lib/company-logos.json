@@ -1,0 +1,272 @@
+{
+  "flowserve": {
+    "src": "/images/companies/flowserve.png",
+    "sourcePage": "https://www.flowserve.com/",
+    "imageUrl": "https://www.flowserve.com/themes/custom/flowserve/logo.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "sulzer": {
+    "src": "/images/companies/sulzer.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Sulzer_AG_2020_logo.svg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Sulzer_AG_2020_logo.svg",
+    "attribution": "Sulzer logo, via Wikimedia Commons.",
+    "license": "Public domain textlogo; trademark rights retained.",
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "ksb": {
+    "src": "/images/companies/ksb.png",
+    "sourcePage": "https://www.ksb.com/en-global",
+    "imageUrl": "https://live-resources-e2e-sales.ksb.com/resource/blob/8366/e6b9664c3029f6cc96c30927f7e67518/logo-claim-data.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "emerson": {
+    "src": "/images/companies/emerson.png",
+    "sourcePage": "https://www.emerson.com/en/corporate",
+    "imageUrl": "https://www.emerson.com/is/image/emerson/logo?fmt=webp-alpha&qlt=95",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "abb": {
+    "src": "/images/companies/abb.png",
+    "sourcePage": "https://new.abb.com/DotNetWidgets/docs/default-source/about/abb-logo",
+    "imageUrl": "https://new.abb.com/docs/default-source/about/abb-logo.svg?sfvrsn=1ab1af14_2&download=true",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "siemens": {
+    "src": "/images/companies/siemens.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Siemens_AG_logo.svg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg",
+    "attribution": "Siemens logo, via Wikimedia Commons.",
+    "license": "Public domain textlogo; trademark rights retained.",
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "yokogawa": {
+    "src": "/images/companies/yokogawa.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Yokogawa_logo.svg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Yokogawa_logo.svg",
+    "attribution": "Yokogawa logo, via Wikimedia Commons.",
+    "license": "Public domain textlogo; trademark rights retained.",
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "endress-hauser": {
+    "src": "/images/companies/endress-hauser.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Endress%2BHauser_Logo.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Endress%2BHauser_Logo.jpg",
+    "attribution": "EndressHauserUS, via Wikimedia Commons; CC BY-SA 3.0.",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "reviewedOn": "2026-09-13"
+  },
+  "slb": {
+    "src": "/images/companies/slb.png",
+    "sourcePage": "https://www.slb.com/",
+    "imageUrl": "https://www.slb.com/-/media/images/logo/SLB_Logo_Positive_RGB_TM.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "halliburton": {
+    "src": "/images/companies/halliburton.png",
+    "sourcePage": "https://www.halliburton.com/",
+    "imageUrl": "https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "baker-hughes": {
+    "src": "/images/companies/baker-hughes.png",
+    "sourcePage": "https://www.bakerhughes.com/",
+    "imageUrl": "https://www.bakerhughes.com/sites/bakerhughes/files/logo-dark_0.png",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "nov": {
+    "src": "/images/companies/nov.png",
+    "sourcePage": "https://www.nov.com/",
+    "imageUrl": "https://assets.nov.com/NCP4N68N/at/7ttsnzbtbzs8wv7pqx4rgr7m/nov-red-and-grey-logo.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "technipfmc": {
+    "src": "/images/companies/technipfmc.png",
+    "sourcePage": "https://www.technipfmc.com/",
+    "imageUrl": "https://www.technipfmc.com/technipfmc/images/logo_Header_logo_Technip.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "saipem": {
+    "src": "/images/companies/saipem.png",
+    "sourcePage": "https://www.saipem.com/en",
+    "imageUrl": "https://www.saipem.com/themes/custom/saipem_theme/overrides-logo-colored.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "shell": {
+    "src": "/images/companies/shell.png",
+    "sourcePage": "https://www.shell.com/",
+    "imageUrl": "https://www.shell.com/etc.clientlibs/amidala/clientlibs/app.min.ACSHASH991f93746116668c396534ae0896e8d7.js",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "bp": {
+    "src": "/images/companies/bp.png",
+    "sourcePage": "https://www.bp.com/",
+    "imageUrl": null,
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "totalenergies": {
+    "src": "/images/companies/totalenergies.png",
+    "sourcePage": "https://totalenergies.com/",
+    "imageUrl": "https://totalenergies.com/themes/custom/totalenergies_com/dist/img/logo_totalenergies.png",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "equinor": {
+    "src": "/images/companies/equinor.png",
+    "sourcePage": "https://www.equinor.com/",
+    "imageUrl": "https://cdn.eds.equinor.com/logo/equinor-logo-horizontal.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "exxonmobil": {
+    "src": "/images/companies/exxonmobil.png",
+    "sourcePage": "https://corporate.exxonmobil.com/",
+    "imageUrl": "https://corporate.exxonmobil.com/-/media/global/icons/logos/exxonmobillogocolor2x.png",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "petrobras": {
+    "src": "/images/companies/petrobras.png",
+    "sourcePage": "https://petrobras.com.br/en",
+    "imageUrl": "https://petrobras.com.br/documents/2677942/2678045/logo.svg/64b59d8a-d175-c374-189d-af798dea2241?version=1.0&t=1686665076000",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "petronas": {
+    "src": "/images/companies/petronas.png",
+    "sourcePage": "https://www.petronas.com/",
+    "imageUrl": "https://www.petronas.com/themes/custom/petronas/images/petronas-logo-dark.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "sasol": {
+    "src": "/images/companies/sasol.png",
+    "sourcePage": "https://www.sasol.com/",
+    "imageUrl": "https://www.sasol.com/sites/default/files/sasol-new-logo_0.png",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "woodside-energy": {
+    "src": "/images/companies/woodside-energy.png",
+    "sourcePage": "https://www.woodside.com/",
+    "imageUrl": "https://www.woodside.com/assets/static/images/svg/logo-colour-vertical.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "tenaris": {
+    "src": "/images/companies/tenaris.png",
+    "sourcePage": "https://www.tenaris.com/en",
+    "imageUrl": "https://www.tenaris.com/assets/dist/site/asset/bundle.js?v=260829-113718",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "vallourec": {
+    "src": "/images/companies/vallourec.png",
+    "sourcePage": "https://www.vallourec.com/",
+    "imageUrl": "https://www.vallourec.com/app/themes/vallourec/public/images/logos/logo-blue-gradient.ebec95.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "swagelok": {
+    "src": "/images/companies/swagelok.png",
+    "sourcePage": "https://www.swagelok.com/en",
+    "imageUrl": "https://www.swagelok.com/assets/images/print/logo-print.png",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "john-crane": {
+    "src": "/images/companies/john-crane.png",
+    "sourcePage": "https://www.johncrane.com/en",
+    "imageUrl": "https://www.johncrane.com/media/t01ncbpm/logo-john-crane.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "atlas-copco": {
+    "src": "/images/companies/atlas-copco.png",
+    "sourcePage": "https://www.atlascopco.com/en-us",
+    "imageUrl": "https://www.atlascopco.com/etc.clientlibs/settings/wcm/designs/accommons/design-system/clientlib-assets/resources/icons/logo.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "alfa-laval": {
+    "src": "/images/companies/alfa-laval.png",
+    "sourcePage": "https://www.alfalaval.com/",
+    "imageUrl": "https://www.alfalaval.com/ui/css/img/logo-alfalaval.svg",
+    "attribution": null,
+    "license": null,
+    "licenseUrl": null,
+    "reviewedOn": "2026-09-13"
+  },
+  "weg": {
+    "src": "/images/companies/weg.png",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Weg_logo_blue_vector.svg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Weg_logo_blue_vector.svg",
+    "attribution": "WEG, via Wikimedia Commons; CC BY-SA 4.0.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "reviewedOn": "2026-09-13"
+  }
+}
