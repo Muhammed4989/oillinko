@@ -2,6 +2,8 @@
 
 The canonical origin is `https://oillinko.com`. Published catalogue and blog URLs come from their existing registries. Preserve old-path permanent redirects when content moves, and keep only final indexable URLs in `src/app/sitemap.ts`.
 
+The sitemap includes the public image-credits page. Privacy and terms pages retain their existing noindex metadata and are excluded from the sitemap, but robots.txt permits fetching them so crawlers can read that directive.
+
 ## Search engines
 
 Submit the complete `https://oillinko.com/sitemap.xml` in the verified Search Console domain property. A successful sitemap submission or processing result is a discovery signal, not confirmation that every page has been indexed. Use individual URL Inspection requests for a small number of important changed URLs; do not repeatedly submit the same URL or misuse Google's restricted Indexing API for ordinary equipment and blog pages.

@@ -25,7 +25,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/privacy", "/terms"],
+        // Legal pages retain noindex in HTML; crawlers must fetch that directive.
       },
       // Preserve existing crawler preferences. Search bots and training bots
       // have separate purposes; training access is not required for search.
