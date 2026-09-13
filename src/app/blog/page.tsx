@@ -1,15 +1,8 @@
-import type { Metadata } from "next";
 import BlogListing from "@/components/BlogListing";
-
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Oil and gas industry knowledge base: equipment standards and procurement, upstream production and extraction, midstream transportation, testing and laboratories, and industry technology — practical articles for professionals.",
-  keywords:
-    "oil and gas blog, oil and gas equipment guide, oil and gas production, oil and gas transportation, petroleum testing, oil and gas industry technology, API 610 guide, bill of quantities",
-  alternates: { canonical: "/blog" },
-};
-
-export default function BlogIndexPage() {
-  return <BlogListing />;
+import { blogMetadata } from "@/lib/blog-metadata";
+type Props={searchParams:Promise<Record<string,string|string[]|undefined>>};
+export async function generateMetadata({searchParams}:Props) {
+ const query=await searchParams;
+ return {...blogMetadata("Oil & Gas Equipment and Procurement Blog","Explore oil and gas equipment guides, service scopes, inspection, material certificates and procurement advice for buyers and engineers.","/blog"),...(Object.keys(query).length?{robots:{index:false,follow:true,googleBot:{index:false,follow:true}}}:{})};
 }
+export default async function BlogPage({searchParams}:Props) { const query=await searchParams;return <BlogListing q={typeof query.q==="string"?query.q.trim().slice(0,160):""} category={typeof query.category==="string"?query.category.slice(0,100):""}/>; }

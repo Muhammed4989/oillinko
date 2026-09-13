@@ -1,54 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { categoryName, getRelatedPosts, type BlogPost } from "@/lib/blog";
+import { categoryName, getRelatedPosts, postUrl, type BlogPost } from "@/lib/blog";
 import TableOfContents from "@/components/TableOfContents";
+import { getBlogCategory, categoryAncestors, categoryUrl } from "@/lib/blog-taxonomy";
+import { BlogBreadcrumb, blogBreadcrumbData } from "@/components/BlogNavigation";
 
-export function Breadcrumb({ title }: { title: string }) {
-  return (
-    <nav aria-label="Breadcrumb" className="mb-2 flex flex-wrap items-center gap-1.5 text-xs text-muted">
-      <Link href="/" className="hover:text-accent">
-        Home
-      </Link>
-      <span>/</span>
-      <Link href="/blog" className="hover:text-accent">
-        Blog
-      </Link>
-      <span>/</span>
-      <span className="text-foreground">{title}</span>
-    </nav>
-  );
-}
-
-export function breadcrumbJsonLd(post: BlogPost) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: site.domain },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${site.domain}/blog` },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: `${site.domain}/blog/${post.slug}`,
-      },
-    ],
-  };
-}
+function postCrumbs(post: BlogPost) { return [{name:"Blog",href:"/blog"},...categoryAncestors(getBlogCategory(post.category)!).map(c=>({name:c.name,href:categoryUrl(c)})),{name:post.title,href:postUrl(post)}]; }
+export function breadcrumbJsonLd(post: BlogPost) { return blogBreadcrumbData(postCrumbs(post)); }
 
 export function articleJsonLd(post: BlogPost, opts?: { dateModified?: string }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     image: `${site.domain}${post.image}`,
     author: { "@type": "Organization", name: site.legalName, url: site.domain },
     publisher: { "@type": "Organization", name: site.legalName, url: site.domain },
     datePublished: post.date,
-    dateModified: opts?.dateModified ?? post.date,
-    mainEntityOfPage: `${site.domain}/blog/${post.slug}`,
+    dateModified: opts?.dateModified ?? post.dateModified,
+    mainEntityOfPage: `${site.domain}${postUrl(post)}`,
   };
 }
 
@@ -72,7 +44,7 @@ export function JsonLd({ data }: { data: object | object[] }) {
         <script
           key={i}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(d).replace(/</g,"\\u003c") }}
         />
       ))}
     </>
@@ -83,7 +55,7 @@ export function BlogPostHeader({ post }: { post: BlogPost }) {
   return (
     <section className="border-b border-line bg-oil-800">
       <div className="mx-auto max-w-6xl px-4 py-16">
-        <Breadcrumb title={post.title} />
+        <BlogBreadcrumb items={postCrumbs(post)} />
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
           {categoryName(post.category)}
         </p>
@@ -92,7 +64,7 @@ export function BlogPostHeader({ post }: { post: BlogPost }) {
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">{post.tagline}</p>
         <p className="mt-3 text-sm text-muted">
-          By {site.name} &middot; {post.dateLabel} &middot; {post.readTime}
+          By {site.name} &middot; Published <time dateTime={post.date}>{post.dateLabel}</time> &middot; Updated <time dateTime={post.dateModified}>{post.dateModified}</time> &middot; {post.readTime}
         </p>
       </div>
     </section>
@@ -135,16 +107,17 @@ export function Faq({ faqs }: { faqs: { q: string; a: string }[] }) {
 
 export function RelatedPosts({ post }: { post: BlogPost }) {
   const related = getRelatedPosts(post);
-  if (related.length === 0) return null;
+  const category = getBlogCategory(post.category)!;
   return (
     <section className="border-t border-line bg-oil-800">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <h2 className="text-xl font-bold">Related reading</h2>
+        <p className="mt-4 text-sm leading-7 text-muted">Continue with the <Link className="text-accent underline" href={categoryUrl(category)}>{category.name.toLowerCase()} guide</Link>, or explore {category.catalogue.map((link,i)=><span key={link.href}>{i>0?" and ":""}<Link className="text-accent underline" href={link.href}>{link.label.toLowerCase()}</Link></span>)}.</p>
         <div className="mt-6 grid gap-6 sm:grid-cols-3">
           {related.map((r) => (
             <Link
               key={r.slug}
-              href={`/blog/${r.slug}`}
+              href={postUrl(r)}
               className="group overflow-hidden rounded-lg border border-line bg-oil-900 transition-colors hover:border-accent"
             >
               <div className="relative h-28 overflow-hidden">
@@ -175,7 +148,7 @@ export function Prose({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start lg:gap-12">
       <TableOfContents variant="sidebar" />
-      <article id="post-content" className="max-w-3xl">
+      <article id="post-content" className="min-w-0 max-w-3xl lg:col-start-2 lg:row-start-1">
         <TableOfContents variant="inline" />
         {children}
       </article>

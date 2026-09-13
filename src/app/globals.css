@@ -47,3 +47,6 @@ body {
 .hero-dark .text-accent { color: #fb923c; }
 :focus-visible { outline: 3px solid #b34408; outline-offset: 3px; }
 input, textarea, select { font-size: 1rem; }
+.blog-guide .read-less { display: none; }
+.blog-guide[open] .read-more { display: none; }
+.blog-guide[open] .read-less { display: inline; }

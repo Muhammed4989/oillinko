@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CtaBand, SectionTitle } from "@/components/ui";
 import { categories } from "@/lib/equipment";
 import { getGroup, groupUrl } from "@/lib/catalogue";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, postUrl } from "@/lib/blog";
 
 const latestPosts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 4);
 
@@ -225,7 +225,7 @@ export default function HomePage() {
           {latestPosts.map((g) => (
             <Link
               key={g.slug}
-              href={`/blog/${g.slug}`}
+              href={postUrl(g)}
               className="group flex flex-col overflow-hidden rounded-lg border border-line bg-oil-800 transition-colors hover:border-accent"
             >
               <div className="relative h-36 overflow-hidden">

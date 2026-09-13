@@ -1,28 +1,5 @@
-export type BlogCategory = {
-  slug: string;
-  name: string;
-};
-
-export const blogCategories: BlogCategory[] = [
-  { slug: "buyers-guides", name: "Buyer's Guides" },
-  { slug: "pumps-rotating-equipment", name: "Pumps & Rotating Equipment" },
-  { slug: "valves-actuation", name: "Valves & Actuation" },
-  { slug: "flanges-fittings-bolting", name: "Flanges, Fittings & Bolting" },
-  { slug: "gaskets-sealing", name: "Gaskets & Sealing Products" },
-  { slug: "pressure-vessels-tanks", name: "Pressure Vessels & Tanks" },
-  { slug: "wellhead-production-equipment", name: "Wellhead & Production Equipment" },
-  { slug: "pipeline-intervention-equipment", name: "Pipeline Intervention Equipment" },
-  { slug: "standards-certification", name: "Standards & Certification" },
-  { slug: "oil-gas-markets", name: "Oil & Gas Markets" },
-  { slug: "upstream-production", name: "Upstream & Production" },
-  { slug: "midstream-transportation", name: "Midstream & Transportation" },
-  { slug: "testing-laboratories", name: "Testing & Laboratories" },
-  { slug: "industry-technology", name: "Industry Technology" },
-];
-
-export function categoryName(slug: string): string {
-  return blogCategories.find((c) => c.slug === slug)?.name ?? slug;
-}
+import { getBlogCategory, categoryUrl } from "./blog-taxonomy";
+export { blogCategories, categoryName } from "./blog-taxonomy";
 
 export type BlogPost = {
   slug: string;
@@ -30,6 +7,8 @@ export type BlogPost = {
   short: string;
   tagline: string;
   category: string;
+  mainCategory: string;
+  dateModified: string;
   readTime: string;
   date: string;
   dateLabel: string;
@@ -47,7 +26,9 @@ export const blogPosts: BlogPost[] = [
     short: "The trade-offs between routing an order through a trading company and buying direct from the factory",
     tagline:
       "Lead time, minimum order quantities, vendor vetting and multi-vendor shipments — what actually changes when an equipment RFQ goes through a sourcing partner instead of straight to the manufacturer",
-    category: "buyers-guides",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-05",
     dateLabel: "5 September 2026",
@@ -68,7 +49,9 @@ export const blogPosts: BlogPost[] = [
     short: "How combining multiple vendors into one shipment actually works, and when it's worth it",
     tagline:
       "What shipment consolidation solves for multi-vendor equipment orders, when it isn't worth the extra handling, and what a sourcing partner should confirm before goods leave any factory",
-    category: "buyers-guides",
+    category: "logistics-delivery",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-07",
     dateLabel: "7 September 2026",
@@ -89,7 +72,9 @@ export const blogPosts: BlogPost[] = [
     short: "Why RFQs land on mismatched suppliers, and how to filter for real fit before sending one",
     tagline:
       "Trading-company confusion, specialization mismatches, capacity mismatches and communication gaps that send an RFQ to the wrong supplier, and what a sourcing partner should check before it goes out",
-    category: "buyers-guides",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-07",
     dateLabel: "7 September 2026",
@@ -110,7 +95,9 @@ export const blogPosts: BlogPost[] = [
     short: "Vendor vetting, comparable quotes, technical review, inspection coordination and freight — the work behind the RFQ",
     tagline:
       "What actually happens between sending a request for quotation and receiving the equipment: vendor vetting, comparable quotes, technical review, inspection coordination and Incoterms handling",
-    category: "buyers-guides",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-05",
     dateLabel: "5 September 2026",
@@ -132,6 +119,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "How API 682 piping plans support a mechanical seal, the difference between Plan 52 and Plan 53, and what to check on a seal datasheet before you accept a quote",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-03",
     dateLabel: "3 September 2026",
@@ -153,6 +142,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "API 674 reciprocating pumps and API 676 rotary pumps compared — drive types, typical services, and what a positive displacement pump datasheet needs that a centrifugal one doesn't",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-03",
     dateLabel: "3 September 2026",
@@ -175,6 +166,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "OH, BB and VS — what the API 610 type letters mean, which configuration fits which duty, and the mechanical requirements the standard imposes on all of them",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -199,7 +192,9 @@ export const blogPosts: BlogPost[] = [
     short: "What TPI covers, who the agencies are, and how to specify witnessing level",
     tagline:
       "What a TPI agency actually does, the difference between witness, monitor and document review, and how to write the inspection clause in your RFQ",
-    category: "standards-certification",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -223,7 +218,9 @@ export const blogPosts: BlogPost[] = [
     short: "The difference between a 3.1 and a 3.2 certificate — and when you need one",
     tagline:
       "What each EN 10204 document type actually certifies, who is allowed to sign it, and how to specify the right one without over-paying for the wrong one",
-    category: "standards-certification",
+    category: "materials-documentation",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-13",
     readTime: "6 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -242,7 +239,9 @@ export const blogPosts: BlogPost[] = [
     slug: "how-to-write-a-bill-of-quantities",
     title: "How to Write a Bill of Quantities (BOQ)",
     short: "Get your equipment list right so suppliers can quote",
-    category: "buyers-guides",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     tagline:
       "A line-by-line approach to preparing an equipment list or bill of quantities (BOQ) that suppliers can quote accurately and competitively",
     readTime: "6 min read",
@@ -266,7 +265,9 @@ export const blogPosts: BlogPost[] = [
     title: "Flanges, Gaskets & Bolting",
     short: "How flanged connections hold, and how to spec them",
     tagline: "Choose the right flange class, gasket and stud bolts as a single matched system",
-    category: "flanges-fittings-bolting",
+    category: "piping-flanges-fittings",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-01-19",
     dateLabel: "19 January 2026",
@@ -286,7 +287,9 @@ export const blogPosts: BlogPost[] = [
     title: "Pipeline Fittings & Schedules",
     short: "Elbows, tees, reducers and how schedules work",
     tagline: "Reading a fittings spec: ANSI B16.9, ASTM A234 WPB, schedules and ends",
-    category: "flanges-fittings-bolting",
+    category: "piping-flanges-fittings",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "6 min read",
     date: "2026-01-26",
     dateLabel: "26 January 2026",
@@ -306,7 +309,9 @@ export const blogPosts: BlogPost[] = [
     title: "Hot Tapping & Line Stopping Explained (API RP 2201)",
     short: "Modify live pipelines without shutting them down",
     tagline: "What hot tapping and line stopping are, when they are used, and the equipment that makes them possible",
-    category: "pipeline-intervention-equipment",
+    category: "pipeline-intervention",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-13",
     readTime: "7 min read",
     date: "2026-02-02",
     dateLabel: "2 February 2026",
@@ -328,6 +333,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "Gate, globe, ball, check and butterfly valves explained, the API and ASME standards that govern them, and how to specify manual, pneumatic, electric or hydraulic actuation",
     category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -349,6 +356,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "Spiral wound, ring-type joint and kammprofile gaskets compared, and how to match the gasket to the flange class, facing and process fluid",
     category: "gaskets-sealing",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "6 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -370,6 +379,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "What ASME Section VIII, API 650, API 620 and TEMA actually cover, and how to know which code applies to your vessel, tank or heat exchanger",
     category: "pressure-vessels-tanks",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "7 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -391,6 +402,8 @@ export const blogPosts: BlogPost[] = [
     tagline:
       "What a wellhead and Christmas tree assembly actually consists of, how API 6A pressure and material classes work, and what to check before you specify one",
     category: "wellhead-production-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "7 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
@@ -412,6 +425,8 @@ slug: "reading-a-pump-curve-explained",
     tagline:
       "What the head-capacity, efficiency and NPSH-required curves on a pump datasheet actually tell you, and how to check a vendor's curve against your system before you accept an offer",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-04",
     dateLabel: "4 September 2026",
@@ -433,6 +448,8 @@ slug: "reading-a-pump-curve-explained",
     tagline:
       "The difference between FAT and commissioning, witness levels, the core factory tests, and a practical checklist for both stages of bringing a pump into service",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-04",
     dateLabel: "4 September 2026",
@@ -454,7 +471,9 @@ slug: "reading-a-pump-curve-explained",
     short: "The checks that separate a real sourcing partner from a reseller with a PDF catalogue",
     tagline:
       "Company registration, manufacturer relationships, quality credentials, financial red flags and the documents to ask for before any deposit — how to vet an equipment trading company before you commit an order to it",
-    category: "buyers-guides",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-13",
     readTime: "8 min read",
     date: "2026-09-06",
     dateLabel: "6 September 2026",
@@ -476,6 +495,8 @@ slug: "reading-a-pump-curve-explained",
     tagline:
       "VS1 through VS7 explained, why vertical turbine pumps solve NPSH problems a horizontal pump can't, and the intake design and testing details that decide whether the installed pump performs",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-06",
     dateLabel: "6 September 2026",
@@ -497,6 +518,8 @@ slug: "reading-a-pump-curve-explained",
     tagline:
       "Metallic flexible element, gear, quill shaft and torsional damping couplings compared, service factors and design life per API 671, and what API 686 requires for baseplate flatness, grouting and anchor bolt design",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-08",
     dateLabel: "8 September 2026",
@@ -518,6 +541,8 @@ slug: "reading-a-pump-curve-explained",
     tagline:
       "Hydraulic diaphragm vs packed plunger metering pumps, the ±1% accuracy and 10:1 turndown requirements, relief valve and diaphragm rupture detection rules, and what to specify on an API 675 datasheet",
     category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-13",
     readTime: "9 min read",
     date: "2026-09-08",
     dateLabel: "8 September 2026",
@@ -545,3 +570,7 @@ export function getRelatedPosts(post: BlogPost): BlogPost[] {
 }
 
 export const blogPaths = blogPosts.map((p) => ({ slug: p.slug }));
+
+export function postUrl(post: BlogPost) { return `${categoryUrl(getBlogCategory(post.category)!)}/${post.slug}`; }
+export function postsInCategory(slug: string) { return blogPosts.filter(p=>p.category===slug || p.mainCategory===slug).sort((a,b)=>b.date.localeCompare(a.date)||a.slug.localeCompare(b.slug)); }
+export function legacyBlogRedirects() { return [{source:"/guides",destination:"/blog"}, ...blogPosts.flatMap(p=>["/blog/","/guides/"].map(prefix=>({source:prefix+p.slug,destination:postUrl(p)})))]; }
