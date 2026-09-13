@@ -1,15 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
 import { categories } from "@/lib/equipment";
 import { originCountries, sectors } from "@/lib/catalogue";
 
 type Status = "idle" | "sending" | "success" | "error";
+const subscribeOrigin = (callback: () => void) => { window.addEventListener("popstate",callback); return () => window.removeEventListener("popstate",callback); };
+const originSnapshot = () => new URLSearchParams(window.location.search).get("origin")?.slice(0,100) ?? "";
+const emptyOrigin = () => "";
 
-export default function RfqForm({ initialCategory = "Multiple / full BOQ", initialItem = "", initialOrigin = "", sourcePage = "/rfq" }: { initialCategory?: string; initialItem?: string; initialOrigin?: string; sourcePage?: string }) {
+export default function RfqForm({ initialCategory = "Multiple / full BOQ", initialItem = "", initialKind = "", initialOrigin = "", sourcePage = "/rfq" }: { initialCategory?: string; initialItem?: string; initialKind?: string; initialOrigin?: string; sourcePage?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [file, setFile] = useState<File | null>(null);
+  const [category, setCategory] = useState(initialCategory);
+  const [item, setItem] = useState(initialItem);
+  const [kind, setKind] = useState(initialKind);
+  const requestedOrigin = useSyncExternalStore(subscribeOrigin,originSnapshot,emptyOrigin);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,6 +38,9 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
       setStatus("success");
       form.reset();
       setFile(null);
+      setCategory(initialCategory);
+      setItem(initialItem);
+      setKind(initialKind);
     } catch {
       setStatus("error");
     }
@@ -56,7 +66,7 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
 
       <div className="rounded-lg border-2 border-dashed border-line bg-oil-800 p-5">
         <label htmlFor="rfq-attachment" className="mb-1.5 block text-sm font-medium">
-          Equipment list / BOQ file
+          Equipment list / BOQ / service scope
         </label>
         <input
           id="rfq-attachment"
@@ -67,7 +77,7 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
           className="w-full rounded border border-line bg-oil-900 px-3 py-2.5 text-sm text-muted file:mr-3 file:rounded file:border-0 file:bg-oil-700 file:px-3 file:py-1.5 file:text-sm file:font-medium file:text-foreground hover:file:bg-oil-600"
         />
         <p className="mt-1.5 text-xs text-muted">
-          {file ? `Attached: ${file.name}` : "Excel, PDF or Word — your BOQ or equipment list (optional)"}
+          {file ? `Attached: ${file.name}` : "Excel, PDF or Word — your BOQ, specification or service scope (optional)"}
         </p>
       </div>
 
@@ -100,7 +110,7 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
 
       <div>
         <label htmlFor="rfq-category" className="mb-1.5 block text-sm font-medium">Equipment / service category</label>
-        <select id="rfq-category" name="category" className={input} defaultValue={initialCategory}>
+        <select id="rfq-category" name="category" className={input} value={category} onChange={e => { setCategory(e.target.value); setItem(""); setKind(""); }}>
           <option value="" disabled>
             Select a category
           </option>
@@ -115,11 +125,17 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
       </div>
 
       <div>
+        <label htmlFor="rfq-kind" className="mb-1.5 block text-sm font-medium">What does your request include?</label>
+        <select id="rfq-kind" name="requirement_type" value={kind} onChange={e => setKind(e.target.value)} className={input}>
+          <option value="">Select if applicable</option><option value="Equipment">Equipment / materials supply</option><option value="Service">Service / field execution</option><option value="Software">Software licensing / support</option><option value="Mixed">Mixed equipment and services</option>
+        </select>
+      </div>
+      <div>
         <label htmlFor="rfq-item" className="mb-1.5 block text-sm font-medium">Equipment / service / model reference</label>
-        <input id="rfq-item" name="equipment_or_service" defaultValue={initialItem} className={input} placeholder="Selected equipment, model or part number" />
+        <input id="rfq-item" name="equipment_or_service" value={item} onChange={e => setItem(e.target.value)} className={input} placeholder="Selected equipment, service, model or part number" />
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
-        <div><label htmlFor="rfq-origin" className="mb-1.5 block text-sm font-medium">Required country of origin</label><input id="rfq-origin" name="required_manufacturing_origin" list="origin-countries" defaultValue={initialOrigin} className={input} placeholder="No preference, or specify a country" /><datalist id="origin-countries">{originCountries.map(c=><option key={c} value={c}/>)}</datalist><p className="mt-2 text-xs text-muted">Product manufacturing origin, separate from delivery country. Subject to confirmation.</p></div>
+        <div><label htmlFor="rfq-origin" className="mb-1.5 block text-sm font-medium">Required country of origin</label><input key={initialOrigin || requestedOrigin} id="rfq-origin" name="required_manufacturing_origin" list="origin-countries" defaultValue={initialOrigin || requestedOrigin} className={input} placeholder="No preference, or specify a country" /><datalist id="origin-countries">{originCountries.map(c=><option key={c} value={c}/>)}</datalist><p className="mt-2 text-xs text-muted">Product manufacturing origin, separate from delivery country. Subject to confirmation.</p></div>
         <div><label htmlFor="rfq-origins-excluded" className="mb-1.5 block text-sm font-medium">Excluded origins / alternatives</label><input id="rfq-origins-excluded" name="origin_restrictions" className={input} placeholder="Specify restrictions or acceptable alternatives" /></div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
@@ -127,14 +143,14 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
         <div><label htmlFor="rfq-date" className="mb-1.5 block text-sm font-medium">Required delivery / service date</label><input id="rfq-date" name="required_date" type="date" className={input}/></div>
       </div>
       <div>
-        <label htmlFor="rfq-message" className="mb-1.5 block text-sm font-medium">{file ? "Additional details (optional)" : "Equipment requirements *"}</label>
+        <label htmlFor="rfq-message" className="mb-1.5 block text-sm font-medium">{file ? "Additional details (optional)" : "Equipment or service requirements *"}</label>
         <textarea
           required={!file}
           id="rfq-message"
           name="message"
           rows={5}
           className={input}
-          placeholder="Describe your requirement — items, quantities, sizes, classes, required standards, target delivery..."
+          placeholder="Equipment: items, quantities and specifications. Services: asset, work scope, site, dates, responsibilities and required deliverables."
         />
       </div>
 

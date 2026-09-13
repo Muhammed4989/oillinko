@@ -1,3 +1,5 @@
+import { extendCatalogue } from "./catalogue-extensions";
+
 export const sectors = [
   { id: "exploration", name: "Exploration & Reservoir", description: "Surveying, formation evaluation and reservoir data acquisition before and during field development." },
   { id: "drilling", name: "Drilling & Well Construction", description: "Rig equipment, tubulars, drilling fluids, cementing and well-control requirements." },
@@ -8,13 +10,16 @@ export const sectors = [
   { id: "offshore", name: "Offshore & Marine", description: "Offshore production, subsea operations, marine support and harsh-environment equipment." },
   { id: "power", name: "Power & Utilities", description: "Electrical power, steam, cooling, compressed air and industrial utility systems." },
   { id: "water", name: "Water & Environment", description: "Produced water, industrial water treatment, wastewater and environmental monitoring." },
+  { id: "decommissioning", name: "Decommissioning & Restoration", description: "Well abandonment, facility retirement, materials recovery and site restoration enquiries." },
+  { id: "energy-transition", name: "Carbon Management & Geothermal", description: "Carbon capture, CO2 handling, methane monitoring and geothermal project requirements related to industrial energy systems." },
 ] as const;
 
 export type SectorId = typeof sectors[number]["id"];
-export const applications = ["New projects", "Maintenance & spares", "Plant turnarounds", "Inspection & testing", "Rental & field services"];
+export const applications = ["New projects", "Maintenance & spares", "Plant turnarounds", "Inspection & testing", "Rental & field services", "Studies & design", "Well intervention", "Decommissioning"];
 export const originCountries = ["Turkey", "Germany", "United States", "United Kingdom", "Italy", "France", "Spain", "Netherlands", "Switzerland", "Sweden", "Norway", "Finland", "Austria", "Belgium", "Poland", "Czechia", "Canada", "Mexico", "Brazil", "Japan", "South Korea", "China", "India", "Taiwan", "Singapore", "Malaysia", "Indonesia", "Australia", "Saudi Arabia", "United Arab Emirates", "Qatar", "Oman", "Egypt", "South Africa"];
 
-export type CatalogueType = { id: string; name: string; description: string; requirements: string[] };
+export type RequirementKind = "Equipment" | "Service" | "Software";
+export type CatalogueType = { id: string; name: string; description: string; requirements: string[]; aliases?: string[]; kind?: RequirementKind; sectors?: SectorId[]; applications?: string[]; detail?: boolean };
 export type CatalogueGroup = { slug: string; name: string; summary: string; sectors: SectorId[]; applications: string[]; kind: "Equipment" | "Service"; types: CatalogueType[] };
 type Row = [string, string, string];
 function group(slug: string, name: string, summary: string, sectors: SectorId[], rows: Row[], kind: "Equipment" | "Service" = "Equipment"): CatalogueGroup {
@@ -22,7 +27,7 @@ function group(slug: string, name: string, summary: string, sectors: SectorId[],
 
 }
 
-export const catalogue: CatalogueGroup[] = [
+const baseCatalogue: CatalogueGroup[] = [
  group("pumps-rotating-equipment", "Pumps & Rotating Equipment", "Liquid-transfer and dosing equipment, with mechanical components for rotating machinery. Select by duty and fluid conditions before selecting a size or model.", ["production","pipelines","refining","gas","power","water"], [
   ["Centrifugal pumps", "For process transfer, circulation and utility duties; the operating point and suction conditions define the selection.", "Flow and differential head|Fluid composition and temperature|Suction pressure and available NPSH|Materials and seal arrangement"],
   ["Positive displacement pumps", "Reciprocating, screw, gear and progressing-cavity arrangements for duties requiring a defined volume per cycle.", "Flow and discharge pressure|Viscosity and solids content|Drive and speed|Relief and pulsation requirements"],
@@ -171,16 +176,40 @@ export const catalogue: CatalogueGroup[] = [
  ], "Service"),
 ];
 
+export const catalogue = extendCatalogue(baseCatalogue);
 export function getGroup(slug: string) { return catalogue.find(g=>g.slug===slug); }
+export function typeUrl(group: CatalogueGroup, item: CatalogueType) {
+ return `/equipment/${group.slug}${item.detail ? `/${item.id}` : `#${item.id}`}`;
+}
 export function requestUrl(category: string, item?: string, origin?: string) {
  const p=new URLSearchParams({category}); if(item)p.set("item",item); if(origin)p.set("origin",origin);
  return `/rfq?${p.toString()}`;
 }
-export function filterCatalogue(query: string, sector: string, kind: string, application: string) {
- const terms=query.trim().toLowerCase().split(/\s+/).filter(Boolean);
- return catalogue.filter(g=>(!sector||g.sectors.some(s=>s===sector))&&(!kind||g.kind===kind)&&(!application||g.applications.includes(application))).map(g=> {
-  const shared=`${g.name} ${g.summary} ${g.sectors.map(id=>sectors.find(s=>s.id===id)?.name).join(" ")}`.toLowerCase();
-  const types=g.types.filter(t=>terms.every(term=>`${shared} ${t.name} ${t.description} ${t.requirements.join(" ")}`.toLowerCase().includes(term)));
+export type CatalogueFilters = { search: string; category: string; sector: string; kind: string; application: string; origin: string };
+export const catalogueFilterKeys = ["search", "category", "sector", "kind", "application", "origin"] as const;
+export function readCatalogueFilters(query: Record<string, string | string[] | undefined>): CatalogueFilters {
+ const text=(key:string,limit=160)=>typeof query[key]==="string" ? query[key].trim().slice(0,limit) : "";
+ const category=text("category"), sector=text("sector"), kind=text("kind"), application=text("application");
+ return {search:text("search"),category:getGroup(category)?category:"",sector:sectors.some(s=>s.id===sector)?sector:"",kind:["Equipment","Service","Software"].includes(kind)?kind:"",application:applications.includes(application)?application:"",origin:text("origin",100)};
+}
+export function catalogueSearchUrl(filters: Partial<CatalogueFilters>) {
+ const params=new URLSearchParams();
+ for(const key of catalogueFilterKeys){const value=filters[key]?.trim();if(value)params.set(key,value);}
+ return `/equipment${params.size?`?${params.toString()}`:""}`;
+}
+export function filterCatalogue(query: string, sector: string, kind: string, application: string, category = "") {
+ const normalize=(value:string)=>value.toLowerCase().replace(/\bp\s*&\s*a\b/g,"plug abandonment").replace(/\be\s*&\s*i\b/g,"electrical instrument").replace(/[^\p{L}\p{N}]+/gu," ").trim();
+ const terms=normalize(query).split(/\s+/).filter(Boolean);
+ return catalogue.filter(g=>!category||g.slug===category).map(g=> {
+  const types=g.types.filter(t=> {
+   const itemSectors=t.sectors??g.sectors;
+   if(sector&&!itemSectors.some(s=>s===sector))return false;
+   if(kind&&(t.kind??g.kind)!==kind)return false;
+   if(application&&!(t.applications??g.applications).includes(application))return false;
+   const text=normalize(`${t.name} ${t.description} ${t.requirements.join(" ")} ${(t.aliases??[]).join(" ")} ${itemSectors.map(id=>sectors.find(s=>s.id===id)?.name).join(" ")}`);
+   const familyName=normalize(g.name);
+   return terms.every(term=>text.includes(term)) || terms.every(term=>familyName.includes(term));
+  });
   return {...g,types};
  }).filter(g=>g.types.length>0);
 }

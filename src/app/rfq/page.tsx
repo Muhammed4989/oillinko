@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui";
 import { site } from "@/lib/site";
 import RfqForm from "@/components/RfqForm";
-import { getGroup } from "@/lib/catalogue";
+import { getGroup, typeUrl } from "@/lib/catalogue";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
   description:
-    "Send your bill of quantities (BOQ) or equipment list to Oillinko and receive competitive offers from verified oil and gas equipment manufacturers — checked against your specifications.",
+    "Send equipment specifications, a BOQ or a service scope to Oillinko. Our team reviews your requirements and coordinates sourcing enquiries.",
   alternates: { canonical: "/rfq" },
 };
 
@@ -20,11 +20,11 @@ export default async function RfqPage({ searchParams }: { searchParams: Promise<
     <>
       <PageHeader
         title="Request a Quote"
-        subtitle="Send us your bill of quantities or equipment list. We'll review your requirements and contact suitable suppliers for quotations."
+        subtitle="Send us your bill of quantities, equipment list or service scope. We'll review your requirements and contact suitable suppliers for quotations."
       />
       <section className="mx-auto max-w-3xl px-4 py-14">
         <div className="rounded-xl border border-line bg-oil-800 p-6 sm:p-8">
-          <RfqForm initialCategory={group?.name ?? "Multiple / full BOQ"} initialItem={item?.name} initialOrigin={origin} sourcePage={group ? `/equipment/${group.slug}${item ? `#${item.id}` : ""}` : "/rfq"} />
+          <RfqForm key={`${group?.slug}/${item?.id}/${origin}`} initialCategory={group?.name ?? "Multiple / full BOQ"} initialItem={item?.name} initialKind={item?.kind ?? group?.kind ?? ""} initialOrigin={origin} sourcePage={group ? (item ? typeUrl(group,item) : `/equipment/${group.slug}`) : "/rfq"} />
         </div>
         <div className="mt-6 rounded-lg border border-line bg-oil-800 p-6 text-sm leading-relaxed text-muted">
           <p className="font-semibold text-foreground">Prefer email or phone?</p>
