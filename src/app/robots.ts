@@ -27,8 +27,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/privacy", "/terms"],
       },
-      // Explicitly welcome AI answer-engine and LLM-training crawlers —
-      // Oillinko wants to be discoverable and cited by AI search tools.
+      // Preserve existing crawler preferences. Search bots and training bots
+      // have separate purposes; training access is not required for search.
       ...aiCrawlers.map((userAgent) => ({
         userAgent,
         allow: "/",
