@@ -6,6 +6,8 @@ Provide manufacturer, model, serial number, equipment tag and relevant drawings.
 
 ## Separate assessment from authorized repair
 
+The [control valve repair RFQ guide](post:control-valve-repair-rfq-scope-tests-reports) applies this distinction to a valve, actuator and positioner assembly. It explains which identification records, diagnostic evidence, approval boundaries and final reports help a buyer compare a proposed overhaul.
+
 Where the condition is uncertain, an initial assessment can provide the basis for a subsequent repair proposal. Define the assessment deliverables, the permitted scope and any limits on disassembly. Ask the provider to explain how it will report findings, recommended work and parts requiring replacement. The purchaser should know which activities are included in the initial price and which require further authorization. This prevents an enquiry for an evaluation from becoming an open-ended commitment to repair every defect that might be discovered after the equipment reaches a workshop.
 
 The assessment may need inspection, measurements or testing relevant to the equipment. The [inspection and testing guide](category:inspection-testing) explains how to frame the method, coverage and reporting scope. Results should remain traceable to the asset and the conditions under which they were obtained. A measurement report does not necessarily include a complete engineering recommendation, so specify that deliverable separately if it is needed. Likewise, a commercial repair offer should identify its technical basis rather than presenting a replacement parts list without explaining the findings that justify it.

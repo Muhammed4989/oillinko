@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "control-valve-repair-rfq-scope-tests-reports",
+    title: "Control Valve Repair RFQs: Scope, Tests and Reports",
+    short: "Request evidence about the valve, actuator and positioner before approving an overhaul quotation.",
+    tagline: "How to describe the fault, separate assessment from repair, agree testing and request useful as-found and as-left records.",
+    category: "maintenance-repair",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-14",
+    readTime: "8 min read",
+    date: "2026-09-14",
+    dateLabel: "14 September 2026",
+    description: "Prepare a control valve repair RFQ with assembly identification, diagnostic evidence, parts approval, agreed testing and traceable repair reports.",
+    keywords: "control valve repair, control valve repair quotation, valve overhaul scope, as-found as-left valve report, control valve repair testing",
+    image: "/images/blog/control-valve-repair-evidence.png",
+    related: [
+      "valves-and-actuation-explained",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "en-10204-material-certificates-explained",
+    ],
+  },
+  {
     slug: "exw-vs-fca-oil-gas-equipment-buyers",
     title: "EXW vs FCA for Oil & Gas Equipment Buyers",
     short: "Compare collection, loading and export responsibilities before choosing an equipment quotation.",

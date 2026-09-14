@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Control valve repair evidence</title>
+  <desc id="desc">Connect the condition received, approved repair scope and returned evidence using one equipment identity.</desc>
+  <rect width="1200" height="630" fill="#f4f7fa"/>
+  <rect width="16" height="630" fill="#f97316"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="60" y="70" font-size="19" letter-spacing="3" font-weight="700" fill="#b8430a">OILLINKO / MAINTENANCE GUIDES</text>
+    <text x="60" y="132" font-size="43" font-weight="700" fill="#142e43">Control valve repair evidence</text>
+    <text x="60" y="175" font-size="25" fill="#465a6b">One equipment identity, from assessment to acceptance</text>
+    <rect x="60" y="221" width="460" height="269" rx="18" fill="#fff" stroke="#d0dbe4"/>
+    <rect x="680" y="221" width="460" height="269" rx="18" fill="#fff" stroke="#d0dbe4"/>
+    <text x="90" y="272" font-size="28" font-weight="700" fill="#142e43">AS FOUND</text>
+    <text x="710" y="272" font-size="28" font-weight="700" fill="#142e43">AS LEFT</text>
+    <g font-size="24" fill="#465a6b">
+      <text x="90" y="324">Valve + actuator + positioner</text><text x="90" y="367">Observed condition</text><text x="90" y="410">Supporting measurements</text><text x="90" y="453">Proposed work and parts</text>
+      <text x="710" y="324">Final assembly configuration</text><text x="710" y="367">Completed work and parts</text><text x="710" y="410">Agreed test results</text><text x="710" y="453">Remaining limitations</text>
+    </g>
+    <path d="M539 353h117m-13-13 13 13-13 13" fill="none" stroke="#f97316" stroke-width="5"/>
+    <g font-size="19" text-anchor="middle" font-weight="700" fill="#b8430a"><text x="597" y="306">APPROVED</text><text x="597" y="330">SCOPE</text></g>
+    <rect x="60" y="528" width="1080" height="54" rx="10" fill="#e5edf3"/>
+    <text x="600" y="563" text-anchor="middle" font-size="23" font-weight="700" fill="#142e43">Keep the valve tag and scope revision traceable across every record.</text>
+    <text x="60" y="610" font-size="16" fill="#607183">Illustrative buyer record structure. Test methods and acceptance criteria require technical agreement.</text>
+  </g>
+</svg>
