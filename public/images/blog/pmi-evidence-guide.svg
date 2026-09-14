@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PMI: three parts of material acceptance</title>
+  <desc id="desc">Chemical analysis, component identity and the project specification are distinct parts of reviewing a material.</desc>
+  <rect width="1200" height="630" rx="28" fill="#f3f6f8"/>
+  <text x="64" y="86" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#c45314" letter-spacing="4">OILLINKO / BUYER GUIDES</text>
+  <text x="64" y="160" font-family="Arial,sans-serif" font-size="49" font-weight="700" fill="#142836">What does a PMI result prove?</text>
+  <g fill="#fff" stroke="#d9e2e7" stroke-width="2">
+    <rect x="64" y="214" width="328" height="305" rx="20"/>
+    <rect x="436" y="214" width="328" height="305" rx="20"/>
+    <rect x="808" y="214" width="328" height="305" rx="20"/>
+  </g>
+  <g fill="none" stroke="#ea6f27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="228" cy="311" r="48"/>
+    <path d="M187 332l24-40 28 29 28-45"/>
+    <path d="M564 268h65l22 22v65h-87zM629 268v25h22M581 312h43M581 332h30"/>
+    <rect x="932" y="265" width="82" height="91" rx="9"/>
+    <path d="M953 293l8 8 20-20M953 330l8 8 20-20"/>
+  </g>
+  <g font-family="Arial,sans-serif" text-anchor="middle" fill="#142836">
+    <g font-size="34" font-weight="700"><text x="228" y="411">Chemistry</text><text x="600" y="411">Identity</text><text x="972" y="411">Specification</text></g>
+    <g font-size="23" fill="#506371"><text x="228" y="455">What was measured?</text><text x="600" y="455">Which component?</text><text x="972" y="455">What is required?</text></g>
+  </g>
+  <text x="64" y="578" font-family="Arial,sans-serif" font-size="25" fill="#506371">Connect the result to the item and the acceptance basis.</text>
+</svg>

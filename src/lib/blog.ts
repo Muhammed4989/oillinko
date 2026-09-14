@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "positive-material-identification-xrf-oes-buyers-guide",
+    title: "Positive Material Identification: XRF vs OES for Buyers",
+    short: "Choose a PMI method that can measure the elements your purchase specification actually needs.",
+    tagline: "What XRF and OES can establish, why carbon matters for 316L, and how to request traceable PMI results when buying pressure components.",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-14",
+    readTime: "8 min read",
+    date: "2026-09-14",
+    dateLabel: "14 September 2026",
+    description: "Compare XRF and OES for positive material identification. Understand carbon limitations, traceable PMI reports and the inspection scope to include in an RFQ.",
+    keywords: "positive material identification, XRF vs OES PMI, PMI testing requirements, PMI inspection report, 316L carbon verification",
+    image: "/images/blog/pmi-evidence-guide.png",
+    related: [
+      "en-10204-material-certificates-explained",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "flanges-gaskets-and-bolting",
+    ],
+  },
+  {
     slug: "equipment-trading-companies-vs-buying-direct",
     title:
       "Equipment Trading Companies vs Buying Direct from the Manufacturer: Pros, Cons and When Each Makes Sense",
