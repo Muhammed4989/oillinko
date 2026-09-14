@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "spiral-wound-gasket-identification-rfq",
+    title: "Spiral Wound Gasket Identification: A Buyer’s RFQ Guide",
+    short: "Turn gasket markings, ring details and flange records into a clear replacement requirement.",
+    tagline: "How to separate winding, filler and ring materials, check the flange interface and resolve missing information before ordering.",
+    category: "gaskets-sealing",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-14",
+    readTime: "8 min read",
+    date: "2026-09-14",
+    dateLabel: "14 September 2026",
+    description: "Spiral wound gasket identification for buyers: read markings, distinguish winding and ring materials, confirm flange details and prepare a replacement RFQ.",
+    keywords: "spiral wound gasket identification, spiral wound gasket RFQ, gasket winding and filler materials, gasket inner and outer rings, ASME B16.20 gasket marking",
+    image: "/images/blog/spiral-wound-gasket-components.png",
+    related: [
+      "gaskets-and-sealing-products-explained",
+      "flanges-gaskets-and-bolting",
+      "en-10204-material-certificates-explained",
+    ],
+  },
+  {
     slug: "control-valve-repair-rfq-scope-tests-reports",
     title: "Control Valve Repair RFQs: Scope, Tests and Reports",
     short: "Request evidence about the valve, actuator and positioner before approving an overhaul quotation.",
@@ -417,7 +437,7 @@ export const blogPosts: BlogPost[] = [
       "Spiral wound, ring-type joint and kammprofile gaskets compared, and how to match the gasket to the flange class, facing and process fluid",
     category: "gaskets-sealing",
     mainCategory: "oil-and-gas-equipment",
-    dateModified: "2026-09-13",
+    dateModified: "2026-09-14",
     readTime: "6 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",

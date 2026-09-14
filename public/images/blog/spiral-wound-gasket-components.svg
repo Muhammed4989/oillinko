@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#eef4f8"/>
+  <g font-family="Arial, sans-serif" fill="#213346">
+    <text x="64" y="68" font-size="20" font-weight="700" letter-spacing="2">OILLINKO / BUYER GUIDES</text>
+    <text x="64" y="125" font-size="38" font-weight="700">One gasket. Four material fields.</text>
+    <text x="64" y="162" font-size="21" fill="#526375">Record the winding, filler and each ring separately.</text>
+    <circle cx="292" cy="380" r="169" fill="#d4dee8" stroke="#607387" stroke-width="2"/>
+    <circle cx="292" cy="380" r="127" fill="#273b50"/>
+    <g fill="none" stroke="#90a2b2" stroke-width="2">
+      <circle cx="292" cy="380" r="121"/><circle cx="292" cy="380" r="114"/>
+      <circle cx="292" cy="380" r="107"/><circle cx="292" cy="380" r="100"/>
+    </g>
+    <circle cx="292" cy="380" r="93" fill="#e2a064" stroke="#9b5e2d" stroke-width="2"/>
+    <circle cx="292" cy="380" r="67" fill="#eef4f8" stroke="#9b5e2d" stroke-width="2"/>
+    <g fill="none" stroke="#607387" stroke-width="2">
+      <path d="M 423 275 H 509 V 254 H 556"/>
+      <path d="M 407 375 H 556"/>
+      <path d="M 369 404 H 493 V 489 H 556"/>
+    </g>
+    <g fill="#fff" stroke="#d3dfe9">
+      <rect x="556" y="210" width="580" height="92" rx="12"/>
+      <rect x="556" y="319" width="580" height="110" rx="12"/>
+      <rect x="556" y="446" width="580" height="92" rx="12"/>
+    </g>
+    <text x="581" y="247" font-size="25" font-weight="700">OUTER RING</text>
+    <text x="581" y="278" font-size="21" fill="#526375">Specify its own material grade.</text>
+    <text x="581" y="356" font-size="25" font-weight="700">WINDING + FILLER</text>
+    <text x="581" y="387" font-size="21" fill="#526375">Two fields within the sealing element:</text>
+    <text x="581" y="413" font-size="21" fill="#526375">metal grade and filler identification.</text>
+    <text x="581" y="483" font-size="25" font-weight="700">INNER RING</text>
+    <text x="581" y="514" font-size="21" fill="#526375">Confirm presence and material grade.</text>
+    <text x="64" y="593" font-size="18" fill="#526375">Example with both rings. Not to scale. Colors are not material identification codes.</text>
+  </g>
+</svg>

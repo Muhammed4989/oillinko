@@ -11,7 +11,7 @@ import {
   breadcrumbJsonLd,
   faqJsonLd,
 } from "@/components/BlogChrome";
-import { getPost } from "@/lib/blog";
+import { getPost, postUrl } from "@/lib/blog";
 
 const post = getPost("gaskets-and-sealing-products-explained")!;
 
@@ -19,7 +19,7 @@ const post = getPost("gaskets-and-sealing-products-explained")!;
 const faqs = [
   {
     q: "When is a ring-type joint (RTJ) gasket required instead of a spiral wound gasket?",
-    a: "RTJ gaskets are typically used at higher pressure classes (commonly Class 900 and above) and where the flange facing is machined with a matching ring groove, giving a more robust metal-to-metal seal than a spiral wound gasket can provide at those pressures.",
+    a: "Use the gasket type specified for the actual joint. RTJ gaskets require the matching ring groove, profile and material requirements; pressure class alone does not determine the gasket type. Do not substitute an RTJ and a spiral wound gasket merely because size and class appear to match.",
   },
   {
     q: "What filler material should a spiral wound gasket use?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Can a gasket for one flange class be used on another?",
-    a: "No — a gasket is sized to a specific flange size and class, since the raised face dimensions and the gasket's compressed width and inner/outer diameter must match the flange facing precisely for a proper seal.",
+    a: "Do not infer interchangeability from class labels alone. Some dimensions or product designs can cover multiple designations, while others cannot. Confirm the applicable flange standard, facing, bore, gasket dimensions and construction against the approved joint requirements and manufacturer information.",
   },
 ];
 
@@ -37,18 +37,19 @@ export default function Page() {
       <BlogPostHeader post={post} />
       <Prose>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
-          A flange only seals as well as the gasket between the two faces,
-          sized and tested to{" "}
+          A gasket must be selected for the complete flange joint and service.
+          Metallic gasket requirements are addressed by{" "}
           <a
             className="text-accent hover:underline"
-            href="https://www.asme.org/codes-standards"
+            href="https://www.asme.org/codes-standards/find-codes-standards/b16-20-metallic-gaskets-pipe-flanges"
             target="_blank"
             rel="noopener noreferrer"
           >
             ASME B16.20
           </a>
-          . Get the gasket type, filler or facing wrong and the flange class,
-          bolting and material grade around it stop mattering. Here is how
+          , within its stated scope. The gasket construction, flange geometry,
+          materials, bolting and approved assembly requirements work together.
+          Here is how
           the main gasket types used in oil and gas piping differ, and when
           each one applies.
         </p>
@@ -57,8 +58,8 @@ export default function Page() {
         <div className="mt-6 space-y-4">
           {[
             {
-              t: "Spiral wound gaskets (API 601 / ASME B16.20)",
-              d: "The industrial default for flanged connections in oil and gas. A metal strip — typically stainless steel — is wound alternately with a filler material (graphite or PTFE) into a flat, resilient gasket that seals under bolt load and maintains sealing pressure as the joint relaxes over time.",
+              t: "Spiral wound gaskets (ASME B16.20)",
+              d: "A formed metal winding and a softer filler make up the sealing element. Inner and outer rings may be part of the specified construction. Select the materials and geometry for the actual joint and service; nominal size alone does not identify the complete product.",
             },
             {
               t: "Ring-type joint (RTJ) gaskets",
@@ -66,11 +67,11 @@ export default function Page() {
             },
             {
               t: "Kammprofile (grooved metal) gaskets",
-              d: "A solid metal core with concentric grooves, faced with a thin soft layer (often graphite). Kammprofile gaskets need lower bolt load to seal than spiral wound gaskets, making them useful on older or lighter flanges, or where a very reliable seal is required at moderate bolt loads.",
+              d: "A grooved metal core with a soft facing forms the sealing construction. Required seating load and performance depend on the particular product and joint. Ask for the manufacturer's applicable selection data rather than assuming one gasket family always needs less load than another.",
             },
             {
               t: "Non-metallic sheet gaskets (ASME B16.21)",
-              d: "Flat gaskets cut from compressed non-asbestos or PTFE sheet material, used for lower-pressure, less critical services such as utility water or low-pressure air lines.",
+              d: "Flat sealing products made from specified sheet materials, including suitable fiber composites or PTFE formulations. Their application depends on the material, process conditions and joint requirements; the product family alone does not establish a service limit.",
             },
           ].map((x) => (
             <div key={x.t} className="rounded-lg border border-line bg-oil-800 p-6">
@@ -92,13 +93,20 @@ export default function Page() {
           ]}
         />
         <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">
-          Because a gasket is only correct in combination with its flange and
-          bolting, always order it alongside the flange line item rather than
-          as a separate generic purchase — see our guide to{" "}
+          Tie each gasket purchase to the relevant flange or joint reference,
+          including when buying replacements separately. See our guide to{" "}
           <Link className="text-accent hover:underline" href="/blog/category/oil-and-gas-equipment/piping-flanges-fittings/flanges-gaskets-and-bolting">
             flanges, gaskets and bolting
           </Link>{" "}
           for how the three elements work as one connection.
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          For a replacement with incomplete markings, the{" "}
+          <Link className="text-accent hover:underline" href={postUrl(getPost("spiral-wound-gasket-identification-rfq")!)}>
+            spiral wound gasket identification and RFQ guide
+          </Link>{" "}
+          explains how to distinguish winding, filler and ring materials and
+          confirm the flange information before comparing quotations.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Need gaskets matched to an existing flange schedule? Browse our{" "}
@@ -109,7 +117,7 @@ export default function Page() {
           <Link className="text-accent hover:underline" href="/rfq">
             send us your flange list
           </Link>{" "}
-          and we will quote the matching gasket set.
+          for review and supplier quotation coordination.
         </p>
 
         <Faq faqs={faqs} />
