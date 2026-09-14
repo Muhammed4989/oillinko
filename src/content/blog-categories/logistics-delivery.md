@@ -18,6 +18,8 @@ Long storage periods and changing environments can affect equipment preservation
 
 ## Agree delivery terms and the named place
 
+For quotations collected from a factory or a nominated terminal, the [EXW vs FCA equipment buyer guide](post:exw-vs-fca-oil-gas-equipment-buyers) compares loading and export responsibilities. It explains how to specify the handover and compare the remaining shipment costs on the same basis.
+
 [ICC's Incoterms 2020 resource](https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/) explains how the rules allocate relevant obligations, costs and risks between seller and buyer. Specify the selected rule, named place and edition in the commercial agreement. Do not assume that payment terms, transfer of ownership or technical acceptance are settled merely by choosing an Incoterms rule. Those matters require their own agreed terms. The rule should also fit the actual transport arrangement and the parties' ability to carry out the responsibilities assigned to them.
 
 Clarify who arranges carriage, insurance, export and import formalities, and destination handling within the agreed scope. Country-specific requirements must be checked for the actual transaction with the responsible parties. Avoid treating a generic shipping estimate as a complete landed cost where duties, taxes or handling remain unconfirmed. Ask which costs are included and which are provisional. If the delivery point changes, recheck the allocation of responsibilities and cost assumptions rather than updating only the address on the packing list or purchase order.

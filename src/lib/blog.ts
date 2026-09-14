@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "exw-vs-fca-oil-gas-equipment-buyers",
+    title: "EXW vs FCA for Oil & Gas Equipment Buyers",
+    short: "Compare collection, loading and export responsibilities before choosing an equipment quotation.",
+    tagline: "How to define the handover point, compare the complete shipment scope and prepare delivery requirements for an equipment RFQ.",
+    category: "logistics-delivery",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-14",
+    readTime: "8 min read",
+    date: "2026-09-14",
+    dateLabel: "14 September 2026",
+    description: "EXW vs FCA for oil and gas equipment: compare loading, export clearance, named delivery points, packing and quotation exclusions before placing an order.",
+    keywords: "EXW vs FCA, oil and gas equipment shipping terms, FCA named place, EXW equipment quotation, Incoterms 2020 procurement",
+    image: "/images/blog/exw-fca-quotation-review.png",
+    related: [
+      "consolidated-shipments-and-multi-vendor-orders",
+      "how-to-write-a-bill-of-quantities",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+    ],
+  },
+  {
     slug: "positive-material-identification-xrf-oes-buyers-guide",
     title: "Positive Material Identification: XRF vs OES for Buyers",
     short: "Choose a PMI method that can measure the elements your purchase specification actually needs.",

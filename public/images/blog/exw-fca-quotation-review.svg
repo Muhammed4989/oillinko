@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Review the whole equipment quotation</title>
+  <desc id="desc">Confirm equipment, define the handover, and price the remaining journey before comparing offers.</desc>
+  <rect width="1200" height="630" fill="#f4f7fa"/>
+  <rect x="0" y="0" width="16" height="630" fill="#f97316"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="60" y="72" font-size="19" font-weight="700" letter-spacing="3" fill="#b8430a">OILLINKO / PROCUREMENT GUIDES</text>
+    <text x="60" y="136" font-size="46" font-weight="700" fill="#142e43">EXW vs FCA</text>
+    <text x="60" y="180" font-size="27" fill="#465a6b">Review the whole equipment quotation</text>
+    <g stroke="#d0dbe4" fill="#ffffff">
+      <rect x="60" y="227" width="336" height="271" rx="18"/>
+      <rect x="432" y="227" width="336" height="271" rx="18"/>
+      <rect x="804" y="227" width="336" height="271" rx="18"/>
+    </g>
+    <g fill="#f97316">
+      <circle cx="105" cy="274" r="22"/><circle cx="477" cy="274" r="22"/><circle cx="849" cy="274" r="22"/>
+      <path d="M404 352h18l-6-6m6 6-6 6M776 352h18l-6-6m6 6-6 6" fill="none" stroke="#f97316" stroke-width="3"/>
+    </g>
+    <g fill="#ffffff" font-size="24" font-weight="700" text-anchor="middle"><text x="105" y="282">1</text><text x="477" y="282">2</text><text x="849" y="282">3</text></g>
+    <g fill="#142e43" font-size="27" font-weight="700">
+      <text x="85" y="333">Equipment scope</text><text x="457" y="333">Handover point</text><text x="829" y="333">Remaining journey</text>
+    </g>
+    <g fill="#465a6b" font-size="23">
+      <text x="85" y="385">Configuration</text><text x="85" y="422">Packing</text><text x="85" y="459">Release documents</text>
+      <text x="457" y="385">Named location</text><text x="457" y="422">Loading responsibility</text><text x="457" y="459">Export arrangements</text>
+      <text x="829" y="385">Onward transport</text><text x="829" y="422">Destination charges</text><text x="829" y="459">Insurance scope</text>
+    </g>
+    <text x="60" y="562" font-size="23" font-weight="700" fill="#142e43">Compare the same equipment and destination. Keep unconfirmed costs visible.</text>
+    <text x="60" y="601" font-size="16" fill="#607183">Buyer planning illustration · Confirm the agreed delivery rule, place and edition in the quotation.</text>
+  </g>
+</svg>
