@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "replacement-heat-exchanger-tube-bundles-rfq",
+    title: "Replacement Heat Exchanger Tube Bundles: RFQ Guide",
+    short: "Define replacement boundaries, drawing evidence and performance responsibilities before ordering a tube bundle.",
+    tagline: "A buyer guide to replacement bundle identity, retained interfaces, process duty, materials and acceptance evidence.",
+    category: "pressure-vessels-tanks",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-15",
+    readTime: "9 min read",
+    date: "2026-09-15",
+    dateLabel: "15 September 2026",
+    description: "Prepare an RFQ for replacement heat exchanger tube bundles: drawings, fit, process duty, materials, acceptance evidence and delivery assumptions.",
+    keywords: "replacement heat exchanger tube bundles, tube bundle RFQ, replacement bundle drawings, heat exchanger bundle compatibility",
+    image: "/images/blog/tube-bundle-review.png",
+    related: ["pressure-vessels-tanks-and-heat-exchangers-explained", "en-10204-material-certificates-explained", "third-party-inspection-tpi-oil-and-gas-equipment"],
+  },
+  {
     slug: "export-packing-oil-gas-equipment-rfq",
     title: "Export Packing for Oil & Gas Equipment: RFQ Checklist",
     short: "Define equipment protection, package identity and transport responsibilities before comparing packing quotations.",

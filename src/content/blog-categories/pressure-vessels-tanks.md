@@ -12,6 +12,8 @@ For heat exchangers, identify both fluid streams, their required inlet and outle
 
 ## Agree the fabrication and interface boundaries
 
+For installed exchangers, the [replacement tube bundle RFQ guide](post:replacement-heat-exchanger-tube-bundles-rfq) explains how to connect drawing revisions and retained interfaces to the process basis. It separates mechanical fit, performance commitments and acceptance evidence before a manufacturing order is released.
+
 Fabricated equipment often has many mechanical interfaces. Nozzle orientation, connection details, supports, lifting provisions and access openings should be represented in the agreed drawing package. The surrounding piping and structural design must account for the equipment arrangement and project requirements. If transport dimensions restrict a package, establish whether field assembly is expected and who is responsible for that work. A quotation for shop fabrication may exclude site lifting, foundation work, insulation, coating repair or final connections. These exclusions affect both project cost and the schedule needed to reach a usable installation.
 
 Internal components deserve explicit identification. Demisters, distributors, trays, coils and other internals may have their own material and performance requirements. Existing internals can also restrict what can be replaced through an access opening. For spare components, include the equipment serial number, assembly drawing and part identification where available. Ask the manufacturer to confirm fit and the scope of any replacement proposal. A dimensional resemblance is useful evidence for an enquiry, but it does not establish that a component will maintain the original vessel's process performance or design requirements.

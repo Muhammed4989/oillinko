@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#edf4f8"/>
+<g font-family="Arial, sans-serif" fill="#203343">
+<text x="60" y="58" font-size="20" letter-spacing="2" font-weight="700">OILLINKO / REPLACEMENT TUBE BUNDLES</text>
+<text x="60" y="114" font-size="35" font-weight="700">One equipment record. Three review decisions.</text>
+<rect x="65" y="222" width="340" height="238" rx="18" fill="#203343"/>
+<g fill="white"><text x="95" y="270" font-size="23" font-weight="700">EXISTING EQUIPMENT</text><text x="95" y="317" font-size="21">Identity and drawing revisions</text><text x="95" y="355" font-size="21">Condition and repair history</text><text x="95" y="393" font-size="21">Current process requirements</text></g>
+<g stroke="#c98239" stroke-width="4" fill="none"><path d="M405 341H480V221H530M480 341H530M480 341V461H530"/></g>
+<g fill="white" stroke="#cad8e1"><rect x="530" y="175" width="605" height="94" rx="14"/><rect x="530" y="295" width="605" height="94" rx="14"/><rect x="530" y="415" width="605" height="94" rx="14"/></g>
+<text x="557" y="211" font-size="23" font-weight="700">FIT</text><text x="557" y="245" font-size="21">Confirmed interfaces and approved deviations</text>
+<text x="557" y="331" font-size="23" font-weight="700">DUTY</text><text x="557" y="365" font-size="21">Agreed process basis and performance scope</text>
+<text x="557" y="451" font-size="23" font-weight="700">ACCEPTANCE</text><text x="557" y="485" font-size="21">Inspection, records and release responsibilities</text>
+<text x="65" y="574" font-size="21">Matching the outside dimensions does not resolve all three questions.</text>
+<text x="65" y="608" font-size="16" fill="#576d7c">Procurement review map. Not a fabrication drawing or an engineering approval.</text>
+</g></svg>
