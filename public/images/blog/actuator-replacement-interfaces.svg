@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#edf3f7"/>
+  <g font-family="Arial, sans-serif">
+    <text x="60" y="58" fill="#304253" font-size="19" font-weight="700" letter-spacing="2">OILLINKO / REPLACEMENT REQUIREMENTS</text>
+    <text x="60" y="110" fill="#1e2f40" font-size="34" font-weight="700">A matching flange is only one interface.</text>
+    <rect x="60" y="158" width="336" height="303" rx="18" fill="#ffffff" stroke="#c8d3dc" stroke-width="2"/>
+    <rect x="432" y="158" width="336" height="303" rx="18" fill="#1e2f40"/>
+    <rect x="804" y="158" width="336" height="303" rx="18" fill="#ffffff" stroke="#c8d3dc" stroke-width="2"/>
+    <g font-size="22" font-weight="700">
+      <text x="86" y="207" fill="#1e2f40">VALVE DUTY</text>
+      <text x="458" y="207" fill="#ffffff">MECHANICAL FIT</text>
+      <text x="830" y="207" fill="#1e2f40">CONTROL PACKAGE</text>
+    </g>
+    <g font-size="21" fill="#435769">
+      <text x="86" y="267">Torque or thrust</text><text x="86" y="309">Travel and motion</text>
+      <text x="86" y="351">Service conditions</text><text x="86" y="393">Valve limits</text>
+      <text x="830" y="267">Available utilities</text><text x="830" y="309">Commands and feedback</text>
+      <text x="830" y="351">Required failure response</text><text x="830" y="393">Retained accessories</text>
+    </g>
+    <g font-size="21" fill="#e4edf4">
+      <text x="458" y="267">Flange and drive</text><text x="458" y="309">Coupling and bracket</text>
+      <text x="458" y="351">Orientation and clearance</text><text x="458" y="393">Assembly responsibility</text>
+    </g>
+    <g stroke="#cd8845" fill="none" stroke-width="4"><path d="M400 310h26m-8-8 8 8-8 8"/><path d="M772 310h26m-8-8 8 8-8 8"/></g>
+    <rect x="60" y="491" width="1080" height="64" rx="12" fill="#dfe9ef"/>
+    <text x="84" y="532" fill="#263a4b" font-size="23" font-weight="700">Agree the complete supply boundary before comparing quotations.</text>
+    <text x="60" y="597" fill="#627587" font-size="17">Buyer review map. No dimensions, output limits or equipment compatibility are implied.</text>
+  </g>
+</svg>

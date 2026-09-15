@@ -11,7 +11,7 @@ import {
   breadcrumbJsonLd,
   faqJsonLd,
 } from "@/components/BlogChrome";
-import { getPost } from "@/lib/blog";
+import { getPost, postUrl } from "@/lib/blog";
 
 const post = getPost("valves-and-actuation-explained")!;
 
@@ -104,18 +104,19 @@ export default function Page() {
 
         <h2 id="specifying-actuation" className="mt-12 text-xl font-bold">Specifying actuation</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
-          Actuators mount to the valve stem per the{" "}
+          Part-turn actuator attachments may be specified to{" "}
           <a
             className="text-accent hover:underline"
             href="https://www.iso.org/standard/89904.html"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong className="text-foreground">ISO 5211</strong>
+            <strong className="text-foreground">ISO 5211:2026</strong>
           </a>{" "}
-          interface standard, which keeps the actuator and valve
-          interchangeable between manufacturers. When specifying actuation,
-          define:
+          for flange and driving-component interfaces. Matching an attachment
+          does not establish complete interchangeability: output, travel,
+          mounting assemblies, utilities and controls still require review.
+          When specifying actuation, define:
         </p>
         <CheckList
           items={[
@@ -136,6 +137,14 @@ export default function Page() {
           matched package rather than two separate purchases — the actuator&apos;s
           torque output must be sized to the valve&apos;s actual breakaway and
           running torque at the specified pressure differential.
+        </p>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          For an installed assembly, the{" "}
+          <Link className="text-accent hover:underline" href={postUrl(getPost("valve-actuator-replacement-rfq-compatibility")!)}>
+            valve actuator replacement RFQ guide
+          </Link>{" "}
+          explains how to document retained accessories, mounting constraints
+          and failure response before accepting an equivalent.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Sourcing valves for a project? Browse our{" "}

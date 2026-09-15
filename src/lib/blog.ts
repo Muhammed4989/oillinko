@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "valve-actuator-replacement-rfq-compatibility",
+    title: "Valve Actuator Replacement: RFQ & Compatibility Guide",
+    short: "Check valve duty, mounting, controls and failure response before accepting a replacement actuator.",
+    tagline: "The evidence buyers need to compare replacement actuators, retained accessories and complete automation packages.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-15",
+    readTime: "9 min read",
+    date: "2026-09-15",
+    dateLabel: "15 September 2026",
+    description: "Prepare a valve actuator replacement RFQ: check torque, travel, ISO 5211 mounting, utilities, controls and failure response before accepting an equivalent.",
+    keywords: "valve actuator replacement, valve actuator RFQ, ISO 5211 actuator compatibility, actuator torque requirements, fail position actuator",
+    image: "/images/blog/actuator-replacement-interfaces.png",
+    related: [
+      "valves-and-actuation-explained",
+      "control-valve-repair-rfq-scope-tests-reports",
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+    ],
+  },
+  {
     slug: "pressure-gauge-calibration-certificate-buyers-guide",
     title: "Pressure Gauge Calibration Certificates: A Buyer’s Guide",
     short: "Check the instrument identity, measured results and acceptance basis before treating a calibration certificate as approval.",
@@ -434,7 +454,7 @@ export const blogPosts: BlogPost[] = [
       "Gate, globe, ball, check and butterfly valves explained, the API and ASME standards that govern them, and how to specify manual, pneumatic, electric or hydraulic actuation",
     category: "valves-actuation",
     mainCategory: "oil-and-gas-equipment",
-    dateModified: "2026-09-13",
+    dateModified: "2026-09-15",
     readTime: "8 min read",
     date: "2026-09-02",
     dateLabel: "2 September 2026",
