@@ -12,6 +12,8 @@ Separate urgent equipment from items that can wait. A small critical spare shoul
 
 ## Define packing and cargo information
 
+The [export packing RFQ checklist](post:export-packing-oil-gas-equipment-rfq) separates equipment protection, transport handling and package records. Use it to compare supplier packing proposals and identify missing assumptions before dispatch.
+
 Transport planning needs dimensions, weights and the characteristics of the actual packed cargo. A catalogue net weight is not a substitute for a final packing list. Ask for the number of packages, gross weights and dimensions as they become available, and identify any changes that affect the transport plan. Equipment that requires special lifting, orientation or protection should be clearly described. The manufacturer should provide handling and preservation requirements relevant to the supplied item, rather than leaving the carrier to infer them from the appearance of the crate.
 
 Long storage periods and changing environments can affect equipment preservation needs. Ask how the offered packing supports the planned journey and any expected storage before installation. Some components may require specific inspection or preservation actions during storage; obtain those instructions from the manufacturer. Keep package labels tied to purchase order and equipment references so receiving personnel can identify the contents without unnecessary unpacking. For mixed orders, distinguish complete assemblies, loose accessories and documentation packages to reduce the chance that an essential small item becomes separated from its parent equipment.

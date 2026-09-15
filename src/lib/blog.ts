@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "export-packing-oil-gas-equipment-rfq",
+    title: "Export Packing for Oil & Gas Equipment: RFQ Checklist",
+    short: "Define equipment protection, package identity and transport responsibilities before comparing packing quotations.",
+    tagline: "How to specify export packing, storage assumptions, wood packaging evidence and package-level records for project equipment.",
+    category: "logistics-delivery",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-15",
+    readTime: "9 min read",
+    date: "2026-09-15",
+    dateLabel: "15 September 2026",
+    description: "Specify export packing for oil and gas equipment: preservation, wood packaging, handling data, packing lists and release evidence for a clear RFQ.",
+    keywords: "export packing for oil and gas equipment, equipment packing list, export packing RFQ, ISPM 15 wood packaging, equipment preservation for shipment",
+    image: "/images/blog/export-packing-review.png",
+    related: ["consolidated-shipments-and-multi-vendor-orders", "exw-vs-fca-oil-gas-equipment-buyers", "third-party-inspection-tpi-oil-and-gas-equipment"],
+  },
+  {
     slug: "valve-actuator-replacement-rfq-compatibility",
     title: "Valve Actuator Replacement: RFQ & Compatibility Guide",
     short: "Check valve duty, mounting, controls and failure response before accepting a replacement actuator.",
