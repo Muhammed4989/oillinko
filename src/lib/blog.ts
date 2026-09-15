@@ -20,6 +20,26 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "pressure-gauge-calibration-certificate-buyers-guide",
+    title: "Pressure Gauge Calibration Certificates: A Buyer’s Guide",
+    short: "Check the instrument identity, measured results and acceptance basis before treating a calibration certificate as approval.",
+    tagline: "What as-found and as-left results, traceability, uncertainty and laboratory scope tell you about a pressure gauge calibration.",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-15",
+    readTime: "8 min read",
+    date: "2026-09-15",
+    dateLabel: "15 September 2026",
+    description: "Review a pressure gauge calibration certificate: instrument identity, as-found and as-left results, uncertainty, traceability and the agreed acceptance rule.",
+    keywords: "pressure gauge calibration certificate, pressure gauge calibration report, as-found as-left calibration, calibration uncertainty, accredited pressure calibration",
+    image: "/images/blog/pressure-calibration-record.png",
+    related: [
+      "third-party-inspection-tpi-oil-and-gas-equipment",
+      "pump-factory-acceptance-testing-and-commissioning-checklist",
+      "en-10204-material-certificates-explained",
+    ],
+  },
+  {
     slug: "spiral-wound-gasket-identification-rfq",
     title: "Spiral Wound Gasket Identification: A Buyer’s RFQ Guide",
     short: "Turn gasket markings, ring details and flange records into a clear replacement requirement.",
