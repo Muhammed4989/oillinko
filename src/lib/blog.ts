@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "asme-b16-5-flange-pressure-classes",
+    title: "ASME B16.5 Flange Pressure Classes: A Buyer’s Guide",
+    short: "Understand class designations, material-specific pressure-temperature ratings and complete-joint checks before buying flanges.",
+    tagline: "Why Class 150 is not a fixed 150 psi limit, and which rating evidence belongs in a flange enquiry.",
+    category: "piping-flanges-fittings",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-16",
+    readTime: "9 min read",
+    date: "2026-09-16",
+    dateLabel: "16 September 2026",
+    description: "Understand ASME B16.5 flange pressure classes, material and temperature effects, connection compatibility and the evidence needed for a clear enquiry.",
+    keywords: "ASME B16.5 flange pressure classes, Class 150 flange pressure rating, flange pressure temperature rating, flange material group",
+    image: "/images/blog/flange-rating-review.png",
+    related: ["flanges-gaskets-and-bolting", "spiral-wound-gasket-identification-rfq", "en-10204-material-certificates-explained"],
+  },
+  {
     slug: "replacement-heat-exchanger-tube-bundles-rfq",
     title: "Replacement Heat Exchanger Tube Bundles: RFQ Guide",
     short: "Define replacement boundaries, drawing evidence and performance responsibilities before ordering a tube bundle.",
@@ -419,7 +435,7 @@ export const blogPosts: BlogPost[] = [
     tagline: "Choose the right flange class, gasket and stud bolts as a single matched system",
     category: "piping-flanges-fittings",
     mainCategory: "oil-and-gas-equipment",
-    dateModified: "2026-09-13",
+    dateModified: "2026-09-16",
     readTime: "8 min read",
     date: "2026-01-19",
     dateLabel: "19 January 2026",

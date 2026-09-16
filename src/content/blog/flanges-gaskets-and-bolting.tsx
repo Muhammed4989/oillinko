@@ -19,15 +19,15 @@ const post = getPost("flanges-gaskets-and-bolting")!;
 const faqs = [
   {
     q: "Can a Class 300 flange be bolted to a Class 600 flange?",
-    a: "No. The two flanges in a joint must be the same ASME B16.5 pressure class — the bolt circle, number of bolt holes and flange thickness differ between classes, so a Class 300 and Class 600 flange are not interchangeable or safe to mix.",
+    a: "Do not assume flanges of different classes are interchangeable. The responsible engineer must verify the exact dimensions, facing, bolting and rating of the proposed joint. A matching bolt pattern alone does not approve a mixed-class connection.",
   },
   {
     q: "What is the difference between RF and RTJ facing?",
-    a: "Raised face (RF) is the standard facing used across most pressure classes, sealing against a gasket compressed onto a raised ring on the flange face. Ring-type joint (RTJ) facing uses a metal ring gasket seated in a groove, giving a more robust seal used at higher pressure classes and larger sizes.",
+    a: "Raised face (RF) joints use a gasket on the raised sealing surface. Ring-type joint (RTJ) joints use a compatible metal ring gasket in the specified grooves. Facing, ring geometry and materials must match the approved connection; pressure class alone does not select the facing.",
   },
   {
     q: "Why is ASTM A193 Gr. B7 paired with A194 Gr. 2H nuts?",
-    a: "The pairing is designed so that, if the joint is ever over-torqued or overloaded, the nut threads are the weaker point and fail before the bolt itself — a deliberate safety margin. Gr. 2H nuts are hardened low-alloy steel matched specifically to the strength of Gr. B7 studs.",
+    a: "B7 studs and 2H nuts are a common specified combination, but selection depends on the approved joint requirements. Grade 2H is quenched-and-tempered medium-carbon steel with specified mechanical requirements. The nut should not be described as an intentional weak point or a safeguard against overtightening.",
   },
 ];
 
@@ -43,11 +43,11 @@ export default function FlangesGuide() {
           connections cannot. Pumps, valves, vessels and instruments must be
           removable, and pipelines must be temporarily separated for cleaning,
           testing or tie-in. Every one of those joints uses the same three
-          elements: two flanges rated to the same pressure class, a gasket that
+          elements: compatible flanges, a gasket that
           seals the facing, and stud bolts with nuts that hold the assembly
-          together. If any of the three is under-specified, the joint fails — and
-          a leaking flange joint in hydrocarbon service is a serious incident
-          waiting to happen. Treat the connection as one system.
+          together. Incomplete specification can compromise the joint.
+          Treat the connection as one system and follow the approved design
+          and assembly requirements.
         </p>
 
         <h2 id="flanges-asme-b16-5-types-and-pressure-classes" className="mt-12 text-xl font-bold">Flanges: ASME B16.5 types and pressure classes</h2>
@@ -62,8 +62,8 @@ export default function FlangesGuide() {
             <strong className="text-foreground">ASME B16.5</strong>
           </a>
           . It fixes the
-          dimensions, pressure classes, facings and materials so that flanges from
-          different factories can still be bolted together. Common flange types
+          dimensions, pressure-temperature ratings and other requirements within
+          its scope. Confirm the exact product and interface. Common flange types
           in oil and gas are:
         </p>
         <div className="mt-6 overflow-x-auto rounded-lg border border-line">
@@ -77,12 +77,12 @@ export default function FlangesGuide() {
             </thead>
             <tbody>
               {[
-                ["Weld neck", "Butt-welded to the pipe; bore matches the pipe", "Main process and hazardous service — the default in oil and gas"],
-                ["Slip-on", "Placed over the pipe and fillet-welded", "General purpose, lower class service"],
+                ["Weld neck", "Butt-welded to the pipe", "Confirm bore, end preparation and project requirements"],
+                ["Slip-on", "Placed over the pipe and fillet-welded", "Use where permitted by the approved piping specification"],
                 ["Blind", "No bore — closes the end of a line or vessel", "Flange ends, valves, test boundaries"],
                 ["Socket weld", "Pipe fits inside the socket, fillet-welded", "Small-bore high-pressure lines"],
                 ["Lap joint", "A stub end backs the loose flange", "Lines that are taken apart frequently"],
-                ["Threaded", "Screwed onto the pipe", "Small, low-pressure, non-critical duty"],
+                ["Threaded", "Screwed onto the pipe", "Confirm thread and permitted service in the project specification"],
               ].map((r) => (
                 <tr key={r[0]} className="border-b border-line/60 last:border-0">
                   <td className="px-4 py-3 font-medium text-foreground">{r[0]}</td>
@@ -95,12 +95,12 @@ export default function FlangesGuide() {
         </div>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Pressure classes under ASME B16.5 are{" "}
-          <strong className="text-foreground">150, 300, 600, 900, 1500 and 2500</strong>.
-          Higher classes mean thicker, stronger flanges and a higher pressure
-          rating — and a Class 600 flange can never be mixed with a Class 300
-          one. Raised face (RF) is the standard facing for most classes; ring-type
-          joint (RTJ) facings are used for higher classes and larger sizes where
-          gasket retention is critical.
+          <strong className="text-foreground">150, 300, 400, 600, 900, 1500 and 2500</strong>.
+          The rating must be reviewed for the applicable material and temperature;
+          the class number is not a pressure value in psi. Size limits depend on
+          class, and the facing must be specified separately. Read the{" "}
+          <Link className="text-accent hover:underline" href="/blog/category/oil-and-gas-equipment/piping-flanges-fittings/asme-b16-5-flange-pressure-classes">flange pressure class buyer guide</Link>{" "}
+          before comparing rating descriptions or proposed substitutes.
         </p>
 
         <h2 id="gaskets-sealing-the-face" className="mt-12 text-xl font-bold">Gaskets: sealing the face</h2>
@@ -110,8 +110,8 @@ export default function FlangesGuide() {
           <strong className="text-foreground">spiral wound gasket per ASME B16.20</strong>:
           a stainless steel strip winding (commonly AISI 304 or higher alloy) and a
           filler such as graphite, spiralled into a flat gasket that seals under
-          bolt load and spring-back. API 601 covers spiral wound gaskets for
-          refinery service. Select the winding and filler to the process fluid
+          bolt load and spring-back. Specify the applicable ASME B16.20 edition
+          and project requirements. Select the winding and filler to the process fluid
           and temperature, not just the flange size.
         </p>
 
@@ -132,10 +132,10 @@ export default function FlangesGuide() {
         </p>
         <ul className="mt-5 space-y-3">
           {[
-            ["Stud bolt — ASTM A193 Gr. B7", "A chromium-molybdenum carbon steel, quenched and tempered, with the strength to hold a Class 150–2500 joint at high flanging pressure."],
-            ["Nut — ASTM A194 Gr. 2H", "A heavy hex nut of low-alloy steel, hardened, designed so a failure happens in the nut threads rather than the bolt."],
-            ["Threads and dimensions", "Threads per ANSI B1.1 (class 2 is common); dimensions per ANSI B18.2. Bolts are supplied with one or two heavy hex nuts as specified."],
-            ["Corrosion-resistant service", "For aggressive service, A193 Gr. B8M (316 stainless) or low-hardness variants are used instead of plain B7."],
+            ["Stud bolt — ASTM A193 Gr. B7", "Quenched-and-tempered chromium-molybdenum alloy steel. Confirm the material and mechanical requirements against the approved joint specification."],
+            ["Nut — ASTM A194 Gr. 2H", "Quenched-and-tempered medium-carbon steel with specified mechanical requirements; not an intentional weak link in the joint."],
+            ["Threads and dimensions", "Specify diameter, thread, length and the applicable dimensional requirements. Define how many nuts and other accessories form each ordered set."],
+            ["Other service requirements", "Alternative fastener materials and coatings require technical selection for the actual environment; do not substitute grades from a generic corrosion-resistant description."],
           ].map(([s, d]) => (
             <li key={s} className="flex gap-3 text-sm leading-relaxed text-muted">
               <svg className="mt-0.5 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="3">
@@ -147,6 +147,12 @@ export default function FlangesGuide() {
             </li>
           ))}
         </ul>
+
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          Manufacturer reference: <a className="text-accent hover:underline" href="https://www.portlandbolt.com/technical/specifications/astm-a194/" target="_blank" rel="noopener noreferrer">Portland Bolt&apos;s ASTM A194 technical table</a>{" "}
+          identifies Grade 2H material and mechanical requirements. Use the
+          applicable specification and project requirements for acceptance.
+        </p>
 
         <h2 id="specify-the-whole-set" className="mt-12 text-xl font-bold">Specify the whole set</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">

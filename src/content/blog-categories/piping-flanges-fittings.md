@@ -6,6 +6,8 @@ Begin with the piping class, line specification or approved drawing. Identify wh
 
 ## Read ratings as a complete specification
 
+The [flange pressure class buyer guide](post:asme-b16-5-flange-pressure-classes) explains why a class number is not a fixed pressure value. It connects material and temperature information to the rating review, then checks the evidence needed for the complete mating connection.
+
 Nominal size and pressure class are starting points, not a complete connection definition. The [ASME B16.5 scope](https://www.asme.org/codes-standards/find-codes-standards/b16-5-pipe-flanges-flanged-fittings-nps-1-2-nps-24-metric-inch-standard) covers pressure-temperature ratings, materials, dimensions and other requirements for the flanges and flanged fittings within its scope. A class designation is not a single allowable pressure for every temperature and material. The responsible engineer needs to confirm the rating against the project conditions, and the supplier needs enough information to identify the correct component and supporting documentation.
 
 Facing, bore, end preparation and connection standard affect fit even when nominal sizes match. Existing drawings are particularly useful where replacement parts must connect to installed equipment. The article on [flanges, gaskets and bolting](post:flanges-gaskets-and-bolting) explains why these items are specified as a joint system. Avoid ordering each element from a different shorthand description and expecting the final assembly to be compatible. Where flange standards or connection systems differ, request an engineered interface review rather than assuming that a nominal size conversion will resolve the difference.

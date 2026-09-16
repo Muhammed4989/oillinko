@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#edf4f8"/>
+<g font-family="Arial,sans-serif" fill="#203343">
+<text x="60" y="58" font-size="20" font-weight="700" letter-spacing="2">OILLINKO / FLANGE RATING REVIEW</text>
+<text x="60" y="117" font-size="37" font-weight="700">Class 150 does not mean a fixed 150 psi limit.</text>
+<g fill="white" stroke="#ccd9e1"><rect x="60" y="169" width="330" height="108" rx="14"/><rect x="435" y="169" width="330" height="108" rx="14"/><rect x="810" y="169" width="330" height="108" rx="14"/></g>
+<g font-size="24" font-weight="700"><text x="83" y="211">CLASS + STANDARD</text><text x="458" y="211">MATERIAL</text><text x="833" y="211">TEMPERATURE</text></g>
+<g font-size="20"><text x="83" y="247">Specified designation</text><text x="458" y="247">Applicable grade and basis</text><text x="833" y="247">Defined project conditions</text></g>
+<path d="M225 277V312H975V277M600 277V342" stroke="#c98239" stroke-width="4" fill="none"/>
+<rect x="60" y="342" width="1080" height="92" rx="14" fill="#203343"/>
+<text x="89" y="381" fill="white" font-size="24" font-weight="700">REVIEW THE APPLICABLE PRESSURE–TEMPERATURE RATING</text>
+<text x="89" y="414" fill="white" font-size="20">Document, revision, units, notes and product-specific limitations</text>
+<text x="60" y="493" font-size="25" font-weight="700">Then check the complete connection.</text>
+<text x="60" y="535" font-size="22">Mating interface · Gasket · Bolting · Other connection limits · Approval</text>
+<text x="60" y="598" font-size="17" fill="#576d7c">Conceptual buyer checklist. Not a pressure-rating chart or permission to operate equipment.</text>
+</g></svg>
