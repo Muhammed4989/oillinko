@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#eff6f8"/><g font-family="Arial, sans-serif">
+<text x="60" y="70" font-size="23" fill="#17677a">OILLINKO / INSPECTION BUYER GUIDE</text>
+<text x="60" y="132" font-size="44" font-weight="700" fill="#102d41">PT or MT? Define the inspection scope.</text>
+<rect x="60" y="177" width="525" height="264" rx="20" fill="#fff" stroke="#bad2da"/>
+<rect x="615" y="177" width="525" height="264" rx="20" fill="#fff" stroke="#bad2da"/>
+<text x="92" y="232" font-size="33" font-weight="700" fill="#17677a">PT / Liquid penetrant</text>
+<text x="92" y="289" font-size="26" fill="#102d41">Suitable nonporous materials</text>
+<text x="92" y="335" font-size="26" fill="#102d41">Discontinuities open to the surface</text>
+<text x="92" y="396" font-size="22" fill="#526773">Confirm material and surface suitability</text>
+<text x="647" y="232" font-size="33" font-weight="700" fill="#17677a">MT / Magnetic particle</text>
+<text x="647" y="289" font-size="26" fill="#102d41">Ferromagnetic materials</text>
+<text x="647" y="335" font-size="26" fill="#102d41">Surface and near-surface examination</text>
+<text x="647" y="396" font-size="22" fill="#526773">Confirm applicability to the actual item</text>
+<rect x="60" y="476" width="1080" height="95" rx="16" fill="#102d41"/>
+<text x="90" y="514" font-size="24" font-weight="700" fill="#fff">BOTH NEED A DEFINED ASSIGNMENT</text>
+<text x="90" y="550" font-size="25" fill="#d7ebef">Coverage · Acceptance criteria · Qualified personnel · Traceable report</text>
+<text x="60" y="607" font-size="19" fill="#526773">Conceptual comparison only. The project requirements and approved procedure govern the examination.</text>
+</g></svg>

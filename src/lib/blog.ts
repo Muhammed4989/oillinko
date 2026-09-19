@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "liquid-penetrant-vs-magnetic-particle-testing-rfq",
+    title: "Liquid Penetrant vs Magnetic Particle Testing: RFQ Guide",
+    short: "Compare PT and MT applicability, then define inspection coverage, acceptance criteria and traceable reporting.",
+    tagline: "How to turn a surface inspection requirement into a scope that buyers and inspection providers can compare.",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-19",
+    readTime: "9 min read",
+    date: "2026-09-19",
+    dateLabel: "19 September 2026",
+    description: "Compare liquid penetrant vs magnetic particle testing for buyers: material suitability, surface access, inspection coverage, acceptance criteria and RFQ records.",
+    keywords: "liquid penetrant vs magnetic particle testing, PT vs MT inspection, NDT inspection RFQ, surface inspection scope",
+    image: "/images/blog/pt-mt-scope-review.png",
+    related: ["third-party-inspection-tpi-oil-and-gas-equipment", "positive-material-identification-xrf-oes-buyers-guide", "en-10204-material-certificates-explained"],
+  },
+  {
     slug: "asme-b16-5-flange-pressure-classes",
     title: "ASME B16.5 Flange Pressure Classes: A Buyer’s Guide",
     short: "Understand class designations, material-specific pressure-temperature ratings and complete-joint checks before buying flanges.",

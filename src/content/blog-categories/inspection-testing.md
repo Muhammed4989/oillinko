@@ -30,4 +30,6 @@ Reports should state findings clearly and identify unresolved deviations, limita
 
 ## Submit the requirement and supporting records
 
+For a surface examination enquiry, the [liquid penetrant versus magnetic particle testing guide](post:liquid-penetrant-vs-magnetic-particle-testing-rfq) separates material applicability from coverage and acceptance. Use it to organize component identities, examination areas and reporting responsibilities before comparing inspection prices.
+
 Use the [inspection and engineering service catalogue](/oil-and-gas/services/inspection-engineering) to describe the scope to Oillinko, including the worksite, quantities, method or objective, dates and required deliverables. For broader condition work, the [asset integrity and survey catalogue](/oil-and-gas/services/asset-integrity-surveys) may provide a more appropriate starting point. Enquiries are reviewed before a specific provider and scope are proposed. The [inspection and material quality guide](category:inspection-material-quality) ties the individual assignment back to the complete acceptance package, so the final report serves a clear project purpose.
