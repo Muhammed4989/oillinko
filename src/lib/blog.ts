@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "check-valve-cracking-pressure-rfq-guide",
+    title: "Check Valve Cracking Pressure: A Buyer’s RFQ Guide",
+    short: "Separate opening threshold, required flow, resealing and working pressure before buying an inline check valve.",
+    tagline: "The data and evidence buyers need to compare check valve configurations without confusing their pressure specifications.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-20",
+    readTime: "9 min read",
+    date: "2026-09-20",
+    dateLabel: "20 September 2026",
+    description: "Understand check valve cracking pressure, reseal behavior and working pressure. Prepare an RFQ with flow conditions, materials and verification requirements.",
+    keywords: "check valve cracking pressure, check valve reseal pressure, check valve RFQ, cracking pressure vs working pressure",
+    image: "/images/blog/check-valve-pressure-questions.png",
+    related: ["valves-and-actuation-explained","reading-a-pump-curve-explained","inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "inspection-test-plans-hold-vs-witness-points",
     title: "Inspection and Test Plans: Hold vs Witness Points",
     short: "Agree inspection participation, notification and release authority before placing an equipment order.",
