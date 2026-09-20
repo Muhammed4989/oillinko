@@ -31,3 +31,8 @@ Inspection, certification and warranty obligations should also be agreed before 
 ## Route the enquiry through Oillinko
 
 Oillinko receives requirements for sourcing and RFQ coordination through the [procurement services page](/services) and enquiry form. Provide the current equipment list, supporting specifications and the date by which a response is needed. State whether the enquiry is budgetary or intended for near-term purchase. The comparison of [direct manufacturer and trading-company purchasing](post:equipment-trading-companies-vs-buying-direct) can help choose the commercial route. Product availability, supply scope and commercial terms are confirmed through the individual offer, while the buyer retains control of the technical and purchasing approvals required for the order.
+
+
+## Agree inspection participation before ordering
+
+The [inspection and test plan guide](post:inspection-test-plans-hold-vs-witness-points) explains how hold and witness points affect notices, attendance and release authority. Use it when comparing inspection commitments in equipment offers, especially where different parties must review records or approve progression through manufacturing stages.

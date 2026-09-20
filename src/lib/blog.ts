@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "inspection-test-plans-hold-vs-witness-points",
+    title: "Inspection and Test Plans: Hold vs Witness Points",
+    short: "Agree inspection participation, notification and release authority before placing an equipment order.",
+    tagline: "A buyer guide to ITP legends, inspection notices, traceable records and manufacturing release boundaries.",
+    category: "supplier-selection-rfq",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-20",
+    readTime: "9 min read",
+    date: "2026-09-20",
+    dateLabel: "20 September 2026",
+    description: "Understand hold vs witness points in inspection and test plans. Define notification, approval authority, records and release boundaries in equipment RFQs.",
+    keywords: "hold vs witness points, inspection and test plan, ITP procurement requirements, inspection notification and release",
+    image: "/images/blog/itp-hold-witness-points.png",
+    related: ["third-party-inspection-tpi-oil-and-gas-equipment","pump-factory-acceptance-testing-and-commissioning-checklist","en-10204-material-certificates-explained"],
+  },
+  {
     slug: "liquid-penetrant-vs-magnetic-particle-testing-rfq",
     title: "Liquid Penetrant vs Magnetic Particle Testing: RFQ Guide",
     short: "Compare PT and MT applicability, then define inspection coverage, acceptance criteria and traceable reporting.",
