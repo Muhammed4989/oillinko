@@ -33,3 +33,8 @@ Define warranty or workmanship terms for the actual repair scope and identify ex
 ## Prepare a scoped service enquiry
 
 Submit the equipment identification, condition information, required schedule and expected deliverables through the [inspection, engineering and repair service catalogue](/oil-and-gas/services/inspection-engineering). State whether the immediate request is for assessment, a defined repair or a planned maintenance package. Oillinko receives the enquiry for review and provider coordination; availability, qualifications and the detailed work scope are confirmed for the particular requirement. The wider [oil and gas services guide](category:oil-and-gas-services) explains schedule and commercial interfaces. Additional maintenance articles will be published in this category as they are prepared and reviewed.
+
+
+## Define plate heat exchanger service boundaries
+
+The [plate heat exchanger cleaning and reconditioning guide](post:plate-heat-exchanger-cleaning-reconditioning-rfq) explains how to separate cleaning, plate examination, gasket replacement and frame work in a service enquiry. Use it to identify conditional repairs, allocate site and transport responsibilities, and agree the evidence needed at handover before comparing offers.

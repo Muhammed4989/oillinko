@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "plate-heat-exchanger-cleaning-reconditioning-rfq",
+    title: "Plate Heat Exchanger Cleaning vs Reconditioning: RFQ Guide",
+    short: "Compare cleaning, plate reconditioning and frame repair through a clearly defined service scope.",
+    tagline: "How buyers can specify equipment identity, conditional repairs, inspection and handover evidence for gasketed plate heat exchangers.",
+    category: "maintenance-repair",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-20",
+    readTime: "9 min read",
+    date: "2026-09-20",
+    dateLabel: "20 September 2026",
+    description: "Compare plate heat exchanger cleaning and reconditioning. Define gasket replacement, inspection, conditional repairs and acceptance records in your service RFQ.",
+    keywords: "plate heat exchanger cleaning vs reconditioning, plate heat exchanger service RFQ, plate heat exchanger regasketing, heat exchanger cleaning scope",
+    image: "/images/blog/plate-heat-exchanger-service-scope.png",
+    related: ["pressure-vessels-tanks-and-heat-exchangers-explained","liquid-penetrant-vs-magnetic-particle-testing-rfq","inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "check-valve-cracking-pressure-rfq-guide",
     title: "Check Valve Cracking Pressure: A Buyer’s RFQ Guide",
     short: "Separate opening threshold, required flow, resealing and working pressure before buying an inline check valve.",
