@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "oil-flushing-service-rfq-cleanliness-acceptance",
+    title: "Oil Flushing Service RFQ: Cleanliness Targets and Acceptance",
+    short: "Define oil flushing boundaries, cleanliness requirements, sampling evidence and handover responsibilities.",
+    tagline: "A procurement guide to comparable oil flushing quotations and project-specific acceptance evidence.",
+    category: "maintenance-repair",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-21",
+    readTime: "8 min read",
+    date: "2026-09-21",
+    dateLabel: "21 September 2026",
+    description: "Prepare an oil flushing RFQ with clear circuit boundaries, cleanliness targets, sampling requirements, commercial scope and acceptance records.",
+    keywords: "oil flushing service RFQ, oil flushing cleanliness targets, flushing acceptance report, oil flushing sampling plan",
+    image: "/images/blog/oil-flushing-rfq.png",
+    related: ["inspection-test-plans-hold-vs-witness-points","pump-factory-acceptance-testing-and-commissioning-checklist","control-valve-repair-rfq-scope-tests-reports"],
+  },
+  {
     slug: "heat-number-traceability-mill-certificates",
     title: "Heat Number Traceability: Matching Materials to Mill Certificates",
     short: "Connect delivered materials to their mill certificates and resolve gaps in the documentary chain.",

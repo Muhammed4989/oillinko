@@ -38,3 +38,8 @@ Submit the equipment identification, condition information, required schedule an
 ## Define plate heat exchanger service boundaries
 
 The [plate heat exchanger cleaning and reconditioning guide](post:plate-heat-exchanger-cleaning-reconditioning-rfq) explains how to separate cleaning, plate examination, gasket replacement and frame work in a service enquiry. Use it to identify conditional repairs, allocate site and transport responsibilities, and agree the evidence needed at handover before comparing offers.
+
+
+## Define oil flushing acceptance before requesting quotations
+
+The [oil flushing service RFQ guide](post:oil-flushing-service-rfq-cleanliness-acceptance) explains how to identify circuit boundaries, obtain the applicable cleanliness requirement and agree sampling evidence. It also covers commercial exclusions and handover responsibilities, helping buyers compare service proposals without treating a particle contamination code as a universal acceptance target.
