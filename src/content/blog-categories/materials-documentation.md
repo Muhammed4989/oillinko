@@ -31,3 +31,8 @@ Specify who can accept document deviations and what must be resolved before disp
 ## Build a maintainable handover package
 
 Organize the final records around purchase order lines, equipment tags or another identifier that the receiving and maintenance teams actually use. Include the accepted specification revision and resolved deviations where required. For spare parts, retain the relevant equipment reference so the record remains useful after the original packaging is removed. The [quality enquiry page](/quality) provides a route to discuss documentation requirements with Oillinko. State the expected document types and traceability basis in the initial request, allowing the proposed supplier to confirm the available evidence before the purchase becomes a commitment.
+
+
+## Match delivered material to its records
+
+The [heat number traceability guide](post:heat-number-traceability-mill-certificates) follows the connection from physical identification through packing records to the relevant mill certificate. It explains questions to resolve for cut stock, split deliveries and component records, and separates a successful identity match from technical acceptance against the purchase specification.

@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "heat-number-traceability-mill-certificates",
+    title: "Heat Number Traceability: Matching Materials to Mill Certificates",
+    short: "Connect delivered materials to their mill certificates and resolve gaps in the documentary chain.",
+    tagline: "A receiving and procurement guide to item identification, certificate matching, split deliveries and traceability discrepancies.",
+    category: "materials-documentation",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-21",
+    readTime: "8 min read",
+    date: "2026-09-21",
+    dateLabel: "21 September 2026",
+    description: "Match heat numbers and product identifiers to mill certificates. Define traceability records for cut materials, split shipments and receiving discrepancies.",
+    keywords: "heat number traceability, mill certificate matching, material traceability records, heat number vs serial number",
+    image: "/images/blog/heat-number-traceability.png",
+    related: ["en-10204-material-certificates-explained","positive-material-identification-xrf-oes-buyers-guide","consolidated-shipments-and-multi-vendor-orders"],
+  },
+  {
     slug: "mechanical-seal-replacement-identification-rfq-guide",
     title: "Mechanical Seal Replacement: Identification and RFQ Guide",
     short: "Identify the installed seal, define the assembly boundary and compare replacement offers.",
