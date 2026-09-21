@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mechanical-seal-replacement-identification-rfq-guide",
+    title: "Mechanical Seal Replacement: Identification and RFQ Guide",
+    short: "Identify the installed seal, define the assembly boundary and compare replacement offers.",
+    tagline: "What buyers need beyond shaft diameter: part references, drawings, duty, materials and a clearly defined replacement scope.",
+    category: "gaskets-sealing",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-21",
+    readTime: "8 min read",
+    date: "2026-09-21",
+    dateLabel: "21 September 2026",
+    description: "Prepare a mechanical seal replacement RFQ with part numbers, drawings, materials and duty. Compare complete cartridges, repair kits and proposed alternatives.",
+    keywords: "mechanical seal replacement identification, mechanical seal RFQ, replacement cartridge seal, mechanical seal part number",
+    image: "/images/blog/mechanical-seal-replacement-rfq.png",
+    related: ["api-682-mechanical-seal-piping-plans-explained","gaskets-and-sealing-products-explained","inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "plate-heat-exchanger-cleaning-reconditioning-rfq",
     title: "Plate Heat Exchanger Cleaning vs Reconditioning: RFQ Guide",
     short: "Compare cleaning, plate reconditioning and frame repair through a clearly defined service scope.",

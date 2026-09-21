@@ -29,3 +29,8 @@ Storage and handling requirements depend on the actual product and material. Ask
 Acceptance should compare the delivered product against the final purchase description and agreed evidence. Confirm dimensions, labeling, material identification and package condition using the project's receiving requirements. A general catalogue sheet may describe a family of products rather than the exact supplied construction. Ask for any required batch-specific records before the order is placed. The [inspection and material quality category](category:inspection-material-quality) explains how to distinguish supplier statements from the specific inspection and traceability evidence needed for a particular order.
 
 Prepare the final requirement with quantities and units that match the intended supply, such as individual gaskets, complete sets or equipment-specific kits. Include the joint or asset identification, materials, drawings, documentation and requested delivery date. Use the [gasket and sealing catalogue](/oil-and-gas/equipment/gaskets-seals) to submit the enquiry to Oillinko. Where installation or investigation is also required, describe that as a separate [maintenance and repair scope](category:maintenance-repair), so a component quotation is not mistaken for an assessment of the complete joint or equipment condition.
+
+
+## Identify a replacement pump seal
+
+The [mechanical seal replacement RFQ guide](post:mechanical-seal-replacement-identification-rfq-guide) explains how to preserve assembly references, distinguish complete cartridges from repair kits, and document interfaces and duty. Use it when a spare is identified only by a photograph or nominal size, and keep proposed alternatives subject to a defined technical review.
