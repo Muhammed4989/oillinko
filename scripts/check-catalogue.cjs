@@ -9,6 +9,7 @@ require.extensions[".ts"] = (module, file) => module._compile(ts.transpileModule
 const { catalogue, sectors, applications, filterCatalogue, requestUrl, typeUrl, readCatalogueFilters, catalogueSearchUrl } = require("../src/lib/catalogue.ts");
 const { productSections, contentWordCount, topicOverviews } = require("../src/lib/catalogue-content.ts");
 const { companies } = require("../src/lib/companies.ts");
+const { companyProfiles, companyProfilePath } = require("../src/lib/company-profiles.ts");
 const found = (query, sector = "", kind = "", application = "") => filterCatalogue(query, sector, kind, application).flatMap(g => g.types);
 
 // These short/common company names can also be ordinary technical words. The
@@ -116,6 +117,7 @@ function checkHtml(html,url,item){
 }
 if(process.argv.includes('--build')){
  const app=path.join(__dirname,'../.next/server/app');const sitemap=fs.readFileSync(path.join(app,'sitemap.xml.body'),'utf8');
+ for(const profile of companyProfiles){const url=companyProfilePath(profile.companyId);assert(sitemap.includes('<loc>https://oillinko.com'+url+'</loc>'),'Company profile sitemap: '+url);const html=fs.readFileSync(path.join(app,url+'.html'),'utf8');assert.equal((html.match(/<h1(?:\s|>)/g)??[]).length,1,'Company profile H1: '+url);assert(html.includes('rel="canonical" href="https://oillinko.com'+url+'"'),'Company profile canonical: '+url);assert(html.includes('The file is retained for sourcing review and is not published on the website.'),'Company catalogue privacy note: '+url);}
  for(const url of allPaths)assert(sitemap.includes('<loc>https://oillinko.com'+url+'</loc>'),'Sitemap: '+url);
  assert(!sitemap.includes('<loc>https://oillinko.com/equipment'),'Legacy URLs in sitemap');
  for(const route of products)checkHtml(fs.readFileSync(path.join(app,route.url+'.html'),'utf8'),route.url,route.item);
