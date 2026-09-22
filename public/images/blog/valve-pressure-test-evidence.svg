@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f1f5f9"/>
+  <text x="60" y="62" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f766e">OILLINKO / VALVE TESTING</text>
+  <text x="60" y="126" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#0f172a">A test certificate needs a traceable basis</text>
+  <g fill="#ffffff" stroke="#cbd5e1" stroke-width="2">
+    <rect x="60" y="182" width="245" height="250" rx="18"/>
+    <rect x="338" y="182" width="245" height="250" rx="18"/>
+    <rect x="616" y="182" width="245" height="250" rx="18"/>
+    <rect x="895" y="182" width="245" height="250" rx="18"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#0f766e">
+    <text x="84" y="232">1 / STANDARD</text><text x="362" y="232">2 / SCOPE</text><text x="640" y="232">3 / ACCEPT</text><text x="919" y="232">4 / RECORD</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" fill="#334155">
+    <text x="84" y="286">Document</text><text x="84" y="326">Edition</text><text x="84" y="366">Product basis</text>
+    <text x="362" y="286">Shell</text><text x="362" y="326">Closure</text><text x="362" y="366">Backseat if applicable</text>
+    <text x="640" y="286">Test conditions</text><text x="640" y="326">Leakage criterion</text><text x="640" y="366">Extent and witness</text>
+    <text x="919" y="286">Valve identity</text><text x="919" y="326">Actual result</text><text x="919" y="366">Date and approval</text>
+  </g>
+  <path d="M305 307h33M583 307h33M861 307h34" stroke="#0f766e" stroke-width="5"/>
+  <text x="60" y="512" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#0f172a">“Hydrotested” alone does not define what was accepted</text>
+  <text x="60" y="566" font-family="Arial, sans-serif" font-size="23" fill="#475569">Connect the governing requirement to the exact valve and its recorded result.</text>
+</svg>

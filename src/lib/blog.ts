@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-598-vs-iso-5208-valve-testing-buyers-guide",
+    title: "API 598 vs ISO 5208 Valve Testing: A Buyer’s Guide",
+    short: "Define valve shell and closure testing, acceptance criteria and traceable reports before ordering.",
+    tagline: "A procurement guide to choosing the testing basis and comparing the evidence included with an industrial valve offer.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-22",
+    readTime: "9 min read",
+    date: "2026-09-22",
+    dateLabel: "22 September 2026",
+    description: "Compare API 598 and ISO 5208 valve testing. Define shell, closure and backseat tests, acceptance criteria, witnessing and test reports in an RFQ.",
+    keywords: "API 598 vs ISO 5208 valve testing, valve pressure test certificate, valve shell and seat testing, valve test report RFQ",
+    image: "/images/blog/valve-pressure-test-evidence.png",
+    related: ["valves-and-actuation-explained","check-valve-cracking-pressure-rfq-guide","inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "npt-bspt-bspp-threaded-fitting-buyers-guide",
     title: "NPT vs BSPT vs BSPP: A Threaded Fitting Buyer’s Guide",
     short: "Identify the thread family and complete sealing arrangement before ordering fittings or adapters.",
