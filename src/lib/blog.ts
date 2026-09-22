@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "coating-dft-inspection-reports-buyers-guide",
+    title: "Coating DFT Inspection Reports: A Buyer’s Guide",
+    short: "Define the measurement basis, inspection areas, acceptance criteria and traceable records for dry-film thickness.",
+    tagline: "A procurement guide to coating thickness evidence that can be checked against the approved system and project specification.",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-22",
+    readTime: "9 min read",
+    date: "2026-09-22",
+    dateLabel: "22 September 2026",
+    description: "Review coating DFT inspection reports and specify measurement standards, areas, gauge checks, acceptance criteria and traceable results in an RFQ or ITP.",
+    keywords: "coating DFT inspection report, dry film thickness report, coating thickness acceptance criteria, DFT inspection RFQ",
+    image: "/images/blog/coating-dft-inspection-report.png",
+    related: ["inspection-test-plans-hold-vs-witness-points","third-party-inspection-tpi-oil-and-gas-equipment","liquid-penetrant-vs-magnetic-particle-testing-rfq"],
+  },
+  {
     slug: "api-598-vs-iso-5208-valve-testing-buyers-guide",
     title: "API 598 vs ISO 5208 Valve Testing: A Buyer’s Guide",
     short: "Define valve shell and closure testing, acceptance criteria and traceable reports before ordering.",
