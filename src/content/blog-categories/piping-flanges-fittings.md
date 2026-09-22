@@ -29,3 +29,8 @@ Sealing products require the same level of identification. A gasket that looks s
 Inspection and documentation requirements should identify what needs to be demonstrated for each product. Material records, dimensional checks, pressure tests and valve seat leakage tests are different forms of evidence. State the applicable standard and acceptance criteria where your project requires them, and ask suppliers to list any exclusions. If a third-party witness is needed, arrange the scope and notification points before manufacture reaches that stage. The [inspection and maintenance guide](category:inspection-testing) helps translate a broad request for certification into a defined inspection activity and deliverable.
 
 For a mixed piping enquiry, organize line items by the actual product rather than combining several components into an ambiguous description. Specify quantities and units, and mark which accessories are included in each assembly. Use the [valve catalogue](/oil-and-gas/equipment/valves) and [flanges, fittings and bolting catalogue](/oil-and-gas/equipment/flanges-fittings-bolting) to frame the requirement sent to Oillinko. Keeping the technical description, drawings and agreed deviations together makes it easier to compare quotations and to verify that delivered items correspond to the final purchase scope.
+
+
+## Specify threaded connections completely
+
+The [NPT, BSPT and BSPP buyer guide](post:npt-bspt-bspp-threaded-fitting-buyers-guide) separates thread identity from the complete mating and sealing arrangement. It explains what to record for each end of an adapter, how to handle uncertain samples and why the actual product configuration needs its own material and rating review.

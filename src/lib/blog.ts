@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "npt-bspt-bspp-threaded-fitting-buyers-guide",
+    title: "NPT vs BSPT vs BSPP: A Threaded Fitting Buyer’s Guide",
+    short: "Identify the thread family and complete sealing arrangement before ordering fittings or adapters.",
+    tagline: "A buyer’s guide to connection identity, mating geometry and comparable threaded fitting quotations.",
+    category: "piping-flanges-fittings",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-22",
+    readTime: "8 min read",
+    date: "2026-09-22",
+    dateLabel: "22 September 2026",
+    description: "Compare NPT, BSPT and BSPP fitting enquiries. Specify both adapter ends, sealing details, materials and identification evidence before ordering.",
+    keywords: "NPT vs BSPT vs BSPP, threaded fitting identification, BSPP sealing connection, pipe fitting RFQ",
+    image: "/images/blog/threaded-fitting-buyers-guide.png",
+    related: ["pipeline-fittings-and-schedules","en-10204-material-certificates-explained","heat-number-traceability-mill-certificates"],
+  },
+  {
     slug: "oil-flushing-service-rfq-cleanliness-acceptance",
     title: "Oil Flushing Service RFQ: Cleanliness Targets and Acceptance",
     short: "Define oil flushing boundaries, cleanliness requirements, sampling evidence and handover responsibilities.",
