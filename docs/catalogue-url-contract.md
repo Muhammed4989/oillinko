@@ -41,6 +41,12 @@ Clean category and industry pages are indexable, internally linked and included 
 5. Keep lead intake separate from supplier distribution. Current forms still go to Oillinko for manual review. No supplier accounts, automatic lead delivery or supplier integration are introduced by this migration.
 6. Additional languages should have a language namespace and their own reviewed content/hreflang implementation when commissioned. Do not change English URLs merely to add another language.
 
+## Supplier identity boundary
+
+Company identities are published only in the `/oil-and-gas/companies` namespace. The technical catalogue and industry routes must remain supplier-neutral: no company names, logos, outbound company links, catalogues, company-specific claims or named-company fields in page copy, metadata, structured data, images, search aliases or RFQ defaults. A catalogue page may ask the buyer to provide the manufacturer or OEM of installed equipment, but it must not disclose the suppliers Oillinko may use to fulfil the request.
+
+Company profiles may link outward to relevant technical categories. Catalogue pages must not link back to named company profiles. This one-way relationship lets readers discover a company's capabilities from its own profile without allowing a product-keyword landing page to expose Oillinko's prospective supply route.
+
 These are extension rules, not a claim that supplier databases, manufacturer records or multilingual pages already exist. The data access helpers and URL registry provide a boundary for a future CMS/database while allowing published URLs to remain stable.
 
 ## Release checks

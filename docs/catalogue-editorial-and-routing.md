@@ -9,6 +9,8 @@ The catalogue contains 37 categories and 219 equipment, service and software top
 - `catalogue-content.ts` combines that topic copy with specification guidance, related-topic comparisons and purchasing questions. Some specification guidance is shared across pages where the same requirement applies. The 700-word minimum counts article paragraphs, excluding headings, navigation, footer and form text.
 - Word count is a floor, not an SEO performance measure. Future edits should add useful topic-specific explanations and avoid repeating keywords or creating location/origin variants without distinct evidence and content.
 - Do not present catalogue inclusion as stock, an appointed supplier, a guaranteed certification, a price or confirmed manufacturing origin. Confirm these for the actual proposal.
+- Keep supplier identity separate from catalogue discovery. Company names, brands, logos, websites, catalogues and company-specific claims belong only under `/oil-and-gas/companies`. Equipment, service, software and industry pages must not identify or link to a potential supplier in visible copy, metadata, structured data, image attribution, search aliases or enquiry defaults. They describe the requirement generically and route the enquiry to Oillinko.
+- Generic technical requests for an installed manufacturer, OEM, model, serial number or part number are allowed because they help identify the buyer's existing equipment. They must not reveal which supplier Oillinko may approach. Do not add reverse links from catalogue topics to company profiles.
 
 ## URLs and indexing
 
@@ -23,7 +25,7 @@ The URL migration supersedes the original `/equipment` layout described below. S
 
 ## Validation
 
-Run `npm run lint -- src scripts`, `npm run build`, then `node scripts/check-catalogue.cjs --build`. Optional read-only HTTP verification: `node scripts/check-catalogue.cjs --url https://oillinko.com` (267 catalogue/industry URLs plus search and 404 checks; no form submissions).
+Run `npm run lint -- src scripts`, `npm run build`, then `node scripts/check-catalogue.cjs --build`. The catalogue check rejects protected company names and company website hosts in catalogue and industry HTML. Optional read-only HTTP verification: `node scripts/check-catalogue.cjs --url https://oillinko.com` (267 catalogue/industry URLs plus search and 404 checks; no form submissions).
 
 Browser review should cover selection and search, reload/back navigation, origin transfer into the product form, related-product navigation, legacy hash migration and a narrow mobile viewport. Keep the non-www domain and existing redirect arrangement unchanged.
 

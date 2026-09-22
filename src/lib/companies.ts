@@ -39,6 +39,8 @@ export type DirectoryCompany = {
 
 // Reference records only. Commercial relationships, stock and manufacturing
 // origin belong to separately verified records, never to a company listing.
+// Named company identity is restricted to /oil-and-gas/companies. Do not import
+// these records into catalogue, service, software or industry page rendering.
 export const companies: DirectoryCompany[] = [
   { id: "flowserve", name: "Flowserve", headquarters: "United States", region: "North America", role: "manufacturer", specialties: ["pumps", "valves", "sealing"], description: "Pumps, valves, mechanical seals and actuation for fluid-handling systems. Relevant to process plants, pipeline pumping stations and equipment maintenance where the duty and installed configuration must be specified.", website: "https://www.flowserve.com/", reviewedOn: "2026-09-13" },
   { id: "sulzer", name: "Sulzer", headquarters: "Switzerland", region: "Europe", role: "manufacturer", specialties: ["pumps", "water", "sealing"], description: "Pumping, separation and mixing technology, alongside rotating-equipment services. Its portfolio spans industrial processes and water applications; equipment selection depends on the actual medium, operating conditions and project requirements.", website: "https://www.sulzer.com/", reviewedOn: "2026-09-13" },

@@ -8,7 +8,24 @@ const ts = require("typescript");
 require.extensions[".ts"] = (module, file) => module._compile(ts.transpileModule(fs.readFileSync(file, "utf8"), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText, file);
 const { catalogue, sectors, applications, filterCatalogue, requestUrl, typeUrl, readCatalogueFilters, catalogueSearchUrl } = require("../src/lib/catalogue.ts");
 const { productSections, contentWordCount, topicOverviews } = require("../src/lib/catalogue-content.ts");
+const { companies } = require("../src/lib/companies.ts");
 const found = (query, sector = "", kind = "", application = "") => filterCatalogue(query, sector, kind, application).flatMap(g => g.types);
+
+// These short/common company names can also be ordinary technical words. The
+// remaining directory names are distinctive enough to protect automatically.
+// Website hosts are always protected, including for the exceptions below.
+const ambiguousCompanyNames = new Set(["bp", "Shell", "Wood"]);
+const protectedCompanyNames = companies.map(company => company.name).filter(name => !ambiguousCompanyNames.has(name));
+const protectedCompanyHosts = companies.map(company => new URL(company.website).hostname.replace(/^www\./, "").toLowerCase());
+function assertSupplierNeutral(value, context) {
+ const text = String(value);
+ const normalized = text.toLocaleLowerCase("en");
+ for (const name of protectedCompanyNames) {
+  const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${name.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&")}([^\\p{L}\\p{N}]|$)`, "iu");
+  assert(!pattern.test(text), `Named company ${name} leaked into ${context}`);
+ }
+ for (const host of protectedCompanyHosts) assert(!normalized.includes(host), `Company website ${host} leaked into ${context}`);
+}
 
 const searches = [
   ["MWD", "mwd-and-lwd-tools"], ["LWD", "mwd-and-lwd-tools"],
@@ -54,6 +71,7 @@ for(const group of catalogue)for(const item of group.types){
  assert(item.sectors.every(id=>sectors.some(s=>s.id===id)),item.id);
  assert(item.applications.every(a=>applications.includes(a)),item.id);
  const sections=productSections(group,item);const words=contentWordCount(sections);wordCounts.push(words);
+ assertSupplierNeutral(JSON.stringify({group:{name:group.name,summary:group.summary},item,sections}),`catalogue topic ${item.id}`);
  assert(words>=700,'Content floor: '+item.id);
  assert.equal(new Set(sections.flatMap(s=>s.paragraphs)).size,sections.flatMap(s=>s.paragraphs).length,'Repeated paragraph: '+item.id);
  const url=typeUrl(group,item);
@@ -83,6 +101,7 @@ assert.equal(catalogueSearchUrl({}),catalogueRoot);
 assert.equal(readCatalogueFilters({sector:'unknown',search:['a','b'],kind:'invalid'}).search,'');
 
 function checkHtml(html,url,item){
+ assertSupplierNeutral(html,`rendered catalogue or industry page ${url}`);
  assert(html.includes('rel="canonical" href="https://oillinko.com'+url+'"'),'Canonical: '+url);
  assert.equal((html.match(/<h1(?:\s|>)/g)??[]).length,1,'H1: '+url);
  assert(!/<a[^>]+href="\/equipment(?:[/?#"])/.test(html),'Internal legacy link: '+url);
