@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-6a-psl-pr-levels-wellhead-equipment-buyers-guide",
+    title: "API 6A PSL and PR Levels: A Wellhead Equipment Buyer’s Guide",
+    short: "Separate product specification requirements from design-validation evidence before ordering wellhead and tree equipment.",
+    tagline: "A buyer’s guide to reading PSL and PR requirements in context instead of treating them as interchangeable quality grades.",
+    category: "wellhead-production-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-23",
+    readTime: "9 min read",
+    date: "2026-09-23",
+    dateLabel: "23 September 2026",
+    description: "Understand API 6A PSL and PR requirements for wellhead and tree equipment. Define the product, service conditions, edition, validation evidence and records in an RFQ.",
+    keywords: "API 6A PSL and PR levels, API 6A product specification level, wellhead equipment RFQ, API 6A validation records",
+    image: "/images/blog/api-6a-psl-pr-buyer-guide.png",
+    related: ["wellhead-and-christmas-tree-equipment-explained","inspection-test-plans-hold-vs-witness-points","en-10204-material-certificates-explained"],
+  },
+  {
     slug: "coating-dft-inspection-reports-buyers-guide",
     title: "Coating DFT Inspection Reports: A Buyer’s Guide",
     short: "Define the measurement basis, inspection areas, acceptance criteria and traceable records for dry-film thickness.",
