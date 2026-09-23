@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "electric-motor-rewinding-rfq-tests-data-acceptance-records",
+    title: "Electric Motor Rewinding RFQ: Tests, Data and Acceptance Records",
+    short: "Define the as-found evidence, authorized repair boundary, winding data, final tests and handover records.",
+    tagline: "A procurement guide to comparing motor rewinding quotations without losing the original design basis or repair traceability.",
+    category: "maintenance-repair",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-23",
+    readTime: "9 min read",
+    date: "2026-09-23",
+    dateLabel: "23 September 2026",
+    description: "Prepare an electric motor rewinding RFQ with nameplate data, as-found tests, winding records, repair approvals, final tests and traceable handover documents.",
+    keywords: "electric motor rewinding RFQ, motor rewind tests, motor repair report, motor winding data sheet",
+    image: "/images/blog/electric-motor-rewinding-rfq.png",
+    related: ["pump-factory-acceptance-testing-and-commissioning-checklist","inspection-test-plans-hold-vs-witness-points","mechanical-seal-replacement-identification-rfq-guide"],
+  },
+  {
     slug: "dap-vs-ddp-oil-gas-equipment-buyers",
     title: "DAP vs DDP for Oil & Gas Equipment Buyers",
     short: "Compare import clearance, duties, destination delivery and quotation assumptions before selecting a delivered trade term.",
