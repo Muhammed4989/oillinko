@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "dap-vs-ddp-oil-gas-equipment-buyers",
+    title: "DAP vs DDP for Oil & Gas Equipment Buyers",
+    short: "Compare import clearance, duties, destination delivery and quotation assumptions before selecting a delivered trade term.",
+    tagline: "A buyer’s guide to defining the named place, importer role and landed-cost boundary in equipment quotations.",
+    category: "logistics-delivery",
+    mainCategory: "oil-and-gas-procurement",
+    dateModified: "2026-09-23",
+    readTime: "9 min read",
+    date: "2026-09-23",
+    dateLabel: "23 September 2026",
+    description: "Compare DAP vs DDP for oil and gas equipment. Define the named place, import clearance, duties, taxes, unloading, documentation and exclusions before award.",
+    keywords: "DAP vs DDP oil and gas equipment, DAP Incoterms 2020, DDP importer of record, delivered equipment quotation",
+    image: "/images/blog/dap-vs-ddp-equipment-buyers.png",
+    related: ["exw-vs-fca-oil-gas-equipment-buyers","export-packing-oil-gas-equipment-rfq","consolidated-shipments-and-multi-vendor-orders"],
+  },
+  {
     slug: "api-6a-psl-pr-levels-wellhead-equipment-buyers-guide",
     title: "API 6A PSL and PR Levels: A Wellhead Equipment Buyer’s Guide",
     short: "Separate product specification requirements from design-validation evidence before ordering wellhead and tree equipment.",
