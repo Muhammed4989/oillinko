@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Sour service RFQ evidence chain</title>
+  <desc id="desc">Five connected stages: environment, component scope, material condition, fabrication controls, and verification and approval.</desc>
+  <rect width="1200" height="630" fill="#071a28"/>
+  <circle cx="1090" cy="82" r="170" fill="#0d3043"/>
+  <circle cx="85" cy="570" r="210" fill="#0a2637"/>
+  <text x="72" y="90" fill="#f4f7f8" font-family="Arial, sans-serif" font-size="42" font-weight="700">Sour-service RFQ evidence chain</text>
+  <text x="72" y="130" fill="#a9bdc8" font-family="Arial, sans-serif" font-size="22">Turn “NACE compliant” into a defined, reviewable requirement.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(72 210)"><rect width="190" height="210" rx="18" fill="#0e2b3d" stroke="#2fa7a0" stroke-width="3"/><circle cx="34" cy="34" r="18" fill="#2fa7a0"/><text x="34" y="42" text-anchor="middle" fill="#071a28" font-size="22" font-weight="700">1</text><text x="24" y="86" fill="#f4f7f8" font-size="24" font-weight="700">Environment</text><text x="24" y="126" fill="#b7c8d1" font-size="18">H₂S • pH</text><text x="24" y="156" fill="#b7c8d1" font-size="18">temperature</text><text x="24" y="186" fill="#b7c8d1" font-size="18">water • chloride</text></g>
+    <path d="M270 315h35" stroke="#e7a93b" stroke-width="5"/><path d="m298 304 15 11-15 11" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(315 210)"><rect width="190" height="210" rx="18" fill="#0e2b3d" stroke="#2fa7a0" stroke-width="3"/><circle cx="34" cy="34" r="18" fill="#2fa7a0"/><text x="34" y="42" text-anchor="middle" fill="#071a28" font-size="22" font-weight="700">2</text><text x="24" y="86" fill="#f4f7f8" font-size="24" font-weight="700">Components</text><text x="24" y="126" fill="#b7c8d1" font-size="18">wetted parts</text><text x="24" y="156" fill="#b7c8d1" font-size="18">pressure boundary</text><text x="24" y="186" fill="#b7c8d1" font-size="18">product forms</text></g>
+    <path d="M513 315h35" stroke="#e7a93b" stroke-width="5"/><path d="m541 304 15 11-15 11" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(558 210)"><rect width="190" height="210" rx="18" fill="#0e2b3d" stroke="#2fa7a0" stroke-width="3"/><circle cx="34" cy="34" r="18" fill="#2fa7a0"/><text x="34" y="42" text-anchor="middle" fill="#071a28" font-size="22" font-weight="700">3</text><text x="24" y="86" fill="#f4f7f8" font-size="24" font-weight="700">Condition</text><text x="24" y="126" fill="#b7c8d1" font-size="18">heat treatment</text><text x="24" y="156" fill="#b7c8d1" font-size="18">strength</text><text x="24" y="186" fill="#b7c8d1" font-size="18">hardness</text></g>
+    <path d="M756 315h35" stroke="#e7a93b" stroke-width="5"/><path d="m784 304 15 11-15 11" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(801 210)"><rect width="190" height="210" rx="18" fill="#0e2b3d" stroke="#2fa7a0" stroke-width="3"/><circle cx="34" cy="34" r="18" fill="#2fa7a0"/><text x="34" y="42" text-anchor="middle" fill="#071a28" font-size="22" font-weight="700">4</text><text x="24" y="86" fill="#f4f7f8" font-size="24" font-weight="700">Fabrication</text><text x="24" y="126" fill="#b7c8d1" font-size="18">welding</text><text x="24" y="156" fill="#b7c8d1" font-size="18">forming • repair</text><text x="24" y="186" fill="#b7c8d1" font-size="18">examination</text></g>
+    <path d="M999 315h35" stroke="#e7a93b" stroke-width="5"/><path d="m1027 304 15 11-15 11" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(1044 210)"><rect width="120" height="210" rx="18" fill="#14374a" stroke="#e7a93b" stroke-width="3"/><circle cx="34" cy="34" r="18" fill="#e7a93b"/><text x="34" y="42" text-anchor="middle" fill="#071a28" font-size="22" font-weight="700">5</text><text x="18" y="86" fill="#f4f7f8" font-size="20" font-weight="700">Evidence</text><text x="18" y="121" fill="#b7c8d1" font-size="16">records</text><text x="18" y="149" fill="#b7c8d1" font-size="16">deviations</text><text x="18" y="177" fill="#b7c8d1" font-size="16">approval</text></g>
+  </g>
+  <rect x="72" y="490" width="1092" height="76" rx="16" fill="#102d3e" stroke="#284a5c"/>
+  <text x="618" y="522" text-anchor="middle" fill="#e7a93b" font-family="Arial, sans-serif" font-size="20" font-weight="700">ISO 15156 / NACE MR0175 supplements the project design basis</text>
+  <text x="618" y="551" text-anchor="middle" fill="#c1d0d7" font-family="Arial, sans-serif" font-size="18">Final material selection remains with the responsible engineering parties.</text>
+</svg>

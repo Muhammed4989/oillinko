@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "nace-mr0175-iso-15156-sour-service-buyers-guide",
+    title: "NACE MR0175 / ISO 15156: A Sour Service Buyer’s Guide",
+    short: "Define the H2S environment, material condition, fabrication controls and evidence behind a sour-service claim.",
+    tagline: "A procurement guide to turning “NACE compliant” into a reviewable material and equipment requirement.",
+    category: "materials-documentation",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-24",
+    readTime: "10 min read",
+    date: "2026-09-24",
+    dateLabel: "24 September 2026",
+    description: "Prepare a sour-service RFQ using NACE MR0175 / ISO 15156: define the environment, product form, heat treatment, hardness, welding and qualification evidence.",
+    keywords: "NACE MR0175 ISO 15156 sour service, sour service material requirements, ISO 15156 material selection, NACE MR0175 RFQ",
+    image: "/images/blog/sour-service-rfq-evidence.svg",
+    related: ["en-10204-material-certificates-explained","heat-number-traceability-mill-certificates","positive-material-identification-xrf-oes-buyers-guide"],
+  },
+  {
     slug: "electric-motor-rewinding-rfq-tests-data-acceptance-records",
     title: "Electric Motor Rewinding RFQ: Tests, Data and Acceptance Records",
     short: "Define the as-found evidence, authorized repair boundary, winding data, final tests and handover records.",
