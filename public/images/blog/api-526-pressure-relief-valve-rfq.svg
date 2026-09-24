@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">API 526 pressure-relief valve RFQ evidence chain</title>
+  <desc id="desc">Diagram connecting approved relief basis, service data, selected valve configuration, certification and final records.</desc>
+  <rect width="1200" height="630" fill="#071a28"/><circle cx="1120" cy="40" r="190" fill="#0d3043"/><circle cx="80" cy="610" r="220" fill="#0a2637"/>
+  <text x="70" y="86" fill="#f4f7f8" font-family="Arial, sans-serif" font-size="42" font-weight="700">API 526 pressure-relief valve RFQ</text>
+  <text x="70" y="128" fill="#a9bdc8" font-family="Arial, sans-serif" font-size="22">Connect approved relief data to the offered device and its evidence.</text>
+  <g transform="translate(72 205)" font-family="Arial, sans-serif">
+    <rect width="1056" height="250" rx="24" fill="#0c2637" stroke="#284a5c" stroke-width="2"/>
+    <g transform="translate(34 34)"><circle cx="72" cy="72" r="64" fill="#123b4c" stroke="#2fa7a0" stroke-width="4"/><text x="72" y="63" text-anchor="middle" fill="#f4f7f8" font-size="20" font-weight="700">RELIEF</text><text x="72" y="91" text-anchor="middle" fill="#f4f7f8" font-size="20" font-weight="700">BASIS</text><text x="72" y="170" text-anchor="middle" fill="#b7c8d1" font-size="17">case • capacity</text></g>
+    <path d="M188 106h70" stroke="#e7a93b" stroke-width="5"/><path d="m248 94 16 12-16 12" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(270 34)"><circle cx="72" cy="72" r="64" fill="#123b4c" stroke="#2fa7a0" stroke-width="4"/><text x="72" y="60" text-anchor="middle" fill="#f4f7f8" font-size="19" font-weight="700">SERVICE</text><text x="72" y="88" text-anchor="middle" fill="#f4f7f8" font-size="19" font-weight="700">DATA</text><text x="72" y="170" text-anchor="middle" fill="#b7c8d1" font-size="17">set • back pressure</text></g>
+    <path d="M424 106h70" stroke="#e7a93b" stroke-width="5"/><path d="m484 94 16 12-16 12" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(506 34)"><circle cx="72" cy="72" r="64" fill="#123b4c" stroke="#2fa7a0" stroke-width="4"/><text x="72" y="60" text-anchor="middle" fill="#f4f7f8" font-size="19" font-weight="700">VALVE</text><text x="72" y="88" text-anchor="middle" fill="#f4f7f8" font-size="19" font-weight="700">CONFIG.</text><text x="72" y="170" text-anchor="middle" fill="#b7c8d1" font-size="17">orifice • materials</text></g>
+    <path d="M660 106h70" stroke="#e7a93b" stroke-width="5"/><path d="m720 94 16 12-16 12" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(742 34)"><circle cx="72" cy="72" r="64" fill="#123b4c" stroke="#2fa7a0" stroke-width="4"/><text x="72" y="60" text-anchor="middle" fill="#f4f7f8" font-size="18" font-weight="700">TEST &amp;</text><text x="72" y="88" text-anchor="middle" fill="#f4f7f8" font-size="18" font-weight="700">CERTIFY</text><text x="72" y="170" text-anchor="middle" fill="#b7c8d1" font-size="17">capacity • set • seat</text></g>
+    <path d="M896 106h55" stroke="#e7a93b" stroke-width="5"/><path d="m941 94 16 12-16 12" fill="none" stroke="#e7a93b" stroke-width="5"/>
+    <g transform="translate(958 52)"><rect width="72" height="108" rx="10" fill="#163f51" stroke="#e7a93b" stroke-width="3"/><path d="M17 30h38M17 52h38M17 74h30" stroke="#dbe5e9" stroke-width="5"/><text x="36" y="136" text-anchor="middle" fill="#b7c8d1" font-size="16">DOSSIER</text></g>
+  </g>
+  <rect x="72" y="500" width="1056" height="66" rx="16" fill="#102d3e" stroke="#284a5c"/>
+  <text x="600" y="527" text-anchor="middle" fill="#e7a93b" font-family="Arial, sans-serif" font-size="19" font-weight="700">API 526 standardizes purchase features; it does not replace approved sizing.</text>
+  <text x="600" y="553" text-anchor="middle" fill="#c1d0d7" font-family="Arial, sans-serif" font-size="17">Final selection and installation remain with the responsible engineering parties.</text>
+</svg>

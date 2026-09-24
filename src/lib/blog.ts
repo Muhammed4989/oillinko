@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-526-pressure-relief-valves-rfq-guide",
+    title: "API 526 Pressure-Relief Valves: An RFQ Guide",
+    short: "Turn an approved relief requirement into a comparable valve enquiry without treating an API or ASME label as a sizing decision.",
+    tagline: "A buyer’s guide to service data, set pressure, back pressure, orifice, connections, materials and certification evidence.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-24",
+    readTime: "10 min read",
+    date: "2026-09-24",
+    dateLabel: "24 September 2026",
+    description: "Prepare an API 526 pressure-relief valve RFQ with approved relief data, set pressure, back pressure, orifice, materials, connections, certification and test records.",
+    keywords: "API 526 pressure relief valve RFQ, pressure relief valve datasheet, PSV set pressure and back pressure, relief valve certification records",
+    image: "/images/blog/api-526-pressure-relief-valve-rfq.svg",
+    related: ["valves-and-actuation-explained","api-598-vs-iso-5208-valve-testing-buyers-guide","inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "nace-mr0175-iso-15156-sour-service-buyers-guide",
     title: "NACE MR0175 / ISO 15156: A Sour Service Buyer’s Guide",
     short: "Define the H2S environment, material condition, fabrication controls and evidence behind a sour-service claim.",
