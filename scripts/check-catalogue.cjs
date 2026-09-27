@@ -17,7 +17,7 @@ const found = (query, sector = "", kind = "", application = "") => filterCatalog
 // Website hosts are always protected, including for the exceptions below.
 const ambiguousCompanyNames = new Set(["bp", "Shell", "Wood"]);
 const protectedCompanyNames = companies.map(company => company.name).filter(name => !ambiguousCompanyNames.has(name));
-const protectedCompanyHosts = companies.map(company => new URL(company.website).hostname.replace(/^www\./, "").toLowerCase());
+const protectedCompanyHosts = companies.flatMap(company => company.website ? [new URL(company.website).hostname.replace(/^www\./, "").toLowerCase()] : []);
 function assertSupplierNeutral(value, context) {
  const text = String(value);
  const normalized = text.toLocaleLowerCase("en");
