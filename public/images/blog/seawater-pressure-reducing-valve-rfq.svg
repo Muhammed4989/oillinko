@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Seawater pressure reducing valve RFQ evidence</title>
+  <desc id="desc">Four connected steps: operating envelope, wetted materials, valve configuration, and verification records.</desc>
+  <rect width="1200" height="630" fill="#071e2b"/>
+  <path d="M0 505c195-55 333 58 520 10s317-24 680 35v80H0z" fill="#0c3b50"/>
+  <path d="M0 548c210-45 333 31 520-10s400-28 680 22" fill="none" stroke="#2a7f91" stroke-width="4" opacity=".7"/>
+  <text x="72" y="107" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="#f1f7f7">Seawater pressure control</text>
+  <text x="74" y="153" font-family="Arial,sans-serif" font-size="23" fill="#b6d3da">Four checks for a comparable offshore valve RFQ</text>
+  <g font-family="Arial,sans-serif">
+    <g transform="translate(72 220)"><rect width="235" height="208" rx="18" fill="#12394a" stroke="#4ab1bd" stroke-width="2"/><text x="20" y="49" font-size="19" fill="#77d6de">01</text><text x="20" y="88" font-size="23" font-weight="700" fill="white">Operating duty</text><text x="20" y="130" font-size="17" fill="#c5dce1">Flow range</text><text x="20" y="160" font-size="17" fill="#c5dce1">Inlet / outlet pressure</text><text x="20" y="190" font-size="17" fill="#c5dce1">Temperature</text></g>
+    <g transform="translate(343 220)"><rect width="235" height="208" rx="18" fill="#12394a" stroke="#4ab1bd" stroke-width="2"/><text x="20" y="49" font-size="19" fill="#77d6de">02</text><text x="20" y="88" font-size="23" font-weight="700" fill="white">Materials</text><text x="20" y="130" font-size="17" fill="#c5dce1">Body and trim</text><text x="20" y="160" font-size="17" fill="#c5dce1">Pilot and tubing</text><text x="20" y="190" font-size="17" fill="#c5dce1">Traceable grade</text></g>
+    <g transform="translate(614 220)"><rect width="235" height="208" rx="18" fill="#12394a" stroke="#4ab1bd" stroke-width="2"/><text x="20" y="49" font-size="19" fill="#77d6de">03</text><text x="20" y="88" font-size="23" font-weight="700" fill="white">Configuration</text><text x="20" y="130" font-size="17" fill="#c5dce1">Size and flanges</text><text x="20" y="160" font-size="17" fill="#c5dce1">Pilot arrangement</text><text x="20" y="190" font-size="17" fill="#c5dce1">Outline drawing</text></g>
+    <g transform="translate(885 220)"><rect width="235" height="208" rx="18" fill="#12394a" stroke="#4ab1bd" stroke-width="2"/><text x="20" y="49" font-size="19" fill="#77d6de">04</text><text x="20" y="88" font-size="23" font-weight="700" fill="white">Evidence</text><text x="20" y="130" font-size="17" fill="#c5dce1">Tests and reports</text><text x="20" y="160" font-size="17" fill="#c5dce1">Material certificates</text><text x="20" y="190" font-size="17" fill="#c5dce1">Declared deviations</text></g>
+  </g>
+  <path d="M312 323h27m-8-9 9 9-9 9m252-9h27m-8-9 9 9-9 9m252-9h27m-8-9 9 9-9 9" stroke="#77d6de" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="74" y="579" font-family="Arial,sans-serif" font-size="21" fill="#c5dce1">Oillinko · Buyer guidance</text>
+</svg>
