@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "centrifugal-pump-spare-parts-rfq-identification",
+    title: "Centrifugal Pump Spare Parts RFQ: Identifying the Correct Components",
+    short: "Identify the installed pump and each replacement component before comparing spare-parts offers.",
+    tagline: "A buyer's checklist for impellers, wear rings, shaft sleeves, drawings, materials and quoted scope.",
+    category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-27",
+    readTime: "8 min read",
+    date: "2026-09-27",
+    dateLabel: "27 September 2026",
+    description: "Prepare a centrifugal pump spare-parts RFQ using the machine identity, assembly drawing, item number, material, dimensions and clear replacement scope.",
+    keywords: "centrifugal pump spare parts RFQ, pump impeller replacement identification, pump wear ring spare parts, pump shaft sleeve RFQ",
+    image: "/images/blog/pump-spare-parts-rfq.svg",
+    related: ["mechanical-seal-replacement-identification-rfq-guide", "heat-number-traceability-mill-certificates", "pump-factory-acceptance-testing-and-commissioning-checklist"],
+  },
+  {
     slug: "check-valve-face-to-face-dimensions-rfq",
     title: "Check Valve Face-to-Face Dimensions: What an RFQ Must Specify",
     short: "Identify the check-valve pattern, connection and installation length before comparing replacement offers.",
