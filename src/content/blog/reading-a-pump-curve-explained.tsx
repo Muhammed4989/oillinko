@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Every centrifugal pump quotation should come with a performance
           curve, and a buyer who cannot read it is relying entirely on the

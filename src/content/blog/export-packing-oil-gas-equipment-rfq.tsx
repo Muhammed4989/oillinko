@@ -16,7 +16,7 @@ const faqs=[
 
 export default function Page(){return <>
   <BlogPostHeader post={post}/>
-  <Prose>
+  <Prose post={post}>
     <p className={paragraph}>
       Export packing for oil and gas equipment should be specified before
       the goods reach the dispatch area. A quotation saying seaworthy packing

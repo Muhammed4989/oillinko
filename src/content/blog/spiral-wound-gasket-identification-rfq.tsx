@@ -34,7 +34,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         Spiral wound gasket identification starts with a practical problem: a
         stores description such as &ldquo;4-inch, Class 300, stainless steel and

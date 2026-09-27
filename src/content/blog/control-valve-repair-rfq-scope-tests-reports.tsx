@@ -34,7 +34,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         A control valve repair quotation should explain which problem the work
         is intended to resolve and how the result will be demonstrated. An offer

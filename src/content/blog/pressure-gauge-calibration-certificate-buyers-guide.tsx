@@ -35,7 +35,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         A pressure gauge calibration certificate is useful only when it answers
         the buyer&apos;s actual measurement question. A document can identify a

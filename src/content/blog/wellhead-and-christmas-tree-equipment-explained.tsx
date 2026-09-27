@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Wellhead and Christmas tree equipment sits at the point where the
           well meets the surface — it is the pressure boundary for

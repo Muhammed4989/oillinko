@@ -38,7 +38,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Almost every technical specification for pressure equipment, piping
           and structural steel asks for a material certificate — and most say

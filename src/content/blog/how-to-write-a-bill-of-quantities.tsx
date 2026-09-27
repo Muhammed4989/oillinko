@@ -36,7 +36,7 @@ export default function BoqGuide() {
     <>
       <BlogPostHeader post={post} />
 
-      <Prose>
+      <Prose post={post}>
         <h2 id="why-the-boq-matters-more-than-the-supplier" className="text-xl font-bold">Why the BOQ matters more than the supplier</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           A supplier can only quote what you tell them. The difference between two

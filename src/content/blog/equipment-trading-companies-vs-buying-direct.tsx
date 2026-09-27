@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           An oil & gas equipment buyer sourcing a pump package, a lot of
           valves or a pressure vessel has two basic routes to a quote:

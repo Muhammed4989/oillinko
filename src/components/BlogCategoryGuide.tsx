@@ -11,11 +11,8 @@ export function GuideParagraph({ text }: { text: string }) {
 }
 export default function BlogCategoryGuide({ slug }: { slug: string }) {
   const sections = categoryGuide(slug);
-  return <details className="blog-guide mt-4 rounded-xl border border-line bg-white" data-category-guide={slug}>
-    <summary className="cursor-pointer px-5 py-3 font-semibold text-accent"><span className="read-more">Read more</span><span className="read-less">Read less</span><span className="sr-only"> about this category</span></summary>
-    <div className="max-w-4xl px-5 pb-7 sm:px-8">{sections.map((section,i)=><section key={section.heading} className="mt-8" aria-labelledby={`guide-section-${i}`}>
-      <h2 id={`guide-section-${i}`} className="text-xl font-semibold">{section.heading}</h2>
+  return <div className="mt-8 max-w-4xl" data-category-guide={slug}>{sections.map((section,i)=><section key={section.heading} className="mt-8" aria-labelledby={`guide-${slug}-${i}`}>
+      <h2 id={`guide-${slug}-${i}`} className="text-xl font-semibold">{section.heading}</h2>
       {section.paragraphs.map((text,j)=><GuideParagraph key={j} text={text}/>)}
-    </section>)}</div>
-  </details>;
+    </section>)}</div>;
 }

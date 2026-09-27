@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           The first RFQ you send to a new equipment trading company is also,
           quietly, an evaluation of the company itself — before you have

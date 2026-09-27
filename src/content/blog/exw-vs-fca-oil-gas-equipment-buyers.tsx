@@ -34,7 +34,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         An EXW vs FCA comparison starts with the point at which the buyer takes
         responsibility for the equipment. A lower equipment price can leave more

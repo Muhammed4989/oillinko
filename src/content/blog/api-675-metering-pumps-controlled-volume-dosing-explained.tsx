@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Not every dosing pump in a plant needs a standard behind it — but for
           services where an under-dose or over-dose of a chemical has safety,

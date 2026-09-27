@@ -43,7 +43,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Most process pumps in a plant are centrifugal, built to{" "}
           <Link className="text-accent hover:underline" href="/blog/category/oil-and-gas-equipment/pumps-rotating-equipment/api-610-pump-types-and-classes-explained">

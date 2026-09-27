@@ -34,7 +34,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         Positive material identification, usually shortened to PMI, uses elemental
         analysis to help verify that a metal is consistent with the specified alloy.

@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           &quot;Send us your RFQ&quot; makes the process sound simple, and for
           the buyer it largely is — but a sourcing partner&apos;s real work
