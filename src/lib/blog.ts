@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "seawater-pressure-reducing-valves-offshore-rfq-guide",
+    title: "Seawater Pressure Reducing Valves: An Offshore RFQ Guide",
+    short: "Define the duty, wetted materials, pressure-control range and acceptance evidence before comparing marine pressure reducing valve offers.",
+    tagline: "A practical buyer guide to specifying a pressure reducing valve for seawater without confusing it with a relief valve.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-27",
+    readTime: "9 min read",
+    date: "2026-09-27",
+    dateLabel: "27 September 2026",
+    description: "Prepare an offshore seawater pressure reducing valve RFQ with flow cases, inlet and outlet pressure, corrosion-resistant materials, pilot details and test records.",
+    keywords: "seawater pressure reducing valve RFQ, marine pressure reducing valve, offshore seawater PRV, super duplex pressure control valve",
+    image: "/images/blog/seawater-pressure-reducing-valve-rfq.svg",
+    related: ["valves-and-actuation-explained", "api-598-vs-iso-5208-valve-testing-buyers-guide", "api-526-pressure-relief-valves-rfq-guide"],
+  },
+  {
     slug: "api-526-pressure-relief-valves-rfq-guide",
     title: "API 526 Pressure-Relief Valves: An RFQ Guide",
     short: "Turn an approved relief requirement into a comparable valve enquiry without treating an API or ASME label as a sizing decision.",
