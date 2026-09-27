@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Check valve installation length comparison</title>
+  <desc id="desc">Conceptual comparison of a wafer check valve between pipe flanges and a check valve with integral flanged ends, with face-to-face dimensions highlighted.</desc>
+  <rect width="1200" height="630" fill="#081c2f"/>
+  <path d="M0 0h1200v630H0z" fill="#0c2740"/>
+  <circle cx="1055" cy="65" r="235" fill="#0e3854" opacity=".55"/>
+  <text x="72" y="78" fill="#f3f8fb" font-family="Arial,sans-serif" font-size="31" font-weight="700">Check valve dimensional fit</text>
+  <text x="72" y="118" fill="#bfd8e8" font-family="Arial,sans-serif" font-size="18">Confirm the pattern, reference faces and installation length.</text>
+  <rect x="65" y="165" width="1070" height="370" rx="24" fill="#102f4a" stroke="#2e5770" stroke-width="2"/>
+  <text x="105" y="215" fill="#eaf5fa" font-family="Arial,sans-serif" font-size="22" font-weight="700">Wafer body between flanges</text>
+  <text x="665" y="215" fill="#eaf5fa" font-family="Arial,sans-serif" font-size="22" font-weight="700">Integral flanged ends</text>
+  <path d="M108 305h83m194 0h131M665 305h83m290 0h65" stroke="#83a7bd" stroke-width="28" stroke-linecap="round"/>
+  <rect x="190" y="264" width="24" height="82" rx="4" fill="#95b8c9"/>
+  <rect x="363" y="264" width="24" height="82" rx="4" fill="#95b8c9"/>
+  <rect x="214" y="275" width="149" height="60" rx="16" fill="#19c5aa" stroke="#7cf2dc" stroke-width="3"/>
+  <path d="M287 281v48" stroke="#0a4350" stroke-width="10"/>
+  <path d="M299 281v48" stroke="#0a4350" stroke-width="10"/>
+  <rect x="748" y="264" width="25" height="82" rx="4" fill="#7be4cf"/>
+  <rect x="1013" y="264" width="25" height="82" rx="4" fill="#7be4cf"/>
+  <rect x="773" y="273" width="240" height="64" rx="30" fill="#236887" stroke="#80c8df" stroke-width="3"/>
+  <path d="M852 285l65 40m0-40l-65 40" stroke="#c3eaf1" stroke-width="7" stroke-linecap="round"/>
+  <path d="M214 386h149m-149-10v20m149-20v20M773 386h240m-240-10v20m240-20v20" stroke="#ffcc70" stroke-width="3"/>
+  <text x="251" y="424" fill="#ffde9c" font-family="Arial,sans-serif" font-size="16">L₁</text>
+  <text x="880" y="424" fill="#ffde9c" font-family="Arial,sans-serif" font-size="16">L₂</text>
+  <text x="105" y="482" fill="#bfd8e8" font-family="Arial,sans-serif" font-size="16">Body is installed between mating flanges.</text>
+  <text x="665" y="482" fill="#bfd8e8" font-family="Arial,sans-serif" font-size="16">The valve has its own end flanges.</text>
+  <text x="72" y="582" fill="#93b7ca" font-family="Arial,sans-serif" font-size="15">Conceptual diagram • Not to scale • Verify the manufacturer's dimensional drawing</text>
+</svg>
