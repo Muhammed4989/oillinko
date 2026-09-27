@@ -17,7 +17,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post}/>
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>A seawater pressure reducing valve enquiry needs more than a nominal pipe size and two pressure numbers. The buyer is purchasing a pressure-control assembly that must hold the required downstream condition over a defined range of flows and inlet pressures. Seawater adds a material-selection problem: the body may be corrosion resistant while a pilot, spring, tubing connection or fastener is not. The best RFQ makes the complete duty and the evidence expected from the bidder visible before prices are compared.</p>
       <p className={paragraph}>This guide is for procurement preparation, not for setting a valve in service or approving a piping design. The project engineer should establish the operating envelope, required downstream pressure, material basis, installation constraints and acceptance criteria. The manufacturer then selects and documents the proposed model against that approved basis. Any proposed alternative should identify its differences rather than relying on a broad “marine suitable” description.</p>
       <figure className="mt-8"><Image src={post.image} width={1200} height={630} sizes="(max-width: 768px) 100vw, 768px" className="h-auto w-full rounded-xl border border-line" alt="Seawater pressure reducing valve RFQ flow from operating envelope through materials and connections to tests and documented quotation."/><figcaption className="mt-3 text-sm text-muted">A comparable offer connects operating data, the full wetted-material schedule and acceptance evidence.</figcaption></figure>

@@ -16,7 +16,7 @@ const faqs=[
 
 export default function Page(){return <>
   <BlogPostHeader post={post}/>
-  <Prose>
+  <Prose post={post}>
     <p className={paragraph}>Replacement heat exchanger tube bundles are purchased against an existing assembly, not just a nominal shell diameter. A buyer may have a nameplate photograph and an urgent shutdown date, while the manufacturer needs enough evidence to define what will fit, what duty it must deliver and which parts remain in service. The useful starting point is a controlled enquiry package that separates confirmed information from assumptions. That distinction makes a preliminary quotation easier to develop into an accountable manufacturing proposal.</p>
     <p className={paragraph}>Begin by identifying the decision you are making. Is the requirement an interchangeable spare for an unchanged duty, a response to repeated tube damage, or a proposed capacity change? Each raises different review questions. A replacement order should not conceal an unresolved performance problem or turn an assumed material improvement into an approved redesign. This guide explains what to request from the owner, engineer and manufacturer before comparing offers. It does not provide removal instructions, fabrication dimensions or pressure-test procedures.</p>
     <figure className="mt-8">

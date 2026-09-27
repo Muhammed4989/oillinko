@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           A gasket must be selected for the complete flange joint and service.
           Metallic gasket requirements are addressed by{" "}

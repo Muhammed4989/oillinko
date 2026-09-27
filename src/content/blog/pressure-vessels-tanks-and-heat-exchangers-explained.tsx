@@ -35,7 +35,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Pressure vessels, storage tanks and heat exchangers are each
           governed by a different code family, and mixing them up on a

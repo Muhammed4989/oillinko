@@ -35,7 +35,7 @@ export default function HotTappingGuide() {
     <>
       <BlogPostHeader post={post} />
 
-      <Prose>
+      <Prose post={post}>
         <h2 id="what-is-hot-tapping" className="text-xl font-bold">What is hot tapping?</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Hot tapping is a specialist method of creating a connection to an existing pipeline or other pressure boundary while an engineered arrangement maintains containment. The complete system can involve a fitting, valve, tapping machine and purpose-selected cutting equipment. The actual method and feasibility depend on the line material, condition, fluid and operating envelope. This article explains terminology and purchasing questions; it is not an execution procedure or authorization to work on a live line.

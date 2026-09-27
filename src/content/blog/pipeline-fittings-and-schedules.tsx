@@ -35,7 +35,7 @@ export default function FittingsGuide() {
     <>
       <BlogPostHeader post={post} />
 
-      <Prose>
+      <Prose post={post}>
         <h2 id="what-counts-as-a-pipeline-fitting" className="text-xl font-bold">What counts as a pipeline fitting</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Pipeline fittings are the manufactured pieces that change the

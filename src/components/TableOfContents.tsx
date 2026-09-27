@@ -68,7 +68,7 @@ export default function TableOfContents({
 }) {
   const { headings, activeId, setActiveId } = useTocHeadings(containerId);
 
-  if (headings.length < 2) return null;
+  if (headings.length === 0) return null;
 
   function goTo(e: React.MouseEvent, id: string) {
     e.preventDefault();
@@ -112,10 +112,9 @@ export default function TableOfContents({
     );
   }
 
-  // Sidebar: sticky nav in the left column, desktop only.
   return (
-    <nav aria-label="Table of contents" className="hidden lg:block">
-      <div className="sticky top-24">
+    <nav aria-label="Table of contents">
+      <div>
         <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
           On this page
         </p>

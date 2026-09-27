@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           The coupling between a driver and driven machine is one of the most
           overlooked components in a rotating equipment train, yet a coupling

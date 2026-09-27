@@ -35,7 +35,7 @@ const faqs = [
 export default function Page() {
   return <>
     <BlogPostHeader post={post} />
-    <Prose>
+    <Prose post={post}>
       <p className={paragraph}>
         A valve actuator replacement can look straightforward when the old
         nameplate is readable and the mounting holes appear to match. Yet a

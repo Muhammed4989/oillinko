@@ -36,7 +36,7 @@ export default function FlangesGuide() {
     <>
       <BlogPostHeader post={post} />
 
-      <Prose>
+      <Prose post={post}>
         <h2 id="why-flanged-connections-dominate-oil-and-gas-piping" className="text-xl font-bold">Why flanged connections dominate oil and gas piping</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
           Flanged connections give plant operators a maintenance point that welded

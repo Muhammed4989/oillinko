@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           An RFQ that goes out to ten suppliers and comes back with three
           vague quotes, two outright declines and five silences is not

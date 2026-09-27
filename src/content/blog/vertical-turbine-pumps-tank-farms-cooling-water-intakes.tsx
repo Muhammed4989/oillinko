@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <>
       <BlogPostHeader post={post} />
-      <Prose>
+      <Prose post={post}>
         <p className="text-sm leading-relaxed text-muted sm:text-base">
           Tank farm transfer and cooling water intake duties share one
           constraint a horizontal pump cannot solve cheaply: the liquid level

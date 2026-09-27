@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
 import { site } from "@/lib/site";
-import { categoryName, getRelatedPosts, postUrl, type BlogPost } from "@/lib/blog";
-import TableOfContents from "@/components/TableOfContents";
+import { categoryName, postUrl, type BlogPost } from "@/lib/blog";
+import BlogHierarchy from "@/components/BlogHierarchy";
 import { getBlogCategory, categoryAncestors, categoryUrl } from "@/lib/blog-taxonomy";
 import { BlogBreadcrumb, blogBreadcrumbData } from "@/components/BlogNavigation";
+import { postCover } from "@/lib/blog-cover";
+import Image from "next/image";
 
 function postCrumbs(post: BlogPost) { return [{name:"Blog",href:"/blog"},...categoryAncestors(getBlogCategory(post.category)!).map(c=>({name:c.name,href:categoryUrl(c)})),{name:post.title,href:postUrl(post)}]; }
 export function breadcrumbJsonLd(post: BlogPost) { return blogBreadcrumbData(postCrumbs(post)); }
@@ -15,7 +15,7 @@ export function articleJsonLd(post: BlogPost, opts?: { dateModified?: string }) 
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: `${site.domain}${post.image}`,
+    image: `${site.domain}${postCover(post.slug)}`,
     author: { "@type": "Organization", name: site.legalName, url: site.domain },
     publisher: { "@type": "Organization", name: site.legalName, url: site.domain },
     datePublished: post.date,
@@ -51,24 +51,41 @@ export function JsonLd({ data }: { data: object | object[] }) {
   );
 }
 
-export function BlogPostHeader({ post }: { post: BlogPost }) {
+export function BlogPageHeader({ crumbs, label, title, description, published, updated, readTime }: { crumbs: { name: string; href: string }[]; label: string; title: string; description: string; published?: { date: string; label: string }; updated?: { date: string; label: string }; readTime?: string }) {
   return (
     <section className="border-b border-line bg-oil-800">
-      <div className="mx-auto max-w-6xl px-4 py-16">
-        <BlogBreadcrumb items={postCrumbs(post)} />
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+        <BlogBreadcrumb items={crumbs} />
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
-          {categoryName(post.category)}
+          {label}
         </p>
         <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
-          {post.title}
+          {title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-muted">{post.tagline}</p>
-        <p className="mt-3 text-sm text-muted">
-          By {site.name} &middot; Published <time dateTime={post.date}>{post.dateLabel}</time> &middot; Updated <time dateTime={post.dateModified}>{post.dateModified}</time> &middot; {post.readTime}
+        <p className="mt-4 max-w-2xl text-lg leading-7 text-muted">{description}</p>
+        <p className="mt-5 flex flex-wrap gap-x-2 gap-y-1 text-sm text-muted">
+          <span>By {site.name}</span>
+          {published && <><span aria-hidden="true">&middot;</span><span>Published <time dateTime={published.date}>{published.label}</time></span></>}
+          {updated && <><span aria-hidden="true">&middot;</span><span>Updated <time dateTime={updated.date}>{updated.label}</time></span></>}
+          {readTime && <><span aria-hidden="true">&middot;</span><span>{readTime}</span></>}
         </p>
       </div>
     </section>
   );
+}
+
+export function BlogPostHeader({ post }: { post: BlogPost }) {
+  const updatedLabel = new Date(`${post.dateModified}T00:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  return <BlogPageHeader crumbs={postCrumbs(post)} label={categoryName(post.category)} title={post.title} description={post.tagline || post.description} published={{ date: post.date, label: post.dateLabel }} updated={{ date: post.dateModified, label: updatedLabel }} readTime={post.readTime} />;
+}
+
+export function BlogCover({ src, alt }: { src: string; alt: string }) {
+  return <Image src={src} alt={alt} width={1600} height={900} priority sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 850px" className="mb-8 aspect-[16/9] w-full rounded-lg object-cover" />;
 }
 
 export function Faq({ faqs }: { faqs: { q: string; a: string }[] }) {
@@ -105,51 +122,14 @@ export function Faq({ faqs }: { faqs: { q: string; a: string }[] }) {
   );
 }
 
-export function RelatedPosts({ post }: { post: BlogPost }) {
-  const related = getRelatedPosts(post);
-  const category = getBlogCategory(post.category)!;
-  return (
-    <section className="border-t border-line bg-oil-800">
-      <div className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="text-xl font-bold">Related reading</h2>
-        <p className="mt-4 text-sm leading-7 text-muted">Continue with the <Link className="text-accent underline" href={categoryUrl(category)}>{category.name.toLowerCase()} guide</Link>, or explore {category.catalogue.map((link,i)=><span key={link.href}>{i>0?" and ":""}<Link className="text-accent underline" href={link.href}>{link.label.toLowerCase()}</Link></span>)}.</p>
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          {related.map((r) => (
-            <Link
-              key={r.slug}
-              href={postUrl(r)}
-              className="group overflow-hidden rounded-lg border border-line bg-oil-900 transition-colors hover:border-accent"
-            >
-              <div className="relative h-28 overflow-hidden">
-                <Image
-                  src={r.image}
-                  alt={r.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-oil-900/80 to-transparent" />
-              </div>
-              <div className="p-5">
-                <p className="text-xs text-muted">{categoryName(r.category)}</p>
-                <h3 className="mt-1.5 text-sm font-semibold transition-colors group-hover:text-accent">
-                  {r.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export function RelatedPosts({ post }: { post: BlogPost }) { void post; return null; }
 
-export function Prose({ children }: { children: React.ReactNode }) {
+export function Prose({ children, post }: { children: React.ReactNode; post: BlogPost }) {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-14 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:items-start lg:gap-12">
-      <TableOfContents variant="sidebar" />
-      <article id="post-content" className="min-w-0 max-w-3xl lg:col-start-2 lg:row-start-1">
-        <TableOfContents variant="inline" />
+    <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-14 sm:grid-cols-[230px_minmax(0,1fr)] lg:grid-cols-[280px_minmax(0,1fr)]">
+      <BlogHierarchy containerId="post-content" />
+      <article id="post-content" className="min-w-0 max-w-3xl">
+        <BlogCover src={postCover(post.slug)} alt={post.title} />
         {children}
       </article>
     </div>
