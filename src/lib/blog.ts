@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "check-valve-face-to-face-dimensions-rfq",
+    title: "Check Valve Face-to-Face Dimensions: What an RFQ Must Specify",
+    short: "Identify the check-valve pattern, connection and installation length before comparing replacement offers.",
+    tagline: "A buyer's guide to dimensional interchangeability for wafer, lug and flanged check-valve quotations.",
+    category: "valves-actuation",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-27",
+    readTime: "8 min read",
+    date: "2026-09-27",
+    dateLabel: "27 September 2026",
+    description: "Prepare a check-valve RFQ with the correct face-to-face dimension, body pattern, mating flanges, flow direction and dimensional drawing.",
+    keywords: "check valve face-to-face dimensions RFQ, API 594 check valve dimensions, ASME B16.10 valve length, wafer versus flanged check valve",
+    image: "/images/blog/check-valve-face-to-face-rfq.svg",
+    related: ["check-valve-cracking-pressure-rfq-guide", "asme-b16-5-flange-pressure-classes", "api-598-vs-iso-5208-valve-testing-buyers-guide"],
+  },
+  {
     slug: "seawater-pressure-reducing-valves-offshore-rfq-guide",
     title: "Seawater Pressure Reducing Valves: An Offshore RFQ Guide",
     short: "Define the duty, wetted materials, pressure-control range and acceptance evidence before comparing marine pressure reducing valve offers.",
