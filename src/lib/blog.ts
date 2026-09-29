@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ultrasonic-thickness-measurement-reports-rfq-guide",
+    title: "Ultrasonic Thickness Measurement Reports: A Buyer’s RFQ Guide",
+    short: "Define survey coverage, measurement validity, repeatable locations and traceable inspection deliverables.",
+    tagline: "Specify a wall thickness survey that answers the inspection question and produces reviewable records.",
+    category: "inspection-testing",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-29",
+    readTime: "8 min read",
+    date: "2026-09-29",
+    dateLabel: "29 September 2026",
+    description: "Prepare an ultrasonic thickness measurement RFQ with defined coverage, valid readings, repeatable locations and traceable inspection reports.",
+    keywords: "ultrasonic thickness measurement report, UT thickness survey RFQ, corrosion thickness inspection, ISO 16809",
+    image: "/images/blog/heroes/ultrasonic-thickness-measurement-reports-rfq-guide.webp",
+    related: ["inspection-test-plans-hold-vs-witness-points", "coating-dft-inspection-reports-buyers-guide", "positive-material-identification-xrf-oes-buyers-guide"],
+  },
+  {
     slug: "controlled-bolting-services-rfq-handover-guide",
     title: "Controlled Bolting Services: An RFQ and Handover Guide",
     short: "Define the joint register, approved assembly basis, site responsibilities and completion records before comparing service offers.",
