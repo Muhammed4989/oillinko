@@ -1,3 +1,4 @@
+import BreadcrumbBar from "@/components/BreadcrumbBar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -52,19 +53,15 @@ export default async function CompanyProfilePage({ params }: Props) {
 
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-    <section className="border-b border-line bg-oil-800">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
-        <nav aria-label="Breadcrumb" className="mb-7 flex flex-wrap gap-2 text-sm text-muted"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/oil-and-gas">Oil & Gas</Link><span aria-hidden="true">/</span><Link href={companyDirectoryPath}>Companies</Link><span aria-hidden="true">/</span><span aria-current="page">{company.name}</span></nav>
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent">Independent manufacturer reference</p>
-        <h1 className="mt-3 max-w-5xl text-3xl font-bold tracking-tight sm:text-5xl">{company.name}</h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">China-based industrial valve manufacturer listed as a prospective source for project-specific enquiries. Oillinko reviews each requirement and coordinates quotations manually.</p>
-        <div className="mt-7 flex flex-wrap gap-3 text-sm"><span className="rounded-full border border-line px-3 py-1.5">Headquarters: {company.headquarters}</span><span className="rounded-full border border-line px-3 py-1.5">Company type: Equipment manufacturer</span><span className="rounded-full border border-line px-3 py-1.5">Reviewed: {profile.reviewedOn}</span></div>
-      </div>
-    </section>
+    <BreadcrumbBar><nav aria-label="Breadcrumb" className="flex flex-wrap gap-2 text-sm text-muted"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/oil-and-gas">Oil & Gas</Link><span aria-hidden="true">/</span><Link href={companyDirectoryPath}>Companies</Link><span aria-hidden="true">/</span><span aria-current="page">{company.name}</span></nav></BreadcrumbBar>
 
-    <main className="mx-auto max-w-6xl px-4 py-12">
+    <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <article className="min-w-0">
+          <header className="mb-8"><p className="text-sm font-semibold uppercase tracking-widest text-accent">Independent manufacturer reference</p>
+        <h1 className="mt-3 max-w-5xl text-3xl font-bold tracking-tight sm:text-5xl">{company.name}</h1>
+        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">China-based industrial valve manufacturer listed as a prospective source for project-specific enquiries. Oillinko reviews each requirement and coordinates quotations manually.</p>
+        <div className="mt-7 flex flex-wrap gap-3 text-sm"><span className="rounded-full border border-line px-3 py-1.5">Headquarters: {company.headquarters}</span><span className="rounded-full border border-line px-3 py-1.5">Company type: Equipment manufacturer</span><span className="rounded-full border border-line px-3 py-1.5">Reviewed: {profile.reviewedOn}</span></div></header>
           <div className="rounded-xl border border-amber-300 bg-amber-50 p-5 text-sm leading-relaxed text-amber-950"><strong>Qualification status:</strong> This is an independent directory profile for a prospective source. It does not imply appointment, authorised distribution, project approval or confirmed stock. Product compliance and manufacturing origin are verified against the specific quotation.</div>
           {profile.sections.map(section => <section key={section.heading} className="mt-10"><h2 className="text-2xl font-bold">{section.heading}</h2>{section.paragraphs.map(paragraph => <p key={paragraph.slice(0, 70)} className="mt-4 leading-8 text-muted">{paragraph}</p>)}</section>)}
 
@@ -80,6 +77,6 @@ export default async function CompanyProfilePage({ params }: Props) {
       </div>
 
       <section id="company-enquiry" aria-labelledby="company-enquiry-title" className="mx-auto mt-16 max-w-3xl scroll-mt-24 border-t border-line pt-14"><p className="text-sm font-semibold uppercase tracking-wider text-accent">Enquiry managed by Oillinko</p><h2 id="company-enquiry-title" className="mt-3 text-3xl font-bold">Request a quotation for this valve range</h2><p className="mt-4 leading-relaxed text-muted">Send the valve datasheet, quantity, project standards, documentation requirements, required manufacturing origin and delivery country. Your request comes to Oillinko for review and manual supplier coordination.</p><div className="mt-7 rounded-xl border border-line bg-white p-5 sm:p-8"><RfqForm initialCategory="Valves & Actuation" initialItem={`${company.name} — valve model / project reference`} initialKind="Equipment" sourcePage={path} /></div></section>
-    </main>
+    </section>
   </>;
 }

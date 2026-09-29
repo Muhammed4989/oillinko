@@ -1,17 +1,18 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { catalogue, catalogueSearchUrl, filterCatalogue, groupUrl, requestUrl, sectors, typeUrl, type CatalogueFilters, type CatalogueGroup, type CatalogueType } from "@/lib/catalogue";
 import CatalogueFilterForm from "@/components/CatalogueFilterForm";
 function ItemCard({ group, item, origin }: { group: CatalogueGroup; item: CatalogueType; origin: string }) {
  const productUrl = typeUrl(group,item)+(origin?`?${new URLSearchParams({origin})}`:"");
  return <li className="rounded-lg border border-line p-4"><p className="mb-2 text-xs text-muted">{item.kind ?? group.kind}</p><Link className="font-semibold hover:text-accent" href={productUrl}>{item.name}</Link><p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p><Link href={productUrl} className="mt-3 inline-block text-sm font-semibold text-accent">{item.kind === "Service" ? "Service information & enquiry →" : "Product information & enquiry →"}</Link>{origin && <Link href={requestUrl(group.slug,item.id,origin)} className="mt-2 block text-sm text-accent">Request with selected origin →</Link>}</li>;
 }
-export default function CatalogueExplorer({ filters }: { filters: CatalogueFilters }) {
+export default function CatalogueExplorer({ filters, heading }: { filters: CatalogueFilters; heading?: ReactNode }) {
  const {search, category, sector, kind, application, origin} = filters;
  const groups = filterCatalogue(search, sector, kind, application, category);
  const filtered = !!(search || category || sector || kind || application);
  return <section className="mx-auto max-w-6xl px-4 py-10"><div className="grid items-start gap-8 lg:grid-cols-[280px_minmax(0,1fr)]">
-  <aside className="min-w-0"><CatalogueFilterForm key={catalogueSearchUrl(filters)} filters={filters}/></aside>
-  <div className="min-w-0"><div className="mb-6 flex flex-wrap items-center justify-between gap-3"><p role="status" className="text-sm text-muted">{groups.length} of {catalogue.length} categories · {groups.reduce((sum,g)=>sum+g.types.length,0)} equipment, service and software types</p><Link href="/rfq" className="text-sm font-semibold text-accent underline">Have a BOQ? Send the whole list</Link></div>
+  <aside className="order-2 min-w-0 lg:order-1"><CatalogueFilterForm key={catalogueSearchUrl(filters)} filters={filters}/></aside>
+  <div className="order-1 min-w-0 lg:order-2">{heading}<div className="mb-6 flex flex-wrap items-center justify-between gap-3"><p role="status" className="text-sm text-muted">{groups.length} of {catalogue.length} categories · {groups.reduce((sum,g)=>sum+g.types.length,0)} equipment, service and software types</p><Link href="/rfq" className="text-sm font-semibold text-accent underline">Have a BOQ? Send the whole list</Link></div>
    {filtered && <p className="mb-5 text-sm text-muted">Results for: {[search, catalogue.find(g=>g.slug===category)?.name, sectors.find(s=>s.id===sector)?.name, kind, application].filter(Boolean).join(" · ")}</p>}
    {origin && <p className="mb-5 rounded-lg border border-line bg-white p-4 text-sm">Manufacturing origin requested: <strong>{origin}</strong>. Oillinko will check this requirement for equipment included in your enquiry.</p>}
    {groups.length===0 && <div className="rounded-xl border border-line bg-white p-8"><h2 className="text-xl font-semibold">Tell us what you need</h2><p className="mt-3 text-muted">No catalogue type matches these filters. Broaden your selections or send a model number, drawing or service scope to Oillinko.</p><Link href={requestUrl("other",undefined,origin)} className="mt-5 inline-block rounded bg-accent px-5 py-3 font-semibold text-black">Send your requirement</Link></div>}
