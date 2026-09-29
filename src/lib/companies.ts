@@ -4,6 +4,7 @@ export const companyRoles = {
   manufacturer: "Equipment manufacturers",
   technology: "Oilfield technology & services",
   engineering: "Engineering & project delivery",
+  logistics: "Logistics & freight forwarding",
   operator: "Energy operators & producers",
 } as const;
 
@@ -20,6 +21,7 @@ export const companySpecialties = {
   piping: { name: "Pipes, tubing & fittings", href: "/oil-and-gas/equipment/flanges-fittings-bolting" },
   sealing: { name: "Seals & equipment reliability", href: "/oil-and-gas/equipment/gaskets-seals" },
   engineering: { name: "Engineering & project services", href: "/oil-and-gas/services" },
+  logistics: { name: "Freight & project logistics", href: "/oil-and-gas/services/freight-expediting-and-project-logistics" },
   water: { name: "Water & process treatment", href: "/industries/water" },
 } as const;
 
@@ -42,6 +44,9 @@ export type DirectoryCompany = {
 // Named company identity is restricted to /oil-and-gas/companies. Do not import
 // these records into catalogue, service, software or industry page rendering.
 export const companies: DirectoryCompany[] = [
+  { id: "kade-grup", name: "KADE Grup", headquarters: "Türkiye", region: "Europe / Middle East", role: "engineering", specialties: ["engineering", "piping", "electrical", "instrumentation"], description: "Engineering company in Kdz. Ereğli, Zonguldak, offering industrial mechanical and piping systems, electrical systems, automation, and engineering/procurement/construction services. Its introduction to Oillinko also describes welded assemblies and mechanical packages. Fabrication scope, materials and current certificate coverage are reviewed against each project before quotation or qualification.", website: "https://www.kadegrup.com.tr/", reviewedOn: "2026-09-29" },
+  { id: "cagin-metal-isleme", name: "Çağın Metal İşleme", headquarters: "Türkiye", region: "Europe / Middle East", role: "manufacturer", specialties: ["engineering", "piping"], description: "Istanbul-based subcontract machining company whose official range includes long and large-diameter turning, horizontal boring and flange machining. Suitable enquiries identify the component drawing, material, weight, tolerances and inspection scope. Published machine dimensions describe separate configurations; combined workpiece capacity and current inspection documentation require confirmation for the proposed job.", website: "https://www.caginmetalisleme.com/", reviewedOn: "2026-09-29" },
+  { id: "global-express-international", name: "Global Express International", headquarters: "Saudi Arabia", region: "Middle East", role: "logistics", specialties: ["logistics"], description: "Jeddah-based logistics company offering sea, air and inland freight, customs clearance, warehousing and project logistics. Its response to Oillinko identifies oil and gas equipment and project-cargo support. Oversized, heavy-lift and dangerous-goods shipments remain subject to cargo dimensions, weight, route, classification, carrier acceptance and applicable permissions; a listing does not guarantee shipment acceptance.", website: "https://gei-ksa.com/", reviewedOn: "2026-09-29" },
   { id: "ak-celik-boru", name: "AK Çelik Boru", headquarters: "Türkiye", region: "Europe / Middle East", role: "manufacturer", specialties: ["piping", "gas", "engineering"], description: "Engineering and fabrication company in İskenderun whose published range includes steel pipe systems, pressure vessels, cryogenic and LNG/LPG tanks, and project-specific process equipment. Configuration, documentation and manufacturing origin must be checked for each enquiry.", website: "https://akcelikboru.com/", reviewedOn: "2026-09-27" },
   { id: "ozturk-container", name: "Öztürk Container", headquarters: "Türkiye", region: "Europe / Middle East", role: "manufacturer", specialties: ["engineering"], description: "Istanbul-based maker of flat-pack accommodation containers, prefabricated buildings, site offices and other modular units. Its published oil and gas range includes temporary camp and pipeline-project facilities; the required layout and site specifications are reviewed per project.", website: "https://ozturkcontainer.com/en", reviewedOn: "2026-09-27" },
   { id: "param-instruments", name: "Param Instruments Inc.", headquarters: "India", region: "Asia", role: "manufacturer", specialties: ["instrumentation", "valves", "piping"], description: "Mumbai-based instrumentation component company offering manifold and needle valves, tube fittings and related fluid-system components. A product-specific datasheet and applicable test documents should be obtained before a quotation is compared.", reviewedOn: "2026-09-27" },
