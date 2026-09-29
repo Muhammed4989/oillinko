@@ -1,5 +1,5 @@
 import { site } from "@/lib/site";
-import { categoryName, postUrl, type BlogPost } from "@/lib/blog";
+import { categoryName, postUrl, getRelatedPosts, type BlogPost } from "@/lib/blog";
 import BlogHierarchy from "@/components/BlogHierarchy";
 import { getBlogCategory, categoryAncestors, categoryUrl } from "@/lib/blog-taxonomy";
 import { BlogBreadcrumb, blogBreadcrumbData } from "@/components/BlogNavigation";
@@ -130,6 +130,9 @@ export function Faq({ faqs }: { faqs: { q: string; a: string }[] }) {
 
 export function RelatedPosts({ post }: { post: BlogPost }) { void post; return null; }
 
+function BlogRelatedReading({ post }: { post: BlogPost }) {
+  return <section className="mt-12 border-t border-line pt-8" aria-labelledby="related-reading"><h2 id="related-reading" className="text-xl font-bold">Related reading</h2><ul className="mt-4 space-y-3 text-sm sm:text-base">{getRelatedPosts(post).map(related => <li key={related.slug}><a className="text-accent underline underline-offset-4" href={postUrl(related)}>{related.title}</a></li>)}</ul></section>;
+}
 export function Prose({ children, post }: { children: React.ReactNode; post: BlogPost }) {
   return (
     <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-14 sm:grid-cols-[230px_minmax(0,1fr)] lg:grid-cols-[280px_minmax(0,1fr)]">
@@ -138,6 +141,7 @@ export function Prose({ children, post }: { children: React.ReactNode; post: Blo
         <BlogPostContentHeader post={post} />
         <BlogCover src={postCover(post.slug)} alt={post.title} />
         {children}
+        <BlogRelatedReading post={post} />
       </article>
     </div>
   );

@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import { blogPosts, postUrl } from "@/lib/blog";
+import { blogPosts, postUrl, postsInCategory } from "@/lib/blog";
 import { blogCategories, categoryAncestors, categoryUrl } from "@/lib/blog-taxonomy";
 import { blogMetadata, postMetadata } from "@/lib/blog-metadata";
-import { blogBreadcrumbData } from "@/components/BlogNavigation";
+import { ArticleCards, CategoryCards, blogBreadcrumbData } from "@/components/BlogNavigation";
 import BlogCategoryGuide from "@/components/BlogCategoryGuide";
 import BlogHierarchy from "@/components/BlogHierarchy";
 import { BlogBreadcrumbHeader, BlogCover, BlogPageHeader, JsonLd } from "@/components/BlogChrome";
@@ -27,6 +27,8 @@ export default async function Page(props:Props) {
        <BlogCover src={categoryCover(category.slug)} alt={category.name} />
        <p data-category-intro="" className="max-w-3xl text-lg leading-7 text-muted">{category.intro}</p>
        <BlogCategoryGuide slug={category.slug}/>
+       {!category.parent && <section className="mt-12" aria-labelledby="category-subtopics"><h2 id="category-subtopics" className="text-xl font-semibold">Explore subtopics</h2><CategoryCards categories={blogCategories.filter(c => c.parent === category.slug)}/></section>}
+       <section className="mt-12" aria-labelledby="category-articles"><h2 id="category-articles" className="text-xl font-semibold">Articles in this category</h2><ArticleCards posts={postsInCategory(category.slug)}/></section>
      </article>
    </div>
    <JsonLd data={blogBreadcrumbData(crumbs)}/>
