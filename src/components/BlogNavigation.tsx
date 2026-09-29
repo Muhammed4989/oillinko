@@ -7,7 +7,7 @@ import { postCover } from "@/lib/blog-cover";
 
 export type Crumb = { name: string; href: string };
 export function BlogBreadcrumb({ items }: { items: Crumb[] }) {
-  return <nav aria-label="Breadcrumb" className="mb-5 text-sm text-muted"><ol className="flex flex-wrap gap-x-2 gap-y-2">{items.map((item,i)=><li key={item.href} className="inline-flex max-w-full items-baseline gap-2 break-words">{i>0&&<span aria-hidden="true">/</span>}{i===items.length-1?<span aria-current="page">{item.name}</span>:<Link href={item.href} className="text-accent underline underline-offset-4">{item.name}</Link>}</li>)}</ol></nav>;
+  return <nav aria-label="Breadcrumb" className="text-sm text-muted"><ol className="flex flex-wrap gap-x-2 gap-y-2">{items.map((item,i)=><li key={item.href} className="inline-flex max-w-full items-baseline gap-2 break-words">{i>0&&<span aria-hidden="true">/</span>}{i===items.length-1?<span aria-current="page">{item.name}</span>:<Link href={item.href} className="text-accent underline underline-offset-4">{item.name}</Link>}</li>)}</ol></nav>;
 }
 export function blogBreadcrumbData(items: Crumb[]) { return {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:items.map((c,i)=>({"@type":"ListItem",position:i+1,name:c.name,item:site.domain+c.href}))}; }
 export function CategoryCards({ categories }: { categories: BlogCategory[] }) {

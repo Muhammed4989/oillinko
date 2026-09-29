@@ -1,3 +1,4 @@
+import BreadcrumbBar from "@/components/BreadcrumbBar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "@/components/SiteImage";
@@ -43,16 +44,12 @@ export default async function CompaniesPage({ searchParams }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
-      <section className="border-b border-line bg-oil-800">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
-          <nav aria-label="Breadcrumb" className="mb-7 flex flex-wrap gap-2 text-sm text-muted"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/oil-and-gas">Oil & Gas</Link><span aria-hidden="true">/</span><span aria-current="page">Companies</span></nav>
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">The global industry, in one place</p>
+      <BreadcrumbBar><nav aria-label="Breadcrumb" className="flex flex-wrap gap-2 text-sm text-muted"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/oil-and-gas">Oil & Gas</Link><span aria-hidden="true">/</span><span aria-current="page">Companies</span></nav></BreadcrumbBar>
+      <section aria-labelledby="directory-title" className="mx-auto max-w-6xl px-4 py-10">
+        <header className="mb-10"><p className="text-sm font-semibold uppercase tracking-widest text-accent">The global industry, in one place</p>
           <h1 className="mt-3 max-w-4xl text-3xl font-bold tracking-tight sm:text-5xl">Global oil & gas<br className="hidden sm:block" /> company directory.</h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-muted">Explore equipment manufacturers, oilfield technology providers, engineering companies and energy operators. Connect an industry name with the equipment, services and project requirements behind it.</p>
-          <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-5 text-sm"><span><strong className="text-xl">{companies.length}</strong> company references</span><span><strong className="text-xl">{Object.keys(companyRoles).length}</strong> company types</span><span><strong className="text-xl">{Object.keys(companySpecialties).length}</strong> specialties</span></div>
-        </div>
-      </section>
-      <section aria-labelledby="directory-title" className="mx-auto max-w-6xl px-4 py-10">
+          <div className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-5 text-sm"><span><strong className="text-xl">{companies.length}</strong> company references</span><span><strong className="text-xl">{Object.keys(companyRoles).length}</strong> company types</span><span><strong className="text-xl">{Object.keys(companySpecialties).length}</strong> specialties</span></div></header>
         <h2 id="directory-title" className="mb-5 text-2xl font-bold">Explore the directory</h2>
         <CompanyFilterForm key={companySearchUrl(filters)} filters={filters} />
         <p className="mt-5 max-w-4xl text-sm leading-relaxed text-muted">An independent industry reference. Listings do not imply a customer relationship, partnership, authorised distribution or endorsement of Oillinko. Headquarters identify the company base; product manufacturing origin is confirmed separately for each offer.</p>

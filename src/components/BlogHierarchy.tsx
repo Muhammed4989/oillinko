@@ -14,7 +14,7 @@ export default function BlogHierarchy({ containerId }: { containerId: string }) 
   const mainCategories = blogCategories.filter((category) => !category.parent);
 
   return (
-    <aside className="min-w-0 sm:sticky sm:top-6 sm:max-h-[calc(100vh-3rem)] sm:overflow-y-auto">
+    <aside className="order-2 min-w-0 sm:order-1 sm:sticky sm:top-6 sm:max-h-[calc(100vh-3rem)] sm:overflow-y-auto">
       <nav aria-label="Blog hierarchy" className="max-h-72 overflow-y-auto rounded-lg border border-line bg-white sm:max-h-none sm:overflow-visible">
         <Link href="/blog" aria-current={pathname === "/blog" ? "page" : undefined} className="block border-b border-line px-4 py-4 font-bold">
           Blog

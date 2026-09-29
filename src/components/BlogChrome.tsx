@@ -5,6 +5,7 @@ import { getBlogCategory, categoryAncestors, categoryUrl } from "@/lib/blog-taxo
 import { BlogBreadcrumb, blogBreadcrumbData } from "@/components/BlogNavigation";
 import { postCover } from "@/lib/blog-cover";
 import Image from "@/components/SiteImage";
+import BreadcrumbBar from "@/components/BreadcrumbBar";
 
 function postCrumbs(post: BlogPost) { return [{name:"Blog",href:"/blog"},...categoryAncestors(getBlogCategory(post.category)!).map(c=>({name:c.name,href:categoryUrl(c)})),{name:post.title,href:postUrl(post)}]; }
 export function breadcrumbJsonLd(post: BlogPost) { return blogBreadcrumbData(postCrumbs(post)); }
@@ -51,11 +52,13 @@ export function JsonLd({ data }: { data: object | object[] }) {
   );
 }
 
-export function BlogPageHeader({ crumbs, label, title, description, published, updated, readTime }: { crumbs: { name: string; href: string }[]; label: string; title: string; description: string; published?: { date: string; label: string }; updated?: { date: string; label: string }; readTime?: string }) {
+export function BlogBreadcrumbHeader({ crumbs }: { crumbs: { name: string; href: string }[] }) {
+  return <BreadcrumbBar><BlogBreadcrumb items={crumbs} /></BreadcrumbBar>;
+}
+
+export function BlogPageHeader({ label, title, description, published, updated, readTime }: { label: string; title: string; description: string; published?: { date: string; label: string }; updated?: { date: string; label: string }; readTime?: string }) {
   return (
-    <section className="border-b border-line bg-oil-800">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
-        <BlogBreadcrumb items={crumbs} />
+    <header className="mb-8">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
           {label}
         </p>
@@ -69,19 +72,22 @@ export function BlogPageHeader({ crumbs, label, title, description, published, u
           {updated && <><span aria-hidden="true">&middot;</span><span>Updated <time dateTime={updated.date}>{updated.label}</time></span></>}
           {readTime && <><span aria-hidden="true">&middot;</span><span>{readTime}</span></>}
         </p>
-      </div>
-    </section>
+    </header>
   );
 }
 
 export function BlogPostHeader({ post }: { post: BlogPost }) {
+  return <BlogBreadcrumbHeader crumbs={postCrumbs(post)} />;
+}
+
+function BlogPostContentHeader({ post }: { post: BlogPost }) {
   const updatedLabel = new Date(`${post.dateModified}T00:00:00Z`).toLocaleDateString("en-GB", {
     day: "numeric",
     month: "long",
     year: "numeric",
     timeZone: "UTC",
   });
-  return <BlogPageHeader crumbs={postCrumbs(post)} label={categoryName(post.category)} title={post.title} description={post.tagline || post.description} published={{ date: post.date, label: post.dateLabel }} updated={{ date: post.dateModified, label: updatedLabel }} readTime={post.readTime} />;
+  return <BlogPageHeader label={categoryName(post.category)} title={post.title} description={post.tagline || post.description} published={{ date: post.date, label: post.dateLabel }} updated={{ date: post.dateModified, label: updatedLabel }} readTime={post.readTime} />;
 }
 
 export function BlogCover({ src, alt }: { src: string; alt: string }) {
@@ -128,7 +134,8 @@ export function Prose({ children, post }: { children: React.ReactNode; post: Blo
   return (
     <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-14 sm:grid-cols-[230px_minmax(0,1fr)] lg:grid-cols-[280px_minmax(0,1fr)]">
       <BlogHierarchy containerId="post-content" />
-      <article id="post-content" className="min-w-0 max-w-3xl">
+      <article id="post-content" className="order-1 min-w-0 max-w-3xl sm:order-2">
+        <BlogPostContentHeader post={post} />
         <BlogCover src={postCover(post.slug)} alt={post.title} />
         {children}
       </article>
