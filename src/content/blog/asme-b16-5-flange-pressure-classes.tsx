@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 import Link from "next/link";
 import { CtaBand } from "@/components/ui";
 import { BlogPostHeader, CheckList, Faq, JsonLd, Prose, RelatedPosts, articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/BlogChrome";

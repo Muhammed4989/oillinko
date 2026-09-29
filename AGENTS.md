@@ -13,3 +13,7 @@ Do not expose a named supplier or manufacturer on equipment, service, software o
 Generic technical wording such as “manufacturer,” “supplier,” “OEM,” and fields asking the buyer for an installed manufacturer, model or part number remain allowed. Editorial articles may cite an original technical source when accuracy requires it, but a citation must not be presented as the supplier assigned to an Oillinko enquiry.
 
 When adding or editing a company, catalogue topic or service, run the catalogue checks. Keep the protected company-name check current so a future company record cannot leak into catalogue HTML, metadata or structured data.
+
+# Image descriptions and hover text
+
+Use `@/components/SiteImage` for visible site images. Provide a meaningful English `alt` describing the image; the component also uses that description as the native `title` shown on mouse hover. Keep supplier identities confined to the company-directory namespace in both attributes. Background image containers must expose the same hover description when overlays cover the image. Run `node scripts/check-image-descriptions.cjs` after a production build to audit every generated page.

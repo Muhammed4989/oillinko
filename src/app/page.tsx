@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CatalogueEntry from "@/components/CatalogueEntry";
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 import { CtaBand, SectionTitle } from "@/components/ui";
 import { categories } from "@/lib/equipment";
 import { getGroup, groupUrl } from "@/lib/catalogue";
@@ -91,7 +91,7 @@ const faqJsonLd = {
 export default function HomePage() {
   return (
     <>
-      <section className="hero-dark relative overflow-hidden border-b border-line">
+      <section className="hero-dark relative overflow-hidden border-b border-line" title="Oil refinery at sunset — oil and gas equipment sourcing">
         <Image
           src="/images/hero-refinery.jpg"
           alt="Oil refinery at sunset — oil and gas equipment sourcing"
@@ -174,7 +174,7 @@ export default function HomePage() {
                 href={groupUrl(getGroup(c.slug)!)}
                 className="group overflow-hidden rounded-lg border border-line bg-oil-900 transition-colors hover:border-accent"
               >
-                <div className="relative h-40 overflow-hidden">
+                <div className="relative h-40 overflow-hidden" title={c.name}>
                   <Image
                     src={c.image}
                     alt={c.name}
@@ -228,7 +228,7 @@ export default function HomePage() {
               href={postUrl(g)}
               className="group flex flex-col overflow-hidden rounded-lg border border-line bg-oil-800 transition-colors hover:border-accent"
             >
-              <div className="relative h-36 overflow-hidden">
+              <div className="relative h-36 overflow-hidden" title={g.title}>
                 <Image
                   src={g.image}
                   alt={g.title}
