@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 import Link from "next/link";
 
 export function PageHeader({
@@ -44,10 +44,10 @@ export function SectionTitle({
 
 export function CtaBand() {
   return (
-    <section className="relative overflow-hidden border-t border-line bg-accent">
+    <section className="relative overflow-hidden border-t border-line bg-accent" title="Oil refinery illuminated at night">
       <Image
         src="/images/refinery-night-unsplash.jpg"
-        alt=""
+        alt="Oil refinery illuminated at night"
         fill
         sizes="100vw"
         className="object-cover opacity-20"

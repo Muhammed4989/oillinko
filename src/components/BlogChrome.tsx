@@ -4,7 +4,7 @@ import BlogHierarchy from "@/components/BlogHierarchy";
 import { getBlogCategory, categoryAncestors, categoryUrl } from "@/lib/blog-taxonomy";
 import { BlogBreadcrumb, blogBreadcrumbData } from "@/components/BlogNavigation";
 import { postCover } from "@/lib/blog-cover";
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 
 function postCrumbs(post: BlogPost) { return [{name:"Blog",href:"/blog"},...categoryAncestors(getBlogCategory(post.category)!).map(c=>({name:c.name,href:categoryUrl(c)})),{name:post.title,href:postUrl(post)}]; }
 export function breadcrumbJsonLd(post: BlogPost) { return blogBreadcrumbData(postCrumbs(post)); }

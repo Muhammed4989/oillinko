@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 import CompanyFilterForm from "@/components/CompanyFilterForm";
 import CompanyDirectoryGuide from "@/components/CompanyDirectoryGuide";
 import RfqForm from "@/components/RfqForm";

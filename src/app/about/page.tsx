@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image from "@/components/SiteImage";
 import { CtaBand, PageHeader } from "@/components/ui";
 import { site } from "@/lib/site";
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
         subtitle="An international sourcing and procurement consultancy for the oil and gas industry — head office in Istanbul, with regional offices in Erbil and Amman, serving buyers across the Middle East, Europe, Asia and beyond."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <div className="relative mb-12 h-64 overflow-hidden rounded-lg border border-line sm:h-80">
+        <div className="relative mb-12 h-64 overflow-hidden rounded-lg border border-line sm:h-80" title="Oil refinery complex near water">
           <Image
             src="/images/about-refinery.jpg"
             alt="Oil refinery complex near water"
