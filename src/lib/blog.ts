@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "controlled-bolting-services-rfq-handover-guide",
+    title: "Controlled Bolting Services: An RFQ and Handover Guide",
+    short: "Define the joint register, approved assembly basis, site responsibilities and completion records before comparing service offers.",
+    tagline: "A procurement guide to the scope and evidence behind industrial torque and tensioning services.",
+    category: "maintenance-repair",
+    mainCategory: "oil-and-gas-services",
+    dateModified: "2026-09-29",
+    readTime: "9 min read",
+    date: "2026-09-29",
+    dateLabel: "29 September 2026",
+    description: "Prepare a controlled bolting services RFQ with joint data, approved assembly requirements, site responsibilities and traceable handover records.",
+    keywords: "controlled bolting services RFQ, bolt torque tensioning service scope, flange joint assembly records, bolting handover dossier",
+    image: "/images/blog/heroes/controlled-bolting-services-rfq-handover-guide.webp",
+    related: ["flanges-gaskets-and-bolting", "inspection-test-plans-hold-vs-witness-points", "spiral-wound-gasket-identification-rfq"],
+  },
+  {
     slug: "centrifugal-pump-spare-parts-rfq-identification",
     title: "Centrifugal Pump Spare Parts RFQ: Identifying the Correct Components",
     short: "Identify the installed pump and each replacement component before comparing spare-parts offers.",
