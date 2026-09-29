@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "replacement-electric-motors-nameplate-interface-rfq-guide",
+    title: "Replacement Electric Motors: Nameplate and Interface RFQ Guide",
+    short: "Identify the installed motor, electrical rating, mounting and control interfaces before comparing replacement offers.",
+    tagline: "A buyer's checklist for a motor replacement that must fit both the machine and its electrical system.",
+    category: "pumps-rotating-equipment",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-29",
+    readTime: "9 min read",
+    date: "2026-09-29",
+    dateLabel: "29 September 2026",
+    description: "Prepare a replacement electric motor RFQ with nameplate data, mounting and shaft dimensions, supply and drive requirements, approval evidence and clear deviations.",
+    keywords: "replacement electric motor RFQ, motor nameplate replacement, motor mounting compatibility, electric motor interface checklist",
+    image: "/images/blog/heroes/replacement-electric-motors-nameplate-interface-rfq-guide.webp",
+    related: ["electric-motor-rewinding-rfq-tests-data-acceptance-records", "api-671-couplings-and-baseplate-design", "pump-factory-acceptance-testing-and-commissioning-checklist"],
+  },
+  {
     slug: "ultrasonic-thickness-measurement-reports-rfq-guide",
     title: "Ultrasonic Thickness Measurement Reports: A Buyer’s RFQ Guide",
     short: "Define survey coverage, measurement validity, repeatable locations and traceable inspection deliverables.",
