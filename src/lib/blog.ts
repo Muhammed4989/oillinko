@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "wps-pqr-welder-qualifications-fabrication-rfq-checklist",
+    title: "WPS, PQR and Welder Qualifications: A Fabrication RFQ Checklist",
+    short: "Separate procedure instructions, qualification tests and personnel records before comparing fabrication bids.",
+    tagline: "A buyer checklist for linking welding documents to the actual joints and project qualification basis.",
+    category: "materials-documentation",
+    mainCategory: "inspection-material-quality",
+    dateModified: "2026-09-30",
+    readTime: "9 min read",
+    date: "2026-09-30",
+    dateLabel: "30 September 2026",
+    description: "Prepare a fabrication RFQ that distinguishes WPS, PQR and welder qualifications, links each record to the project scope and defines inspection handover evidence.",
+    keywords: "WPS PQR welder qualification RFQ, fabrication welding dossier, welding procedure specification, welder performance qualification documents",
+    image: "/images/blog/heroes/wps-pqr-welder-qualifications-fabrication-rfq-checklist.webp",
+    related: ["heat-number-traceability-mill-certificates", "inspection-test-plans-hold-vs-witness-points", "liquid-penetrant-vs-magnetic-particle-testing-rfq"],
+  },
+  {
     slug: "replacement-electric-motors-nameplate-interface-rfq-guide",
     title: "Replacement Electric Motors: Nameplate and Interface RFQ Guide",
     short: "Identify the installed motor, electrical rating, mounting and control interfaces before comparing replacement offers.",
