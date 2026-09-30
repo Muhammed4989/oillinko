@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">API 5L line pipe request for quotation checklist</title>
+  <desc id="desc">Six connected review steps: standard edition, grade and PSL, dimensions, manufacture, inspection, and delivery.</desc>
+  <rect width="1200" height="630" fill="#eaf0f4"/>
+  <rect x="48" y="44" width="1104" height="542" rx="28" fill="#fff" stroke="#b9cbd7" stroke-width="2"/>
+  <text x="88" y="113" fill="#1d3044" font-family="Arial,sans-serif" font-weight="700" font-size="35">Line pipe RFQ: define the evidence</text>
+  <text x="88" y="157" fill="#60758a" font-family="Arial,sans-serif" font-size="21">A comparable offer answers each question for the same item schedule.</text>
+  <path d="M155 309 H1045" stroke="#e58438" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g fill="#1d3044">
+      <circle cx="155" cy="309" r="38"/><circle cx="333" cy="309" r="38"/><circle cx="511" cy="309" r="38"/><circle cx="689" cy="309" r="38"/><circle cx="867" cy="309" r="38"/><circle cx="1045" cy="309" r="38"/>
+    </g>
+    <g fill="#fff" font-size="25" font-weight="700">
+      <text x="155" y="318">1</text><text x="333" y="318">2</text><text x="511" y="318">3</text><text x="689" y="318">4</text><text x="867" y="318">5</text><text x="1045" y="318">6</text>
+    </g>
+    <g fill="#1d3044" font-size="21" font-weight="700">
+      <text x="155" y="391">Edition</text><text x="333" y="391">Grade &amp; PSL</text><text x="511" y="391">Dimensions</text><text x="689" y="391">Route</text><text x="867" y="391">Records</text><text x="1045" y="391">Delivery</text>
+    </g>
+    <g fill="#60758a" font-size="17">
+      <text x="155" y="422">Project basis</text><text x="333" y="422">Product identity</text><text x="511" y="422">OD and wall</text><text x="689" y="422">Seamless or weld</text><text x="867" y="422">Traceable tests</text><text x="1045" y="422">Ends and packing</text>
+    </g>
+  </g>
+  <rect x="88" y="489" width="1024" height="57" rx="12" fill="#eaf0f4"/>
+  <text x="112" y="526" fill="#1d3044" font-family="Arial,sans-serif" font-size="21">Resolve exceptions against the controlled specification before award.</text>
+</svg>
