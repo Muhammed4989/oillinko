@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "api-5l-line-pipe-rfq-grade-psl-dimensions-records",
+    title: "API 5L Line Pipe RFQ: Grade, PSL, Dimensions and Records",
+    short: "Define the line-pipe product, grade, PSL, dimensions and evidence before comparing mill offers.",
+    tagline: "A buyer checklist for a traceable API 5L enquiry, including edition control and delivery interfaces.",
+    category: "piping-flanges-fittings",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-30",
+    readTime: "8 min read",
+    date: "2026-09-30",
+    dateLabel: "30 September 2026",
+    description: "Build an API 5L line pipe RFQ with the correct edition, grade, PSL, outside diameter, wall thickness, manufacturing route, inspection records and deviations.",
+    keywords: "API 5L line pipe RFQ, PSL 1 versus PSL 2 line pipe, line pipe grade wall thickness, line pipe mill certificates",
+    image: "/images/blog/api-5l-line-pipe-rfq.svg",
+    related: ["pipeline-fittings-and-schedules", "heat-number-traceability-mill-certificates", "en-10204-material-certificates-explained"],
+  },
+  {
     slug: "wps-pqr-welder-qualifications-fabrication-rfq-checklist",
     title: "WPS, PQR and Welder Qualifications: A Fabrication RFQ Checklist",
     short: "Separate procedure instructions, qualification tests and personnel records before comparing fabrication bids.",
