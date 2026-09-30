@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Pressure vessel replacement records</title>
+  <desc id="desc">A five-stage diagram joining installed nameplate, original data report, current duty, mechanical interfaces and handover records.</desc>
+  <rect width="1200" height="630" fill="#edf2f5"/>
+  <rect x="54" y="50" width="1092" height="530" rx="28" fill="#fff" stroke="#c3d1da" stroke-width="2"/>
+  <text x="88" y="122" fill="#1c3043" font-family="Arial,sans-serif" font-size="36" font-weight="700">Replacement vessel RFQ</text>
+  <text x="88" y="163" fill="#587187" font-family="Arial,sans-serif" font-size="21">Connect the existing asset to the new purchase basis.</text>
+  <path d="M156 314 H1038" stroke="#e38338" stroke-width="9" stroke-linecap="round"/>
+  <g fill="#1c3043"><circle cx="156" cy="314" r="42"/><circle cx="376" cy="314" r="42"/><circle cx="596" cy="314" r="42"/><circle cx="816" cy="314" r="42"/><circle cx="1038" cy="314" r="42"/></g>
+  <g fill="#fff" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle"><text x="156" y="323">1</text><text x="376" y="323">2</text><text x="596" y="323">3</text><text x="816" y="323">4</text><text x="1038" y="323">5</text></g>
+  <g fill="#1c3043" font-family="Arial,sans-serif" font-size="21" font-weight="700" text-anchor="middle"><text x="156" y="393">Nameplate</text><text x="376" y="393">Data report</text><text x="596" y="393">Current duty</text><text x="816" y="393">Interfaces</text><text x="1038" y="393">Handover</text></g>
+  <g fill="#587187" font-family="Arial,sans-serif" font-size="17" text-anchor="middle"><text x="156" y="423">Serial and code</text><text x="376" y="423">Original evidence</text><text x="596" y="423">Design basis</text><text x="816" y="423">Nozzles and supports</text><text x="1038" y="423">Reports and drawings</text></g>
+  <rect x="88" y="493" width="1024" height="52" rx="10" fill="#edf2f5"/>
+  <text x="110" y="527" fill="#1c3043" font-family="Arial,sans-serif" font-size="20">Resolve missing information and proposed deviations before award.</text>
+</svg>

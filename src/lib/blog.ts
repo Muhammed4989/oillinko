@@ -20,6 +20,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "pressure-vessel-nameplates-data-reports-replacement-rfq",
+    title: "Pressure Vessel Nameplates and Data Reports: A Replacement RFQ Guide",
+    short: "Connect the installed vessel identity, design basis and documentation before requesting a replacement.",
+    tagline: "Use the nameplate and manufacturer's data report as starting evidence, then define the actual replacement duty and interfaces.",
+    category: "pressure-vessels-tanks",
+    mainCategory: "oil-and-gas-equipment",
+    dateModified: "2026-09-30",
+    readTime: "8 min read",
+    date: "2026-09-30",
+    dateLabel: "30 September 2026",
+    description: "Prepare a pressure vessel replacement RFQ using nameplate details, ASME data reports, design conditions, nozzle and support interfaces, inspection evidence and clear deviations.",
+    keywords: "pressure vessel replacement RFQ, pressure vessel nameplate data report, ASME U-1 manufacturer data report, vessel identification checklist",
+    image: "/images/blog/pressure-vessel-replacement-records.svg",
+    related: ["pressure-vessels-tanks-and-heat-exchangers-explained", "heat-number-traceability-mill-certificates", "inspection-test-plans-hold-vs-witness-points"],
+  },
+  {
     slug: "api-5l-line-pipe-rfq-grade-psl-dimensions-records",
     title: "API 5L Line Pipe RFQ: Grade, PSL, Dimensions and Records",
     short: "Define the line-pipe product, grade, PSL, dimensions and evidence before comparing mill offers.",
