@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Phased-array weld inspection evidence path</title>
+  <desc id="desc">A five-step flow connects weld map, access, procedure, coverage and traceable records.</desc>
+  <rect width="1200" height="630" fill="#edf2f5"/>
+  <rect x="54" y="48" width="1092" height="534" rx="28" fill="#fff" stroke="#c3d1da" stroke-width="2"/>
+  <text x="88" y="121" fill="#1c3043" font-family="Arial,sans-serif" font-size="35" font-weight="700">PAUT weld inspection scope</text>
+  <text x="88" y="163" fill="#587187" font-family="Arial,sans-serif" font-size="21">Every result should remain connected to an identified weld.</text>
+  <path d="M157 307 H1042" stroke="#e38338" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#1c3043"><circle cx="157" cy="307" r="42"/><circle cx="378" cy="307" r="42"/><circle cx="600" cy="307" r="42"/><circle cx="821" cy="307" r="42"/><circle cx="1042" cy="307" r="42"/></g>
+  <g fill="#fff" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle"><text x="157" y="316">1</text><text x="378" y="316">2</text><text x="600" y="316">3</text><text x="821" y="316">4</text><text x="1042" y="316">5</text></g>
+  <g fill="#1c3043" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle"><text x="157" y="390">Weld map</text><text x="378" y="390">Access</text><text x="600" y="390">Procedure</text><text x="821" y="390">Coverage</text><text x="1042" y="390">Records</text></g>
+  <g fill="#587187" font-family="Arial,sans-serif" font-size="16" text-anchor="middle"><text x="157" y="420">Unique ID</text><text x="378" y="420">Scan surface</text><text x="600" y="420">Approved basis</text><text x="821" y="420">Limitations</text><text x="1042" y="420">Data and report</text></g>
+  <rect x="88" y="497" width="1024" height="52" rx="10" fill="#edf2f5"/>
+  <text x="110" y="531" fill="#1c3043" font-family="Arial,sans-serif" font-size="20">A method label alone does not establish full examination coverage.</text>
+</svg>

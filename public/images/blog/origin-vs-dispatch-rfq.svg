@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Origin and dispatch fields in an equipment RFQ</title>
+  <desc id="desc">Four separate cards identify manufacturing country, customs origin, dispatch location and evidence.</desc>
+  <rect width="1200" height="630" fill="#edf2f5"/>
+  <rect x="54" y="48" width="1092" height="534" rx="28" fill="#fff" stroke="#c3d1da" stroke-width="2"/>
+  <text x="88" y="121" fill="#1c3043" font-family="Arial,sans-serif" font-size="35" font-weight="700">Where was the equipment made?</text>
+  <text x="88" y="163" fill="#587187" font-family="Arial,sans-serif" font-size="21">Ask four separate questions before comparing offers.</text>
+  <g fill="#f3f6f8" stroke="#c3d1da" stroke-width="2"><rect x="88" y="220" width="236" height="214" rx="16"/><rect x="350" y="220" width="236" height="214" rx="16"/><rect x="612" y="220" width="236" height="214" rx="16"/><rect x="874" y="220" width="236" height="214" rx="16"/></g>
+  <g fill="#e38338"><circle cx="206" cy="269" r="22"/><circle cx="468" cy="269" r="22"/><circle cx="730" cy="269" r="22"/><circle cx="992" cy="269" r="22"/></g>
+  <g fill="#1c3043" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle"><text x="206" y="331">Manufacture</text><text x="468" y="331">Customs origin</text><text x="730" y="331">Dispatch</text><text x="992" y="331">Evidence</text></g>
+  <g fill="#587187" font-family="Arial,sans-serif" font-size="16" text-anchor="middle"><text x="206" y="371">Actual factory</text><text x="468" y="371">Applicable rules</text><text x="730" y="371">Physical departure</text><text x="992" y="371">Unit-linked records</text></g>
+  <rect x="88" y="497" width="1024" height="52" rx="10" fill="#edf2f5"/>
+  <text x="110" y="531" fill="#1c3043" font-family="Arial,sans-serif" font-size="20">The seller address and the shipping country do not establish manufacture.</text>
+</svg>
