@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Filtration and coalescing RFQ flow</title>
+  <desc id="desc">Five steps show process duty, contaminant target, element selection, pressure drop and maintenance records.</desc>
+  <rect width="1200" height="630" fill="#edf2f5"/>
+  <rect x="54" y="48" width="1092" height="534" rx="28" fill="#fff" stroke="#c3d1da" stroke-width="2"/>
+  <text x="88" y="121" fill="#1c3043" font-family="Arial,sans-serif" font-size="35" font-weight="700">Filter and coalescer RFQ</text>
+  <text x="88" y="163" fill="#587187" font-family="Arial,sans-serif" font-size="21">Describe the duty before choosing a housing or element.</text>
+  <path d="M157 307 H1042" stroke="#e38338" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#1c3043"><circle cx="157" cy="307" r="42"/><circle cx="378" cy="307" r="42"/><circle cx="600" cy="307" r="42"/><circle cx="821" cy="307" r="42"/><circle cx="1042" cy="307" r="42"/></g>
+  <g fill="#fff" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle"><text x="157" y="316">1</text><text x="378" y="316">2</text><text x="600" y="316">3</text><text x="821" y="316">4</text><text x="1042" y="316">5</text></g>
+  <g fill="#1c3043" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle"><text x="157" y="390">Stream duty</text><text x="378" y="390">Contaminant</text><text x="600" y="390">Element</text><text x="821" y="390">Pressure drop</text><text x="1042" y="390">Maintenance</text></g>
+  <g fill="#587187" font-family="Arial,sans-serif" font-size="16" text-anchor="middle"><text x="157" y="420">Flow and conditions</text><text x="378" y="420">Inlet and outlet</text><text x="600" y="420">Performance basis</text><text x="821" y="420">Clean to terminal</text><text x="1042" y="420">Spare and changeout</text></g>
+  <rect x="88" y="497" width="1024" height="52" rx="10" fill="#edf2f5"/>
+  <text x="110" y="531" fill="#1c3043" font-family="Arial,sans-serif" font-size="20">Compare the whole process package and recurring element cost.</text>
+</svg>
