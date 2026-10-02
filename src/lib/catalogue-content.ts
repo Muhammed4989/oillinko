@@ -7,6 +7,7 @@ import { specialistOverviews } from "./catalogue-overviews-specialist";
 import { serviceOverviews } from "./catalogue-overviews-services";
 import { catalogueTopicGuidance } from "./catalogue-topic-guidance";
 import { digitalSpecificationGuidance, digitalTopicGuidance } from "./catalogue-digital-guidance";
+import { maintenanceSpecificationGuidance, maintenanceTopicGuidance } from "./catalogue-maintenance-guidance";
 
 export const topicOverviews = { ...coreOverviews, ...processOverviews, ...wellOverviews, ...operationsOverviews, ...specialistOverviews, ...serviceOverviews };
 export type ContentSection = { title: string; paragraphs: string[]; anchor?: string };
@@ -49,7 +50,7 @@ export function productSections(group: CatalogueGroup, item: CatalogueType): Con
     { title: `About ${item.name.toLowerCase()}`, paragraphs: [overview[0]] },
     { title: service ? "Where the service is used" : "Typical applications", paragraphs: [overview[1]] },
     { title: service ? "Service options and scope" : software ? "Licensing and deployment options" : "Types and configuration choices", paragraphs: [overview[2]] },
-    ...item.requirements.map(label => ({ title: label, paragraphs: [digitalSpecificationGuidance[item.id]?.[label] ?? specificationText(label, used)] })),
+    ...item.requirements.map(label => ({ title: label, paragraphs: [digitalSpecificationGuidance[item.id]?.[label] ?? maintenanceSpecificationGuidance[item.id]?.[label] ?? specificationText(label, used)] })),
     { title: "How related requirements differ", paragraphs: group.types.filter(t => t.id !== item.id).slice(0, 3).map(t => `${t.name}: ${topicOverviews[t.id]?.[0] ?? t.description} ${topicOverviews[t.id]?.[2] ?? ""}`) },
     { title: service ? "Compare the complete service proposal" : software ? "Compare licensing and support terms" : "Compare the complete supply scope", paragraphs: [
       service
@@ -69,7 +70,7 @@ export function productSections(group: CatalogueGroup, item: CatalogueType): Con
   ];
   // Preserve existing information-N links when inserting new editorial sections.
   const anchored = sections.map((section, index) => ({ ...section, anchor: `information-${index}` }));
-  const details = (catalogueTopicGuidance[item.id] ?? digitalTopicGuidance[item.id] ?? []).map(section => ({
+  const details = (catalogueTopicGuidance[item.id] ?? digitalTopicGuidance[item.id] ?? maintenanceTopicGuidance[item.id] ?? []).map(section => ({
     ...section,
     anchor: `guidance-${section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
   }));
