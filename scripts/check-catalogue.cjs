@@ -10,6 +10,7 @@ const { catalogue, sectors, applications, filterCatalogue, requestUrl, typeUrl, 
 const { productSections, contentWordCount, topicOverviews } = require("../src/lib/catalogue-content.ts");
 const { companies } = require("../src/lib/companies.ts");
 const { companyProfiles, companyProfilePath } = require("../src/lib/company-profiles.ts");
+const { industryGuides } = require("../src/lib/industry-guides.ts");
 const found = (query, sector = "", kind = "", application = "") => filterCatalogue(query, sector, kind, application).flatMap(g => g.types);
 
 // These short/common company names can also be ordinary technical words. The
@@ -28,6 +29,13 @@ function assertSupplierNeutral(value, context) {
  for (const host of protectedCompanyHosts) assert(!normalized.includes(host), `Company website ${host} leaked into ${context}`);
 }
 
+for(const [sector,guide] of Object.entries(industryGuides)){
+ assert(sectors.some(s=>s.id===sector),'Known guide sector: '+sector);
+ const paragraphs=guide.sections.flatMap(section=>section.paragraphs).join(' ');
+ assert(paragraphs.split(/\s+/).filter(Boolean).length>=700,'Independent industry guide word count: '+sector);
+ assertSupplierNeutral(JSON.stringify(guide),'industry guide '+sector);
+ for(const id of guide.topicIds)assert(catalogue.some(group=>group.types.some(item=>item.id===id)),'Guide topic: '+id);
+}
 const searches = [
   ["MWD", "mwd-and-lwd-tools"], ["LWD", "mwd-and-lwd-tools"],
   ["liner hanger", "liner-hangers-and-running-tools"], ["sand control", "sand-control-screens-and-gravel-pack-tools"],
@@ -106,6 +114,13 @@ function checkHtml(html,url,item){
  assert(html.includes('rel="canonical" href="https://oillinko.com'+url+'"'),'Canonical: '+url);
  assert.equal((html.match(/<h1(?:\s|>)/g)??[]).length,1,'H1: '+url);
  assert(!/<a[^>]+href="\/equipment(?:[/?#"])/.test(html),'Internal legacy link: '+url);
+ const guide=industryGuides[url.split('/industries/')[1]];
+ if(guide){
+  const body=html.match(/<article[^>]*data-sector-guide[^>]*>([\s\S]*?)<\/article>/)?.[1];assert(body,'Sector guide body: '+url);
+  assert.equal((body.match(/<h3(?:\s|>)/g)??[]).length,guide.sections.length+1,'Guide sections and related navigation: '+url);
+  const words=Array.from(body.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g),match=>match[1].replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ')).join(' ').split(/\s+/).filter(Boolean).length;
+  assert(words>=700,'Rendered independent sector guide word count: '+url);
+ }
  if(item){
   const body=html.match(/<article[^>]*data-product-content[^>]*>([\s\S]*?)<\/article>/)?.[1];assert(body,'Product content: '+url);
   const words=body.replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').split(/\s+/).filter(Boolean).length;
@@ -141,14 +156,24 @@ async function checkHttp(base){
   ['/oil-and-gas/services','','Service',''],
   ['/industries/pipelines','','','pipelines'],
  ]){
-  const r=await get(url);const html=await r.text();assert(!html.includes('content="noindex, follow"'),'Clean landing must be indexable: '+url);
+  const r=await get(url);let html=await r.text();assert(!html.includes('content="noindex, follow"'),'Clean landing must be indexable: '+url);
+  if(expectedKind){
+   const hierarchy=html.match(/<nav[^>]*aria-label="Oil and gas catalogue hierarchy"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+   assert(hierarchy,'Catalogue hierarchy: '+url);
+   assert(hierarchy.match(/<a\b[^>]*>/g)?.some(tag=>tag.includes('href="'+url+'"')&&tag.includes('aria-current="page"')),'Current hierarchy link: '+url);
+   // Search views retain controls; clean catalogue landings use the hierarchy.
+   const search=expectedCategory?'pump':'tank cleaning';
+   const response=await get(url+'?search='+encodeURIComponent(search));assert.equal(response.status,200);
+   html=await response.text();assert(html.includes('content="noindex, follow"'),'Filtered landing noindex: '+url);
+  }
   for(const [field,value]of [['category',expectedCategory],['kind',expectedKind],['sector',expectedSector]]){
-   const select=html.match(new RegExp('<select[^>]+name="'+field+'"[^>]*>([\\s\\S]*?)</select>'))?.[1];
+   const select=html.match(new RegExp('<select\\b[^>]*name="'+field+'"[^>]*>([\\s\\S]*?)</select>'))?.[1];
    assert(select&&new RegExp('<option[^>]*(?:value="'+value+'"[^>]*selected=""|selected=""[^>]*value="'+value+'")').test(select)||select?.includes('<option selected="">'+value+'</option>'),'Selected '+field+' on '+url);
   }
  }
  const filtered=await get('/oil-and-gas/services?search=tank+cleaning');assert.equal(filtered.status,200);const html=await filtered.text();
- assert(html.includes('content="noindex, follow"'));assert(html.includes('href="/oil-and-gas/services/tank-cleaning"'));assert(!html.includes('href="/oil-and-gas/services/heat-exchanger-cleaning'));
+ assert(html.includes('content="noindex, follow"'));const resultBody=html.split('<h2 id="search-results"')[1]?.split('</article>')[0];assert(resultBody,'Search results content');
+ const tank=products.find(route=>route.item.id==='tank-cleaning-and-sludge-removal');assert(resultBody.includes('href="'+tank.url+'"'),'Canonical tank cleaning result');assert(!resultBody.includes('href="/oil-and-gas/services/heat-exchanger-cleaning'));
  assert.equal((await get('/oil-and-gas/equipment/pumps/not-a-real-product')).status,404);
  console.log(JSON.stringify({base,checkedPublicRoutes:allPaths.size,checkedPermanentRedirects:legacy.length+3,filterSelections:'passed',contentAndCanonicals:'passed',httpChecks:'passed'},null,2));
 }
