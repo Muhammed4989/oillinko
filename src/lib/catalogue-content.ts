@@ -5,9 +5,10 @@ import { wellOverviews } from "./catalogue-overviews-wells";
 import { operationsOverviews } from "./catalogue-overviews-operations";
 import { specialistOverviews } from "./catalogue-overviews-specialist";
 import { serviceOverviews } from "./catalogue-overviews-services";
+import { catalogueTopicGuidance } from "./catalogue-topic-guidance";
 
 export const topicOverviews = { ...coreOverviews, ...processOverviews, ...wellOverviews, ...operationsOverviews, ...specialistOverviews, ...serviceOverviews };
-export type ContentSection = { title: string; paragraphs: string[] };
+export type ContentSection = { title: string; paragraphs: string[]; anchor?: string };
 
 const guidance: [RegExp, string][] = [
  [/composition|fluid|medium|chemical|sample|contaminant|water matrix|feed|crude|analytes/i, "The properties of the handled or measured material affect compatibility and performance. A name such as oil, gas or water can cover very different compositions, temperatures and contamination levels. Use the available analysis or approved material specification to describe the actual duty. Identify expected variation and distinguish measured data from estimates. For replacements, record whether the medium or operating conditions have changed since the existing equipment was selected. These details help a reviewer assess a proposed material or configuration against the intended application."],
@@ -65,7 +66,13 @@ export function productSections(group: CatalogueGroup, item: CatalogueType): Con
           : "Can an alternative be accepted on size or price alone? A proposed alternative needs review against the required function, materials, interfaces and documented performance. Similar dimensions or a familiar brand name do not establish compatibility. State which requirements are mandatory and where an equivalent may be considered. Availability, lead time and supporting documents are confirmed for the actual offer rather than assumed from this catalogue.",
     ] },
   ];
-  return sections;
+  // Preserve existing information-N links when inserting new editorial sections.
+  const anchored = sections.map((section, index) => ({ ...section, anchor: `information-${index}` }));
+  const details = (catalogueTopicGuidance[item.id] ?? []).map(section => ({
+    ...section,
+    anchor: `guidance-${section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+  }));
+  return [...anchored.slice(0, 3), ...details, ...anchored.slice(3)];
 }
 export function contentWordCount(sections: ContentSection[]) {
   return sections.flatMap(s => s.paragraphs).join(" ").split(/\s+/).filter(Boolean).length;
