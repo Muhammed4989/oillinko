@@ -13,6 +13,7 @@ const { companyProfiles, companyProfilePath } = require("../src/lib/company-prof
 const { industryGuides } = require("../src/lib/industry-guides.ts");
 const { digitalSpecificationGuidance, digitalTopicGuidance } = require("../src/lib/catalogue-digital-guidance.ts");
 const { maintenanceSpecificationGuidance, maintenanceTopicGuidance } = require("../src/lib/catalogue-maintenance-guidance.ts");
+const { serviceSpecificationGuidance, serviceTopicGuidance } = require("../src/lib/catalogue-service-guidance.ts");
 const found = (query, sector = "", kind = "", application = "") => filterCatalogue(query, sector, kind, application).flatMap(g => g.types);
 
 // These short/common company names can also be ordinary technical words. The
@@ -38,7 +39,7 @@ for(const [sector,guide] of Object.entries(industryGuides)){
  assertSupplierNeutral(JSON.stringify(guide),'industry guide '+sector);
  for(const id of guide.topicIds)assert(catalogue.some(group=>group.types.some(item=>item.id===id)),'Guide topic: '+id);
 }
-for(const [specifications,details] of [[digitalSpecificationGuidance,digitalTopicGuidance],[maintenanceSpecificationGuidance,maintenanceTopicGuidance]])for(const [id,paragraphs] of Object.entries(specifications)){
+for(const [specifications,details] of [[digitalSpecificationGuidance,digitalTopicGuidance],[maintenanceSpecificationGuidance,maintenanceTopicGuidance],[serviceSpecificationGuidance,serviceTopicGuidance]])for(const [id,paragraphs] of Object.entries(specifications)){
  const item=catalogue.flatMap(group=>group.types).find(item=>item.id===id);assert(item,'Known guidance topic: '+id);
  assert.deepEqual(Object.keys(paragraphs),item.requirements,'Specification labels must match existing requirements: '+id);
  assertSupplierNeutral(JSON.stringify(paragraphs),'catalogue specification '+id);
