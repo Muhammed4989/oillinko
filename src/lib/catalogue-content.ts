@@ -1,3 +1,4 @@
+import { inspectionSpecificationGuidance, inspectionTopicGuidance, inspectionProposalGuidance } from "./catalogue-inspection-guidance";
 import type { CatalogueGroup, CatalogueType } from "./catalogue";
 import { coreOverviews } from "./catalogue-overviews-core";
 import { processOverviews } from "./catalogue-overviews-process";
@@ -57,7 +58,7 @@ export function productSections(group: CatalogueGroup, item: CatalogueType): Con
     { title: `About ${item.name.toLowerCase()}`, paragraphs: [overview[0]] },
     { title: service ? "Where the service is used" : "Typical applications", paragraphs: [overview[1]] },
     { title: service ? "Service options and scope" : software ? "Licensing and deployment options" : "Types and configuration choices", paragraphs: [overview[2]] },
-    ...item.requirements.map(label => ({ title: label, paragraphs: [engineeredEquipmentSpecificationGuidance[item.id]?.[label] ?? filtrationSpecificationGuidance[item.id]?.[label] ?? valveSpecificationGuidance[item.id]?.[label] ?? hydraulicSpecificationGuidance[item.id]?.[label] ?? electricalSpecificationGuidance[item.id]?.[label] ?? digitalSpecificationGuidance[item.id]?.[label] ?? maintenanceSpecificationGuidance[item.id]?.[label] ?? serviceSpecificationGuidance[item.id]?.[label] ?? measurementSpecificationGuidance[item.id]?.[label] ?? specificationText(label, used)] })),
+    ...item.requirements.map(label => ({ title: label, paragraphs: [inspectionSpecificationGuidance[item.id]?.[label] ?? engineeredEquipmentSpecificationGuidance[item.id]?.[label] ?? filtrationSpecificationGuidance[item.id]?.[label] ?? valveSpecificationGuidance[item.id]?.[label] ?? hydraulicSpecificationGuidance[item.id]?.[label] ?? electricalSpecificationGuidance[item.id]?.[label] ?? digitalSpecificationGuidance[item.id]?.[label] ?? maintenanceSpecificationGuidance[item.id]?.[label] ?? serviceSpecificationGuidance[item.id]?.[label] ?? measurementSpecificationGuidance[item.id]?.[label] ?? specificationText(label, used)] })),
     { title: "How related requirements differ", paragraphs: group.types.filter(t => t.id !== item.id).slice(0, 3).map(t => `${t.name}: ${topicOverviews[t.id]?.[0] ?? t.description} ${topicOverviews[t.id]?.[2] ?? ""}`) },
     { title: service ? "Compare the complete service proposal" : software ? "Compare licensing and support terms" : "Compare the complete supply scope", paragraphs: [
       service
@@ -76,8 +77,8 @@ export function productSections(group: CatalogueGroup, item: CatalogueType): Con
     ] },
   ];
   // Preserve existing information-N links when inserting new editorial sections.
-  const anchored = sections.map((section, index) => ({ ...section, paragraphs: section.title === "Compare the complete supply scope" && engineeredEquipmentSupplyGuidance[item.id] ? [engineeredEquipmentSupplyGuidance[item.id]] : section.paragraphs, anchor: `information-${index}` }));
-  const details = (catalogueTopicGuidance[item.id] ?? engineeredEquipmentTopicGuidance[item.id] ?? filtrationTopicGuidance[item.id] ?? valveTopicGuidance[item.id] ?? hydraulicTopicGuidance[item.id] ?? electricalTopicGuidance[item.id] ?? digitalTopicGuidance[item.id] ?? maintenanceTopicGuidance[item.id] ?? serviceTopicGuidance[item.id] ?? measurementTopicGuidance[item.id] ?? []).map(section => ({
+  const anchored = sections.map((section, index) => ({ ...section, paragraphs: section.title === "Compare the complete service proposal" && inspectionProposalGuidance[item.id] ? [inspectionProposalGuidance[item.id]] : section.title === "Compare the complete supply scope" && engineeredEquipmentSupplyGuidance[item.id] ? [engineeredEquipmentSupplyGuidance[item.id]] : section.paragraphs, anchor: `information-${index}` }));
+  const details = (inspectionTopicGuidance[item.id] ?? catalogueTopicGuidance[item.id] ?? engineeredEquipmentTopicGuidance[item.id] ?? filtrationTopicGuidance[item.id] ?? valveTopicGuidance[item.id] ?? hydraulicTopicGuidance[item.id] ?? electricalTopicGuidance[item.id] ?? digitalTopicGuidance[item.id] ?? maintenanceTopicGuidance[item.id] ?? serviceTopicGuidance[item.id] ?? measurementTopicGuidance[item.id] ?? []).map(section => ({
     ...section,
     anchor: `guidance-${section.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
   }));
