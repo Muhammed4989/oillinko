@@ -1,0 +1,13 @@
+# Globe and control valve enquiry guidance — 3 October 2026
+
+Replace four generic requirement paragraphs on the existing globe/control-valve page and add three focused sections covering complete regulating assemblies, operating-case comparisons and factory versus installed-loop acceptance. Preserve all existing requirement labels, information-N anchors, routes, metadata, enquiry fields and manual Oillinko routing. The existing repair article concerns overhaul; this page addresses new and replacement supply enquiries.
+
+## Primary source basis
+
+- [Official control-valve sizing overview](https://www.emerson.com/en/final-control/catalog/products-and-software/valves/control-valves/control-valves-sizing): identifies physical details, process pressures and temperature, fluid properties and flow as sizing inputs. Used only for the limited input categories; no sizing equation, engineering calculation or required standard edition is reproduced.
+- [Official control-valve handbook overview](https://www.emerson.com/en/final-control/catalog/products-and-software/valves/control-valves/control-valve-handbook): identifies valves, actuators and accessories and the regulating function. The landing page does not establish numerical limits or a selected assembly's suitability.
+- [Official globe-control-valve overview](https://www.emerson.com/en/final-control/catalog/products-and-software/valves/control-valves/globe-control-valves): supports the limited construction/regulating-assembly distinction and the role of the selected trim. Product-family capabilities are not generalized to every valve.
+
+Sources were checked on 3 October 2026. The full handbook PDF exceeded the research tool's size limit and is not treated as a reviewed normative or numerical reference. Manufacturer names and links remain internal; supplier-neutral public copy asks for project evidence and review rather than assigns a supplier. Operating-case registers, scope comparisons and handover requests are original purchasing guidance. No hazardous operating procedure, numerical sizing limit, leakage-class default, fail-state prescription, stock, authorization, certification or field experience is claimed.
+
+No extra image is added solely for decoration. Existing site-image alt/title descriptions remain audited after the production build. Validate supplier neutrality and labels, complete paragraph delivery, preserved anchors, metadata/schema/sitemap, targeted ESLint, blog check, catalogue HTTP audit and desktop/mobile layouts. Publish through the existing master/Vercel workflow and record actual production verification and the changed-URL IndexNow receipt privately. Do not claim indexing from acknowledgement.
