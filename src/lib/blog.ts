@@ -19,6 +19,86 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "industrial-strainer-rfq-screen-opening-area-pressure-loss",
+  "title": "Industrial Strainer RFQs: Screen Opening, Free Area and Pressure Loss",
+  "short": "Compare a complete strainer using particle retention, screen construction, hydraulic duty and maintenance access.",
+  "tagline": "A procurement guide to separating mesh designation from the performance of the offered assembly.",
+  "category": "piping-flanges-fittings",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-03",
+  "readTime": "8 min read",
+  "date": "2026-10-03",
+  "dateLabel": "3 October 2026",
+  "description": "Prepare an industrial strainer RFQ with screen opening, free area, fluid conditions, clean pressure loss, differential limits and replacement records.",
+  "keywords": "industrial strainer RFQ, strainer mesh opening specification, strainer free area pressure drop, basket strainer replacement screen",
+  "image": "/images/blog/industrial-strainer-rfq-screen-opening-area-pressure-loss.svg",
+  "related": [
+    "industrial-filter-coalescer-rfq-duty-elements-pressure-drop",
+    "reading-a-pump-curve-explained",
+    "pipeline-fittings-and-schedules"
+  ]
+},
+{
+  "slug": "rotating-equipment-vibration-survey-scope-baseline-records",
+  "title": "Rotating Equipment Vibration Surveys: Scope, Baselines and Records",
+  "short": "Define machine coverage, operating conditions, measurement locations and reviewable diagnostic evidence before booking a survey.",
+  "tagline": "A service RFQ guide to useful measurements, comparable trends and a clear handover.",
+  "category": "maintenance-repair",
+  "mainCategory": "oil-and-gas-services",
+  "dateModified": "2026-10-03",
+  "readTime": "8 min read",
+  "date": "2026-10-03",
+  "dateLabel": "3 October 2026",
+  "description": "Scope a rotating equipment vibration survey with asset identity, operating states, measurement points, baseline data, evaluation basis and handover records.",
+  "keywords": "rotating equipment vibration survey RFQ, vibration survey service scope, machine vibration baseline records, condition monitoring handover report",
+  "image": "/images/blog/rotating-equipment-vibration-survey-scope-baseline-records.svg",
+  "related": [
+    "pump-shaft-alignment-service-scope-handover",
+    "electric-motor-rewinding-rfq-tests-data-acceptance-records",
+    "pump-factory-acceptance-testing-and-commissioning-checklist"
+  ]
+},
+{
+  "slug": "iso-17025-laboratory-accreditation-scope-test-report",
+  "title": "ISO/IEC 17025 Laboratory Accreditation: Check the Scope Behind the Report",
+  "short": "Match the laboratory identity, accredited activity, method, location and measurement range to the evidence your purchase needs.",
+  "tagline": "A buyer review of accreditation evidence before commissioning tests or accepting a laboratory report.",
+  "category": "materials-documentation",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-03",
+  "readTime": "8 min read",
+  "date": "2026-10-03",
+  "dateLabel": "3 October 2026",
+  "description": "Check ISO/IEC 17025 accreditation against the current laboratory scope, test method, measurement range, location, report identity and acceptance requirement.",
+  "keywords": "ISO 17025 laboratory accreditation scope, verify accredited laboratory test report, calibration laboratory scope range, laboratory accreditation versus certification",
+  "image": "/images/blog/iso-17025-laboratory-accreditation-scope-test-report.svg",
+  "related": [
+    "pressure-gauge-calibration-certificate-buyers-guide",
+    "en-10204-material-certificates-explained",
+    "inspection-test-plans-hold-vs-witness-points"
+  ]
+},
+{
+  "slug": "equipment-rfq-revision-control-bid-clarifications",
+  "title": "Equipment RFQ Revision Control: Keep Drawings, Clarifications and Bids Aligned",
+  "short": "Give each bidder one identifiable technical basis and keep later changes connected to revised offers.",
+  "tagline": "A practical workflow for controlling a changing enquiry without losing the basis of comparison.",
+  "category": "supplier-selection-rfq",
+  "mainCategory": "oil-and-gas-procurement",
+  "dateModified": "2026-10-03",
+  "readTime": "8 min read",
+  "date": "2026-10-03",
+  "dateLabel": "3 October 2026",
+  "description": "Control equipment RFQ revisions using an attachment register, change notices, bidder acknowledgements, offer revisions and a clear accepted document baseline.",
+  "keywords": "equipment RFQ revision control, RFQ drawing revision register, supplier bid clarification log, quotation revision technical baseline",
+  "image": "/images/blog/equipment-rfq-revision-control-bid-clarifications.svg",
+  "related": [
+    "how-to-write-a-bill-of-quantities",
+    "partial-awards-equipment-rfq-package-line-item-offers",
+    "inspection-test-plans-hold-vs-witness-points"
+  ]
+},
   {
     slug: "industrial-hose-assembly-rfq-service-ends-traceability",
     title: "Industrial Hose Assembly RFQs: Service, End Connections and Traceability",
