@@ -20,6 +20,86 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "steam-trap-rfq-condensate-load-differential-pressure",
+  "title": "Steam Trap RFQs: Condensate Load, Differential Pressure and Connections",
+  "short": "Specify a steam trap against its drainage duty and operating envelope rather than its pipe size alone.",
+  "tagline": "Build a comparable enquiry for a replacement trap or a defined condensate drainage point.",
+  "category": "valves-actuation",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-04",
+  "readTime": "6 min read",
+  "date": "2026-10-04",
+  "dateLabel": "4 October 2026",
+  "description": "Prepare a steam trap RFQ with condensate load, minimum differential pressure, backpressure, air removal, connections and documented selection limits.",
+  "keywords": "steam trap RFQ, steam trap differential pressure selection, condensate load specification, steam trap replacement connections",
+  "image": "/images/blog/steam-trap-rfq-condensate-load-differential-pressure.svg",
+  "related": [
+    "valves-and-actuation-explained",
+    "npt-bspt-bspp-threaded-fitting-buyers-guide",
+    "industrial-strainer-rfq-screen-opening-area-pressure-loss"
+  ]
+},
+{
+  "slug": "tank-cleaning-service-rfq-scope-waste-handover",
+  "title": "Tank Cleaning Service RFQs: Scope, Responsibilities and Waste Handover",
+  "short": "Define the tank, cleaning objective, site interfaces and residue records before comparing contractor offers.",
+  "tagline": "A procurement guide to describing a cleaning work package and its acceptance evidence.",
+  "category": "maintenance-repair",
+  "mainCategory": "oil-and-gas-services",
+  "dateModified": "2026-10-04",
+  "readTime": "6 min read",
+  "date": "2026-10-04",
+  "dateLabel": "4 October 2026",
+  "description": "Scope a tank cleaning service RFQ using tank history, cleaning objectives, site responsibilities, residue assumptions, waste handover and acceptance records.",
+  "keywords": "tank cleaning service RFQ, tank sludge removal scope, tank cleaning contractor responsibilities, tank cleaning waste handover records",
+  "image": "/images/blog/tank-cleaning-service-rfq-scope-waste-handover.svg",
+  "related": [
+    "pressure-vessels-tanks-and-heat-exchangers-explained",
+    "inspection-test-plans-hold-vs-witness-points",
+    "plate-heat-exchanger-cleaning-reconditioning-rfq"
+  ]
+},
+{
+  "slug": "elastomer-hardness-reports-shore-a-irhd-acceptance",
+  "title": "Elastomer Hardness Reports: Shore A, IRHD and Acceptance Evidence",
+  "short": "Check the test method, specimen and traceability before accepting a rubber hardness value.",
+  "tagline": "A buyer’s guide to comparing elastomer hardness records without assuming every scale is interchangeable.",
+  "category": "materials-documentation",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-04",
+  "readTime": "6 min read",
+  "date": "2026-10-04",
+  "dateLabel": "4 October 2026",
+  "description": "Review elastomer hardness reports with the specified Shore or IRHD method, specimen geometry, conditioning, results, batch traceability and acceptance basis.",
+  "keywords": "elastomer hardness test report, Shore A vs IRHD acceptance, rubber hardness certificate review, elastomer batch traceability",
+  "image": "/images/blog/elastomer-hardness-reports-shore-a-irhd-acceptance.svg",
+  "related": [
+    "gaskets-and-sealing-products-explained",
+    "iso-17025-laboratory-accreditation-scope-test-report",
+    "en-10204-material-certificates-explained"
+  ]
+},
+{
+  "slug": "quotation-validity-equipment-lead-time-delivery-milestones",
+  "title": "Quotation Validity vs Equipment Lead Time: Define the Dates and Milestones",
+  "short": "Separate the offer expiry date from manufacturing readiness, shipment and final delivery commitments.",
+  "tagline": "A practical guide to comparing equipment quotation timelines on the same commercial basis.",
+  "category": "logistics-delivery",
+  "mainCategory": "oil-and-gas-procurement",
+  "dateModified": "2026-10-04",
+  "readTime": "6 min read",
+  "date": "2026-10-04",
+  "dateLabel": "4 October 2026",
+  "description": "Compare quotation validity and equipment lead time with explicit expiry dates, starting events, approvals, manufacturing readiness and shipment milestones.",
+  "keywords": "quotation validity vs lead time, equipment quotation delivery milestones, lead time starting date RFQ, equipment offer expiry date",
+  "image": "/images/blog/quotation-validity-equipment-lead-time-delivery-milestones.svg",
+  "related": [
+    "equipment-rfq-revision-control-bid-clarifications",
+    "exw-vs-fca-oil-gas-equipment-buyers",
+    "export-packing-oil-gas-equipment-rfq"
+  ]
+},
+{
   "slug": "industrial-strainer-rfq-screen-opening-area-pressure-loss",
   "title": "Industrial Strainer RFQs: Screen Opening, Free Area and Pressure Loss",
   "short": "Compare a complete strainer using particle retention, screen construction, hydraulic duty and maintenance access.",
