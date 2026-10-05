@@ -16,6 +16,12 @@ function equipmentLink(id: string, label: string) {
 }
 
 export const engineeredEquipmentSpecificationGuidance: Record<string, Record<string, string>> = {
+  "o-rings-and-packing": {
+  "Dimensions or part number": "Separate an O-ring enquiry from a packing-set enquiry even when both appear on the same maintenance list. For an O-ring, provide the approved part reference or drawing, nominal inside diameter and cross-section, dimensional units and required tolerance basis. For packing, identify the shaft or stem and stuffing-box dimensions from the approved equipment record, together with the specified ring or set arrangement. A photograph is useful for orientation but should not become the controlling dimensional specification. Mark measurements from removed parts as observations for review.",
+  "Compound or packing material": "Request identification of the actual offered compound or packing construction, rather than only a broad material family. For an elastomer seal, retain the specified compound reference and hardness where available and ask how any proposed substitute differs. For packing, identify the specified material, construction and complete set contents. Keep an original part quotation separate from a proposed alternative. Neither a matching colour nor a similar catalogue description establishes that the replacement meets the approved requirement.",
+  "Service conditions": "Describe the medium, relevant composition and the normal and exceptional pressure and temperature cases known to the project. State whether the sealing interface is stationary, rotating or reciprocating and provide applicable movement or speed information for technical selection. Include cleaning or flushing exposure when it forms part of the approved service description. Ask the supplier to identify the conditions used in its assessment and any unanswered inputs. The enquiry should support specialist selection without turning preliminary service data into a seal rating.",
+  "Equipment model": "Connect every seal line to the relevant equipment tag, assembly drawing and parts-list revision. Identify whether the request concerns one loose component, a matched packing set or a maintenance kit covering several sealing positions. If equipment has been modified, provide the current approved configuration instead of relying only on the original model. Ask the offer to map its references to the requested positions, quantities and revisions, and to identify omitted kit items explicitly."
+},
   "cooling-towers-and-utility-air-dryers": {
   "Utility medium and duty": "Identify whether the enquiry covers cooling-water heat rejection, compressed-air moisture removal or two separately tagged packages. For a cooling tower, describe the connected water circuit and list the required operating cases. For a dryer, identify the air users, demand profile and required outlet air-quality specification. Mark existing equipment that remains within the installation. A shared purchase schedule can contain both packages, but each needs its own duty sheet, supply boundary and technical acceptance record. Do not compare a tower capacity with a dryer flow rating.",
   "Inlet and target conditions": "For the tower, supply water flow, entering and required leaving water temperatures, and the design entering-air wet-bulb condition. Keep all values tied to the same case. For the dryer, state airflow with reference conditions, inlet temperature, pressure and required pressure dew point at that pressure. Include the relevant ambient conditions. Ask the bidder to identify the rating basis and confirm the offered performance at the specified conditions. A nominal catalogue capacity does not establish performance for a different inlet or ambient case.",
@@ -43,6 +49,7 @@ export const engineeredEquipmentSpecificationGuidance: Record<string, Record<str
 };
 
 export const engineeredEquipmentSupplyGuidance: Record<string, string> = {
+  "o-rings-and-packing": "Compare an individual seal, a defined packing set and a complete maintenance kit on their stated contents. Record the quantity and unit of supply, offered part reference, material identification, packaging and required documents for each line. Ask whether any accessories or specialist support are included, optional or excluded. Keep proposed alternatives separate from the approved part requirement until technical review is complete. Confirm manufacturing country independently of dispatch location, together with quotation validity, delivery terms and the assumptions behind the lead time. A low unit price does not resolve an incomplete kit or an unidentified compound.",
   "cooling-towers-and-utility-air-dryers": "Compare a complete package with a complete package. For a cooling tower, identify the structure, heat-transfer internals, fan equipment, water-distribution components, instruments and controls included in the offer. For a dryer, identify the drying unit, associated filters, drains, instruments and connection accessories. State which civil, piping, electrical and commissioning services are separate. Request manufacturing origin independently of dispatch location, and record the named delivery place, documentation, inspection scope and exclusions. Oillinko receives enquiries for manual coordination; catalogue inclusion does not establish stock, delivery time or confirmed application suitability.",
   "plate-exchangers-and-air-coolers": "Compare the quoted equipment boundary line by line. For a plate unit, identify the frame, plates, seals, connections, insulation and any separately priced spares. For an air cooler, identify bundles, fans, drives, supports, guards, access provisions and control interfaces. Record inspection, documentation and site attendance as included or excluded. Ask for manufacturing origin separately from the dispatch location and named delivery place. A replacement-only price should not be compared directly with a complete package quotation that includes new supports, controls and installation work.",
   "reciprocating-compressors": "For reciprocating compressors, distinguish an assembly quotation from a complete gas compression package. Compare the driver, cooling, process auxiliaries, controls, engineering studies and agreed tests using the same boundary. Identify field connections, utilities and commissioning work supplied by others. Request a list of departures from the case schedule and scope matrix, with their effect on the proposed selection. Keep manufacturing origin, dispatch location and delivery terms as separate entries. A preliminary assembly price should remain visibly preliminary until the required interfaces and included work have been reviewed.",
@@ -50,6 +57,36 @@ export const engineeredEquipmentSupplyGuidance: Record<string, string> = {
 };
 
 export const engineeredEquipmentTopicGuidance: Record<string, ContentSection[]> = {
+  "o-rings-and-packing": [
+  {
+    "title": "How should a replacement list distinguish individual seals from complete kits?",
+    "paragraphs": [
+      "A shutdown list often describes several different purchasing units as a seal kit. Before requesting prices, define what one unit means for each line. An individual O-ring, a bag of identical rings, a set for one valve and a kit for a complete pump assembly cannot be compared by unit price without this distinction. Use a simple schedule showing the equipment reference, sealing position, quantity per assembly and number of assemblies to be serviced. Keep contingency spares visible as a separate quantity so they are not confused with the content of each kit.",
+      "Ask for a proposed kit-content list where the original contents cannot be confirmed. That list should identify each supplied component and the equipment position it is intended to serve. Record whether accessories or retained components are included, excluded or supplied by the owner. A commercial description such as complete does not resolve an uncertain assembly boundary. The responsible maintenance or engineering team should review the mapping before the quotation is treated as a replacement for the requested kit."
+    ]
+  },
+  {
+    "title": "What evidence makes a material substitution reviewable?",
+    "paragraphs": [
+      "A useful alternative proposal explains what changes and gives the reviewer enough information to decide whether further assessment is needed. Ask the offer to retain the original requirement beside the proposed compound or packing construction, with the relevant product data and stated service assumptions. The review should remain specific to the sealing position. Acceptance of a material in one item does not automatically approve its use in another item exposed to different conditions or movement.",
+      "Keep the technical response tied to a dated document or identified data-sheet revision. If the supplier cannot establish a requested property or traceable material identity, record that as an open point. Do not resolve the gap by copying a property from another product in the same family. The purchasing comparison can still show the quoted price and delivery estimate, provided the alternative is clearly described as awaiting technical acceptance. No general promise of interchangeability should replace that review."
+    ]
+  },
+  {
+    "title": "How should receiving records support maintenance without implying installation approval?",
+    "paragraphs": [
+      "Agree the information that must accompany the goods before comparing offers. Depending on the approved purchasing specification, this may include the supplied part reference, compound or material identification, quantity, batch reference, dimensional records and the required certificate. Ask which records are standard, which require an additional request and which cannot be supplied. A generic brochure describes a product range; it is not a record identifying the particular items received for the maintenance job.",
+      "Arrange packaging and labelling so different sizes, materials and equipment allocations can be distinguished during receipt and storage. Request the product-specific storage instructions and any required shelf-life information instead of assigning one storage life to every elastomer or packing material. If a delivery is split, retain the link between each consignment and the remaining quantities. Receiving checks establish what arrived against the purchase description; they do not authorize installation or establish that an unreviewed substitution is suitable.",
+      "Send the requirement to Oillinko with the available drawings, parts schedule and unresolved questions. Oillinko reviews the enquiry and coordinates supplier responses manually. The eventual offer should separate goods, documentation and any optional specialist support, while identifying manufacturing origin, delivery terms and validity. Installation methods, gland adjustments and operating acceptance remain with the approved equipment instructions and the responsible site team. This page supports preparation of the purchase enquiry and does not prescribe a sealing arrangement."
+    ],
+    "links": [
+      {
+        "label": "Distinguish sheet gaskets from ring and packing requirements",
+        "href": "/oil-and-gas/equipment/gaskets-seals/sheet-and-non-metallic-gaskets"
+      }
+    ]
+  }
+],
   "cooling-towers-and-utility-air-dryers": [
   {
     "title": "How should a cooling-tower thermal case be compared?",
