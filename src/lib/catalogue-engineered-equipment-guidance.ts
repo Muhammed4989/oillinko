@@ -16,6 +16,12 @@ function equipmentLink(id: string, label: string) {
 }
 
 export const engineeredEquipmentSpecificationGuidance: Record<string, Record<string, string>> = {
+  "cooling-towers-and-utility-air-dryers": {
+  "Utility medium and duty": "Identify whether the enquiry covers cooling-water heat rejection, compressed-air moisture removal or two separately tagged packages. For a cooling tower, describe the connected water circuit and list the required operating cases. For a dryer, identify the air users, demand profile and required outlet air-quality specification. Mark existing equipment that remains within the installation. A shared purchase schedule can contain both packages, but each needs its own duty sheet, supply boundary and technical acceptance record. Do not compare a tower capacity with a dryer flow rating.",
+  "Inlet and target conditions": "For the tower, supply water flow, entering and required leaving water temperatures, and the design entering-air wet-bulb condition. Keep all values tied to the same case. For the dryer, state airflow with reference conditions, inlet temperature, pressure and required pressure dew point at that pressure. Include the relevant ambient conditions. Ask the bidder to identify the rating basis and confirm the offered performance at the specified conditions. A nominal catalogue capacity does not establish performance for a different inlet or ambient case.",
+  "Available utilities": "Provide the available electrical supply and identify other utility connections included in the enquiry. Ask tower bidders to state the proposed fan-drive scope and the water-system interfaces requiring separate provision. Ask dryer bidders to identify power, regeneration-air or other utility requirements for their offered technology. Have each proposal separate equipment consumption from auxiliary loads excluded from supply. Use the same project operating cases when requesting these figures. Record the source and status of estimated utility data so commercial comparisons do not present assumptions as confirmed site capacity.",
+  "Space and environmental limits": "Include a dimensioned installation layout, connection locations, access route and maintenance clearances. For a tower, identify surrounding structures and the available air paths for specialist review; also state applicable site noise and environmental requirements. For a dryer, describe the installation environment and the space available for filter, desiccant or refrigeration-system service as applicable. Request an offered layout showing the actual service envelope. For replacements, list the supports, connections and control interfaces that must remain, and record any proposed change as a deviation rather than assuming a matching footprint proves compatibility."
+},
   "plate-exchangers-and-air-coolers": {
   "Thermal duty": "Identify the process heat load together with the inlet and required outlet conditions used to establish it. For a plate exchanger, provide the paired flow and temperature data for both streams and the allowable pressure loss on each side. For an air cooler, include the approved inlet-air design condition with the process case. Separate normal, peak and minimum cases, and ask the bidder to show which cases the proposed unit covers. A heat-duty number alone does not establish the available cooling conditions or the required equipment arrangement.",
   "Fluids and design conditions": "Provide composition, phase and relevant properties for each process stream, identifying uncertainty, solids and known fouling concerns. Distinguish operating pressures and temperatures from the project design limits. Request the material and sealing schedule for the offered construction rather than assuming one metal grade defines the whole assembly. For plate units, include the proposed gasket compound where applicable. For air coolers, distinguish process-side materials from fins and external protection. Keep suitability decisions subject to the actual service and responsible technical review.",
@@ -37,12 +43,46 @@ export const engineeredEquipmentSpecificationGuidance: Record<string, Record<str
 };
 
 export const engineeredEquipmentSupplyGuidance: Record<string, string> = {
+  "cooling-towers-and-utility-air-dryers": "Compare a complete package with a complete package. For a cooling tower, identify the structure, heat-transfer internals, fan equipment, water-distribution components, instruments and controls included in the offer. For a dryer, identify the drying unit, associated filters, drains, instruments and connection accessories. State which civil, piping, electrical and commissioning services are separate. Request manufacturing origin independently of dispatch location, and record the named delivery place, documentation, inspection scope and exclusions. Oillinko receives enquiries for manual coordination; catalogue inclusion does not establish stock, delivery time or confirmed application suitability.",
   "plate-exchangers-and-air-coolers": "Compare the quoted equipment boundary line by line. For a plate unit, identify the frame, plates, seals, connections, insulation and any separately priced spares. For an air cooler, identify bundles, fans, drives, supports, guards, access provisions and control interfaces. Record inspection, documentation and site attendance as included or excluded. Ask for manufacturing origin separately from the dispatch location and named delivery place. A replacement-only price should not be compared directly with a complete package quotation that includes new supports, controls and installation work.",
   "reciprocating-compressors": "For reciprocating compressors, distinguish an assembly quotation from a complete gas compression package. Compare the driver, cooling, process auxiliaries, controls, engineering studies and agreed tests using the same boundary. Identify field connections, utilities and commissioning work supplied by others. Request a list of departures from the case schedule and scope matrix, with their effect on the proposed selection. Keep manufacturing origin, dispatch location and delivery terms as separate entries. A preliminary assembly price should remain visibly preliminary until the required interfaces and included work have been reviewed.",
   "shell-and-tube-heat-exchangers": "For shell-and-tube heat exchangers, compare complete exchanger supply separately from a bundle-only replacement. Identify channels, covers, supports, connections, insulation or other specified accessories, inspection activities and the final document package as included or excluded. For retained equipment, define responsibility for checking its condition and interfaces. Compare the offered thermal and hydraulic cases against the same datasheet revision, with deviations clearly listed. Manufacturing origin and dispatch location are separate from the named delivery point. Do not treat two prices as comparable until their equipment boundaries and evidence requirements are aligned."
 };
 
 export const engineeredEquipmentTopicGuidance: Record<string, ContentSection[]> = {
+  "cooling-towers-and-utility-air-dryers": [
+  {
+    "title": "How should a cooling-tower thermal case be compared?",
+    "paragraphs": [
+      "Keep the water-temperature change and the approach distinct. The approach for an evaporative tower is the difference between the leaving cold-water temperature and the entering air wet-bulb temperature. It is not the temperature reduction across the water circuit. Require a proposal to repeat the complete water and air design case, including the flow basis, rather than quoting a single temperature difference without its definition. Where the project has several seasonal or load cases, identify them individually for assessment.",
+      "Build the comparison around the project documents. Give each thermal case a reference and revision, then ask bidders to mark accepted inputs, proposed alternatives and unresolved assumptions. Identify the party responsible for checking the proposed arrangement against the connected process. If a bidder changes the water flow or target temperature, retain that change visibly in the comparison instead of presenting the option as an equivalent offer. Agree the required performance evidence and its acceptance conditions before selecting the commercial proposal."
+    ]
+  },
+  {
+    "title": "What does the dryer moisture target actually mean?",
+    "paragraphs": [
+      "Pressure dew point describes the condensation temperature at the stated compressed-air pressure. It differs from atmospheric dew point, so a moisture target without its pressure basis is incomplete. Ask for confirmation of the required pressure dew point at the specified flow and inlet conditions. Keep the end-user requirement separate from the bidder's proposed dryer technology. A refrigerated or desiccant label alone does not document the operating envelope or establish that the offered unit meets every project case.",
+      "Record moisture, particle and oil requirements as separate entries where the project specifies them. Require the proposal to identify which part of the offered treatment package addresses each entry and what supporting documents will be supplied. This avoids interpreting a dryer-only offer as evidence for the complete air-quality specification. Identify the location at which acceptance is required, the applicable project specification and who will review the evidence. Do not silently move an acceptance requirement from a user connection to a different point in the package."
+    ]
+  },
+  {
+    "title": "Which replacement and handover boundaries need a written answer?",
+    "paragraphs": [
+      "For a replacement enquiry, attach the verified equipment tag, model reference, available drawings and a list of retained components. State whether the request is for a complete tower or dryer, a defined assembly, or separately identified spare parts. A quotation for an internal component cannot establish the condition or performance of an entire installed system. Ask the bidder to identify any checks needed before confirming compatibility and keep those checks visible in the procurement schedule. Separate a preliminary budget from a technically reviewed replacement proposal.",
+      "Before comparing final offers, agree the drawing list, inspection records, operating documentation and handover responsibilities. Identify whether site attendance, functional checks and performance verification are included, optional or by others. Keep the equipment supply obligation distinct from ongoing water-management or compressed-air-system responsibilities. Assign each open interface to the project reviewer who can close it. Use the related utility and heat-exchanger pages when defining adjacent equipment, while retaining separate specifications and acceptance boundaries for the tower and the air dryer."
+    ],
+    "links": [
+      {
+        "label": "Define the wider plant utility package",
+        "href": "/oil-and-gas/equipment/water-environment-utilities/boilers-cooling-and-compressed-air-utilities"
+      },
+      {
+        "label": "Separate plate-exchanger and air-cooler duties",
+        "href": "/oil-and-gas/equipment/pressure-vessels-tanks/plate-exchangers-and-air-coolers"
+      }
+    ]
+  }
+],
   "plate-exchangers-and-air-coolers": [
   {
     "title": "Which cooling arrangement is actually being requested?",
