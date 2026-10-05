@@ -16,6 +16,12 @@ function equipmentLink(id: string, label: string) {
 }
 
 export const engineeredEquipmentSpecificationGuidance: Record<string, Record<string, string>> = {
+  "plate-exchangers-and-air-coolers": {
+  "Thermal duty": "Identify the process heat load together with the inlet and required outlet conditions used to establish it. For a plate exchanger, provide the paired flow and temperature data for both streams and the allowable pressure loss on each side. For an air cooler, include the approved inlet-air design condition with the process case. Separate normal, peak and minimum cases, and ask the bidder to show which cases the proposed unit covers. A heat-duty number alone does not establish the available cooling conditions or the required equipment arrangement.",
+  "Fluids and design conditions": "Provide composition, phase and relevant properties for each process stream, identifying uncertainty, solids and known fouling concerns. Distinguish operating pressures and temperatures from the project design limits. Request the material and sealing schedule for the offered construction rather than assuming one metal grade defines the whole assembly. For plate units, include the proposed gasket compound where applicable. For air coolers, distinguish process-side materials from fins and external protection. Keep suitability decisions subject to the actual service and responsible technical review.",
+  "Space limits": "Supply a dimensioned layout showing connections, supports, access routes and the equipment removal boundary. A plate exchanger enquiry should allow the bidder to state the space required for opening the frame and handling plates, where that construction applies. An air cooler enquiry should identify the available arrangement and surrounding obstructions for review of air access and discharge. Ask for maintenance and lifting clearances on the offered drawing. A unit fitting the available footprint does not establish that its service space or installation interfaces are acceptable.",
+  "Existing model for replacements": "Send the complete equipment reference, serial number, nameplate photograph and available drawing revision. State exactly what is being replaced: a whole exchanger, a plate pack, individual plates and gaskets, an air-cooler bundle or a fan-related component. Identify which parts remain in service and who verifies their condition and compatibility. Require an exact replacement or a clearly identified alternative against the retained interfaces. Matching overall dimensions, plate count or nominal fan diameter alone is not sufficient evidence of interchangeability."
+},
   "reciprocating-compressors": {
     "Gas analysis": "Provide the gas composition and its measurement basis, including the sampling date, units and expected variation between operating cases. Identify water, liquids, particles and constituents requiring a materials or emissions review. A description such as natural gas is insufficient for a package selection. Separate measured values from assumed values and explain whether an upstream treatment package forms part of the enquiry. Request a documented application review for the offered configuration; a previous selection for a similar stream does not establish suitability for this gas.",
     "Stage pressures and temperatures": "Identify suction and required delivery pressure for each operating case, stating whether pressure is absolute or gauge. Give inlet temperature and available cooling conditions alongside the gas analysis. Distinguish the process requirement from the proposed number of stages and the resulting interstage conditions, which should be explained in the technical offer. Keep design limits separate from normal operation. Ask for a case-by-case performance schedule with assumptions, limitations and the package boundary used in the calculation, rather than comparing a single discharge pressure printed in a brochure.",
@@ -31,11 +37,45 @@ export const engineeredEquipmentSpecificationGuidance: Record<string, Record<str
 };
 
 export const engineeredEquipmentSupplyGuidance: Record<string, string> = {
+  "plate-exchangers-and-air-coolers": "Compare the quoted equipment boundary line by line. For a plate unit, identify the frame, plates, seals, connections, insulation and any separately priced spares. For an air cooler, identify bundles, fans, drives, supports, guards, access provisions and control interfaces. Record inspection, documentation and site attendance as included or excluded. Ask for manufacturing origin separately from the dispatch location and named delivery place. A replacement-only price should not be compared directly with a complete package quotation that includes new supports, controls and installation work.",
   "reciprocating-compressors": "For reciprocating compressors, distinguish an assembly quotation from a complete gas compression package. Compare the driver, cooling, process auxiliaries, controls, engineering studies and agreed tests using the same boundary. Identify field connections, utilities and commissioning work supplied by others. Request a list of departures from the case schedule and scope matrix, with their effect on the proposed selection. Keep manufacturing origin, dispatch location and delivery terms as separate entries. A preliminary assembly price should remain visibly preliminary until the required interfaces and included work have been reviewed.",
   "shell-and-tube-heat-exchangers": "For shell-and-tube heat exchangers, compare complete exchanger supply separately from a bundle-only replacement. Identify channels, covers, supports, connections, insulation or other specified accessories, inspection activities and the final document package as included or excluded. For retained equipment, define responsibility for checking its condition and interfaces. Compare the offered thermal and hydraulic cases against the same datasheet revision, with deviations clearly listed. Manufacturing origin and dispatch location are separate from the named delivery point. Do not treat two prices as comparable until their equipment boundaries and evidence requirements are aligned."
 };
 
 export const engineeredEquipmentTopicGuidance: Record<string, ContentSection[]> = {
+  "plate-exchangers-and-air-coolers": [
+  {
+    "title": "Which cooling arrangement is actually being requested?",
+    "paragraphs": [
+      "Begin the enquiry with the available cooling resource and the approved process objective. A plate exchanger connects two specified fluid streams; an air cooler transfers heat to the air around its heat-transfer assembly. They are not interchangeable purchases merely because both are described as coolers. If the project is comparing technologies, label the enquiry as an options review and give each bidder the same process basis. Ask the reviewer to identify what utility, electrical and installation changes belong to each option before comparing purchase prices.",
+      "Keep a preliminary selection separate from a replacement order. A new package may permit changes to the arrangement, while an installed unit usually has retained connections and support constraints. State whether the responsible engineer allows alternatives and which interfaces must remain fixed. Use a short boundary list to distinguish equipment supply from layout engineering, piping changes, electrical work and site installation. Oillinko can coordinate the enquiry for manual review, but catalogue coverage alone does not confirm availability or the suitability of a proposed design."
+    ]
+  },
+  {
+    "title": "What makes plate and gasket replacements traceable?",
+    "paragraphs": [
+      "For a plate exchanger, ask the proposal to identify the plate design, material, channel arrangement and applicable sealing system against the installed records. A gasketed construction, a welded arrangement and a brazed unit have different replacement boundaries. State the required spare quantity and whether it means individual components or an assembled pack. Provide existing part references and the purpose of the work without instructing a bidder to infer compatibility from a photograph alone. Any proposed substitute should be listed as a technical deviation for review.",
+      "Connect the delivery documents to the actual supplied components. Request the agreed material identification and inspection records, the applicable configuration drawing and the instructions needed by the qualified service team. If an existing pack has been modified, provide the latest verified arrangement rather than an obsolete original bill of materials. Do not prescribe a tightening dimension, cleaning chemical or assembly sequence from a generic enquiry guide. Such instructions depend on the actual equipment and the approved maintenance procedure."
+    ]
+  },
+  {
+    "title": "Which air-cooler auxiliaries and acceptance records belong in the offer?",
+    "paragraphs": [
+      "An air-cooler package may contain more than its heat-transfer bundle. Ask the bidder to identify the proposed fan and drive arrangement, electrical inputs, controls and access provisions. Where the project requires cold-weather accessories or special handling of discharged air, state the requirement and request a defined scope rather than assuming these features are standard. Record site noise constraints and the conditions under which any quoted noise or power figure applies. Keep those figures attached to the offered configuration and operating case.",
+      "Agree what the supplier will demonstrate before shipment and which checks remain part of installation or commissioning. Tie the approved drawing, inspection schedule and final records to the equipment tag. Record deviations from the process case, hydraulic allowance or interface drawing before commercial acceptance. For a bundle replacement, identify whether retained fans, structure and controls are part of the assessment or outside the order. A successful component test does not by itself demonstrate performance of the complete installed cooling system. Use the related exchanger and maintenance guides to define connected work without merging their separate responsibilities."
+    ],
+    "links": [
+      {
+        "label": "Define a complete shell-and-tube exchanger enquiry",
+        "href": "/oil-and-gas/equipment/pressure-vessels-tanks/shell-and-tube-heat-exchangers"
+      },
+      {
+        "label": "Scope exchanger cleaning and retubing separately",
+        "href": "/oil-and-gas/services/heat-exchanger-cleaning-and-retubing"
+      }
+    ]
+  }
+],
   "reciprocating-compressors": [
     { title: "What should a reciprocating compressor RFQ contain?", paragraphs: [
       "A useful reciprocating compressor RFQ combines a gas analysis, a schedule of operating cases and a defined package boundary. Begin with the intended service: for example, an existing gathering installation, a process compression duty or a replacement package. Explain the result the plant needs rather than choosing a frame solely from a headline power rating. Give each duty case a reference that can also appear in the supplier's performance schedule. Record who owns the process data, who will review the proposed selection and which inputs are still awaiting confirmation. This creates an enquiry that can be revised without losing the basis on which the initial quotation was prepared.",
