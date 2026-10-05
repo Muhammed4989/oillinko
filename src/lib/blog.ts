@@ -20,6 +20,86 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "metal-bellows-expansion-joint-rfq-movement-restraints",
+  "title": "Metal Bellows Expansion Joint RFQs: Movement, Restraints and Interfaces",
+  "short": "Specify the complete metallic bellows assembly, required movements and restraint boundary before comparing bids.",
+  "tagline": "A buyer guide to linking expansion joint movements, service conditions and piping interfaces.",
+  "category": "piping-flanges-fittings",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-05",
+  "readTime": "7 min read",
+  "date": "2026-10-05",
+  "dateLabel": "5 October 2026",
+  "description": "Prepare a metal bellows expansion joint RFQ with movement combinations, service conditions, restraints, end connections, accessories and reviewed design evidence.",
+  "keywords": "metal bellows expansion joint RFQ, expansion joint movement specification, bellows pressure thrust restraints, expansion joint replacement dimensions",
+  "image": "/images/blog/metal-bellows-expansion-joint-rfq-movement-restraints.svg",
+  "related": [
+    "industrial-hose-assembly-rfq-service-ends-traceability",
+    "pipeline-fittings-and-schedules",
+    "asme-b16-5-flange-pressure-classes"
+  ]
+},
+{
+  "slug": "rotor-balancing-service-rfq-configuration-tolerances-reports",
+  "title": "Rotor Balancing Service RFQs: Configuration, Tolerances and Reports",
+  "short": "Define the actual rotor configuration, approved tolerance basis and traceable balancing report.",
+  "tagline": "Compare balancing service scope without confusing residual unbalance with complete machine acceptance.",
+  "category": "maintenance-repair",
+  "mainCategory": "oil-and-gas-services",
+  "dateModified": "2026-10-05",
+  "readTime": "7 min read",
+  "date": "2026-10-05",
+  "dateLabel": "5 October 2026",
+  "description": "Scope a rotor balancing service RFQ using delivered configuration, workshop or field boundaries, approved tolerances, correction approvals and traceable results.",
+  "keywords": "rotor balancing service RFQ, residual unbalance report, rotor balancing configuration, workshop versus field balancing scope",
+  "image": "/images/blog/rotor-balancing-service-rfq-configuration-tolerances-reports.svg",
+  "related": [
+    "rotating-equipment-vibration-survey-scope-baseline-records",
+    "pump-shaft-alignment-service-scope-handover",
+    "electric-motor-rewinding-rfq-tests-data-acceptance-records"
+  ]
+},
+{
+  "slug": "charpy-impact-test-reports-temperature-specimens-acceptance",
+  "title": "Charpy Impact Test Reports: Temperature, Specimens and Traceable Acceptance",
+  "short": "Review impact results alongside the ordered material, test conditions and applicable acceptance requirement.",
+  "tagline": "Keep specimen geometry, orientation and temperature attached to each reported Charpy result.",
+  "category": "materials-documentation",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-05",
+  "readTime": "7 min read",
+  "date": "2026-10-05",
+  "dateLabel": "5 October 2026",
+  "description": "Review Charpy impact test reports with material traceability, specimen dimensions, orientation, temperature, individual energy results and an identified acceptance basis.",
+  "keywords": "Charpy impact test report review, Charpy specimen size and orientation, impact test temperature report, Charpy absorbed energy acceptance",
+  "image": "/images/blog/charpy-impact-test-reports-temperature-specimens-acceptance.svg",
+  "related": [
+    "heat-number-traceability-mill-certificates",
+    "en-10204-material-certificates-explained",
+    "iso-17025-laboratory-accreditation-scope-test-report"
+  ]
+},
+{
+  "slug": "air-freight-equipment-quotes-gross-volumetric-weight",
+  "title": "Air Freight Quotes for Equipment: Gross Weight, Volume and Package Data",
+  "short": "Provide final package data and ask how each forwarder calculates chargeable weight and the full service price.",
+  "tagline": "Compare air freight proposals using packed dimensions, gross weight and explicit rating assumptions.",
+  "category": "logistics-delivery",
+  "mainCategory": "oil-and-gas-procurement",
+  "dateModified": "2026-10-05",
+  "readTime": "7 min read",
+  "date": "2026-10-05",
+  "dateLabel": "5 October 2026",
+  "description": "Prepare equipment air freight enquiries with gross weight, external package dimensions, volumetric factors, handling constraints, chargeable weight and included charges.",
+  "keywords": "air freight equipment chargeable weight, gross weight versus volumetric weight, industrial cargo air freight quote, equipment package dimensions freight RFQ",
+  "image": "/images/blog/air-freight-equipment-quotes-gross-volumetric-weight.svg",
+  "related": [
+    "export-packing-oil-gas-equipment-rfq",
+    "consolidated-shipments-and-multi-vendor-orders",
+    "quotation-validity-equipment-lead-time-delivery-milestones"
+  ]
+},
+{
   "slug": "steam-trap-rfq-condensate-load-differential-pressure",
   "title": "Steam Trap RFQs: Condensate Load, Differential Pressure and Connections",
   "short": "Specify a steam trap against its drainage duty and operating envelope rather than its pipe size alone.",
