@@ -20,6 +20,46 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "thermowell-rfq-wake-frequency-process-data",
+  "title": "Thermowell RFQs: Process Data and Wake-Frequency Review",
+  "short": "Connect process cases, installation dimensions and calculation evidence before ordering a thermowell.",
+  "tagline": "Prepare a traceable thermowell enquiry without turning missing process data into design assumptions.",
+  "category": "pressure-vessels-tanks",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-07",
+  "readTime": "6 min read",
+  "date": "2026-10-07",
+  "dateLabel": "7 October 2026",
+  "description": "Prepare a thermowell RFQ with process cases, installation dimensions, wake-frequency calculation evidence, sensor interfaces and document requirements.",
+  "keywords": "thermowell RFQ, thermowell wake frequency calculation inputs, thermowell insertion length drawing, ASME PTC 19.3 TW procurement",
+  "image": "/images/blog/thermowell-rfq-wake-frequency-process-data.svg",
+  "related": [
+    "asme-b16-5-flange-pressure-classes",
+    "equipment-rfq-revision-control-bid-clarifications",
+    "pressure-gauge-calibration-certificate-buyers-guide"
+  ]
+},
+{
+  "slug": "ndt-personnel-certification-iso-9712-employer-based-rfq",
+  "title": "NDT Personnel Certification: An RFQ Verification Guide",
+  "short": "Check the issuing route, method, scope and validity of personnel records against the actual inspection assignment.",
+  "tagline": "Make inspector qualifications reviewable before mobilization and link them to the issued report.",
+  "category": "inspection-testing",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-07",
+  "readTime": "6 min read",
+  "date": "2026-10-07",
+  "dateLabel": "7 October 2026",
+  "description": "Review NDT personnel certification in an RFQ: issuing route, ISO 9712 or employer-based records, method scope, validity, verification and assignment approvals.",
+  "keywords": "NDT personnel certification RFQ, ISO 9712 certificate verification, SNT-TC-1A employer certification, NDT inspector scope review",
+  "image": "/images/blog/ndt-personnel-certification-iso-9712-employer-based-rfq.svg",
+  "related": [
+    "inspection-test-plans-hold-vs-witness-points",
+    "iso-17025-laboratory-accreditation-scope-test-report",
+    "liquid-penetrant-vs-magnetic-particle-testing-rfq"
+  ]
+},
+{
   "slug": "metal-bellows-expansion-joint-rfq-movement-restraints",
   "title": "Metal Bellows Expansion Joint RFQs: Movement, Restraints and Interfaces",
   "short": "Specify the complete metallic bellows assembly, required movements and restraint boundary before comparing bids.",
