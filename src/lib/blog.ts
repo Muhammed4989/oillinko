@@ -20,6 +20,46 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "rupture-disc-replacement-rfq-burst-temperature-holder",
+  "title": "Rupture Disc Replacement RFQs: Burst Conditions and Holder Compatibility",
+  "short": "Connect the replacement disc to its approved burst conditions, installed assembly and required evidence.",
+  "tagline": "A matching size and pressure marking are only the start of a replacement review.",
+  "category": "valves-actuation",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-08",
+  "readTime": "7 min read",
+  "date": "2026-10-08",
+  "dateLabel": "8 October 2026",
+  "description": "Prepare a rupture disc replacement RFQ with traceable burst conditions, holder identification, declared tolerances, service cases and acceptance records.",
+  "keywords": "rupture disc replacement RFQ, rupture disc burst temperature, rupture disc holder compatibility, burst tolerance manufacturing design range",
+  "image": "/images/blog/rupture-disc-replacement-rfq-burst-temperature-holder.svg",
+  "related": [
+    "api-526-pressure-relief-valves-rfq-guide",
+    "asme-b16-5-flange-pressure-classes",
+    "equipment-rfq-revision-control-bid-clarifications"
+  ]
+},
+{
+  "slug": "elastomer-seal-storage-shelf-life-records-buyers",
+  "title": "Elastomer Seal Storage and Shelf-Life Records: A Buyer's Guide",
+  "short": "Check the identity, date basis and storage evidence behind a spare seal's stated remaining life.",
+  "tagline": "Make storage acceptance traceable from quotation to the stores record.",
+  "category": "materials-documentation",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-08",
+  "readTime": "7 min read",
+  "date": "2026-10-08",
+  "dateLabel": "8 October 2026",
+  "description": "Specify elastomer seal age and storage records in an RFQ, match dates to batches, define remaining-life requirements and document receiving exceptions.",
+  "keywords": "elastomer seal shelf life records, ISO 2230 rubber storage, O-ring manufacture date traceability, seal remaining shelf life procurement",
+  "image": "/images/blog/elastomer-seal-storage-shelf-life-records-buyers.svg",
+  "related": [
+    "elastomer-hardness-reports-shore-a-irhd-acceptance",
+    "export-packing-oil-gas-equipment-rfq",
+    "gaskets-and-sealing-products-explained"
+  ]
+},
+{
   "slug": "thermowell-rfq-wake-frequency-process-data",
   "title": "Thermowell RFQs: Process Data and Wake-Frequency Review",
   "short": "Connect process cases, installation dimensions and calculation evidence before ordering a thermowell.",
