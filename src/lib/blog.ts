@@ -20,6 +20,44 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "replacement-bearing-rfq-full-designation-suffixes",
+  "title": "Replacement Bearing RFQs: Full Designations, Suffixes and Supply Scope",
+  "short": "Identify the full bearing variant and define pieces, sets and proposed alternatives before comparing quotations.",
+  "tagline": "Keep equipment identity, product designation and supply scope connected.",
+  "category": "pumps-rotating-equipment",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-09",
+  "readTime": "6 min read",
+  "date": "2026-10-09",
+  "dateLabel": "9 October 2026",
+  "description": "Prepare a replacement bearing RFQ using complete designations, suffix evidence, set scope, documented alternatives and receiving identification records.",
+  "keywords": "replacement bearing RFQ, bearing designation suffixes, bearing clearance seals cage replacement, bearing cross reference verification",
+  "image": "/images/blog/heroes/replacement-bearing-rfq-full-designation-suffixes.webp",
+  "related": [
+    "centrifugal-pump-spare-parts-rfq-identification",
+    "replacement-electric-motors-nameplate-interface-rfq-guide"
+  ]
+},
+{
+  "slug": "surface-roughness-inspection-reports-ra-rz-measurement-basis",
+  "title": "Surface Roughness Inspection Reports: Ra, Rz and the Measurement Basis",
+  "short": "Connect machined-surface readings to the drawing, parameter, standard edition and agreed measurement conditions.",
+  "tagline": "Make surface texture evidence traceable to the part and acceptance requirement.",
+  "category": "inspection-testing",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-09",
+  "readTime": "6 min read",
+  "date": "2026-10-09",
+  "dateLabel": "9 October 2026",
+  "description": "Define a surface roughness inspection report with Ra or Rz requirements, drawing references, measurement conditions, standard editions and acceptance evidence.",
+  "keywords": "surface roughness inspection report, Ra Rz measurement report, surface texture evaluation length, ISO 21920 inspection specification",
+  "image": "/images/blog/heroes/surface-roughness-inspection-reports-ra-rz-measurement-basis.webp",
+  "related": [
+    "surface-preparation-before-coating-inspection-evidence",
+    "iso-17025-laboratory-accreditation-scope-test-report"
+  ]
+},
+{
   "slug": "rupture-disc-replacement-rfq-burst-temperature-holder",
   "title": "Rupture Disc Replacement RFQs: Burst Conditions and Holder Compatibility",
   "short": "Connect the replacement disc to its approved burst conditions, installed assembly and required evidence.",
