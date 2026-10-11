@@ -15,10 +15,52 @@ export type BlogPost = {
   description: string;
   keywords: string;
   image: string;
+  imageAlt?: string;
   related: string[];
 };
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "solenoid-valve-rfq-differential-pressure-coil",
+  "title": "Solenoid Valve RFQs: Differential Pressure and Coil Data",
+  "short": "Define inlet and outlet conditions, valve function and the complete coil assembly before comparing quotations.",
+  "tagline": "Compare the operating envelope and electrical scope of the exact proposed assembly.",
+  "category": "valves-actuation",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-11",
+  "readTime": "6 min read",
+  "date": "2026-10-11",
+  "dateLabel": "11 October 2026",
+  "description": "Prepare a solenoid valve RFQ with inlet and outlet pressure cases, minimum differential pressure, medium, coil supply, connections and complete assembly evidence.",
+  "keywords": "solenoid valve RFQ, minimum differential pressure solenoid valve, solenoid valve coil voltage frequency, direct acting vs pilot operated solenoid valve",
+  "image": "/images/blog/heroes/solenoid-valve-rfq-differential-pressure-coil.webp",
+  "imageAlt": "Concept illustration of a solenoid valve, its electrical coil, pressure gauges and an RFQ checklist.",
+  "related": [
+    "npt-bspt-bspp-threaded-fitting-buyers-guide",
+    "valve-actuator-replacement-rfq-compatibility"
+  ]
+},
+{
+  "slug": "ispm-15-wood-packaging-mark-verification",
+  "title": "ISPM 15 Wood Packaging Marks: A Buyer's Verification Guide",
+  "short": "Connect wood packaging marks and provider records to the actual crates, dunnage and later changes.",
+  "tagline": "Keep package identity, marking evidence and change records connected before dispatch.",
+  "category": "logistics-delivery",
+  "mainCategory": "oil-and-gas-procurement",
+  "dateModified": "2026-10-11",
+  "readTime": "6 min read",
+  "date": "2026-10-11",
+  "dateLabel": "11 October 2026",
+  "description": "Verify ISPM 15 wood packaging mark evidence against crate identities, authorized provider records, reused or repaired wood, loose dunnage and destination review.",
+  "keywords": "ISPM 15 wood packaging mark verification, ISPM 15 mark country code, wood packaging repair reuse records, equipment crate dunnage identification",
+  "image": "/images/blog/heroes/ispm-15-wood-packaging-mark-verification.webp",
+  "imageAlt": "Concept illustration of a wooden shipping crate, loose bracing, camera and packaging review checklist.",
+  "related": [
+    "export-packing-oil-gas-equipment-rfq",
+    "country-of-origin-vs-dispatch-equipment-rfq",
+    "consolidated-shipments-and-multi-vendor-orders"
+  ]
+},
 {
   "slug": "replacement-bearing-rfq-full-designation-suffixes",
   "title": "Replacement Bearing RFQs: Full Designations, Suffixes and Supply Scope",
