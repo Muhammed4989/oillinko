@@ -139,7 +139,7 @@ export function Prose({ children, post }: { children: React.ReactNode; post: Blo
       <BlogHierarchy containerId="post-content" />
       <article id="post-content" className="order-1 min-w-0 max-w-3xl sm:order-2">
         <BlogPostContentHeader post={post} />
-        <BlogCover src={postCover(post.slug)} alt={post.title} />
+        <BlogCover src={postCover(post.slug)} alt={post.imageAlt ?? post.title} />
         {children}
         <BlogRelatedReading post={post} />
       </article>
