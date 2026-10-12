@@ -21,6 +21,48 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "diaphragm-seal-pressure-instrument-rfq-complete-system",
+  "title": "Diaphragm Seal Pressure Instrument RFQs: Define the Complete System",
+  "short": "Specify the filled seal, mounting arrangement and pressure instrument as one assembly before comparing quotations.",
+  "tagline": "Keep process conditions, geometry and assembled measurement evidence connected.",
+  "description": "Prepare a diaphragm seal pressure instrument RFQ with process cases, wetted materials, capillary geometry, system performance review and assembly calibration scope.",
+  "category": "pressure-vessels-tanks",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-12",
+  "readTime": "6 min read",
+  "date": "2026-10-12",
+  "dateLabel": "12 October 2026",
+  "keywords": "diaphragm seal pressure instrument RFQ, remote seal capillary height difference, diaphragm seal fill fluid selection, pressure gauge diaphragm seal assembly",
+  "image": "/images/blog/heroes/diaphragm-seal-pressure-instrument-rfq-complete-system.webp",
+  "imageAlt": "Concept illustration comparing a pressure gauge mounted directly on a diaphragm seal with a remote capillary-connected assembly.",
+  "related": [
+    "pressure-gauge-calibration-certificate-buyers-guide",
+    "npt-bspt-bspp-threaded-fitting-buyers-guide",
+    "thermowell-rfq-wake-frequency-process-data"
+  ]
+},
+{
+  "slug": "coating-holiday-testing-rfq-coverage-repair-records",
+  "title": "Coating Holiday Testing RFQs: Coverage, Acceptance and Repair Records",
+  "short": "Define coating continuity inspection coverage and connect each finding with repair, reinspection and release evidence.",
+  "tagline": "Compare the inspection boundary and records before accepting a coating test quotation.",
+  "description": "Scope a coating holiday testing RFQ with the coating and substrate basis, coverage, method approval, acceptance authority and traceable repair and retest records.",
+  "category": "inspection-testing",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-12",
+  "readTime": "7 min read",
+  "date": "2026-10-12",
+  "dateLabel": "12 October 2026",
+  "keywords": "coating holiday testing RFQ, holiday test report coating, coating discontinuity testing scope, holiday inspection repair retest records",
+  "image": "/images/blog/heroes/coating-holiday-testing-rfq-coverage-repair-records.webp",
+  "imageAlt": "Concept illustration linking a discontinuity in a coated steel panel to its inspection location map and repair and reinspection records.",
+  "related": [
+    "coating-dft-inspection-reports-buyers-guide",
+    "surface-preparation-before-coating-inspection-evidence",
+    "inspection-test-plans-hold-vs-witness-points"
+  ]
+},
+{
   "slug": "solenoid-valve-rfq-differential-pressure-coil",
   "title": "Solenoid Valve RFQs: Differential Pressure and Coil Data",
   "short": "Define inlet and outlet conditions, valve function and the complete coil assembly before comparing quotations.",
