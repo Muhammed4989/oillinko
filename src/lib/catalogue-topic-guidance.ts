@@ -3,6 +3,18 @@ type TopicGuidanceSection = { title: string; paragraphs: string[] };
 // Topic-specific purchasing guidance. Research basis is recorded in
 // docs/content-expansion-2026-10-02.md; supplier identities stay in the directory.
 export const catalogueTopicGuidance: Record<string, TopicGuidanceSection[]> = {
+  "pigging-and-inspection-tools": [
+    { title: "What is the difference between cleaning, gauging and inspection pigs?", paragraphs: [
+      "Cleaning pigs address deposits or unwanted material in the line. A gauging pig checks passage against a specified bore requirement; it is not a complete wall-condition survey. Instrumented inline inspection tools collect data for defined inspection objectives. The enquiry should identify the required result and evidence, rather than treating every pig as an inspection gauge.",
+      "For example, a request to clear accumulated liquids and a request to locate metal loss describe different jobs. Ask a proposal to identify the tool's function and deliverables explicitly. A successful cleaning run alone is not evidence that a pipeline has passed an integrity assessment."
+    ] },
+    { title: "Can every pipeline use the same pig?", paragraphs: [
+      "No. Changes in internal diameter, tight bends and access limitations can prevent a conventional tool from passing through a line. Provide current pipeline drawings and identify known restrictions. Piggability and tool compatibility require review for the actual pipeline; nominal pipe diameter alone is insufficient."
+    ] },
+    { title: "What should a pigging equipment enquiry include?", paragraphs: [
+      "Send Oillinko the task, pipeline geometry, medium and operating envelope, available launch-and-receive facilities and required deliverables. Separate tools-only supply from an executed service. For an inspection assignment, identify the detection objective, data-analysis scope and reporting responsibilities. Ask for assumptions and exclusions to be listed against the same enquiry so that quotations can be compared consistently."
+    ] }
+  ],
   "cathodic-protection-equipment": [
     { title: "Separate the protection design from the equipment order", paragraphs: [
       "A cathodic protection enquiry should identify whether the requirement is for replacement components, a new equipment package or a protection design with associated supply. Galvanic anodes and impressed-current equipment need different schedules and supporting information. For a new system, provide the approved design basis, protected asset geometry, coating condition, exposure environment and intended service life. For replacement anodes, identify the original drawing and alloy specification, together with any survey findings that prompted the replacement. An equipment quotation alone does not establish that the proposed arrangement will protect the complete asset.",
