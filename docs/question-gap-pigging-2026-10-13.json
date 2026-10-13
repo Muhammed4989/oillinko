@@ -1,0 +1,41 @@
+{
+  "preparedAt": "2026-10-13",
+  "status": "publication_authorized_2026-10-13",
+  "window": {
+    "start": "2026-07-12",
+    "end": "2026-10-09",
+    "days": 90,
+    "dateBasis": "America/Los_Angeles",
+    "settledThrough": "2026-10-10"
+  },
+  "implemented": {
+    "query": "what does pigging mean in oil and gas",
+    "impressions": 16,
+    "clicks": 0,
+    "position": 9.3125,
+    "url": "https://oillinko.com/oil-and-gas/equipment/pipeline-intervention/pigging-and-inspection-tools",
+    "segment": "All 16 reported impressions: USA / desktop",
+    "change": "Replaced overview with a direct definition; added cleaning/gauging/inspection distinction, compatibility question and concrete enquiry inputs. Existing URL, title, H1, RFQ routing and generic catalogue layout retained. Metadata derives from the updated overview.",
+    "hypothesis": "Clearer opening and task distinctions improve definition-query relevance and qualified enquiry preparation; no ranking or CTR uplift claimed.",
+    "commercialGoal": "Complete equipment enquiries for manual Oillinko routing; GA4 linkage unavailable.",
+    "sources": [
+      {
+        "url": "https://www.epa.gov/natural-gas-star-program/pipeline-pig-launching-and-receiving",
+        "finding": "Concise definition and pipeline applications. Existing Oillinko text named tool functions but did not directly define pigging."
+      },
+      {
+        "url": "https://www.ppsa-online.com/faq",
+        "finding": "Separates utility and inspection tasks and explains tool-selection constraints. Added a purchasing distinction without operating parameters."
+      },
+      {
+        "url": "https://nigen.com/how-to-pig-a-pipeline-gas-pipeline-pigging-procedure/",
+        "finding": "Combines a definition, inspection outputs and a service CTA. Oillinko should clarify supply versus service scope; no provider execution capabilities copied."
+      }
+    ]
+  },
+  "measurement": {
+    "deploymentDate": null,
+    "review": "Once deployed, compare equal-length 28-day windows with the same query/page/country/device scope; allow data to settle. Record changed query mix and seasonality. Sparse data remains inconclusive.",
+    "automaticScheduleCreated": false
+  }
+}
