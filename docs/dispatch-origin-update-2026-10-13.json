@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-13",
+  "status": "publication_authorized",
+  "url": "https://oillinko.com/blog/category/oil-and-gas-procurement/logistics-delivery/country-of-origin-vs-dispatch-equipment-rfq",
+  "audience": "Equipment buyers and traders comparing manufacturing and shipment declarations",
+  "intent": "Define country of dispatch and distinguish manufacture, customs origin and seller location",
+  "baseline": {
+    "start": "2026-07-12",
+    "end": "2026-10-09",
+    "settledThrough": "2026-10-10",
+    "mainQuery": {
+      "query": "country of dispatch meaning",
+      "impressions": 85,
+      "clicks": 0,
+      "position": 7.305882352941176
+    },
+    "otherVisibleQueries": [
+      {
+        "query": "country of dispatch",
+        "impressions": 8,
+        "clicks": 0,
+        "position": 9.125
+      },
+      {
+        "query": "dispatch country",
+        "impressions": 2,
+        "clicks": 0,
+        "position": 10
+      }
+    ],
+    "segment": "India accounts for 68 of 85 main-query impressions (56 desktop,12 mobile). Definitions are broad informational demand; commercial intent unconfirmed.",
+    "limits": "Visible queries only, not total site/page traffic. No causal inference from low CTR. No GA4 link or verified enquiries."
+  },
+  "overlap": "Update current canonical article. Related EXW/FCA, DAP/DDP and export-packing articles serve different procurement decisions. Original publication date and slug retained.",
+  "change": "Definition first; four-field comparison table; labelled Italy/UAE/Turkey quotation example; jurisdiction-specific transit caveat; query-aligned title/summary/meta description; dateModified only updated.",
+  "sources": [
+    {
+      "url": "https://www.wcoomd.org/en/topics/origin/overview/faq-origin.aspx",
+      "use": "Origin distinct from provenance; country-of-origin evidence depends on applicable rules."
+    },
+    {
+      "url": "https://www.wcoomd.org/en/topics/origin/instrument-and-tools/origin-certification-tools.aspx?p=1",
+      "use": "Existing certification source rechecked."
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/cds-uk-trade-tariff-volume-3-import-declaration-completion-guide/group-5-dates-times-periods-places-countries-and-regions",
+      "use": "UK DE5/14 distinguishes transit from defined intermediate events; not generalized worldwide."
+    }
+  ],
+  "serpReview": "Search results mixed short definitions, dictionaries and customs manuals. Existing article opened with a scenario before defining dispatch. Reviewed primary WCO/UK guidance rather than copying dictionary wording; Google localized top-three positions not verified.",
+  "internalLinks": "Preserved EXW/FCA, DAP/DDP, export packing and freight/expediting service destination.",
+  "cta": "Enquiries remain routed to Oillinko for manual sourcing.",
+  "measurement": {
+    "deploymentDate": null,
+    "review": "Compare equal 28-day windows by query/page/country/device after data settles; no schedule created.",
+    "hypothesis": "Earlier definition and clearer comparisons improve relevance and snippet fit; increased rankings/clicks not guaranteed."
+  }
+}
