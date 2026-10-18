@@ -21,23 +21,6 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
-  slug: "coriolis-flowmeter-replacement-rfq-process-signal-interfaces",
-  title: "Coriolis Flowmeter Replacement RFQs: Process, Fit and Signal Interfaces",
-  short: "Compare replacement meter offers against the measured duty, sensor and transmitter scope, piping fit and control-system signals.",
-  tagline: "Treat the flow sensor and its connected measurement chain as one enquiry.",
-  description: "Prepare a Coriolis flowmeter replacement RFQ using actual process cases, sizing evidence, mechanical interfaces, signal configuration and calibration scope.",
-  category: "pressure-vessels-tanks",
-  mainCategory: "oil-and-gas-equipment",
-  dateModified: "2026-10-16",
-  readTime: "7 min read",
-  date: "2026-10-16",
-  dateLabel: "16 October 2026",
-  keywords: "Coriolis flowmeter replacement RFQ, Coriolis meter sizing data, flow sensor transmitter replacement, mass flowmeter signal interface",
-  image: "/images/blog/heroes/coriolis-flowmeter-replacement-rfq-process-signal-interfaces.webp",
-  imageAlt: "Concept cutaway of a dual-tube flow sensor, transmitter, pipeline flanges and enquiry documents.",
-  related: ["diaphragm-seal-pressure-instrument-rfq-complete-system", "industrial-filter-coalescer-rfq-duty-elements-pressure-drop", "pressure-gauge-calibration-certificate-buyers-guide"]
-},
-{
   slug: "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records",
   title: "Piping Spool Dimensional Inspection RFQs: Drawings, Tolerances and Records",
   short: "Define critical spool dimensions, drawing revisions, inspection stages and traceable handover evidence before comparing offers.",
@@ -45,10 +28,10 @@ export const blogPosts: BlogPost[] = [
   description: "Scope dimensional inspection for prefabricated piping spools with controlled drawings, datums, accepted tolerances, measurement records and deviation handling.",
   category: "inspection-testing",
   mainCategory: "inspection-material-quality",
-  dateModified: "2026-10-16",
+  dateModified: "2026-10-18",
   readTime: "7 min read",
-  date: "2026-10-16",
-  dateLabel: "16 October 2026",
+  date: "2026-10-18",
+  dateLabel: "18 October 2026",
   keywords: "piping spool dimensional inspection RFQ, spool fit up dimensions, pipe spool drawing tolerance report, fabricated spool handover records",
   image: "/images/blog/heroes/piping-spool-dimensional-inspection-rfq-drawings-tolerances-records.webp",
   imageAlt: "Concept illustration of a flanged piping spool beside an isometric drawing, caliper and measurement checklist.",
