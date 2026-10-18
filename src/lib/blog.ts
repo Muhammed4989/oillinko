@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records",
+  title: "Piping Spool Dimensional Inspection RFQs: Drawings, Tolerances and Records",
+  short: "Define critical spool dimensions, drawing revisions, inspection stages and traceable handover evidence before comparing offers.",
+  tagline: "Connect measured fit to the approved drawing and release decision.",
+  description: "Scope dimensional inspection for prefabricated piping spools with controlled drawings, datums, accepted tolerances, measurement records and deviation handling.",
+  category: "inspection-testing",
+  mainCategory: "inspection-material-quality",
+  dateModified: "2026-10-18",
+  readTime: "7 min read",
+  date: "2026-10-18",
+  dateLabel: "18 October 2026",
+  keywords: "piping spool dimensional inspection RFQ, spool fit up dimensions, pipe spool drawing tolerance report, fabricated spool handover records",
+  image: "/images/blog/heroes/piping-spool-dimensional-inspection-rfq-drawings-tolerances-records.webp",
+  imageAlt: "Concept illustration of a flanged piping spool beside an isometric drawing, caliper and measurement checklist.",
+  related: ["inspection-test-plans-hold-vs-witness-points", "wps-pqr-welder-qualifications-fabrication-rfq-checklist", "heat-number-traceability-mill-certificates"]
+},
+{
   "slug": "diaphragm-seal-pressure-instrument-rfq-complete-system",
   "title": "Diaphragm Seal Pressure Instrument RFQs: Define the Complete System",
   "short": "Specify the filled seal, mounting arrangement and pressure instrument as one assembly before comparing quotations.",
