@@ -41,10 +41,7 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Oil & gas equipment sourcing and procurement consultancy — head
-              office in Istanbul, Turkey, with regional offices in
-              Erbil and Amman, connecting buyers worldwide with
-              verified manufacturers.
+              Oil & gas equipment sourcing and procurement consultancy — office in Istanbul, Turkey. Proposed suppliers, availability and supporting evidence require review for each enquiry.
             </p>
           </div>
           {columns.map((col) => (
@@ -79,14 +76,6 @@ export default function Footer() {
                   {site.headOffice.phone}
                 </a>
               </li>
-              {site.offices.map((o) => (
-                <li key={o.city}>
-                  {o.city}:{" "}
-                  <a href={`tel:${o.phone.replace(/\s/g, "")}`} className="hover:text-foreground">
-                    {o.phone}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

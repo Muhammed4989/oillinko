@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Oillinko — international oil and gas equipment sourcing and procurement consultancy, head office in Istanbul, Turkey, with regional offices in Erbil and Amman.",
+    "Contact Oillinko — international oil and gas equipment sourcing and procurement consultancy, with its office in Istanbul, Turkey.",
   alternates: { canonical: "/contact" },
 };
 
@@ -22,12 +22,6 @@ const cards = [
     href: `tel:${site.headOffice.phone.replace(/\s/g, "")}`,
     hint: site.headOffice.country,
   },
-  ...site.offices.map((o) => ({
-    title: `${o.city} — ${o.label}`,
-    value: o.phone,
-    href: `tel:${o.phone.replace(/\s/g, "")}`,
-    hint: o.country,
-  })),
 ];
 
 export default function ContactPage() {
@@ -35,7 +29,7 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact Us"
-        subtitle="Have an equipment list, a project requirement, or a question about sourcing? We respond within 24 hours."
+        subtitle="Have an equipment list, a project requirement, or a question about sourcing? Send the details so we can review the scope and clarify the next steps."
       />
       <section className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -61,8 +55,8 @@ export default function ContactPage() {
           </h2>
           <p className="mt-3 text-lg font-semibold">{site.headOffice.address}</p>
           <p className="mt-1 text-sm text-muted">
-            Serving the global oil and gas market from Turkey, with regional
-            presence across the UK, the Middle East and beyond.
+            Serving international oil and gas buyers from our Istanbul office.
+            Sourcing and delivery scope are confirmed for each enquiry.
           </p>
         </div>
       </section>

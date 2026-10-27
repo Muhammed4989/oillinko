@@ -83,7 +83,6 @@ const organizationJsonLd = {
   telephone: site.headOffice.phone.replace(/\s/g, ""),
   address: {
     "@type": "PostalAddress",
-    streetAddress: site.headOffice.address,
     addressLocality: site.headOffice.city,
     addressCountry: "TR",
   },

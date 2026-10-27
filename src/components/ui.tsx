@@ -57,9 +57,7 @@ export function CtaBand() {
           Have a Bill of Quantities ready?
         </h2>
         <p className="max-w-2xl text-black/80">
-          Send us your BOQ or equipment list and get competitive offers from
-          suitable suppliers — reviewed against the technical specifications
-          your project requires.
+          Send your BOQ or equipment list to request offers for review against your specifications. Availability, supporting evidence and commercial terms need confirmation before an order is agreed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link

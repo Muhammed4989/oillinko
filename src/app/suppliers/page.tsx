@@ -3,16 +3,16 @@ import Link from "next/link";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Oil & Gas Equipment & Material Suppliers — Our Verified Network",
+  title: "Oil & Gas Equipment & Material Suppliers — Evidence and Qualification",
   description:
-    "How Oillinko qualifies oil and gas equipment and material suppliers: verified manufacturers across Türkiye, Europe, the Gulf and Asia, checked on real production capability, EN 10204 3.1 certificates, testing and welding qualifications, and export track record.",
+    "Review proposed oil and gas suppliers against project-specific requirements for production capability, certificates, testing, qualifications and delivery evidence.",
   alternates: { canonical: "/suppliers" },
 };
 
 const regions = [
   {
     title: "Türkiye",
-    text: "A key sourcing market, close to our regional office in Istanbul. Manufacturers there are competitive across flanges, fittings, fasteners, gaskets and specialized pipeline equipment — with short logistics lines to the Middle East, Caucasus and Europe.",
+    text: "A key sourcing market, where our Istanbul office is based. Manufacturers there are competitive across flanges, fittings, fasteners, gaskets and specialized pipeline equipment — with short logistics lines to the Middle East, Caucasus and Europe.",
   },
   {
     title: "Europe",
@@ -20,16 +20,16 @@ const regions = [
   },
   {
     title: "Gulf & Middle East",
-    text: "Regional suppliers experienced with the standards, documentation and delivery expectations of Middle Eastern oil and gas operators.",
+    text: "For proposed regional suppliers, request evidence of experience with the standards, documentation and delivery needs of your project.",
   },
   {
     title: "Asia",
-    text: "Cost-competitive production for non-critical items, selected only where factory quality and certificates can be verified.",
+    text: "Assess proposed production against your requirements, using factory evidence, applicable certificates and quoted commercial terms.",
   },
 ];
 
 const criteria = [
-  "Real production facility — verified, not just a trading website",
+  "Evidence of an actual production facility and relevant capability",
   "Material test certificates (EN 10204 Type 3.1) and traceability",
   "Testing capability: hydrostatic, dimensional, where applicable",
   "Welding qualifications per ASME Section IX where applicable",
@@ -42,10 +42,10 @@ export default function SuppliersPage() {
     <>
       <PageHeader
         title="Supplier Network"
-        subtitle="The quality of an offer depends on the quality of the factory behind it. We build and maintain a network of verified manufacturers."
+        subtitle="Evaluate the proposed factory and its evidence against your order requirements before approving an offer. Supplier status and availability need confirmation for each request."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <div className="mb-10 rounded-xl border border-line bg-white p-6 sm:p-8"><h2 className="text-xl font-bold">Explore companies across the global industry</h2><p className="mt-3 leading-relaxed text-muted">Browse our independent directory of equipment manufacturers, oilfield technology providers, engineering companies and energy operators by specialty.</p><Link href="/oil-and-gas/companies" className="mt-4 inline-block font-semibold text-accent underline">Explore the global company directory</Link></div>
+        <div className="mb-10 rounded-xl border border-line bg-white p-6 sm:p-8"><h2 className="text-xl font-bold">Explore companies across the global industry</h2><p className="mt-3 leading-relaxed text-muted">Browse our independent directory of equipment manufacturers, technology providers, engineering companies and energy operators by specialty. A directory entry does not confirm an Oillinko supplier relationship or availability for your request.</p><Link href="/oil-and-gas/companies" className="mt-4 inline-block font-semibold text-accent underline">Explore the global company directory</Link></div>
         <div className="grid gap-6 md:grid-cols-2">
           {regions.map((r) => (
             <div key={r.title} className="rounded-lg border border-line bg-oil-800 p-6">
@@ -56,7 +56,7 @@ export default function SuppliersPage() {
         </div>
 
         <div className="mt-14 rounded-lg border border-line bg-oil-800 p-6 sm:p-8">
-          <h2 className="text-xl font-bold">How we qualify a manufacturer</h2>
+          <h2 className="text-xl font-bold">Evidence to request before manufacturer approval</h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             {criteria.map((c) => (
               <li key={c} className="flex gap-3 text-sm leading-relaxed text-muted">

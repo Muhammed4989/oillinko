@@ -29,7 +29,7 @@ const steps = [
 const reasons = [
   {
     title: "Specs that hold up",
-    text: "Every quote is checked against your technical requirements — API, ANSI, ASME, ASTM — before it reaches you.",
+    text: "Review proposed offers against your requirements and identify missing evidence or deviations before an order is agreed.",
   },
   {
     title: "Supplier checks for your requirement",
@@ -40,8 +40,8 @@ const reasons = [
     text: "One point of contact for your sourcing inquiry, supplier follow-up and offer comparison. The quotation sets out the supply and delivery responsibilities.",
   },
   {
-    title: "Global network, regional reach",
-    text: "Head office in Istanbul, with regional offices in Erbil and Amman — fast, local access to markets and manufacturers worldwide.",
+    title: "Istanbul office, international enquiries",
+    text: "Our office is in Istanbul, Turkey. We review international sourcing enquiries and clarify proposed supply and delivery responsibilities for each request.",
   },
 ];
 
@@ -53,23 +53,23 @@ const faqs = [
   },
   {
     q: "Do you supply to our material certificates and standards?",
-    a: "Yes. Every item is sourced to the standard you specify — API, ANSI, ASME, ASTM — and pressure-containing parts are supplied with material certificates (typically EN 10204 Type 3.1) and hydrostatic / dimensional test reports where required.",
+    a: "Confirm applicable standards, editions, material certificates, testing and documentation in the written offer for each item. Availability and compliance need supporting supplier evidence before an order is agreed.",
   },
   {
     q: "Can you source our exact bill of quantities?",
-    a: "That is our core service. Send us your bill of quantities or equipment list — Excel, PDF or Word — and we turn it into a structured RFQ, check every offer against your specification, and return one consolidated, comparable quote.",
+    a: "Send your bill of quantities or equipment list — Excel, PDF or Word — for a structured RFQ. Offers can be compared against the specification, with missing documents, exclusions and deviations identified for your review.",
   },
   {
     q: "Can you supply small quantities and spares?",
-    a: "Yes. We regularly supply line pipe fittings, flanges, gaskets, stud bolts and stoppers in maintenance quantities — a few pieces or a few thousand. If it can be specified, it can be bundled and sourced.",
+    a: "Send the quantities and specifications you need. Availability, minimum order quantities, origin and lead time must be confirmed in the offer; a catalogue entry does not establish stock.",
   },
   {
     q: "How fast do you respond to an RFQ?",
-    a: "We respond within one business day to every request, confirming the specification review and the expected return of the consolidated offer. For urgent maintenance requirements, contact us directly by phone or email.",
+    a: "We review your requirements, ask for missing information and discuss the next steps. Quotation timing depends on the specification and supplier response. Include any required date in your enquiry; a submission does not confirm availability, delivery or order acceptance.",
   },
   {
     q: "Which countries and terms do you deliver to?",
-    a: "We ship worldwide from our manufacturing network across Europe, the Gulf and Asia, on the Incoterm you prefer — EXW, FOB, CFR, CIF or DAP. We manage export documentation and freight coordination to your site or port.",
+    a: "Tell us the destination and preferred delivery terms. Feasibility, the agreed Incoterm, documentation and freight responsibilities must be confirmed in the quotation.",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function HomePage() {
             <span className="text-accent">sourced right</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Send us your equipment or service requirements. From Istanbul, we review your specifications, find suitable suppliers and coordinate quotations across the oil and gas value chain.
+            Send us your equipment or service requirements. From Istanbul, we review your specifications and coordinate sourcing enquiries. Applicable standards and documentation must be agreed for each item; the examples below are requirements to discuss.
           </p>
           <CatalogueEntry />
           <div className="mt-6 flex flex-wrap gap-4">

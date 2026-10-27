@@ -37,7 +37,7 @@ export default async function RfqPage({ searchParams }: { searchParams: Promise<
             <a className="text-accent hover:underline" href={`tel:${site.headOffice.phone.replace(/\s/g, "")}`}>
               {site.headOffice.phone}
             </a>
-            . We aim to acknowledge your request within one business day.
+            . Include your specifications and requested timing so we can review the scope and clarify the next steps.
           </p>
         </div>
       </section>

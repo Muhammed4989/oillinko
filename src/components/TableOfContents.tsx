@@ -75,7 +75,10 @@ export default function TableOfContents({
     const el = document.getElementById(id);
     if (!el) return;
     const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
-    window.scrollTo({ top: y, behavior: "smooth" });
+    if (!el.hasAttribute("tabindex")) el.tabIndex = -1;
+    el.focus({ preventScroll: true });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: y, behavior: reducedMotion ? "auto" : "smooth" });
     window.history.pushState(null, "", `#${id}`);
     setActiveId(id);
   }

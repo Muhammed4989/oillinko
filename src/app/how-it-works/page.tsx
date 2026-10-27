@@ -4,7 +4,7 @@ import { CtaBand, PageHeader } from "@/components/ui";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How Oillinko procurement works: send your BOQ, we source and qualify offers from verified manufacturers, check specs, then manage inspection and delivery.",
+    "How Oillinko procurement works: send your BOQ, review proposed offers and supplier evidence, and agree inspection, documentation and delivery responsibilities.",
   alternates: { canonical: "/how-it-works" },
 };
 
@@ -22,22 +22,22 @@ const steps = [
   {
     n: "03",
     title: "Sourcing",
-    text: "We match every line item to qualified manufacturers in our network, prioritizing production capability, certificates and export experience.",
+    text: "We seek offers for the specified items and review proposed production capability, relevant certificates and experience. Availability remains subject to supplier confirmation.",
   },
   {
     n: "04",
     title: "Quotation & comparison",
-    text: "Suppliers return offers with pricing, lead times and technical documentation. We verify each offer against your specification and consolidate the results into one clear comparison.",
+    text: "Compare supplier pricing, lead times and supporting documents against your specification. Missing evidence and deviations need clarification before you approve an offer.",
   },
   {
     n: "05",
     title: "Order & inspection",
-    text: "Once you approve, we place the order and follow production. Quality inspection — hydrostatic testing, dimensional and material verification — takes place at the factory before dispatch.",
+    text: "Once the offer is approved, order follow-up and inspection proceed according to the agreed scope. The inspection plan should specify required tests, checks, records and responsibilities.",
   },
   {
     n: "06",
     title: "Documentation & delivery",
-    text: "We manage export documentation and freight, and hand over the full file: certificates, test reports and delivery documents.",
+    text: "Documentation and freight coordination follow the agreed commercial scope. Confirm the required certificates, test reports and delivery documents in the order before handover.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
     <>
       <PageHeader
         title="How It Works"
-        subtitle="A clear process from your equipment list to delivered, compliant equipment — with one point of contact throughout."
+        subtitle="A process from your equipment list to an agreed supply plan, with scope, evidence and responsibilities reviewed at each stage."
       />
       <section className="mx-auto max-w-4xl px-4 py-16">
         <div className="space-y-4">

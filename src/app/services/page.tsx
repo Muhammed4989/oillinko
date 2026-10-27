@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Sourcing & Procurement",
-    text: "We source oil and gas equipment — pipeline fittings, flanges, gaskets, stud bolts, hot tap and line stop equipment, valves and more — from qualified manufacturers that meet your specification and budget.",
+    text: "We help source oil and gas equipment, including pipeline fittings, flanges, gaskets, stud bolts, hot tap and line stop equipment and valves. Proposed manufacturer capability, conformance and commercial terms need review before agreement.",
   },
   {
     title: "RFQ & Tender Management",
@@ -20,15 +20,15 @@ const services = [
   },
   {
     title: "Technical Specification Review",
-    text: "Every quote is checked against your technical requirements — standards, material grades, schedules, class ratings and test requirements — so non-conforming offers are filtered out before they reach you.",
+    text: "Compare proposed offers with the required standards, material grades, schedules, ratings and tests. Missing evidence and deviations should be identified for the buyer’s decision.",
   },
   {
     title: "Supplier Qualification & Auditing",
-    text: "Manufacturers are qualified on evidence: factory capability, welding and testing facilities, certificates (EN 10204 Type 3.1), quality systems and export track record.",
+    text: "Supplier qualification requires evidence relevant to the order: production capability, applicable certificates, testing and welding qualifications, quality systems and track record.",
   },
   {
     title: "Quality Inspection (QC)",
-    text: "Hydrostatic testing, dimensional checks, material verification and document review — carried out at the factory before dispatch, with reports delivered to your side.",
+    text: "Agree the inspection, testing, witness points and reporting required for the order. The quotation and inspection plan should state what is included and who is responsible.",
   },
   {
     title: "Expediting & Logistics",
@@ -41,7 +41,7 @@ export default function ServicesPage() {
     <>
       <PageHeader
         title="Services"
-        subtitle="Everything between a bill of quantities and delivered, compliant equipment — handled by one accountable partner."
+        subtitle="Coordinate sourcing, specification review and the inspection and delivery scope agreed for your order."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <p className="mb-8 rounded-lg border border-line bg-white p-5 text-muted">Looking for inspection, calibration, repair, rental or field services? <Link className="font-semibold text-accent underline" href="/oil-and-gas/services">Browse specialist service requirements</Link> and send the scope to Oillinko.</p>

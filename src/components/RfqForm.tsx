@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import { site } from "@/lib/site";
 import { categories } from "@/lib/equipment";
 import { originCountries, sectors } from "@/lib/catalogue";
@@ -12,6 +12,7 @@ const emptyOrigin = () => "";
 
 export default function RfqForm({ initialCategory = "Multiple / full BOQ", initialItem = "", initialKind = "", initialOrigin = "", sourcePage = "/rfq" }: { initialCategory?: string; initialItem?: string; initialKind?: string; initialOrigin?: string; sourcePage?: string }) {
   const [status, setStatus] = useState<Status>("idle");
+  const pending = useRef(false);
   const [file, setFile] = useState<File | null>(null);
   const [category, setCategory] = useState(initialCategory);
   const [item, setItem] = useState(initialItem);
@@ -20,9 +21,14 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (pending.current || status === "success") return;
     const form = e.currentTarget;
+    if (!form.reportValidity()) return;
     const data = new FormData(form);
+    pending.current = true;
     setStatus("sending");
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
 
     try {
       const res = await fetch(
@@ -31,18 +37,17 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
           method: "POST",
           body: data,
           headers: { Accept: "application/json" },
+          signal: controller.signal,
         },
       );
       const result = await res.json();
-      if (!res.ok || (result.success !== true && result.success !== "true")) throw new Error("Request failed");
+      if (!res.ok || (result?.success !== true && result?.success !== "true")) throw new Error("Request failed");
       setStatus("success");
-      form.reset();
-      setFile(null);
-      setCategory(initialCategory);
-      setItem(initialItem);
-      setKind(initialKind);
     } catch {
       setStatus("error");
+    } finally {
+      window.clearTimeout(timeout);
+      pending.current = false;
     }
   }
 
@@ -50,7 +55,11 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
     "w-full rounded border border-line bg-oil-900 px-3 py-2.5 text-base text-foreground placeholder:text-muted focus:border-accent focus:outline-none";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <>
+    <p id="rfq-status" role="status" aria-live="polite" aria-atomic="true" className="sr-only">{status === "sending" ? "Sending your request." : status === "success" ? "The form service accepted your request for processing. This does not confirm delivery to the team’s inbox. Your entries remain in the form." : ""}</p>
+    <form onSubmit={handleSubmit} className="space-y-5" aria-busy={status === "sending"}>
+      <fieldset disabled={status === "sending" || status === "success"} className="min-w-0 space-y-5">
+      <legend className="sr-only">Your request for quotation</legend>
       <input type="hidden" name="_subject" value="New RFQ from oillinko.com" />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
@@ -155,26 +164,36 @@ export default function RfqForm({ initialCategory = "Multiple / full BOQ", initi
       </div>
 
       <button
-        type="submit"
-        disabled={status === "sending"}
+        type="submit" aria-describedby={status === "error" ? "rfq-error" : undefined}
+        disabled={status === "sending" || status === "success"}
         className="w-full rounded bg-accent px-6 py-3 font-semibold text-black transition-colors hover:bg-accent-hi disabled:opacity-60 sm:w-auto"
       >
-        {status === "sending" ? "Sending..." : "Submit Request"}
+        {status === "sending" ? "Sending..." : status === "success" ? "Request accepted" : "Submit Request"}
       </button>
+      </fieldset>
 
       {status === "success" && (
-        <p className="rounded border border-green-700 bg-green-50 px-4 py-3 text-sm text-green-800">
-          Thank you — your request has been sent. We aim to reply within one business day.
-        </p>
+        <div className="rounded border border-green-700 bg-green-50 px-4 py-3 text-sm text-green-800">
+          <p>The form service accepted your request for processing. This does not confirm delivery to the team&apos;s inbox. Your entries remain in the form so you can keep a copy until the team replies.</p>
+          <button type="button" className="mt-3 font-semibold underline" onClick={(event) => {
+            event.currentTarget.form?.reset();
+            setFile(null);
+            setCategory(initialCategory);
+            setItem(initialItem);
+            setKind(initialKind);
+            setStatus("idle");
+          }}>Start another request</button>
+        </div>
       )}
       {status === "error" && (
-        <p className="rounded border border-red-800 bg-red-50 px-4 py-3 text-sm text-red-800">
-          Something went wrong. Please email us directly at{" "}
+        <p id="rfq-error" role="alert" className="rounded border border-red-800 bg-red-50 px-4 py-3 text-sm text-red-800">
+          We could not confirm that your request was accepted. Your entries and attachment are still here. Resending may create a duplicate. You can contact us directly at{" "}
           <a className="underline" href={`mailto:${site.email}`}>
             {site.email}
           </a>
         </p>
       )}
     </form>
+    </>
   );
 }

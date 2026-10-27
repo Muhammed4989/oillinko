@@ -5,7 +5,7 @@ import { CtaBand, PageHeader } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Quality & Compliance",
   description:
-    "Oillinko enforces international standards — API, ANSI, ASME, ASTM — on every order: material certification, hydrostatic testing, weld compliance and full documentation.",
+    "Quality planning for oil and gas procurement: confirm applicable standards, material certification, testing, inspection and documentation for each proposed order.",
   alternates: { canonical: "/quality" },
 };
 
@@ -29,19 +29,19 @@ const standards = [
 const checks = [
   {
     title: "Material certification",
-    text: "Material test certificates (EN 10204 Type 3.1) are collected for every forgings, plate and fitting order — traceable from mill to delivered item.",
+    text: "Confirm the required material certificates and traceability for each item, including EN 10204 Type 3.1 where specified, and review the evidence against the order requirements.",
   },
   {
     title: "Hydrostatic testing",
-    text: "Fabricated items such as hot tap saddles are hydrostatically tested after fabrication, and stoppers are leak tested before supply.",
+    text: "Agree applicable pressure and leak testing, acceptance requirements and reporting before accepting the proposed supply. Testing must be supported by the records required for the order.",
   },
   {
     title: "Weld compliance",
-    text: "All welding follows qualified procedures per ASME Section IX, with documented welder qualifications where required.",
+    text: "Confirm applicable welding procedures, qualifications and records with the proposed supplier, including ASME Section IX where specified for the order.",
   },
   {
     title: "Dimensional verification",
-    text: "Flanges, fittings and gaskets are dimensionally verified against the applicable standard during factory inspection.",
+    text: "Define applicable dimensional standards, tolerances, inspection scope and records for the quoted items before order approval.",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function QualityPage() {
     <>
       <PageHeader
         title="Quality & Compliance"
-        subtitle="In the oil and gas industry, the certificate is part of the product. We make sure every item we source meets the standard your project requires."
+        subtitle="Review the evidence required for each item. Applicable standards, editions, inspection and documentation must be confirmed for the proposed order."
       />
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="relative mb-12 h-56 overflow-hidden rounded-lg border border-line sm:h-72" title="Industrial refinery at night">
@@ -74,7 +74,7 @@ export default function QualityPage() {
       </section>
       <section className="border-t border-line bg-oil-800">
         <div className="mx-auto max-w-6xl px-4 py-16">
-          <h2 className="text-2xl font-bold">Standards we work to</h2>
+          <h2 className="text-2xl font-bold">Standards to confirm for your project</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {standards.map((s) => (
               <div

@@ -230,6 +230,13 @@ export default function Page() {
           of a dosing error.
         </p>
 
+        <h2 id="pump-or-skid-scope" className="mt-12 text-xl font-bold">
+          Should the enquiry cover a pump or a complete chemical injection skid?
+        </h2>
+        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+          State whether you need a <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/pumps/metering-and-dosing-pumps">metering pump</Link> or a complete <Link className="text-accent hover:underline" href="/oil-and-gas/equipment/process-packages/chemical-injection-skids">chemical injection skid</Link>. For a pump enquiry, include minimum and maximum dosing rate, chemical concentration, discharge pressure, control signal and wetted-material requirements. For a skid enquiry, also define tank capacity, control and redundancy scope, and site interfaces. Ask the quotation to identify included items and exclusions; a catalogue description does not confirm package completeness or availability.
+        </p>
+
         <h2 id="what-to-check-on-rfq" className="mt-12 text-xl font-bold">
           What to check on an API 675 datasheet or RFQ
         </h2>

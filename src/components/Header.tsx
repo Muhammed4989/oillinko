@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "@/components/SiteImage";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -32,9 +32,16 @@ export function Logo() {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-oil-900/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line bg-oil-900/90 backdrop-blur" onKeyDown={(event) => {
+      if (event.key === "Escape" && open) {
+        event.preventDefault();
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    }}>
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Logo />
         <nav className="hidden items-center gap-4 text-sm text-muted lg:flex">
@@ -56,6 +63,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={open}
           aria-controls="mobile-navigation"
+          ref={toggleRef}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             {open ? (
@@ -67,7 +75,7 @@ export default function Header() {
         </button>
       </div>
       {open && (
-        <nav id="mobile-navigation" className="border-t border-line bg-oil-900 px-4 py-4 lg:hidden">
+        <nav id="mobile-navigation" className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-oil-900 px-4 py-4 lg:hidden">
           <div className="flex flex-col gap-3 text-muted">
             {nav.map((n) => (
               <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="hover:text-foreground">
