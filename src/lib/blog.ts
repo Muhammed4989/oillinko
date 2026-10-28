@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "hydrostatic-test-reports-boundary-acceptance-traceability",
+  "title": "Hydrostatic Test Reports: Boundary, Acceptance and Traceability",
+  "short": "Connect a pressure-test record to the exact item, approved boundary, measurement evidence and acceptance decision.",
+  "tagline": "Specify the evidence behind a pressure-tested claim.",
+  "category": "inspection-testing",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-10-28",
+  "readTime": "8 min read",
+  "date": "2026-10-28",
+  "dateLabel": "28 October 2026",
+  "description": "Review hydrostatic test reports using item identity, approved test boundaries, actual results, instrument records, acceptance references and handover scope.",
+  "keywords": "hydrostatic test report, pressure test documentation, test boundary drawing, pressure test acceptance records",
+  "image": "/images/blog/heroes/hydrostatic-test-reports-boundary-acceptance-traceability.webp",
+  "imageAlt": "Four document cards link item identity, approved test basis, recorded results and the review and release decision.",
+  "related": [
+    "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records",
+    "inspection-test-plans-hold-vs-witness-points",
+    "pressure-gauge-calibration-certificate-buyers-guide"
+  ]
+},
+{
   slug: "coriolis-flowmeter-replacement-rfq-process-signal-interfaces",
   title: "Coriolis Flowmeter Replacement RFQs: Process, Fit and Signal Interfaces",
   short: "Compare replacement meter offers against the measured duty, sensor and transmitter scope, piping fit and control-system signals.",
