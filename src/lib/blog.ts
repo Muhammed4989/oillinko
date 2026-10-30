@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "bearing-storage-receiving-records-shelf-life",
+  "title": "Bearing Storage Before Installation: Shelf Life and Receiving Records",
+  "short": "Connect a stored bearing to its package, date basis, custody history and receiving decision.",
+  "tagline": "Ask what the storage evidence supports before accepting a spare.",
+  "category": "pumps-rotating-equipment",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-30",
+  "readTime": "8 min read",
+  "date": "2026-10-30",
+  "dateLabel": "30 October 2026",
+  "description": "Specify bearing storage evidence before installation: lubrication and packaging scope, date interpretation, custody history, receiving exceptions and quotation review.",
+  "keywords": "bearing storage shelf life, bearing receiving records, bearing packaging storage history, spare bearing procurement",
+  "image": "/images/blog/heroes/bearing-storage-receiving-records-shelf-life.webp",
+  "imageAlt": "Four record cards connect bearing configuration, date basis, package history and the receiving review.",
+  "related": [
+    "replacement-bearing-rfq-full-designation-suffixes",
+    "export-packing-oil-gas-equipment-rfq",
+    "centrifugal-pump-spare-parts-rfq-identification"
+  ]
+},
+{
   "slug": "hydrostatic-test-reports-boundary-acceptance-traceability",
   "title": "Hydrostatic Test Reports: Boundary, Acceptance and Traceability",
   "short": "Connect a pressure-test record to the exact item, approved boundary, measurement evidence and acceptance decision.",
