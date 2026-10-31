@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "motor-ip-rating-vs-ex-certification-rfq",
+  "title": "Motor IP Ratings vs Ex Certification: What an RFQ Must Separate",
+  "short": "Keep enclosure protection and hazardous-area certification as separate evidence paths in a motor quotation.",
+  "tagline": "An IP marking does not replace the required Ex evidence.",
+  "category": "pumps-rotating-equipment",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-10-31",
+  "readTime": "8 min read",
+  "date": "2026-10-31",
+  "dateLabel": "31 October 2026",
+  "description": "Separate motor IP ratings from Ex certification in an RFQ: approved location requirements, exact product scope, certificate status, accessories and receiving records.",
+  "keywords": "motor IP rating vs Ex certification, hazardous area motor RFQ, IECEx certificate verification, electric motor enclosure protection",
+  "image": "/images/blog/heroes/motor-ip-rating-vs-ex-certification-rfq.webp",
+  "imageAlt": "Two evidence paths for motor enclosure protection and Ex certification meet at a review of the exact offered assembly.",
+  "related": [
+    "replacement-electric-motors-nameplate-interface-rfq-guide",
+    "electric-motor-rewinding-rfq-tests-data-acceptance-records",
+    "inspection-test-plans-hold-vs-witness-points"
+  ]
+},
+{
   "slug": "bearing-storage-receiving-records-shelf-life",
   "title": "Bearing Storage Before Installation: Shelf Life and Receiving Records",
   "short": "Connect a stored bearing to its package, date basis, custody history and receiving decision.",
