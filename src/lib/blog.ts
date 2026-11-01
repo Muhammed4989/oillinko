@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "hand-torque-tool-calibration-rfq-range-direction-records",
+  "title": "Hand Torque Tool Calibration RFQs: Range, Direction and Records",
+  "short": "Define the tool, measurement coverage and records before comparing a calibration service.",
+  "tagline": "A generic calibrated label does not define the evidence for a hand torque tool.",
+  "category": "inspection-testing",
+  "mainCategory": "inspection-material-quality",
+  "dateModified": "2026-11-01",
+  "readTime": "8 min read",
+  "date": "2026-11-01",
+  "dateLabel": "1 November 2026",
+  "description": "Prepare a hand torque tool calibration RFQ using exact tool identity, range, direction, ISO 6789 document scope, reported results and controlled return records.",
+  "keywords": "hand torque tool calibration RFQ, torque wrench calibration certificate, ISO 6789 calibration range direction, torque tool receiving records",
+  "image": "/images/blog/heroes/hand-torque-tool-calibration-rfq-range-direction-records.webp",
+  "imageAlt": "A hand torque tool evidence map connects tool identity, measurement coverage, reported results and the return review.",
+  "related": [
+    "controlled-bolting-services-rfq-handover-guide",
+    "iso-17025-laboratory-accreditation-scope-test-report",
+    "pressure-gauge-calibration-certificate-buyers-guide"
+  ]
+},
+{
   "slug": "motor-ip-rating-vs-ex-certification-rfq",
   "title": "Motor IP Ratings vs Ex Certification: What an RFQ Must Separate",
   "short": "Keep enclosure protection and hazardous-area certification as separate evidence paths in a motor quotation.",
