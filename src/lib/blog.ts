@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "rtj-gasket-rfq-ring-number-profile-material-hardness",
+  "title": "RTJ Gasket RFQs: Ring Number, Profile, Material and Hardness",
+  "short": "Match a ring-joint gasket enquiry to the approved groove and a traceable material requirement.",
+  "tagline": "A ring number is one field in a complete replacement requirement.",
+  "category": "gaskets-sealing",
+  "mainCategory": "oil-and-gas-equipment",
+  "dateModified": "2026-11-02",
+  "date": "2026-11-02",
+  "dateLabel": "2 November 2026",
+  "readTime": "8 min read",
+  "description": "Prepare an RTJ gasket RFQ with the complete ring designation, flange and groove reference, material and hardness evidence, proposed deviations and receiving records.",
+  "keywords": "RTJ gasket RFQ, ring joint gasket identification, R RX BX ring number, gasket material hardness documentation",
+  "image": "/images/blog/heroes/rtj-gasket-rfq-ring-number-profile-material-hardness.webp",
+  "imageAlt": "An RTJ enquiry record connects the complete ring designation, matching groove, material evidence and receiving review.",
+  "related": [
+    "gaskets-and-sealing-products-explained",
+    "spiral-wound-gasket-identification-rfq",
+    "heat-number-traceability-mill-certificates"
+  ]
+},
+{
   "slug": "hand-torque-tool-calibration-rfq-range-direction-records",
   "title": "Hand Torque Tool Calibration RFQs: Range, Direction and Records",
   "short": "Define the tool, measurement coverage and records before comparing a calibration service.",
