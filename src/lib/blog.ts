@@ -21,6 +21,27 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "pneumatic-actuator-air-demand-rfq-pressure-volume-time",
+  "title": "Pneumatic Actuator Air Demand: Pressure, Volume and Stroke Time in an RFQ",
+  "short": "Separate supply conditions, air consumed per movement and the complete package performance evidence.",
+  "tagline": "An air-pressure entry does not define a complete pneumatic utility requirement.",
+  "category": "valves-actuation",
+  "mainCategory": "oil-and-gas-equipment",
+  "date": "2026-11-03",
+  "dateModified": "2026-11-03",
+  "dateLabel": "3 November 2026",
+  "readTime": "8 min read",
+  "description": "Define pneumatic actuator air demand in an RFQ: supply pressure at the package, reference volume, stroke and cycle definitions, accessories and travel-time evidence.",
+  "keywords": "pneumatic actuator air consumption RFQ, actuator air demand per stroke, pneumatic valve actuator supply pressure, actuator stroke time evidence",
+  "image": "/images/blog/heroes/pneumatic-actuator-air-demand-rfq-pressure-volume-time.webp",
+  "imageAlt": "A pneumatic actuator enquiry separates available supply, air per movement and package travel-time evidence.",
+  "related": [
+    "valve-actuator-replacement-rfq-compatibility",
+    "solenoid-valve-rfq-differential-pressure-coil",
+    "inspection-test-plans-hold-vs-witness-points"
+  ]
+},
+{
   "slug": "rtj-gasket-rfq-ring-number-profile-material-hardness",
   "title": "RTJ Gasket RFQs: Ring Number, Profile, Material and Hardness",
   "short": "Match a ring-joint gasket enquiry to the approved groove and a traceable material requirement.",
