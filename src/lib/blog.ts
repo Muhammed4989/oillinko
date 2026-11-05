@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "iso-9001-certificate-verification-equipment-rfq",
+  title: "ISO 9001 Certificate Verification in an Equipment RFQ",
+  short: "Check the certified entity, scope and status without confusing system certification with item acceptance.",
+  tagline: "A valid management-system certificate is one part of a supplier and item evidence review.",
+  category: "supplier-selection-rfq",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-05",
+  dateModified: "2026-11-05",
+  dateLabel: "5 November 2026",
+  readTime: "8 min read",
+  description: "Verify an ISO 9001 certificate in an equipment RFQ: legal entity, scope, sites, issuer, accreditation and current status, plus separate product evidence.",
+  keywords: "ISO 9001 certificate verification supplier RFQ, equipment supplier quality certificate scope, verify certification body, management system vs product certificate",
+  image: "/images/train-refinery.jpg",
+  imageAlt: "Industrial equipment context for reviewing supplier quality-system and item-specific documents.",
+  related: ["how-to-evaluate-and-vet-an-equipment-trading-company", "en-10204-material-certificates-explained", "equipment-rfq-revision-control-bid-clarifications"]
+},
+{
   "slug": "pneumatic-actuator-air-demand-rfq-pressure-volume-time",
   "title": "Pneumatic Actuator Air Demand: Pressure, Volume and Stroke Time in an RFQ",
   "short": "Separate supply conditions, air consumed per movement and the complete package performance evidence.",
