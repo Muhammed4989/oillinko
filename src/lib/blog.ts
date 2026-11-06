@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "invoice-packing-list-origin-document-reconciliation",
+  title: "Commercial Invoice, Packing List and Origin Certificate: Reconcile an Equipment Shipment",
+  short: "Match the sale, physical packages and origin claim to the same final equipment.",
+  tagline: "Three shipment records answer different questions and should agree at item level.",
+  category: "logistics-delivery",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-06",
+  dateModified: "2026-11-06",
+  dateLabel: "6 November 2026",
+  readTime: "9 min read",
+  description: "Reconcile a commercial invoice, packing list and required certificate of origin for equipment shipments by line, package, serial number and revision.",
+  keywords: "commercial invoice packing list certificate of origin equipment, export document reconciliation RFQ, shipment packing list invoice mismatch",
+  image: "/images/blog/heroes/invoice-packing-list-origin-document-reconciliation.webp",
+  imageAlt: "Three linked document panels for invoice, packing list and origin review.",
+  related: ["export-packing-oil-gas-equipment-rfq", "country-of-origin-vs-dispatch-equipment-rfq", "consolidated-shipments-and-multi-vendor-orders"]
+},
+{
   slug: "iso-9001-certificate-verification-equipment-rfq",
   title: "ISO 9001 Certificate Verification in an Equipment RFQ",
   short: "Check the certified entity, scope and status without confusing system certification with item acceptance.",
