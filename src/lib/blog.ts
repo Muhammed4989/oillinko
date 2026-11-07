@@ -21,6 +21,22 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "iso-17025-laboratory-scope-test-report-equipment-rfq",
+  title: "ISO/IEC 17025 Laboratory Scope and Test Reports: An Equipment RFQ Guide",
+  short: "Verify the laboratory's current accredited activity and connect its report to the exact ordered item.",
+  tagline: "An accreditation certificate covers defined laboratory work, not every method or supplied product.",
+  category: "inspection-testing",
+  mainCategory: "inspection-material-quality",
+  date: "2026-11-07",
+  dateModified: "2026-11-07",
+  dateLabel: "7 November 2026",
+  readTime: "9 min read",
+  description: "Check ISO/IEC 17025 lab status and scope against an equipment RFQ, then trace the test or calibration report to the method, item and acceptance basis.",
+  keywords: "ISO IEC 17025 laboratory scope equipment RFQ, accredited test report verification, laboratory accreditation scope calibration test",
+  image: "/images/blog/heroes/iso-17025-laboratory-scope-test-report-equipment-rfq.webp",
+  imageAlt: "Diagram linking a laboratory scope, a specific test and the equipment report.",
+  related: ["pressure-gauge-calibration-certificate-buyers-guide", "iso-9001-certificate-verification-equipment-rfq", "en-10204-material-certificates-explained"]
+},{
   slug: "invoice-packing-list-origin-document-reconciliation",
   title: "Commercial Invoice, Packing List and Origin Certificate: Reconcile an Equipment Shipment",
   short: "Match the sale, physical packages and origin claim to the same final equipment.",
