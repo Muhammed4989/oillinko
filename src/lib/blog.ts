@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "pipeline-precommissioning-service-rfq-scope-handover",
+  title: "Pipeline Pre-commissioning Service RFQs: Scope, Boundaries and Handover",
+  short: "Compare cleaning, gauging, testing and drying offers using the same boundaries and deliverables.",
+  tagline: "A service list becomes a comparable quotation only when responsibilities and acceptance records are visible.",
+  category: "supplier-selection-rfq",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-08",
+  dateModified: "2026-11-08",
+  dateLabel: "8 November 2026",
+  readTime: "10 min read",
+  description: "Prepare a pipeline pre-commissioning service RFQ with clear line boundaries, activity scope, client/provider responsibilities, acceptance evidence and handover records.",
+  keywords: "pipeline pre commissioning companies RFQ, pipeline precommissioning service scope, cleaning gauging testing drying quotation, pipeline handover records",
+  image: "/images/blog/heroes/pipeline-precommissioning-service-rfq-scope-handover.webp",
+  imageAlt: "Comparison diagram connecting pipeline sections, activities, responsibilities and handover records.",
+  related: ["hydrostatic-test-reports-boundary-acceptance-traceability", "equipment-rfq-revision-control-bid-clarifications", "line-stopping-service-rfq-pipe-data-isolation-handover"]
+},
+{
   slug: "iso-17025-laboratory-scope-test-report-equipment-rfq",
   title: "ISO/IEC 17025 Laboratory Scope and Test Reports: An Equipment RFQ Guide",
   short: "Verify the laboratory's current accredited activity and connect its report to the exact ordered item.",
