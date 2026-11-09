@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "shell-tube-heat-exchanger-rfq-thermal-mechanical-code-basis",
+  title: "Shell-and-Tube Heat Exchanger RFQs: Duty, Code Basis and Evidence",
+  short: "Compare exchanger bids by process duty, mechanical construction and acceptance records.",
+  tagline: "A named code cannot replace a complete thermal and mechanical enquiry basis.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-09",
+  dateModified: "2026-11-09",
+  dateLabel: "9 November 2026",
+  readTime: "11 min read",
+  description: "Prepare a shell-and-tube heat exchanger RFQ with clear process cases, ASME/TEMA/API 660 applicability, mechanical interfaces, bid deviations and acceptance evidence.",
+  keywords: "shell and tube heat exchanger RFQ, heat exchanger datasheet, ASME heat exchanger code, TEMA 2026 edition, API 660 procurement",
+  image: "/images/blog/heroes/shell-tube-heat-exchanger-rfq-thermal-mechanical-code-basis.webp",
+  imageAlt: "Conceptual diagram connecting process duty, mechanical basis and acceptance records for a heat exchanger RFQ.",
+  related: ["pressure-vessels-tanks-and-heat-exchangers-explained", "replacement-heat-exchanger-tube-bundles-rfq", "third-party-inspection-tpi-oil-and-gas-equipment"]
+},
+{
   slug: "pipeline-precommissioning-service-rfq-scope-handover",
   title: "Pipeline Pre-commissioning Service RFQs: Scope, Boundaries and Handover",
   short: "Compare cleaning, gauging, testing and drying offers using the same boundaries and deliverables.",
