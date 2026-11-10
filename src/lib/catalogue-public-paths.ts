@@ -1246,5 +1246,26 @@ export const historicalCatalogueRedirects = [
   {
     "source": "/equipment/carbon-capture-energy-systems/geothermal-well-and-surface-equipment",
     "destination": "/oil-and-gas/equipment/carbon-capture-energy-systems/geothermal-well-and-surface-equipment"
+  },
+  // Legacy one-level catalogue URLs reported as 404 in Search Console (2026-11-10).
+  {
+    "source": "/equipment/gaskets",
+    "destination": "/oil-and-gas/equipment/gaskets-seals"
+  },
+  {
+    "source": "/equipment/flanges",
+    "destination": "/oil-and-gas/equipment/flanges-fittings-bolting"
+  },
+  {
+    "source": "/equipment/pipeline-fittings",
+    "destination": "/oil-and-gas/equipment/flanges-fittings-bolting"
+  },
+  {
+    "source": "/equipment/hot-tap-line-stop",
+    "destination": "/oil-and-gas/equipment/pipeline-intervention/hot-tapping-and-line-stopping"
+  },
+  {
+    "source": "/equipment/pipe-cutters",
+    "destination": "/oil-and-gas/equipment/tools-lifting-maintenance/welding-cutting-and-machining-tools"
   }
 ];
