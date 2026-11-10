@@ -3,9 +3,9 @@ import Link from "next/link";
 import { CtaBand, PageHeader } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Oil & Gas Equipment & Material Suppliers — Evidence and Qualification",
+  title: "Oil and Gas Industry Suppliers: How to Evaluate Them",
   description:
-    "Review proposed oil and gas suppliers against project-specific requirements for production capability, certificates, testing, qualifications and delivery evidence.",
+    "How to evaluate oil and gas material and equipment suppliers: the evidence to request on production capability, certificates, testing, qualifications and delivery.",
   alternates: { canonical: "/suppliers" },
 };
 
@@ -36,6 +36,35 @@ const criteria = [
   "Export experience with oil and gas buyers",
   "Consistent delivery performance and responsive communication",
 ];
+
+const faqs = [
+  {
+    q: "What do oil and gas industry suppliers provide?",
+    a: "Oil and gas industry suppliers provide equipment, materials and services to operators, contractors and EPC companies, for example pumps, valves, flanges, fittings, gaskets, pressure vessels, instrumentation and inspection services. What a supplier can actually deliver depends on its facility, approvals and the specification of each order.",
+  },
+  {
+    q: "How do you evaluate an oil and gas material supplier?",
+    a: "Compare the supplier evidence with the written requirement for the order: proof of the production facility, material test certificates such as EN 10204 Type 3.1 with traceability, testing capability, applicable welding qualifications and export or delivery history. Ask for these documents before approving an offer, and confirm availability and commercial terms for each request.",
+  },
+  {
+    q: "Does a directory listing mean a company is an Oillinko supplier?",
+    a: "No. The company directory is an independent reference. A directory entry does not confirm an Oillinko supplier relationship, stock or availability for your request.",
+  },
+  {
+    q: "How can I find suppliers for a specific oil and gas equipment list?",
+    a: "Send your bill of quantities or equipment list through the RFQ form. Oillinko, based in Istanbul, reviews the requirement and coordinates supplier enquiries; supplier status, specification, origin and availability are confirmed for each request.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 
 export default function SuppliersPage() {
   return (
@@ -76,6 +105,18 @@ export default function SuppliersPage() {
             ))}
           </ul>
         </div>
+        <div className="mt-14">
+          <h2 className="text-xl font-bold">Oil and gas supplier questions, answered</h2>
+          <div className="mt-5 space-y-4">
+            {faqs.map((f) => (
+              <div key={f.q} className="rounded-lg border border-line bg-oil-800 p-6">
+                <h3 className="text-base font-semibold">{f.q}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </section>
       <CtaBand />
     </>
