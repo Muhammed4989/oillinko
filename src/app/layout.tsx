@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: `${site.name} — Oil & Gas Equipment Sourcing & Procurement`,
     template: `%s | ${site.name}`,
   },
-  description: site.description,
+  description: site.metaDescription,
   keywords: [
     "oil and gas equipment supplier",
     "oil and gas equipment procurement",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: site.name,
     title: `${site.name} — Oil & Gas Equipment Sourcing & Procurement`,
-    description: site.description,
+    description: site.metaDescription,
     url: site.domain,
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — Oil & Gas Equipment Sourcing & Procurement`,
-    description: site.description,
+    description: site.metaDescription,
     images: ["/images/refinery-hazy-unsplash.jpg"],
   },
   robots: {

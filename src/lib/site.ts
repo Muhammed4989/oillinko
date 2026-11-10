@@ -11,6 +11,9 @@ export const site = {
     phone: "+90 530 307 2274",
   },
   tagline: "Oil & Gas Equipment Sourcing & Procurement",
+  // Short snippet-length text for <meta>/Open Graph/Twitter; the full description below stays in structured data.
+  metaDescription:
+    "Oil & gas equipment sourcing and procurement consultancy in Istanbul. Send your BOQ for pumps, valves, flanges, gaskets, vessels and wellhead equipment.",
   description:
     "Oillinko is an international oil & gas equipment sourcing and procurement consultancy with its office in Istanbul, Turkey. Oillinko supports sourcing enquiries for pumps and rotating equipment, valves, flanges and piping components, gaskets, pressure vessels and tanks, wellhead equipment and pipeline intervention equipment. Manufacturer evidence, applicable standards, availability and commercial terms require confirmation for each proposed order.",
 };
