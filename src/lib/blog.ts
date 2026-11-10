@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "third-party-inspector-credential-verification-rfq-scope",
+  title: "Third-Party Inspector Credentials: Verify the Person and Scope",
+  short: "Match the named inspector, current credential and body scope to each assigned task.",
+  tagline: "A certificate acronym is useful only when it fits the actual inspection assignment.",
+  category: "inspection-testing",
+  mainCategory: "inspection-material-quality",
+  date: "2026-11-10",
+  dateModified: "2026-11-10",
+  dateLabel: "10 November 2026",
+  readTime: "11 min read",
+  description: "Prepare a third-party inspection RFQ by verifying each assigned person's API, NDT or welding credential, the inspection body's scope and the accepted report.",
+  keywords: "third party inspector certification verification, API inspector status verification, NDT personnel qualification RFQ, welding inspector credential, inspection body scope",
+  image: "/images/blog/heroes/third-party-inspector-credential-verification-rfq-scope.webp",
+  imageAlt: "Conceptual matrix linking an inspection assignment, verifiable credential and accepted record.",
+  related: ["third-party-inspection-tpi-oil-and-gas-equipment", "inspection-test-plans-hold-vs-witness-points", "iso-17025-laboratory-scope-test-report-equipment-rfq"]
+},
+{
   slug: "shell-tube-heat-exchanger-rfq-thermal-mechanical-code-basis",
   title: "Shell-and-Tube Heat Exchanger RFQs: Duty, Code Basis and Evidence",
   short: "Compare exchanger bids by process duty, mechanical construction and acceptance records.",
