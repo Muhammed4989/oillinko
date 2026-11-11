@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area",
+  title: "Pressure Transmitter Replacement RFQs: Range, HART and Area Marking",
+  short: "Compare replacement transmitters against the installed range, signal, HART revision and hazardous-area data.",
+  tagline: "A matching model family is not proof that a replacement fits the loop and the location.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-11",
+  dateModified: "2026-11-11",
+  dateLabel: "11 November 2026",
+  readTime: "9 min read",
+  description: "Prepare a pressure transmitter replacement RFQ with installed nameplate data, calibrated range versus sensor limits, HART revision, loop power and hazardous-area certificate checks.",
+  keywords: "pressure transmitter replacement RFQ, transmitter range limit minimum span, HART revision 5 7 transmitter, ATEX IECEx transmitter certificate, pressure transmitter datasheet",
+  image: "/images/blog/heroes/pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area.webp",
+  imageAlt: "Conceptual matrix linking installed transmitter data, range and signal, and area marking checks for a replacement RFQ.",
+  related: ["diaphragm-seal-pressure-instrument-rfq-complete-system", "pressure-gauge-calibration-certificate-buyers-guide", "motor-ip-rating-vs-ex-certification-rfq"]
+},
+{
   slug: "third-party-inspector-credential-verification-rfq-scope",
   title: "Third-Party Inspector Credentials: Verify the Person and Scope",
   short: "Match the named inspector, current credential and body scope to each assigned task.",
