@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "asme-b16-34-valve-pressure-class-material-group-rfq-guide",
+  title: "ASME B16.34 Valve Ratings: Class, Material and Temperature in an RFQ",
+  short: "A class number is not a full rating: state body material, design temperature and end connection in the valve RFQ.",
+  tagline: "Read the rating for the quoted body material at the design temperature, not just the class label.",
+  category: "valves-actuation",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-12",
+  dateModified: "2026-11-12",
+  dateLabel: "12 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a valve RFQ under ASME B16.34: design pressure and temperature, body material group, end connection, mating flange class and the rating basis bidders must confirm.",
+  keywords: "ASME B16.34 valve rating, valve pressure class material group, valve pressure temperature rating RFQ, valve vs flange class, valve replacement RFQ",
+  image: "/images/blog/heroes/asme-b16-34-valve-pressure-class-material-group-rfq-guide.webp",
+  imageAlt: "Conceptual diagram linking design data, valve rating and mating flange checks in a valve RFQ.",
+  related: ["api-598-vs-iso-5208-valve-testing-buyers-guide", "asme-b16-5-flange-pressure-classes", "valves-and-actuation-explained"]
+},
+{
   slug: "pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area",
   title: "Pressure Transmitter Replacement RFQs: Range, HART and Area Marking",
   short: "Compare replacement transmitters against the installed range, signal, HART revision and hazardous-area data.",
