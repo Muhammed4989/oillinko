@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "stud-bolt-nut-rfq-astm-a193-a194-grade-coating-length-records",
+  title: "Stud Bolt and Nut RFQs: ASTM A193 and A194 Grade, Coating and Length",
+  short: "\"B7 and 2H\" is shorthand, not an order: specify bolt grade, nut grade, size, length, coating and records.",
+  tagline: "Turn bolting shorthand into five checkable RFQ lines.",
+  category: "piping-flanges-fittings",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-13",
+  dateModified: "2026-11-13",
+  dateLabel: "13 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a flange stud bolt and nut RFQ: ASTM A193 bolt grade, A194 nut grade, thread and length, coating, sour-service hardness and the certificates to request.",
+  keywords: "ASTM A193 B7 stud bolts, ASTM A194 2H nuts, stud bolt RFQ, B7M sour service bolting, flange bolting specification, stud bolt length",
+  image: "/images/blog/heroes/stud-bolt-nut-rfq-astm-a193-a194-grade-coating-length-records.webp",
+  imageAlt: "Diagram showing the five parts of a stud bolt and nut RFQ: bolt grade, nut grade, size and length, coating, and records.",
+  related: ["flanges-gaskets-and-bolting", "controlled-bolting-services-rfq-handover-guide", "asme-b16-5-flange-pressure-classes"]
+},
+{
   slug: "asme-b16-34-valve-pressure-class-material-group-rfq-guide",
   title: "ASME B16.34 Valve Ratings: Class, Material and Temperature in an RFQ",
   short: "A class number is not a full rating: state body material, design temperature and end connection in the valve RFQ.",
