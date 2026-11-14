@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "butt-weld-fitting-rfq-asme-b16-9-schedule-wall-thickness-end-prep",
+  title: "Butt-Weld Fitting RFQs: ASME B16.9 Type, Schedule and End Preparation",
+  short: "\"6-inch Sch 40 elbow\" is not a full line: add material, wall at the weld end, end preparation and records.",
+  tagline: "Match every butt-weld fitting to the pipe it will be welded to.",
+  category: "piping-flanges-fittings",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-14",
+  dateModified: "2026-11-14",
+  dateLabel: "14 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a butt-weld elbow, tee, reducer or cap RFQ: ASME B16.9 type and size, wall thickness at the weld end, material and seamless or welded construction, bevel end preparation and certificates.",
+  keywords: "ASME B16.9 butt weld fittings, butt weld elbow RFQ, pipe fitting schedule wall thickness, butt weld end preparation, seamless vs welded fittings, pipe fitting material certificate",
+  image: "/images/blog/heroes/butt-weld-fitting-rfq-asme-b16-9-schedule-wall-thickness-end-prep.webp",
+  imageAlt: "Diagram showing the five parts of a butt-weld fitting RFQ: type and size, wall thickness, material, end preparation and records.",
+  related: ["pipeline-fittings-and-schedules", "api-5l-line-pipe-rfq-grade-psl-dimensions-records", "heat-number-traceability-mill-certificates"]
+},
+{
   slug: "stud-bolt-nut-rfq-astm-a193-a194-grade-coating-length-records",
   title: "Stud Bolt and Nut RFQs: ASTM A193 and A194 Grade, Coating and Length",
   short: "\"B7 and 2H\" is shorthand, not an order: specify bolt grade, nut grade, size, length, coating and records.",
