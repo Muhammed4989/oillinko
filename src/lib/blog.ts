@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "api-6d-iso-14313-pipeline-valve-rfq-type-bore-qsl-actuation-records",
+  title: "API 6D and ISO 14313 Pipeline Valve RFQs: Type, Bore, QSL and Records",
+  short: "\"API 6D ball valve\" is not a full line: add edition, bore, quality level, actuation and records.",
+  tagline: "Name the edition and quality level so every bidder quotes the same valve.",
+  category: "valves-actuation",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-16",
+  dateModified: "2026-11-16",
+  dateLabel: "16 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a pipeline valve RFQ under API 6D and ISO 14313: edition, valve type and ends, bore and pigging, QSL level, actuator and bolting scope, and the records bidders must supply.",
+  keywords: "API 6D valve RFQ, ISO 14313 pipeline valves, API 6D 25th edition QSL, trunnion ball valve specification, pipeline valve full bore pigging, API 6DX actuator",
+  image: "/images/blog/heroes/api-6d-iso-14313-pipeline-valve-rfq-type-bore-qsl-actuation-records.webp",
+  imageAlt: "Diagram showing the five parts of a pipeline valve RFQ: standard edition, valve type, bore, quality level and records.",
+  related: ["asme-b16-34-valve-pressure-class-material-group-rfq-guide", "api-598-vs-iso-5208-valve-testing-buyers-guide", "valve-actuator-replacement-rfq-compatibility"]
+},
+{
   slug: "butt-weld-fitting-rfq-asme-b16-9-schedule-wall-thickness-end-prep",
   title: "Butt-Weld Fitting RFQs: ASME B16.9 Type, Schedule and End Preparation",
   short: "\"6-inch Sch 40 elbow\" is not a full line: add material, wall at the weld end, end preparation and records.",
