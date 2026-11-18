@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "well-intervention-services-rfq-wireline-slickline-coiled-tubing-scope",
+  title: "Well Intervention Service RFQs: Wireline, Slickline and Coiled Tubing Scope",
+  short: "Define the well data, objective, conveyance method, barrier responsibility and handover records before comparing intervention offers.",
+  tagline: "A well intervention quotation is only comparable when the well, method and responsibilities are written down.",
+  category: "supplier-selection-rfq",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "7 min read",
+  description: "How to prepare a well intervention services RFQ: well data, objective, slickline, wireline or coiled tubing method, barrier and pressure-control responsibility, equipment evidence and handover records.",
+  keywords: "well intervention services RFQ, wireline slickline coiled tubing services, well intervention scope, coiled tubing API RP 5C7, intervention contractor quotation comparison",
+  image: "/images/blog/heroes/well-intervention-services-rfq-wireline-slickline-coiled-tubing-scope.webp",
+  imageAlt: "Diagram showing a well intervention RFQ built from well data, objective, conveyance method, barriers and handover records.",
+  related: ["wellhead-and-christmas-tree-equipment-explained","pipeline-precommissioning-service-rfq-scope-handover","inspection-test-plans-hold-vs-witness-points"]
+},
+{
   slug: "api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records",
   title: "API 650 Storage Tank RFQs: Data Sheet, Design Basis, Foundation and Records",
   short: "\"API 650 tank\" is not a full enquiry: complete the data sheet, fix the design basis and assign the foundation.",
