@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "wellhead-decommissioning-well-abandonment-service-rfq-scope-regulator-records",
+  title: "Wellhead Decommissioning and Well Abandonment Service RFQs: Scope, Regulator Basis and Records",
+  short: "Name the governing rules, well condition, scope boundary, wellhead removal method and records before comparing decommissioning offers.",
+  tagline: "A decommissioning quotation is comparable only when the rule set and the scope boundary are explicit.",
+  category: "supplier-selection-rfq",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "7 min read",
+  description: "Prepare a wellhead decommissioning and well abandonment service RFQ: governing rules, well condition, scope split, wellhead and casing removal, contractor evidence and handover records.",
+  keywords: "wellhead decommissioning RFQ, well abandonment services, well plug and abandonment scope, wellhead removal contractor, well decommissioning guidelines",
+  image: "/images/blog/heroes/wellhead-decommissioning-well-abandonment-service-rfq-scope-regulator-records.webp",
+  imageAlt: "Diagram showing a wellhead decommissioning RFQ built from regulator basis, well condition, scope split, wellhead removal and records.",
+  related: ["well-intervention-services-rfq-wireline-slickline-coiled-tubing-scope","wellhead-and-christmas-tree-equipment-explained","heat-number-traceability-mill-certificates"]
+},
+{
   slug: "well-intervention-services-rfq-wireline-slickline-coiled-tubing-scope",
   title: "Well Intervention Service RFQs: Wireline, Slickline and Coiled Tubing Scope",
   short: "Define the well data, objective, conveyance method, barrier responsibility and handover records before comparing intervention offers.",
