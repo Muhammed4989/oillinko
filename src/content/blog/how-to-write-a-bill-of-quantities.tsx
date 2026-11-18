@@ -127,7 +127,8 @@ export default function BoqGuide() {
         </p>
 
         <Faq faqs={faqs} />
-      </Prose>
+        <p className="mt-6 text-sm leading-relaxed text-muted sm:text-base">If your quantities come from an engineering MTO rather than a hand-built schedule, see the <Link className="text-accent hover:underline" href="/blog/category/oil-and-gas-procurement/supplier-selection-rfq/bulk-piping-material-rfq-mto-piping-class-allowances-equivalent-offers">bulk piping material RFQ guide</Link> for piping class, allowances and equivalent-offer rules.</p>
+    </Prose>
       <RelatedPosts post={post} />
       <JsonLd data={[articleJsonLd(post), breadcrumbJsonLd(post), faqJsonLd(faqs)]} />
       <CtaBand />

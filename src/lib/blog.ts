@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "bulk-piping-material-rfq-mto-piping-class-allowances-equivalent-offers",
+  title: "Bulk Piping Material RFQs from an MTO: Piping Class, Allowances and Equivalent Offers",
+  short: "Turn an MTO into a quotable enquiry with piping class on every line, stated allowances and clear rules for equivalent offers.",
+  tagline: "An MTO list becomes comparable only when class, quantity basis and substitution rules travel with it.",
+  category: "supplier-selection-rfq",
+  mainCategory: "oil-and-gas-procurement",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "7 min read",
+  description: "How to turn a piping MTO into an RFQ for oil and gas material suppliers: piping class per line, complete item descriptions, allowances and spares, equivalent offers, partial awards and revision control.",
+  keywords: "oil and gas material suppliers RFQ, piping MTO RFQ, piping class material specification, bulk piping materials enquiry, equivalent material offers, material take-off procurement",
+  image: "/images/blog/heroes/bulk-piping-material-rfq-mto-piping-class-allowances-equivalent-offers.webp",
+  imageAlt: "Diagram showing a bulk material RFQ built from MTO lines, piping class, allowances, equivalent offers and documents.",
+  related: ["how-to-write-a-bill-of-quantities","partial-awards-equipment-rfq-package-line-item-offers","pipeline-fittings-and-schedules"]
+},
+{
   slug: "wellhead-decommissioning-well-abandonment-service-rfq-scope-regulator-records",
   title: "Wellhead Decommissioning and Well Abandonment Service RFQs: Scope, Regulator Basis and Records",
   short: "Name the governing rules, well condition, scope boundary, wellhead removal method and records before comparing decommissioning offers.",
