@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records",
+  title: "API 650 Storage Tank RFQs: Data Sheet, Design Basis, Foundation and Records",
+  short: "\"API 650 tank\" is not a full enquiry: complete the data sheet, fix the design basis and assign the foundation.",
+  tagline: "Send a completed data sheet so every bidder quotes the same tank.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "7 min read",
+  description: "What to put in an API 650 storage tank RFQ: edition and data sheet, design basis and corrosion allowance, foundation responsibility, fabrication and test scope, and the records bidders must supply.",
+  keywords: "API 650 tank RFQ, welded storage tank data sheet, API 650 13th edition, storage tank foundation responsibility, tank corrosion allowance, atmospheric storage tank specification",
+  image: "/images/blog/heroes/api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records.webp",
+  imageAlt: "Diagram showing the five parts of a storage tank RFQ: data sheet, design basis, foundation, fabrication and records.",
+  related: ["pressure-vessels-tanks-and-heat-exchangers-explained", "hydrostatic-test-reports-boundary-acceptance-traceability", "coating-dft-inspection-reports-buyers-guide"]
+},
+{
   slug: "api-6d-iso-14313-pipeline-valve-rfq-type-bore-qsl-actuation-records",
   title: "API 6D and ISO 14313 Pipeline Valve RFQs: Type, Bore, QSL and Records",
   short: "\"API 6D ball valve\" is not a full line: add edition, bore, quality level, actuation and records.",
