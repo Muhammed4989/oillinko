@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "oil-gas-separator-rfq-api-12j-process-data-internals-vessel-records",
+  title: "Oil and Gas Separator RFQs: API 12J, Process Data, Internals and Vessel Records",
+  short: "Give bidders a process data sheet, vessel basis, internals list, connections and record requirements so separator quotations match.",
+  tagline: "\"Three-phase separator, 10,000 bpd\" is not a quotable enquiry.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "7 min read",
+  description: "What to include in an oil and gas separator RFQ: API Spec 12J and RP 12J context, process data sheet, vessel design basis, internals, nozzles and instruments, relief devices and handover records.",
+  keywords: "oil and gas separator RFQ, API 12J separator specification, three-phase separator data sheet, separator internals, production separator procurement, separator vessel records",
+  image: "/images/blog/heroes/oil-gas-separator-rfq-api-12j-process-data-internals-vessel-records.webp",
+  imageAlt: "Diagram showing a separator RFQ built from process data, vessel basis, internals, connections and records.",
+  related: ["pressure-vessels-tanks-and-heat-exchangers-explained","industrial-filter-coalescer-rfq-duty-elements-pressure-drop","api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records"]
+},
+{
   slug: "api-5ct-casing-tubing-rfq-grade-psl-connection-length-records",
   title: "API 5CT Casing and Tubing RFQs: Grade, PSL, Connection, Length and Records",
   short: "Specify edition, size, grade, PSL, connection, supplementary tests and records so casing and tubing quotations compare like for like.",
