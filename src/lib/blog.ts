@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "api-5ct-casing-tubing-rfq-grade-psl-connection-length-records",
+  title: "API 5CT Casing and Tubing RFQs: Grade, PSL, Connection, Length and Records",
+  short: "Specify edition, size, grade, PSL, connection, supplementary tests and records so casing and tubing quotations compare like for like.",
+  tagline: "\"7 in. casing, P110\" is a start, not an enquiry.",
+  category: "wellhead-production-equipment",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-18",
+  dateModified: "2026-11-18",
+  dateLabel: "18 November 2026",
+  readTime: "8 min read",
+  description: "What to put in an API 5CT casing and tubing RFQ: specification edition, size and grade, PSL, connections and threads, sour-service and supplementary requirements, inspection records and monogram verification.",
+  keywords: "API 5CT casing tubing RFQ, OCTG procurement, casing grade PSL, premium connection enquiry, API 5CT edition, oil country tubular goods quotation",
+  image: "/images/blog/heroes/api-5ct-casing-tubing-rfq-grade-psl-connection-length-records.webp",
+  imageAlt: "Diagram showing a casing and tubing RFQ built from specification, size and grade, connection, service requirements and records.",
+  related: ["api-6a-psl-pr-levels-wellhead-equipment-buyers-guide","api-5l-line-pipe-rfq-grade-psl-dimensions-records","nace-mr0175-iso-15156-sour-service-buyers-guide"]
+},
+{
   slug: "bulk-piping-material-rfq-mto-piping-class-allowances-equivalent-offers",
   title: "Bulk Piping Material RFQs from an MTO: Piping Class, Allowances and Equivalent Offers",
   short: "Turn an MTO into a quotable enquiry with piping class on every line, stated allowances and clear rules for equivalent offers.",
