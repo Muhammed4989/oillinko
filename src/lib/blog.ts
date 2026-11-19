@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "pressure-relief-valve-testing-repair-service-rfq-as-received-vr-records",
+  title: "Pressure Relief Valve Testing and Repair Service RFQs: As-Received Test, VR Repair and Records",
+  short: "List each valve, decide on an as-received test, define repair scope and accreditation, and require per-valve records before comparing bids.",
+  tagline: "\"Overhaul and recertify 40 PSVs\" leaves every cost driver open.",
+  category: "maintenance-repair",
+  mainCategory: "oil-and-gas-services",
+  date: "2026-11-19",
+  dateModified: "2026-11-19",
+  dateLabel: "19 November 2026",
+  readTime: "7 min read",
+  description: "Prepare a pressure relief valve testing and repair service RFQ: valve list, as-received test, repair scope, API 576 and API 527 context, National Board VR accreditation and per-valve records.",
+  keywords: "pressure relief valve repair RFQ, PSV testing service, as-received test relief valve, National Board VR repair, API 527 seat tightness, PSV recertification quotation",
+  image: "/images/blog/heroes/pressure-relief-valve-testing-repair-service-rfq-as-received-vr-records.webp",
+  imageAlt: "Diagram showing a relief valve service RFQ built from valve list, as-received test, repair scope, accreditation and records.",
+  related: ["api-526-pressure-relief-valves-rfq-guide","control-valve-repair-rfq-scope-tests-reports","rupture-disc-replacement-rfq-burst-temperature-holder"]
+},
+{
   slug: "pig-launcher-receiver-rfq-pipeline-data-closure-interlock-records",
   title: "Pig Launcher and Receiver RFQs: Pipeline Data, Closure, Interlock and Records",
   short: "\"One pig launcher\" is not a full enquiry: fix the pipeline data, closure interlock and code basis before comparing bids.",
