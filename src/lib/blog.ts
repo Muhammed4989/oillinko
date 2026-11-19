@@ -38,6 +38,23 @@ export const blogPosts: BlogPost[] = [
   related: ["hot-tapping-and-line-stopping", "api-6d-iso-14313-pipeline-valve-rfq-type-bore-qsl-actuation-records", "pipeline-precommissioning-service-rfq-scope-handover"]
 },
 {
+  slug: "orifice-plate-meter-run-rfq-iso-5167-aga-3-process-data-records",
+  title: "Orifice Plate and Meter Run RFQs: ISO 5167, AGA 3, Process Data and Records",
+  short: "Name the measurement standard, process data, plate and holder, installation and records so orifice quotations match.",
+  tagline: "\"4 in. orifice plate, 300#\" does not define a flow measurement.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-19",
+  dateModified: "2026-11-19",
+  dateLabel: "19 November 2026",
+  readTime: "7 min read",
+  description: "What to include in an orifice plate and meter run RFQ: ISO 5167 and AGA 3 context, process data, plate and holder specification, straight-run and installation scope, and inspection and calibration records.",
+  keywords: "orifice plate RFQ, meter run specification, ISO 5167 orifice, AGA Report 3 API MPMS 14.3, differential pressure flow element procurement, orifice plate data sheet",
+  image: "/images/blog/heroes/orifice-plate-meter-run-rfq-iso-5167-aga-3-process-data-records.webp",
+  imageAlt: "Diagram showing an orifice plate RFQ built from standard, process data, plate and holder, installation and records.",
+  related: ["coriolis-flowmeter-replacement-rfq-process-signal-interfaces","pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area","thermowell-rfq-wake-frequency-process-data"]
+},
+{
   slug: "oil-gas-separator-rfq-api-12j-process-data-internals-vessel-records",
   title: "Oil and Gas Separator RFQs: API 12J, Process Data, Internals and Vessel Records",
   short: "Give bidders a process data sheet, vessel basis, internals list, connections and record requirements so separator quotations match.",
