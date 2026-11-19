@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "pig-launcher-receiver-rfq-pipeline-data-closure-interlock-records",
+  title: "Pig Launcher and Receiver RFQs: Pipeline Data, Closure, Interlock and Records",
+  short: "\"One pig launcher\" is not a full enquiry: fix the pipeline data, closure interlock and code basis before comparing bids.",
+  tagline: "Give bidders the pipeline data and closure requirements so every trap is quoted on the same basis.",
+  category: "pipeline-intervention",
+  mainCategory: "oil-and-gas-services",
+  date: "2026-11-19",
+  dateModified: "2026-11-19",
+  dateLabel: "19 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a pig launcher or receiver RFQ: pipeline data, trap layout, closure type and pressure-safety interlock, governing code basis, protection items and the records bidders must supply.",
+  keywords: "pig launcher RFQ, pig receiver specification, pig trap closure interlock, pig trap ASME B31.4 B31.8, scraper trap procurement, pipeline pig trap records",
+  image: "/images/blog/heroes/pig-launcher-receiver-rfq-pipeline-data-closure-interlock-records.webp",
+  imageAlt: "Diagram showing the five parts of a pig trap RFQ: pipeline data, layout, closure, code basis and records.",
+  related: ["hot-tapping-and-line-stopping", "api-6d-iso-14313-pipeline-valve-rfq-type-bore-qsl-actuation-records", "pipeline-precommissioning-service-rfq-scope-handover"]
+},
+{
   slug: "oil-gas-separator-rfq-api-12j-process-data-internals-vessel-records",
   title: "Oil and Gas Separator RFQs: API 12J, Process Data, Internals and Vessel Records",
   short: "Give bidders a process data sheet, vessel basis, internals list, connections and record requirements so separator quotations match.",
@@ -466,7 +483,7 @@ export const blogPosts: BlogPost[] = [
   keywords: "line stopping service RFQ, line stop isolation scope, pipeline intervention pipe data, line plugging quotation requirements",
   image: "/images/blog/heroes/line-stopping-service-rfq-pipe-data-isolation-handover.webp",
   imageAlt: "Concept illustration of a pipeline connection beside an isometric drawing, measurement tool and blank review checklist.",
-  related: ["hot-tapping-and-line-stopping", "inspection-test-plans-hold-vs-witness-points", "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records"]
+  related: ["hot-tapping-and-line-stopping", "inspection-test-plans-hold-vs-witness-points", "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records", "pig-launcher-receiver-rfq-pipeline-data-closure-interlock-records"]
 },
 {
   slug: "piping-spool-dimensional-inspection-rfq-drawings-tolerances-records",
