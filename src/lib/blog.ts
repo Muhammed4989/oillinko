@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "hydrostatic-pressure-test-service-rfq-boundary-medium-gauges-records",
+  title: "Hydrostatic Pressure Test Service RFQs: Boundary, Medium, Gauges and Records",
+  short: "Define the test boundary, owner pressure basis, water quality, gauges and signed records before comparing hydrotest bids.",
+  tagline: "\"Hydrotest the piping\" leaves boundary, pressure and records open.",
+  category: "inspection-testing",
+  mainCategory: "inspection-material-quality",
+  date: "2026-11-20",
+  dateModified: "2026-11-20",
+  dateLabel: "20 November 2026",
+  readTime: "7 min read",
+  description: "Prepare a hydrostatic pressure test service RFQ: test boundary, owner pressure basis, water quality, calibrated gauges, responsibilities, HSE GS4 context and signed records.",
+  keywords: "hydrostatic test service RFQ, hydrotest quotation, pressure testing contractor, test boundary P&ID, hydrotest records, ASME B31.3 leak test, HSE GS4 pressure testing",
+  image: "/images/blog/heroes/hydrostatic-pressure-test-service-rfq-boundary-medium-gauges-records.webp",
+  imageAlt: "Diagram showing a hydrostatic test service RFQ built from test boundary, pressure basis, medium, gauges and records.",
+  related: ["api-598-vs-iso-5208-valve-testing-buyers-guide","pressure-gauge-calibration-certificate-buyers-guide","pipeline-precommissioning-service-rfq-scope-handover"]
+},
+{
   slug: "pressure-relief-valve-testing-repair-service-rfq-as-received-vr-records",
   title: "Pressure Relief Valve Testing and Repair Service RFQs: As-Received Test, VR Repair and Records",
   short: "List each valve, decide on an as-received test, define repair scope and accreditation, and require per-valve records before comparing bids.",
