@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "lifting-gear-rigging-rfq-wll-certificates-marking-examination-records",
+  title: "Lifting Gear and Rigging RFQs: WLL, Marking, Certificates and Examination Records",
+  short: "Define item type, rated load, standard, marking and certificate records so lifting gear quotations compare like for like.",
+  tagline: "\"10 shackles, 25 t\" leaves marking, standard and certificates open.",
+  category: "inspection-testing",
+  mainCategory: "inspection-material-quality",
+  date: "2026-11-20",
+  dateModified: "2026-11-20",
+  dateLabel: "20 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a lifting gear and rigging RFQ: working load limit, standard and grade, marking, certificates, examination records, offshore lifting sets, inspection points and packing.",
+  keywords: "lifting gear RFQ, sling shackle procurement, WLL marking certificates, LOLER lifting accessories, DNV-ST-E271 lifting sets, rigging hardware quotation",
+  image: "/images/blog/heroes/lifting-gear-rigging-rfq-wll-certificates-marking-examination-records.webp",
+  imageAlt: "Diagram showing a lifting gear RFQ built from item type, rated load, standard, marking and certificate records.",
+  related: ["heat-number-traceability-mill-certificates","inspection-test-plans-hold-vs-witness-points","third-party-inspector-credential-verification-rfq-scope"]
+},
+{
   slug: "sacrificial-anode-rfq-iso-15589-dnv-rp-b401-alloy-dimensions-test-records",
   title: "Sacrificial Anode RFQs: ISO 15589, DNV-RP-B401, Alloy, Dimensions and Test Records",
   short: "Name the specification, alloy, geometry, environment and batch test records so galvanic anode quotations can be compared.",
