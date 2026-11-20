@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "sacrificial-anode-rfq-iso-15589-dnv-rp-b401-alloy-dimensions-test-records",
+  title: "Sacrificial Anode RFQs: ISO 15589, DNV-RP-B401, Alloy, Dimensions and Test Records",
+  short: "Name the specification, alloy, geometry, environment and batch test records so galvanic anode quotations can be compared.",
+  tagline: "\"20 kg aluminium anodes\" does not define what you will receive.",
+  category: "materials-documentation",
+  mainCategory: "inspection-material-quality",
+  date: "2026-11-20",
+  dateModified: "2026-11-20",
+  dateLabel: "20 November 2026",
+  readTime: "7 min read",
+  description: "What to include in a sacrificial anode RFQ: ISO 15589 and DNV-RP-B401 context, alloy and anode type, dimensions and core, inspection and electrochemical test records, traceability and packing.",
+  keywords: "sacrificial anode RFQ, galvanic anode specification, ISO 15589 anodes, DNV-RP-B401 anodes, aluminium zinc anode quotation, cathodic protection anode test records",
+  image: "/images/blog/heroes/sacrificial-anode-rfq-iso-15589-dnv-rp-b401-alloy-dimensions-test-records.webp",
+  imageAlt: "Diagram showing a sacrificial anode RFQ built from specification, alloy, geometry, environment and test records.",
+  related: ["heat-number-traceability-mill-certificates","iso-17025-laboratory-scope-test-report-equipment-rfq","inspection-test-plans-hold-vs-witness-points"]
+},
+{
   slug: "hydrostatic-pressure-test-service-rfq-boundary-medium-gauges-records",
   title: "Hydrostatic Pressure Test Service RFQs: Boundary, Medium, Gauges and Records",
   short: "Define the test boundary, owner pressure basis, water quality, gauges and signed records before comparing hydrotest bids.",
