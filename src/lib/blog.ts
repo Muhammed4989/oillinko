@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "fixed-gas-detector-rfq-gas-technology-iec-60079-29-calibration-records",
+  title: "Fixed Gas Detector RFQs: Gas, Technology, IEC 60079-29 Edition, Calibration and Records",
+  short: "Name the gases, sensing technology, standard edition, certificates and calibration method before comparing gas detector quotations.",
+  tagline: "\"10 gas detectors\" leaves the technology, standard and calibration open.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-22",
+  dateModified: "2026-11-22",
+  dateLabel: "22 November 2026",
+  readTime: "8 min read",
+  description: "What to put in a fixed gas detector RFQ: target gases and ranges, catalytic, infrared and electrochemical technology, IEC 60079-29 edition change, hazardous-area certificates, interface, calibration and records.",
+  keywords: "fixed gas detector RFQ, flammable gas detector specification, IEC 60079-29-0, H2S detector procurement, catalytic infrared electrochemical gas sensor, gas detector calibration",
+  image: "/images/blog/heroes/fixed-gas-detector-rfq-gas-technology-iec-60079-29-calibration-records.webp",
+  imageAlt: "Diagram showing a fixed gas detector RFQ built from target gas, technology, certification, interface and calibration records.",
+  related: ["sil-rated-instruments-valves-rfq-safety-manual-certificate-proof-test-records","pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area","motor-ip-rating-vs-ex-certification-rfq"]
+},
+{
   slug: "sil-rated-instruments-valves-rfq-safety-manual-certificate-proof-test-records",
   title: "SIL-Rated Instrument and Valve RFQs: Safety Manual, Certificate, Proof Test and Records",
   short: "Name the safety function, require the safety manual and assessment evidence, and fix proof-test and delivery records before comparing offers.",

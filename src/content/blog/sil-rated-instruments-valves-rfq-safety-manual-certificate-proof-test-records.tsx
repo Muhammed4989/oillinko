@@ -41,7 +41,8 @@ export default function Article() {
       <h2 id="comparing" className={h}>How should you compare quotations?</h2>
       <p className={p}>Use one table with the datasheet lines and the evidence lines in rows: model and revision, standard edition, assessor and certificate scope, safety manual revision, failure-mode data, systematic capability, proof-test requirements, change notification, hazardous-area certificate, wetted materials, delivery documents, lead time and validity. A cheaper device may lack a current assessment, apply to a different revision, or exclude the safety manual. Send clarifications to every bidder together, as in the <Link className={l} href={postUrl(getPost("equipment-rfq-revision-control-bid-clarifications")!)}>RFQ revision control guide</Link>.</p>
       <p className={p}>To send an instrument or valve requirement, see the Oillinko <Link className={l} href="/oil-and-gas/equipment/instrumentation-control">instrumentation and control</Link> catalogue section or start from the <Link className={l} href="/">Oillinko catalogue</Link>. Enquiries are reviewed and routed manually; suitability, availability, manufacturing origin, conformity and commercial terms are confirmed for each request. This guide does not show that Oillinko or any listed company supplies a particular safety-rated device, and it is not functional safety advice.</p>
-    </Prose>
+    <p className={p}>Gas detection is a common safety-function input; see the <Link className={l} href={postUrl(getPost("fixed-gas-detector-rfq-gas-technology-iec-60079-29-calibration-records")!)}>fixed gas detector RFQ guide</Link> for the technology, certificate and calibration lines.</p>
+</Prose>
     <RelatedPosts post={post}/>
     <JsonLd data={[articleJsonLd(post), breadcrumbJsonLd(post)]}/>
     <CtaBand/>
