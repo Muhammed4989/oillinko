@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "level-transmitter-replacement-rfq-technology-process-data-interface-emulsion-records",
+  title: "Level Transmitter Replacement RFQs: Technology, Process Data, Interface and Records",
+  short: "State what is measured, fluid data, interface and emulsion conditions, mounting, output and records so level instrument quotations compare like for like.",
+  tagline: "Quoting the old model number hides the fluid data that decides how a level instrument behaves.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-21",
+  dateModified: "2026-11-21",
+  dateLabel: "21 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a level transmitter replacement RFQ: level versus interface, density and dielectric data, emulsion and build-up limits, mounting, output and hazardous-area rating, records and quotation comparison.",
+  keywords: "level transmitter RFQ, guided wave radar replacement, interface level measurement, magnetostrictive level, differential pressure level, level instrument procurement",
+  image: "/images/blog/heroes/level-transmitter-replacement-rfq-technology-process-data-interface-emulsion-records.webp",
+  imageAlt: "Diagram showing a level transmitter RFQ built from fluid data, interface, mounting, output and records.",
+  related: ["pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area","coriolis-flowmeter-replacement-rfq-process-signal-interfaces","diaphragm-seal-pressure-instrument-rfq-complete-system"]
+},
+{
   slug: "lifting-gear-rigging-rfq-wll-certificates-marking-examination-records",
   title: "Lifting Gear and Rigging RFQs: WLL, Marking, Certificates and Examination Records",
   short: "Define item type, rated load, standard, marking and certificate records so lifting gear quotations compare like for like.",
