@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "sil-rated-instruments-valves-rfq-safety-manual-certificate-proof-test-records",
+  title: "SIL-Rated Instrument and Valve RFQs: Safety Manual, Certificate, Proof Test and Records",
+  short: "Name the safety function, require the safety manual and assessment evidence, and fix proof-test and delivery records before comparing offers.",
+  tagline: "\"SIL 2 transmitter\" is a claim until the documents behind it are in the RFQ.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-21",
+  dateModified: "2026-11-21",
+  dateLabel: "21 November 2026",
+  readTime: "7 min read",
+  description: "What to put in an RFQ for SIL-rated transmitters, solenoid valves and actuated valves: safety function data, IEC 61508 and 61511 context, safety manual and certificate scope, failure data, proof testing and records.",
+  keywords: "SIL rated instrument RFQ, IEC 61508 safety manual, SIL certificate verification, safety instrumented system procurement, SIL valve RFQ, proof test requirements",
+  image: "/images/blog/heroes/sil-rated-instruments-valves-rfq-safety-manual-certificate-proof-test-records.webp",
+  imageAlt: "Diagram showing a SIL-rated device RFQ built from safety function, evidence, failure data, proof test and records.",
+  related: ["pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area","solenoid-valve-rfq-differential-pressure-coil","valve-actuator-replacement-rfq-compatibility"]
+},
+{
   slug: "level-transmitter-replacement-rfq-technology-process-data-interface-emulsion-records",
   title: "Level Transmitter Replacement RFQs: Technology, Process Data, Interface and Records",
   short: "State what is measured, fluid data, interface and emulsion conditions, mounting, output and records so level instrument quotations compare like for like.",
