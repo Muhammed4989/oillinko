@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "rupture-disc-rfq-burst-pressure-manufacturing-range-coincident-temperature-iso-4126-2",
+  title: "Rupture Disc RFQs: Burst Pressure, Coincident Temperature, Manufacturing Range and ISO 4126-2",
+  short: "State burst pressure with its temperature, the rating basis, disc type, holder and certificate before comparing rupture disc quotations.",
+  tagline: "\"Rupture disc, 10 barg\" leaves temperature, tolerance and holder open.",
+  category: "valves-actuation",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-24",
+  dateModified: "2026-11-24",
+  dateLabel: "24 November 2026",
+  readTime: "7 min read",
+  description: "What to put in a rupture disc RFQ: burst pressure at coincident temperature, manufacturing range and tolerance, disc type, vacuum and back-pressure, holder, ISO 4126-2 and certificate, materials and records.",
+  keywords: "rupture disc RFQ, bursting disc specification, ISO 4126-2, coincident temperature, manufacturing range burst tolerance, rupture disc holder procurement",
+  image: "/images/blog/heroes/rupture-disc-rfq-burst-pressure-manufacturing-range-coincident-temperature-iso-4126-2.webp",
+  imageAlt: "Diagram showing a rupture disc RFQ built from burst pressure and temperature, rating basis, disc type, holder and certificate records.",
+  related: ["api-526-pressure-relief-valves-rfq-guide","pressure-relief-valve-testing-repair-service-rfq-as-received-vr-records","pressure-vessel-nameplates-data-reports-replacement-rfq"]
+},
+{
   slug: "fixed-gas-detector-rfq-gas-technology-iec-60079-29-calibration-records",
   title: "Fixed Gas Detector RFQs: Gas, Technology, IEC 60079-29 Edition, Calibration and Records",
   short: "Name the gases, sensing technology, standard edition, certificates and calibration method before comparing gas detector quotations.",
