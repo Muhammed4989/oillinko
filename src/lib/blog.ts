@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "tank-breather-valve-pressure-vacuum-vent-rfq-api-2000-iso-28300-set-pressure-flow-records",
+  title: "Tank Breather Valve RFQs: Venting Case, Pressure and Vacuum Settings, API 2000 and ISO 28300",
+  short: "State the venting case, pressure and vacuum settings, device type, flame arrestor and flow records before comparing tank breather valve quotations.",
+  tagline: "\"Breather valve for a 5,000 m3 tank\" leaves settings and flow capacity open.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-25",
+  dateModified: "2026-11-25",
+  dateLabel: "25 November 2026",
+  readTime: "6 min read",
+  description: "What to put in a tank breather valve RFQ: venting case, pressure and vacuum settings, flow capacity, device type, flame arrestor, materials, API 2000 and ISO 28300 edition, and records.",
+  keywords: "tank breather valve RFQ, pressure vacuum vent specification, API 2000, ISO 28300, storage tank venting, flame arrestor tank vent",
+  image: "/images/blog/heroes/tank-breather-valve-pressure-vacuum-vent-rfq-api-2000-iso-28300-set-pressure-flow-records.webp",
+  imageAlt: "Diagram showing a tank breather valve RFQ built from service data, venting case, settings, device and records.",
+  related: ["api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records","rupture-disc-rfq-burst-pressure-manufacturing-range-coincident-temperature-iso-4126-2","api-526-pressure-relief-valves-rfq-guide"]
+},
+{
   slug: "rupture-disc-rfq-burst-pressure-manufacturing-range-coincident-temperature-iso-4126-2",
   title: "Rupture Disc RFQs: Burst Pressure, Coincident Temperature, Manufacturing Range and ISO 4126-2",
   short: "State burst pressure with its temperature, the rating basis, disc type, holder and certificate before comparing rupture disc quotations.",
