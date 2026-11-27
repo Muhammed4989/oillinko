@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records",
+  title: "Pressure Gauge RFQs: Standard, Range, Accuracy, Connection, Materials and Records",
+  short: "State the gauge standard, range, accuracy class, connection, wetted materials, case and certificates before comparing pressure gauge quotations.",
+  tagline: "\"Pressure gauge 0-16 bar, 100 mm\" leaves accuracy, thread and materials open.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-27",
+  dateModified: "2026-11-27",
+  dateLabel: "27 November 2026",
+  readTime: "6 min read",
+  description: "What to put in a pressure gauge RFQ: EN 837 or ASME B40.100, range and units, accuracy class, process connection, wetted and case materials, fill, safety features and certificates.",
+  keywords: "pressure gauge RFQ, EN 837-1, ASME B40.100, Bourdon pressure gauge specification, pressure gauge accuracy class, gauge connection thread",
+  image: "/images/blog/heroes/pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records.webp",
+  imageAlt: "Diagram showing six parts of a pressure gauge RFQ: standard, range, accuracy, connection, materials and records.",
+  related: ["pressure-gauge-calibration-certificate-buyers-guide","pressure-transmitter-replacement-rfq-range-output-hart-hazardous-area","npt-bspt-bspp-threaded-fitting-buyers-guide"]
+},
+{
   slug: "tank-breather-valve-pressure-vacuum-vent-rfq-api-2000-iso-28300-set-pressure-flow-records",
   title: "Tank Breather Valve RFQs: Venting Case, Pressure and Vacuum Settings, API 2000 and ISO 28300",
   short: "State the venting case, pressure and vacuum settings, device type, flame arrestor and flow records before comparing tank breather valve quotations.",

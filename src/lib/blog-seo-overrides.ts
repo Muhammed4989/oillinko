@@ -4,6 +4,10 @@
 export type SeoOverride = { title: string; description: string };
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+  "pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records": {
+    title: "Pressure Gauge RFQ: EN 837, Range, Accuracy, Records",
+    description: "What to put in a pressure gauge RFQ: EN 837 or ASME B40.100, range, accuracy class, connection, materials, case and certificates."
+  },
   "api-650-storage-tank-rfq-data-sheet-design-basis-foundation-records": {
     title: "API 650 Tank RFQ: Data Sheet, Design Basis, Records",
     description: "What to put in an API 650 storage tank RFQ: data sheet, design basis, corrosion allowance, foundation responsibility, fabrication scope and records."
