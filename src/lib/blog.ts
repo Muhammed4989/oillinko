@@ -21,6 +21,23 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
 {
+  slug: "temperature-sensor-rtd-thermocouple-rfq-iec-60751-iec-60584-1-element-class-wiring-records",
+  title: "Temperature Sensor RFQs: RTD or Thermocouple, Tolerance Class, Wiring, Thermowell Fit and Records",
+  short: "State the sensor type, tolerance class, element, wiring, sheath, thermowell fit and calibration evidence before comparing temperature sensor quotations.",
+  tagline: "\"Pt100, 200 mm\" leaves class, wiring and length reference open.",
+  category: "pressure-vessels-tanks",
+  mainCategory: "oil-and-gas-equipment",
+  date: "2026-11-28",
+  dateModified: "2026-11-28",
+  dateLabel: "28 November 2026",
+  readTime: "6 min read",
+  description: "What to put in an RTD or thermocouple RFQ: IEC 60751 and IEC 60584-1 class, range, element construction, wiring, sheath and length, thermowell fit and calibration records.",
+  keywords: "temperature sensor RFQ, Pt100 RTD specification, IEC 60751, IEC 60584-1, thermocouple tolerance class, RTD wiring 3-wire 4-wire, thermowell sensor fit",
+  image: "/images/blog/heroes/temperature-sensor-rtd-thermocouple-rfq-iec-60751-iec-60584-1-element-class-wiring-records.webp",
+  imageAlt: "Diagram showing six parts of a temperature sensor RFQ: sensor type, class, element, wiring, assembly and records.",
+  related: ["thermowell-rfq-wake-frequency-process-data","pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records","iso-17025-laboratory-scope-test-report-equipment-rfq"]
+},
+{
   slug: "pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records",
   title: "Pressure Gauge RFQs: Standard, Range, Accuracy, Connection, Materials and Records",
   short: "State the gauge standard, range, accuracy class, connection, wetted materials, case and certificates before comparing pressure gauge quotations.",

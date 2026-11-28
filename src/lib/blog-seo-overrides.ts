@@ -4,6 +4,10 @@
 export type SeoOverride = { title: string; description: string };
 
 export const blogSeoOverrides: Record<string, SeoOverride> = {
+  "temperature-sensor-rtd-thermocouple-rfq-iec-60751-iec-60584-1-element-class-wiring-records": {
+    title: "Temperature Sensor RFQ: RTD, Thermocouple, Class",
+    description: "What to put in a temperature sensor RFQ: RTD or thermocouple, IEC 60751 / 60584-1 class, wiring, sheath, thermowell fit and calibration records."
+  },
   "pressure-gauge-rfq-en-837-asme-b40-100-range-accuracy-case-connection-records": {
     title: "Pressure Gauge RFQ: EN 837, Range, Accuracy, Records",
     description: "What to put in a pressure gauge RFQ: EN 837 or ASME B40.100, range, accuracy class, connection, materials, case and certificates."
